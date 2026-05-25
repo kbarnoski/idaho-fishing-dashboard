@@ -1,538 +1,466 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Idaho Fishing Dashboard — Karel's Trip Countdown</title>
-<style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Idaho Fly Fishing Dashboard — May 25, 2026</title>
+  <style>
+    :root {
+      --green: #2d4a3e;
+      --cream: #f5f1e8;
+      --brown: #8b6f47;
+      --gold: #c9a86b;
+      --dark-green: #1e3329;
+      --warm-cream: #ede8d8;
+      --text-dark: #2a2218;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--cream); color: var(--text-dark); font-family: system-ui, -apple-system, sans-serif; line-height: 1.6; }
+    h1, h2, h3, h4 { font-family: Georgia, serif; }
 
-  :root {
-    --green:       #2d4a3e;
-    --cream:       #f5f1e8;
-    --brown:       #8b6f47;
-    --gold:        #c9a86b;
-    --light-green: #3d6354;
-    --pale:        #ede8da;
-    --alert:       #8b3a3a;
-    --alert-bg:    #f8eded;
-  }
+    .hero { background: var(--green); color: var(--cream); padding: 52px 20px 44px; text-align: center; }
+    .hero h1 { font-size: 2.5em; letter-spacing: -0.5px; margin-bottom: 10px; }
+    .hero .subtitle { color: var(--gold); font-size: 1.05em; margin-bottom: 22px; letter-spacing: 0.3px; }
+    .countdown { display: inline-block; background: var(--gold); color: var(--green); padding: 11px 32px; border-radius: 4px; font-family: Georgia, serif; font-size: 1.35em; font-weight: bold; letter-spacing: 1.5px; }
 
-  body {
-    background: var(--cream);
-    color: #2a2118;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    font-size: 15px;
-    line-height: 1.6;
-  }
+    .container { max-width: 840px; margin: 0 auto; padding: 0 20px; }
 
-  h1, h2, h3, h4 { font-family: Georgia, "Times New Roman", serif; font-weight: normal; }
+    .river-section { padding: 40px 0; border-bottom: 2px solid var(--warm-cream); }
+    .section-header { background: var(--green); color: var(--cream); padding: 18px 26px; border-radius: 6px 6px 0 0; }
+    .section-header h2 { font-size: 1.65em; }
+    .section-header .tagline { color: var(--gold); font-size: 0.88em; margin-top: 5px; }
+    .section-body { background: white; border: 1px solid #ddd; border-top: none; border-radius: 0 0 6px 6px; padding: 28px; }
 
-  .container { max-width: 840px; margin: 0 auto; padding: 0 20px 60px; }
+    .alert { border-radius: 4px; padding: 11px 16px; margin-bottom: 22px; font-size: 0.88em; line-height: 1.5; }
+    .alert.caution { background: #fff8e1; border-left: 4px solid #f0a500; }
+    .alert.warning { background: #fdecea; border-left: 4px solid #c0392b; }
 
-  /* HERO */
-  .hero {
-    background: linear-gradient(160deg, var(--green) 0%, #1e3329 100%);
-    color: var(--cream);
-    padding: 52px 20px 44px;
-    text-align: center;
-    border-bottom: 4px solid var(--gold);
-  }
-  .hero .eyebrow {
-    font-size: 11px; letter-spacing: 3px; text-transform: uppercase;
-    color: var(--gold); margin-bottom: 12px;
-  }
-  .hero h1 { font-size: 2.4rem; margin-bottom: 8px; }
-  .hero .date-line { font-size: 0.9rem; color: #b0c8bd; margin-bottom: 28px; }
-  .hero .countdown {
-    display: inline-block;
-    background: var(--gold); color: var(--green);
-    padding: 14px 36px; border-radius: 4px;
-    font-family: Georgia, serif; font-size: 1.55rem;
-    letter-spacing: 1px;
-  }
-  .hero .countdown span { font-size: 2.4rem; font-weight: bold; display: block; line-height: 1; }
+    .stat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 28px; }
+    .stat-card { background: var(--cream); border: 1px solid var(--gold); border-radius: 6px; padding: 16px 12px; text-align: center; }
+    .stat-card .label { font-size: 0.72em; text-transform: uppercase; letter-spacing: 0.8px; color: var(--brown); margin-bottom: 6px; }
+    .stat-card .value { font-family: Georgia, serif; font-size: 1.55em; color: var(--green); font-weight: bold; line-height: 1.2; }
+    .stat-card .unit { font-size: 0.78em; color: var(--brown); }
+    .stat-card .note { font-size: 0.7em; color: #999; margin-top: 5px; }
 
-  /* RIVER SECTION */
-  .river-section { padding: 40px 0 20px; border-bottom: 2px solid var(--gold); }
-  .river-section:last-of-type { border-bottom: none; }
-  .river-title {
-    font-size: 1.75rem; color: var(--green); margin-bottom: 4px;
-    padding-bottom: 10px; border-bottom: 1px solid var(--gold);
-  }
-  .river-subtitle { color: var(--brown); font-size: 0.85rem; margin-bottom: 24px; letter-spacing: 1px; text-transform: uppercase; }
+    .subsection-title { font-family: Georgia, serif; color: var(--green); font-size: 1.05em; border-bottom: 2px solid var(--gold); padding-bottom: 6px; margin-bottom: 14px; margin-top: 26px; }
 
-  /* STAT CARDS */
-  .stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin-bottom: 24px; }
-  .stat-card {
-    background: var(--green); color: var(--cream);
-    border-radius: 6px; padding: 16px 18px;
-  }
-  .stat-card .label { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
-  .stat-card .value { font-family: Georgia, serif; font-size: 1.6rem; line-height: 1.1; }
-  .stat-card .sub { font-size: 11px; color: #a0b8b0; margin-top: 4px; }
-  .stat-card.alert { background: var(--alert); }
+    .weather-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 26px; }
+    .weather-day { background: var(--cream); border-radius: 6px; padding: 13px 8px; text-align: center; border: 1px solid #ddd; }
+    .weather-day .day-name { font-size: 0.72em; text-transform: uppercase; letter-spacing: 0.5px; color: var(--brown); font-weight: bold; }
+    .weather-day .temp-high { font-family: Georgia, serif; font-size: 1.45em; color: var(--green); margin: 3px 0; }
+    .weather-day .temp-low { font-size: 0.82em; color: #666; }
+    .weather-day .wx-desc { font-size: 0.71em; color: #555; margin-top: 5px; line-height: 1.35; }
+    .weather-day .precip { font-size: 0.75em; color: #2a6fa8; margin-top: 4px; font-weight: bold; }
 
-  /* ALERT BANNER */
-  .alert-banner {
-    background: var(--alert-bg); border-left: 4px solid var(--alert);
-    color: var(--alert); padding: 12px 16px; border-radius: 0 4px 4px 0;
-    margin-bottom: 20px; font-size: 0.9rem;
-  }
-  .alert-banner strong { display: block; margin-bottom: 2px; }
+    .hatch-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px; }
+    .hatch-item { background: var(--cream); border-radius: 4px; padding: 13px 15px; border-left: 3px solid var(--gold); }
+    .hatch-item .hatch-name { font-weight: bold; color: var(--green); font-size: 0.93em; }
+    .hatch-item .hatch-details { font-size: 0.81em; color: #555; margin-top: 3px; line-height: 1.45; }
 
-  /* WEATHER STRIP */
-  .weather-strip { display: flex; gap: 10px; margin-bottom: 24px; overflow-x: auto; }
-  .wx-day {
-    flex: 0 0 140px; background: var(--pale); border: 1px solid #d8d0be;
-    border-radius: 6px; padding: 12px 14px; text-align: center;
-  }
-  .wx-day .wx-name { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--brown); margin-bottom: 6px; }
-  .wx-day .wx-temp { font-family: Georgia, serif; font-size: 1.4rem; color: var(--green); }
-  .wx-day .wx-desc { font-size: 11px; color: #5a4c3a; margin-top: 4px; }
-  .wx-day .wx-wind { font-size: 11px; color: #7a6a52; margin-top: 3px; }
+    .fly-section-label { font-size: 0.82em; color: var(--brown); font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; margin-top: 14px; }
+    .fly-list { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 4px; }
+    .fly-tag { background: var(--green); color: var(--cream); padding: 5px 12px; border-radius: 20px; font-size: 0.8em; }
+    .fly-tag.warm { background: var(--brown); }
 
-  /* SECTION HEADERS */
-  .section-head {
-    font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase;
-    color: var(--brown); border-bottom: 1px solid #d0c8b8;
-    padding-bottom: 5px; margin: 24px 0 12px;
-  }
+    .quotes-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 20px; }
+    .quote-card { background: var(--cream); border-radius: 6px; padding: 16px; border-left: 4px solid var(--green); }
+    .quote-card blockquote { font-style: italic; color: #444; font-size: 0.88em; line-height: 1.55; margin-bottom: 9px; }
+    .quote-card .source { font-size: 0.73em; color: var(--brown); font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px; }
 
-  /* HATCH TABLE */
-  .hatch-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
-  .hatch-table th {
-    background: var(--green); color: var(--gold);
-    text-align: left; font-weight: normal;
-    font-size: 11px; letter-spacing: 1px; text-transform: uppercase;
-    padding: 8px 12px;
-  }
-  .hatch-table td { padding: 8px 12px; border-bottom: 1px solid #ddd5c5; font-size: 0.9rem; }
-  .hatch-table tr:nth-child(even) td { background: var(--pale); }
-  .hatch-table .status-hot { color: #c05a00; font-weight: 600; }
-  .hatch-table .status-build { color: #3a7a4a; font-weight: 600; }
-  .hatch-table .status-fade { color: #888; }
+    .trip-notes { background: var(--dark-green); color: var(--cream); border-radius: 6px; padding: 22px 26px; margin-top: 22px; }
+    .trip-notes h4 { color: var(--gold); font-size: 0.95em; letter-spacing: 0.8px; margin-bottom: 13px; }
+    .trip-notes ul { padding-left: 18px; }
+    .trip-notes li { font-size: 0.86em; margin-bottom: 7px; line-height: 1.55; }
+    .trip-notes li strong { color: var(--gold); }
 
-  /* FLY BOX */
-  .fly-box { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
-  .fly-tag {
-    background: var(--brown); color: var(--cream);
-    padding: 5px 12px; border-radius: 20px; font-size: 0.82rem;
-  }
-  .fly-tag.anchor { background: var(--green); }
-  .fly-tag.dry { background: #5a7a4a; }
-  .fly-tag.streamer { background: #3a5a6a; }
+    .footer { background: var(--green); color: #aaa; padding: 30px 20px; font-size: 0.8em; }
+    .footer h3 { color: var(--cream); font-family: Georgia, serif; font-size: 1em; margin-bottom: 10px; }
+    .footer p { margin-bottom: 5px; line-height: 1.6; }
+    .footer a { color: var(--gold); text-decoration: none; }
+    .footer .timestamp { margin-top: 14px; color: #777; font-size: 0.9em; }
 
-  /* SHOP QUOTES */
-  .shop-quotes { display: flex; flex-direction: column; gap: 14px; margin-bottom: 20px; }
-  .quote-card {
-    background: var(--pale); border-left: 3px solid var(--gold);
-    padding: 12px 16px; border-radius: 0 6px 6px 0;
-  }
-  .quote-card .shop-name { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--brown); margin-bottom: 5px; }
-  .quote-card blockquote { font-style: italic; font-size: 0.92rem; color: #3a2e22; }
-  .quote-card .report-date { font-size: 10px; color: #888; margin-top: 5px; }
-
-  /* GUIDE NOTES */
-  .guide-notes {
-    background: var(--green); color: var(--cream);
-    padding: 18px 22px; border-radius: 6px; margin-bottom: 20px;
-  }
-  .guide-notes h4 { color: var(--gold); margin-bottom: 10px; font-size: 1rem; }
-  .guide-notes ul { padding-left: 18px; }
-  .guide-notes li { margin-bottom: 6px; font-size: 0.9rem; }
-  .guide-notes li::marker { color: var(--gold); }
-
-  /* FOOTER */
-  .footer {
-    margin-top: 40px; padding: 24px 20px;
-    background: var(--green); color: #a0b8b0;
-    font-size: 0.78rem; line-height: 1.8;
-  }
-  .footer a { color: var(--gold); text-decoration: none; }
-  .footer .footer-inner { max-width: 840px; margin: 0 auto; }
-  .footer h4 { color: var(--cream); margin-bottom: 8px; font-size: 0.9rem; }
-  .footer-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 16px; }
-  .footer-ts { color: #6a8880; border-top: 1px solid #3d6354; padding-top: 12px; margin-top: 8px; }
-</style>
+    @media (max-width: 620px) {
+      .stat-grid { grid-template-columns: 1fr 1fr; }
+      .weather-strip { grid-template-columns: 1fr 1fr; }
+      .hatch-grid { grid-template-columns: 1fr; }
+      .quotes-grid { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 1.8em; }
+    }
+  </style>
 </head>
 <body>
 
-<!-- ═══════════════════════════════════════════ HERO ══ -->
+<!-- HERO -->
 <div class="hero">
-  <div class="eyebrow">Eastern Idaho · Daily Conditions</div>
-  <h1>Karel's Fishing Dashboard</h1>
-  <div class="date-line">Sunday, May 24, 2026 · Generated at 13:35 UTC</div>
-  <div class="countdown">
-    <span>12</span>
-    days until the trip · June 5, 2026
+  <div class="container">
+    <h1>Idaho Fly Fishing Dashboard</h1>
+    <div class="subtitle">Monday, May 25, 2026 &nbsp;&middot;&nbsp; Memorial Day &nbsp;&middot;&nbsp; Eastern Idaho</div>
+    <div class="countdown">11 DAYS TO TRIP &nbsp;&middot;&nbsp; JUNE 5, 2026</div>
   </div>
 </div>
 
-<div class="container">
+<div class="container" style="padding-top: 44px; padding-bottom: 44px;">
 
-<!-- ══════════════════════════════════════ HENRY'S FORK ══ -->
-<div class="river-section">
-  <h2 class="river-title">Henry's Fork of the Snake</h2>
-  <p class="river-subtitle">Island Park · Box Canyon · Railroad Ranch · Rexburg</p>
+  <!-- ============================================================ -->
+  <!-- HENRY'S FORK -->
+  <!-- ============================================================ -->
+  <div class="river-section">
+    <div class="section-header">
+      <h2>Henry's Fork of the Snake River</h2>
+      <div class="tagline">Box Canyon &nbsp;&middot;&nbsp; Last Chance &nbsp;&middot;&nbsp; Harriman Ranch &nbsp;&middot;&nbsp; Island Park, ID</div>
+    </div>
+    <div class="section-body">
 
-  <!-- STAT CARDS -->
-  <div class="stat-grid">
-    <div class="stat-card">
-      <div class="label">Flow · Island Park</div>
-      <div class="value">724 <small style="font-size:1rem">cfs</small></div>
-      <div class="sub">USGS #13042500 · 06:45 MST</div>
-    </div>
-    <div class="stat-card">
-      <div class="label">Flow · Rexburg</div>
-      <div class="value">552 <small style="font-size:1rem">cfs</small></div>
-      <div class="sub">USGS #13056500 · 07:15 MST</div>
-    </div>
-    <div class="stat-card">
-      <div class="label">Water Temp</div>
-      <div class="value">~50°F</div>
-      <div class="sub">Rising fast · ~3 wks ahead of avg</div>
-    </div>
-    <div class="stat-card">
-      <div class="label">Clarity</div>
-      <div class="value">Good</div>
-      <div class="sub">Most sections fishable</div>
-    </div>
-  </div>
+      <div class="alert caution">
+        <strong>Flows Rising Fast:</strong> Box Canyon gauge hit 718 cfs this morning &mdash; up sharply from 291 cfs in early May. Classic late-May snowmelt surge. Wading remains possible with care, but conditions are changing daily. The Ranch (Harriman) was closed as of May 9; verify status before June 5.
+      </div>
 
-  <!-- ALERT -->
-  <div class="alert-banner">
-    <strong>⚠ Harriman Ranch (Railroad Ranch) CLOSED until June 15</strong>
-    Your trip starts June 5 — the Ranch opens 10 days in. Plan to float Box Canyon and lower sections on arrival days.
-  </div>
+      <!-- STAT CARDS -->
+      <div class="stat-grid">
+        <div class="stat-card">
+          <div class="label">Box Canyon Flow</div>
+          <div class="value">718</div>
+          <div class="unit">CFS</div>
+          <div class="note">USGS 13042500 &middot; 6:45 AM MDT</div>
+        </div>
+        <div class="stat-card">
+          <div class="label">Rexburg Gauge</div>
+          <div class="value">670</div>
+          <div class="unit">CFS</div>
+          <div class="note">USGS 13056500 &middot; 7:15 AM MDT</div>
+        </div>
+        <div class="stat-card">
+          <div class="label">Water Temp</div>
+          <div class="value">&mdash;</div>
+          <div class="unit">&deg;F</div>
+          <div class="note">Sensor offline / no recent data</div>
+        </div>
+        <div class="stat-card">
+          <div class="label">Clarity</div>
+          <div class="value">Good</div>
+          <div class="unit">&nbsp;</div>
+          <div class="note">Clear with slight tint</div>
+        </div>
+      </div>
 
-  <!-- WEATHER -->
-  <div class="section-head">Island Park Weather (44.42°N · 111.37°W)</div>
-  <div class="weather-strip">
-    <div class="wx-day">
-      <div class="wx-name">Today</div>
-      <div class="wx-temp">76°F</div>
-      <div class="wx-desc">Mostly sunny · PM storms</div>
-      <div class="wx-wind">SSW 1–7 mph · 20% precip</div>
-    </div>
-    <div class="wx-day">
-      <div class="wx-name">Tonight</div>
-      <div class="wx-temp">37°F</div>
-      <div class="wx-desc">Isolated showers then clearing</div>
-      <div class="wx-wind">SSE 1–6 mph · 20% precip</div>
-    </div>
-    <div class="wx-day">
-      <div class="wx-name">Memorial Day</div>
-      <div class="wx-temp">80°F</div>
-      <div class="wx-desc">Sunny</div>
-      <div class="wx-wind">S 1–7 mph · 2% precip</div>
-    </div>
-    <div class="wx-day">
-      <div class="wx-name">Mon Night</div>
-      <div class="wx-temp">41°F</div>
-      <div class="wx-desc">Partly cloudy</div>
-      <div class="wx-wind">SE 2–6 mph · 3% precip</div>
-    </div>
-  </div>
+      <!-- WEATHER -->
+      <div class="subsection-title">4-Day Forecast &mdash; Island Park / Box Canyon (elev. 4,900 ft)</div>
+      <div class="weather-strip">
+        <div class="weather-day">
+          <div class="day-name">Mon 5/25</div>
+          <div class="temp-high">80&deg;F</div>
+          <div class="temp-low">Low 40&deg;F</div>
+          <div class="wx-desc">Mostly Sunny, Slight Chance T-storms late</div>
+          <div class="precip">&#x1F4A7; 20%</div>
+        </div>
+        <div class="weather-day">
+          <div class="day-name">Tue 5/26</div>
+          <div class="temp-high">75&deg;F</div>
+          <div class="temp-low">Low 39&deg;F</div>
+          <div class="wx-desc">Chance Light Rain then Showers &amp; T-storms</div>
+          <div class="precip">&#x1F4A7; 70%</div>
+        </div>
+        <div class="weather-day">
+          <div class="day-name">Wed 5/27</div>
+          <div class="temp-high">76&deg;F</div>
+          <div class="temp-low">Low 39&deg;F</div>
+          <div class="wx-desc">Partly Sunny then Chance Showers &amp; T-storms</div>
+          <div class="precip">&#x1F4A7; 36%</div>
+        </div>
+        <div class="weather-day">
+          <div class="day-name">Thu 5/28</div>
+          <div class="temp-high">81&deg;F</div>
+          <div class="temp-low">Low 39&deg;F</div>
+          <div class="wx-desc">Mostly Sunny &mdash; best fishing window of the week</div>
+          <div class="precip">&#x1F4A7; 6%</div>
+        </div>
+      </div>
 
-  <!-- HATCHES -->
-  <div class="section-head">Hatch Chart · Late May</div>
-  <table class="hatch-table">
-    <thead>
-      <tr><th>Insect</th><th>Stage</th><th>Size</th><th>Timing</th><th>Status</th></tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Salmonfly (Giant Stonefly)</td>
-        <td>Adult / Dry</td>
-        <td>#4–6</td>
-        <td>Afternoon</td>
-        <td class="status-hot">🔥 HOT NOW</td>
-      </tr>
-      <tr>
-        <td>Golden Stonefly</td>
-        <td>Adult / Nymph</td>
-        <td>#8–12</td>
-        <td>All day</td>
-        <td class="status-hot">🔥 HOT NOW</td>
-      </tr>
-      <tr>
-        <td>Western March Brown</td>
-        <td>Dun / Emerger</td>
-        <td>#14–16</td>
-        <td>Midday</td>
-        <td class="status-hot">Active</td>
-      </tr>
-      <tr>
-        <td>PMD (Pale Morning Dun)</td>
-        <td>Nymph / Emerger</td>
-        <td>#16–18</td>
-        <td>10am–2pm</td>
-        <td class="status-build">▲ Building</td>
-      </tr>
-      <tr>
-        <td>Yellow Sally (Small Stonefly)</td>
-        <td>Adult</td>
-        <td>#14–16</td>
-        <td>Afternoon</td>
-        <td class="status-build">▲ Building</td>
-      </tr>
-      <tr>
-        <td>Grannom / Mother's Day Caddis</td>
-        <td>Adult / Pupa</td>
-        <td>#14–18</td>
-        <td>Evening</td>
-        <td class="status-fade">Fading</td>
-      </tr>
-      <tr>
-        <td>Blue-Winged Olive (BWO)</td>
-        <td>Dun / Emerger</td>
-        <td>#18–22</td>
-        <td>Overcast days</td>
-        <td class="status-fade">Tapering</td>
-      </tr>
-      <tr>
-        <td>Green Drake</td>
-        <td>Dun</td>
-        <td>#10–14</td>
-        <td>Afternoon</td>
-        <td class="status-build">▲ Coming June</td>
-      </tr>
-    </tbody>
-  </table>
+      <!-- HATCHES -->
+      <div class="subsection-title">Current Hatches &amp; Emerging Bugs</div>
+      <div class="hatch-grid">
+        <div class="hatch-item">
+          <div class="hatch-name">Salmonfly (Pteronarcys californica)</div>
+          <div class="hatch-details">#4&ndash;6 &middot; Box Canyon in full swing now, tracking upstream with warming temps. By June 5 expect salmonflies finishing at Box and potentially still active on upper reaches. Don't leave the big foam bug at home.</div>
+        </div>
+        <div class="hatch-item">
+          <div class="hatch-name">Golden Stonefly</div>
+          <div class="hatch-details">#8&ndash;10 &middot; Emerging alongside the salmonflies and will carry well into June. Should be the dominant stone hatch during the June 5 trip. Fish them both as dries and nymphs through midday.</div>
+        </div>
+        <div class="hatch-item">
+          <div class="hatch-name">Yellow Sally (Isoperla)</div>
+          <div class="hatch-details">#14&ndash;16 &middot; Building now, peak runs June through July. Afternoon riffle hatch. Should be prime and reliable on June 5 &mdash; a high-percentage dry fly opportunity in moving water.</div>
+        </div>
+        <div class="hatch-item">
+          <div class="hatch-name">PMD (Pale Morning Dun)</div>
+          <div class="hatch-details">#16&ndash;18 &middot; Early emergence building. Expect a reliable 10 AM&ndash;1 PM window by June 5, particularly on slower Ranch water if it's open. Classic dry-dropper setup territory.</div>
+        </div>
+        <div class="hatch-item">
+          <div class="hatch-name">Caddis (Brachycentrus)</div>
+          <div class="hatch-details">#14&ndash;16 &middot; Consistent activity &mdash; evening hatches and egg-laying flights over riffles. Reliable through summer; don't underestimate the Box Canyon caddis window after 7 PM.</div>
+        </div>
+        <div class="hatch-item">
+          <div class="hatch-name">BWO (Blue-Winged Olive)</div>
+          <div class="hatch-details">#18&ndash;22 &middot; Still present on overcast mornings and after rain. Tuesday's storm system could trigger a strong BWO emergence &mdash; a good day to fish soft hackles and cripple emergers.</div>
+        </div>
+      </div>
 
-  <!-- FLY BOX -->
-  <div class="section-head">Fly Box · Henry's Fork</div>
-  <div class="fly-box">
-    <span class="fly-tag anchor">Pat's Rubberlegs #6–8 (Black)</span>
-    <span class="fly-tag anchor">Henry's Fork Foam Stone #4</span>
-    <span class="fly-tag anchor">Tungsten P-Tail #14–16</span>
-    <span class="fly-tag anchor">Zebra Midge #18–20</span>
-    <span class="fly-tag dry">Stimulator #6–8 (Orange)</span>
-    <span class="fly-tag dry">March Brown Comparadun #14</span>
-    <span class="fly-tag dry">PMD Sparkle Dun #16–18</span>
-    <span class="fly-tag dry">Yellow Sally #14–16</span>
-    <span class="fly-tag dry">Elk Hair Caddis #14–16</span>
-    <span class="fly-tag dry">Parachute BWO #18–20</span>
-    <span class="fly-tag streamer">Wooly Bugger #6 (Black/Olive)</span>
-    <span class="fly-tag streamer">Sculpzilla #4 (Olive)</span>
-  </div>
+      <!-- FLIES -->
+      <div class="subsection-title">Top Fly Patterns Right Now</div>
+      <div class="fly-section-label">Nymphs &amp; Wet Flies</div>
+      <div class="fly-list">
+        <span class="fly-tag">Pat's Rubber Legs #6&ndash;8</span>
+        <span class="fly-tag">Pheasant Tail Tungsten #16&ndash;18</span>
+        <span class="fly-tag">Zebra Midge #18&ndash;20</span>
+        <span class="fly-tag">Hare's Ear #14&ndash;16</span>
+        <span class="fly-tag">Golden Stone Nymph #8&ndash;10</span>
+        <span class="fly-tag">Prince Nymph #14&ndash;16</span>
+      </div>
+      <div class="fly-section-label">Dries</div>
+      <div class="fly-list">
+        <span class="fly-tag warm">Chernobyl Ant / Club Sandwich #6</span>
+        <span class="fly-tag warm">Elk Hair Caddis #14&ndash;16</span>
+        <span class="fly-tag warm">PMD Sparkle Dun #16&ndash;18</span>
+        <span class="fly-tag warm">Yellow Sally #14&ndash;16</span>
+        <span class="fly-tag warm">CDC Caddis Emerger #14&ndash;16</span>
+        <span class="fly-tag warm">BWO Sparkle Dun #18&ndash;20</span>
+      </div>
+      <div class="fly-section-label">Streamers</div>
+      <div class="fly-list">
+        <span class="fly-tag">Sculpzilla / Zoo Cougar #4&ndash;6</span>
+        <span class="fly-tag">Olive Articulated Leech #4</span>
+      </div>
 
-  <!-- SHOP QUOTES -->
-  <div class="section-head">Shop Reports</div>
-  <div class="shop-quotes">
-    <div class="quote-card">
-      <div class="shop-name">WorldCast Anglers</div>
-      <blockquote>"Mother's Day Caddis and BWOs are finishing. Salmonflies, golden stones, yellow sallies, and PMDs are now emerging as water temperatures rise. Streamer fishing is very effective this time of year — low and slow."</blockquote>
-      <div class="report-date">May 9, 2026</div>
-    </div>
-    <div class="quote-card">
-      <div class="shop-name">TroutHunter · Island Park</div>
-      <blockquote>"Water temperatures are running roughly three weeks ahead of schedule based on my data. Box Canyon is seeing good nymphing with occasional streamer action along deeper structure. Smaller rubberlegs, small P-tails, and Zebra Midges have been the most consistent setup."</blockquote>
-      <div class="report-date">Most recent available · March 13, 2026</div>
-    </div>
-    <div class="quote-card">
-      <div class="shop-name">Henry's Fork Anglers</div>
-      <blockquote>"The weather here in Henry's Fork Country has been a bit all over the place, so the fishing reflects it."</blockquote>
-      <div class="report-date">May 7, 2026 · Full report at henrysforkanglers.com</div>
-    </div>
-  </div>
+      <!-- QUOTES -->
+      <div class="subsection-title">From the Guides</div>
+      <div class="quotes-grid">
+        <div class="quote-card">
+          <blockquote>&ldquo;Salmon flies could happen any day with warmer temps &mdash; caddis and mayfly emergences are consistent, and stone nymphs are beginning to move toward stream edges.&rdquo;</blockquote>
+          <div class="source">Snake River Fly &middot; May 7, 2026</div>
+        </div>
+        <div class="quote-card">
+          <blockquote>&ldquo;Spring can be a great time of year to wade fish the upper river before flows get high. Salmonflies, Golden Stones, Yellow Sallies, and PMDs are all emerging.&rdquo;</blockquote>
+          <div class="source">WorldCast Anglers &middot; May 9, 2026</div>
+        </div>
+        <div class="quote-card">
+          <blockquote>&ldquo;The weather here in Henry's Fork Country has been a bit all over the place, so the fishing reflects it. Variable spring conditions but the bugs are coming.&rdquo;</blockquote>
+          <div class="source">Henry's Fork Anglers &middot; May 7, 2026</div>
+        </div>
+        <div class="quote-card">
+          <blockquote>&ldquo;The Ranch section continues to produce good dry fly fishing. Nymphs and streamers are the way to go in the Box Canyon, Riverside, and Hatchery Ford areas.&rdquo;</blockquote>
+          <div class="source">WorldCast Anglers &middot; May 2026</div>
+        </div>
+      </div>
 
-  <!-- GUIDE NOTES -->
-  <div class="guide-notes">
-    <h4>Guide Notes for Karel's June 5 Arrival</h4>
-    <ul>
-      <li>Harriman Ranch opens June 15 — you'll have 10 days in before the Ranch is accessible. Start with Box Canyon and Riverside sections.</li>
-      <li>By June 5, PMD hatches should be hitting their stride at Box Canyon (10am–2pm window is money). Bring a full PMD box.</li>
-      <li>Early warm season means Green Drakes may start earlier than usual on lower sections — pack a few #10–12 drakes just in case.</li>
-      <li>720+ cfs at Island Park is ideal float level for Box Canyon. Watch for continued snowmelt bumps.</li>
-      <li>Golden Stones and Salmonflies will still be around early June. Keep a #4 Foam Stone and big rubberlegs as a top-dropper combo.</li>
-      <li>Fish warm afternoons — water 3 weeks ahead of schedule means hatch windows are earlier than guidebook timing suggests.</li>
-    </ul>
-  </div>
-</div><!-- /henry's fork -->
+      <!-- TRIP NOTES -->
+      <div class="trip-notes">
+        <h4>JUNE 5 TRIP OUTLOOK &mdash; 11 DAYS OUT</h4>
+        <ul>
+          <li><strong>Box Canyon:</strong> Primary target. Flows will likely be 800&ndash;1,000+ cfs by June 5 as runoff peaks. Still wadeable in places but respect the current &mdash; fish the big seams and deep edges with heavy nymph rigs.</li>
+          <li><strong>The Ranch (Harriman):</strong> Was closed as of May 9 for the spring nesting season &mdash; confirm current status before the trip. If open, expect solid PMD emergence and evening caddis action on flat glassy water.</li>
+          <li><strong>Salmonfly window:</strong> Finishing up at Box by June 5. Throw a big foam Chernobyl or Club Sandwich as a prospecting dry anyway &mdash; holdover fish will still look up for it. Golden Stones and Yellow Sallies take over as the dominant surface hatches.</li>
+          <li><strong>PMD timing:</strong> Plan for a late-morning window &mdash; 10 AM to 1 PM &mdash; when water warms and bugs pop. A PMD Sparkle Dun over a bead-head Pheasant Tail dropper is a money rig on the Henry's Fork in early June.</li>
+          <li><strong>Evening caddis:</strong> Don't leave the water before dark. Elk Hair Caddis and CDC emergers worked through Box Canyon riffles can be outstanding at dusk &mdash; one of the best times of the day.</li>
+          <li><strong>Flow watch:</strong> 718 cfs today, up from 291 cfs in early May. Check USGS gauge 13042500 the morning before your trip for the most current reading before you commit to a section.</li>
+        </ul>
+      </div>
 
-<!-- ═══════════════════════════════════════ SOUTH FORK ══ -->
-<div class="river-section">
-  <h2 class="river-title">South Fork of the Snake</h2>
-  <p class="river-subtitle">Irwin · Palisades · Swan Valley · Heise</p>
+    </div><!-- /section-body -->
+  </div><!-- /henry's fork section -->
 
-  <!-- STAT CARDS -->
-  <div class="stat-grid">
-    <div class="stat-card alert">
-      <div class="label">Flow · Irwin</div>
-      <div class="value">13,600 <small style="font-size:0.85rem">cfs</small></div>
-      <div class="sub">USGS #13032500 · EXTREME HIGH</div>
+  <!-- ============================================================ -->
+  <!-- SOUTH FORK -->
+  <!-- ============================================================ -->
+  <div class="river-section">
+    <div class="section-header">
+      <h2>South Fork of the Snake River</h2>
+      <div class="tagline">Palisades Dam &nbsp;&middot;&nbsp; Irwin &nbsp;&middot;&nbsp; Heise &nbsp;&middot;&nbsp; Swan Valley, ID</div>
     </div>
-    <div class="stat-card alert">
-      <div class="label">Flow · Heise</div>
-      <div class="value">13,500 <small style="font-size:0.85rem">cfs</small></div>
-      <div class="sub">USGS #13037500 · EXTREME HIGH</div>
-    </div>
-    <div class="stat-card">
-      <div class="label">Water Temp</div>
-      <div class="value">46°F</div>
-      <div class="sub">Cold · best 11am–3pm</div>
-    </div>
-    <div class="stat-card">
-      <div class="label">Visibility</div>
-      <div class="value">2–4 ft</div>
-      <div class="sub">Best near Palisades Dam</div>
-    </div>
-  </div>
+    <div class="section-body">
 
-  <!-- HIGH WATER ALERT -->
-  <div class="alert-banner">
-    <strong>⚠ Extreme High Water — Float Fishing ONLY</strong>
-    Wading is dangerous across all sections. Flows are ~14,000 cfs (dam-controlled peak runoff). Target soft-water refuges: back eddies, tailouts behind cut banks, inside seams. Fish deep with heavy anchors.
-  </div>
+      <div class="alert warning">
+        <strong>High Water Advisory:</strong> South Fork running 13,500 cfs at Heise &mdash; near peak spring runoff. Wading is extremely hazardous. Float fishing only. Clarity is 2&ndash;4 feet (best near Palisades Dam). Plan your shuttle logistics carefully at these levels.
+      </div>
 
-  <!-- WEATHER -->
-  <div class="section-head">Swan Valley Weather (43.46°N · 111.34°W)</div>
-  <div class="weather-strip">
-    <div class="wx-day">
-      <div class="wx-name">Today</div>
-      <div class="wx-temp">77°F</div>
-      <div class="wx-desc">Partly sunny · PM storms</div>
-      <div class="wx-wind">S 7–10 mph · 30% precip</div>
-    </div>
-    <div class="wx-day">
-      <div class="wx-name">Tonight</div>
-      <div class="wx-temp">44°F</div>
-      <div class="wx-desc">Scattered showers, mostly cloudy</div>
-      <div class="wx-wind">S 7–10 mph · 30% precip</div>
-    </div>
-    <div class="wx-day">
-      <div class="wx-name">Memorial Day</div>
-      <div class="wx-temp">82°F</div>
-      <div class="wx-desc">Mostly sunny · slight PM chance</div>
-      <div class="wx-wind">SSE 7 mph · 20% precip</div>
-    </div>
-    <div class="wx-day">
-      <div class="wx-name">Mon Night</div>
-      <div class="wx-temp">46°F</div>
-      <div class="wx-desc">Mostly clear</div>
-      <div class="wx-wind">SSE 7–12 mph · 1% precip</div>
-    </div>
-  </div>
+      <!-- STAT CARDS -->
+      <div class="stat-grid">
+        <div class="stat-card">
+          <div class="label">Heise Flow</div>
+          <div class="value">13,500</div>
+          <div class="unit">CFS</div>
+          <div class="note">USGS 13037500 &middot; 6:30 AM MDT</div>
+        </div>
+        <div class="stat-card">
+          <div class="label">Irwin Flow</div>
+          <div class="value">13,400</div>
+          <div class="unit">CFS</div>
+          <div class="note">USGS 13032500 &middot; 6:30 AM MDT</div>
+        </div>
+        <div class="stat-card">
+          <div class="label">Water Temp</div>
+          <div class="value">46</div>
+          <div class="unit">&deg;F (~8&deg;C)</div>
+          <div class="note">Fly Fish Food &middot; May 24</div>
+        </div>
+        <div class="stat-card">
+          <div class="label">Clarity</div>
+          <div class="value">2&ndash;4</div>
+          <div class="unit">ft visibility</div>
+          <div class="note">Best near Palisades Dam</div>
+        </div>
+      </div>
 
-  <!-- HATCHES -->
-  <div class="section-head">Hatch Chart · Late May</div>
-  <table class="hatch-table">
-    <thead>
-      <tr><th>Insect</th><th>Stage</th><th>Size</th><th>Timing</th><th>Status</th></tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Midge</td>
-        <td>Adult / Pupa</td>
-        <td>#18–22</td>
-        <td>Late morning</td>
-        <td class="status-hot">🔥 Dominant</td>
-      </tr>
-      <tr>
-        <td>Blue-Winged Olive (BWO)</td>
-        <td>Dun / Nymph</td>
-        <td>#18–22</td>
-        <td>Overcast periods</td>
-        <td class="status-hot">Active</td>
-      </tr>
-      <tr>
-        <td>Early Caddis</td>
-        <td>Adult / Pupa</td>
-        <td>#14–18</td>
-        <td>Evening</td>
-        <td class="status-build">▲ Building</td>
-      </tr>
-      <tr>
-        <td>Stonefly (Giant / Golden)</td>
-        <td>Nymph</td>
-        <td>#6–10</td>
-        <td>All day subsurface</td>
-        <td class="status-hot">Active (nymph only — high water)</td>
-      </tr>
-      <tr>
-        <td>PMD</td>
-        <td>Nymph / Emerger</td>
-        <td>#16–18</td>
-        <td>Midday</td>
-        <td class="status-build">▲ Coming Soon</td>
-      </tr>
-    </tbody>
-  </table>
+      <!-- WEATHER -->
+      <div class="subsection-title">4-Day Forecast &mdash; Swan Valley / Heise (elev. 5,000 ft)</div>
+      <div class="weather-strip">
+        <div class="weather-day">
+          <div class="day-name">Mon 5/25</div>
+          <div class="temp-high">82&deg;F</div>
+          <div class="temp-low">Low 46&deg;F</div>
+          <div class="wx-desc">Partly Sunny, Slight Chance T-storms</div>
+          <div class="precip">&#x1F4A7; 20%</div>
+        </div>
+        <div class="weather-day">
+          <div class="day-name">Tue 5/26</div>
+          <div class="temp-high">76&deg;F</div>
+          <div class="temp-low">Low 44&deg;F</div>
+          <div class="wx-desc">Chance Showers &amp; Thunderstorms</div>
+          <div class="precip">&#x1F4A7; 63%</div>
+        </div>
+        <div class="weather-day">
+          <div class="day-name">Wed 5/27</div>
+          <div class="temp-high">77&deg;F</div>
+          <div class="temp-low">Low 44&deg;F</div>
+          <div class="wx-desc">Chance Showers &amp; Thunderstorms</div>
+          <div class="precip">&#x1F4A7; 44%</div>
+        </div>
+        <div class="weather-day">
+          <div class="day-name">Thu 5/28</div>
+          <div class="temp-high">82&deg;F</div>
+          <div class="temp-low">Low 44&deg;F</div>
+          <div class="wx-desc">Mostly Sunny &mdash; best window of the week</div>
+          <div class="precip">&#x1F4A7; 8%</div>
+        </div>
+      </div>
 
-  <!-- FLY BOX -->
-  <div class="section-head">Fly Box · South Fork</div>
-  <div class="fly-box">
-    <span class="fly-tag anchor">Tungsten Pat's Rubberlegs #6 (Tan/Brown)</span>
-    <span class="fly-tag anchor">Black Zebra Midge TBH #20</span>
-    <span class="fly-tag anchor">Egan's Silver Bullet (Baetis) #14</span>
-    <span class="fly-tag anchor">Stonefly Nymph #8–10</span>
-    <span class="fly-tag streamer">Sculpzilla #4 (Olive)</span>
-    <span class="fly-tag streamer">Wooly Bugger #4–6 (Black)</span>
-    <span class="fly-tag dry">Parachute BWO #20–22</span>
-    <span class="fly-tag dry">Elk Hair Caddis #14–16</span>
-  </div>
+      <!-- HATCHES -->
+      <div class="subsection-title">Current Hatches &amp; Emerging Bugs</div>
+      <div class="hatch-grid">
+        <div class="hatch-item">
+          <div class="hatch-name">Midges (Chironomidae)</div>
+          <div class="hatch-details">#18&ndash;22 &middot; Peak activity in mornings. Most reliable consistent hatch right now. Stock up on Zebra Midges in black and red. Fish them under an indicator in slack water and back eddies.</div>
+        </div>
+        <div class="hatch-item">
+          <div class="hatch-name">BWO (Blue-Winged Olive)</div>
+          <div class="hatch-details">#18&ndash;22 &middot; Active, especially on overcast days. Tuesday's incoming storm could trigger an excellent BWO push &mdash; come rigged with soft hackles and Parachute BWO patterns.</div>
+        </div>
+        <div class="hatch-item">
+          <div class="hatch-name">Early Caddis</div>
+          <div class="hatch-details">#14&ndash;18 &middot; Building now, hatching through afternoon and evening. Will intensify week over week through June &mdash; expect good caddis action building toward the June 5 trip.</div>
+        </div>
+        <div class="hatch-item">
+          <div class="hatch-name">Stonefly Nymphs (Subsurface)</div>
+          <div class="hatch-details">#6&ndash;10 &middot; Moving toward stream margins pre-emergence. Primary food source in high-water conditions. Fish them deep on heavy anchor rigs with minimal downstream movement.</div>
+        </div>
+      </div>
 
-  <!-- SHOP QUOTES -->
-  <div class="section-head">Shop Reports</div>
-  <div class="shop-quotes">
-    <div class="quote-card">
-      <div class="shop-name">Fly Fish Food — South Fork Report</div>
-      <blockquote>"Flows out of Palisades Dam are approximately 13,975–14,000 cfs. Water temperature holds around 46°F, making fish sluggish early in the day but more active between 11am and 3pm. Two or three precise drifts through a high-percentage pocket will consistently out-fish a hundred casts down a fast, featureless bank."</blockquote>
-      <div class="report-date">May 24, 2026 (today)</div>
-    </div>
-    <div class="quote-card">
-      <div class="shop-name">WorldCast Anglers</div>
-      <blockquote>"Flows are up — nymphing and streamers are going to be the ticket. Target soft-water refuges: back eddies, tailouts behind cut banks, and inside seams."</blockquote>
-      <div class="report-date">May 2026</div>
-    </div>
-  </div>
+      <!-- FLIES -->
+      <div class="subsection-title">Top Fly Patterns Right Now</div>
+      <div class="fly-section-label">Heavy Nymphs (anchor flies for high water)</div>
+      <div class="fly-list">
+        <span class="fly-tag">Tungsten Pat's Rubber Legs #6</span>
+        <span class="fly-tag">Golden Stone Nymph #8&ndash;10</span>
+        <span class="fly-tag">Pheasant Tail Tungsten #20</span>
+        <span class="fly-tag">Beaded Hare's Ear #14&ndash;16</span>
+        <span class="fly-tag">Black Zebra Midge #20</span>
+      </div>
+      <div class="fly-section-label">Streamers (bank-adjacent, high-percentage in off-color water)</div>
+      <div class="fly-list">
+        <span class="fly-tag warm">Sculpzilla #4</span>
+        <span class="fly-tag warm">Egan's Silver Bullet #14</span>
+        <span class="fly-tag warm">Articulated Streamer: Gold / Olive-White / White #4</span>
+        <span class="fly-tag warm">Slump Buster Olive #6</span>
+      </div>
+      <div class="fly-section-label">Dries (soft water and back eddies only)</div>
+      <div class="fly-list">
+        <span class="fly-tag">Parachute BWO #22</span>
+        <span class="fly-tag">CDC Midge Cluster #18</span>
+        <span class="fly-tag">Elk Hair Caddis #14&ndash;16</span>
+      </div>
 
-  <!-- GUIDE NOTES -->
-  <div class="guide-notes">
-    <h4>Guide Notes for Karel's June 5 Arrival</h4>
-    <ul>
-      <li>Flows at 13,500–13,600 cfs today. Historic peak runoff typically crests in late May/early June — expect these levels or slightly lower on arrival. Call South Fork Lodge or local outfitters the week before to check dam release schedule.</li>
-      <li>Float fishing is mandatory at these flows. Secure a guide or drift boat for South Fork days — wade fishing is simply not feasible.</li>
-      <li>Best strategy: anchor heavy (#6 Rubberlegs), short-line nymph the soft seams. Two-fly rig: big stonefly anchor + small midge or BWO trailer.</li>
-      <li>Clarity best near Palisades Dam (upper section). Move downstream if stain increases.</li>
-      <li>By June 5, PMD hatches may be developing well if temps warm. Pack PMD nymphs and emergers #16–18.</li>
-      <li>Water temp at 46°F means fish are in feeding windows 11am–3pm. Sleep in, fish hard midday, and swing big streamers in the evening through cut banks.</li>
-    </ul>
-  </div>
-</div><!-- /south fork -->
+      <!-- QUOTES -->
+      <div class="subsection-title">From the Guides</div>
+      <div class="quotes-grid">
+        <div class="quote-card">
+          <blockquote>&ldquo;Focus on the soft-water game &mdash; back eddies, slack pockets behind boulders, and inside seams rather than main current. Fish the warmest part of the day, roughly 11 AM to 3 PM.&rdquo;</blockquote>
+          <div class="source">Fly Fish Food &middot; May 24, 2026</div>
+        </div>
+        <div class="quote-card">
+          <blockquote>&ldquo;Larger beaded mayfly nymphs and stones have been good. Bank-adjacent streamer fishing is productive &mdash; try gold, olive over white, and pure white patterns along the banks.&rdquo;</blockquote>
+          <div class="source">Snake River Fly &middot; May 7, 2026</div>
+        </div>
+        <div class="quote-card">
+          <blockquote>&ldquo;Flows held at 14,000 cfs through most of the week before decreasing to 13,600. River is flowing clear and cold from Palisades Reservoir &mdash; best clarity near the dam.&rdquo;</blockquote>
+          <div class="source">Lodge at Palisades Creek &middot; May 21, 2026</div>
+        </div>
+        <div class="quote-card">
+          <blockquote>&ldquo;Use heavy anchor flies with smaller trailers. Plan your float shuttle carefully at these elevated flows &mdash; put-in and take-out logistics matter more than usual at 13,000+ cfs.&rdquo;</blockquote>
+          <div class="source">Fly Fish Food &middot; May 24, 2026</div>
+        </div>
+      </div>
+
+      <!-- TRIP NOTES -->
+      <div class="trip-notes">
+        <h4>JUNE 5 TRIP OUTLOOK &mdash; 11 DAYS OUT</h4>
+        <ul>
+          <li><strong>Flow projection:</strong> Currently 13,500 cfs &mdash; near peak. Runoff typically crests late May to early June. By June 5 flows could be 8,000&ndash;12,000 cfs depending on snowmelt and Palisades Reservoir releases. Still big water, but driftable.</li>
+          <li><strong>Float fishing only:</strong> Wading won't be viable until flows drop below ~6,000 cfs. Book a drift boat guide or bring your own &mdash; the classic Irwin-to-Heise float is the quintessential June run on the South Fork.</li>
+          <li><strong>Best section:</strong> Target the upper South Fork near Palisades Dam. Controlled dam releases mean cleaner, clearer water in the first 5&ndash;8 miles &mdash; best visibility and most reliable bug activity of the whole river.</li>
+          <li><strong>Hatches to expect June 5:</strong> Salmonflies may still be trickling on upper reaches; PMDs and Caddis will be ramping toward their June peak. Rig a PMD Sparkle Dun over a stonefly nymph and be ready to adapt through the day.</li>
+          <li><strong>11 AM&ndash;3 PM window:</strong> Cold water (currently 46&deg;F) keeps fish metabolisms slow in the morning. The midday window is prime when water approaches 50&deg;F+ and bugs start moving. Don't rush the early alarm on this trip.</li>
+          <li><strong>Crowds:</strong> The South Fork is one of Idaho's most popular float rivers in June. Cover water efficiently and don't linger on obvious runs &mdash; the fish are there, but so are the other boats.</li>
+        </ul>
+      </div>
+
+    </div><!-- /section-body -->
+  </div><!-- /south fork section -->
 
 </div><!-- /container -->
 
 <!-- FOOTER -->
 <div class="footer">
-  <div class="footer-inner">
-    <div class="footer-cols">
-      <div>
-        <h4>Henry's Fork Sources</h4>
-        USGS #13042500 (Island Park) · USGS #13056500 (Rexburg)<br>
-        TroutHunter · trouthunt.com<br>
-        Henry's Fork Anglers · henrysforkanglers.com<br>
-        WorldCast Anglers · worldcastanglers.com<br>
-        Henry's Fork Hatch Chart · norrik.com<br>
-        NWS Island Park Forecast · api.weather.gov
-      </div>
-      <div>
-        <h4>South Fork Sources</h4>
-        USGS #13037500 (Heise) · USGS #13032500 (Irwin)<br>
-        Fly Fish Food · flyfishfood.com<br>
-        South Fork Lodge · southforklodge.com<br>
-        WorldCast Anglers · worldcastanglers.com<br>
-        DriftWise · driftwise.app<br>
-        NWS Swan Valley Forecast · api.weather.gov
-      </div>
-    </div>
-    <div class="footer-ts">
-      Generated by Idaho Fishing Agent · Sunday, May 24, 2026 at 13:35 UTC ·
-      Streamflow data provisional, subject to USGS revision ·
-      Next update: Monday, May 25, 2026
-    </div>
+  <div class="container">
+    <h3>Data Sources</h3>
+    <p>
+      <strong>Streamflow (USGS NWIS):</strong>
+      <a href="https://waterservices.usgs.gov/nwis/iv/?sites=13042500,13056500&parameterCd=00060,00010&format=json&siteStatus=active">Henry's Fork gauges (13042500, 13056500)</a>
+      &nbsp;&middot;&nbsp;
+      <a href="https://waterservices.usgs.gov/nwis/iv/?sites=13037500,13032500&parameterCd=00060,00010&format=json&siteStatus=active">South Fork gauges (13037500, 13032500)</a>
+    </p>
+    <p>
+      <strong>Weather:</strong>
+      <a href="https://api.weather.gov/gridpoints/PIH/152,115/forecast">NWS Island Park / Box Canyon forecast</a>
+      &nbsp;&middot;&nbsp;
+      <a href="https://api.weather.gov/gridpoints/PIH/147,70/forecast">NWS Swan Valley / Heise forecast</a>
+      &nbsp;&middot;&nbsp; Pocatello/Caribou (PIH) forecast office
+    </p>
+    <p>
+      <strong>Shop Reports:</strong>
+      <a href="https://worldcastanglers.com/fishing-report/">WorldCast Anglers</a>
+      &nbsp;&middot;&nbsp;
+      <a href="https://snakeriverfly.com/pages/southeast-idaho-fishing-report">Snake River Fly</a>
+      &nbsp;&middot;&nbsp;
+      <a href="https://www.flyfishfood.com/blogs/fly-fishing-reports/south-fork-of-the-snake">Fly Fish Food</a>
+      &nbsp;&middot;&nbsp;
+      <a href="https://henrysforkanglers.com/blogs/fishing-reports">Henry's Fork Anglers</a>
+      &nbsp;&middot;&nbsp;
+      <a href="https://tlapc.com/category/south-fork-of-the-snake-river-fishing-report/">Lodge at Palisades Creek</a>
+    </p>
+    <p class="timestamp">
+      Generated: Monday, May 25, 2026 at 13:35 UTC &nbsp;&middot;&nbsp;
+      Provisional USGS data subject to revision &nbsp;&middot;&nbsp;
+      Always verify current conditions with local fly shops before hitting the water
+    </p>
   </div>
 </div>
 
