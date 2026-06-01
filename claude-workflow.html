@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Claude Code Ops — Laptop · Phone · Agents</title>
+<style>
+  :root{
+    --bg:#0f1115; --panel:#181b20; --panel2:#1f242b; --line:#2b323b;
+    --txt:#e6e8eb; --muted:#9aa3ad; --faint:#6b7480;
+    --coral:#d97757; --coral2:#e8916f; --teal:#5bb3a6; --gold:#c9a86b;
+    --green:#6fbf73; --red:#e06c6c; --blue:#6ea8d8;
+    --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--bg);color:var(--txt);font-family:var(--sans);
+    -webkit-font-smoothing:antialiased;line-height:1.55}
+  a{color:var(--coral2);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:1000px;margin:0 auto;padding:48px 24px 96px}
+  header.hero{margin-bottom:40px}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--coral);margin:0 0 12px}
+  h1{font-size:38px;line-height:1.1;margin:0 0 14px;letter-spacing:-.01em}
+  .lede{font-size:17px;color:var(--muted);max-width:660px;margin:0}
+  section{margin-top:44px}
+  h2{font-size:13px;font-family:var(--mono);letter-spacing:.16em;text-transform:uppercase;
+    color:var(--teal);border-bottom:1px solid var(--line);padding-bottom:10px;margin:0 0 22px}
+  h3{font-size:18px;margin:0 0 6px;letter-spacing:-.01em}
+  p{color:var(--muted)}
+  .grid{display:grid;gap:16px}
+  .g3{grid-template-columns:repeat(3,1fr)}
+  .g2{grid-template-columns:repeat(2,1fr)}
+  @media(max-width:760px){.g3,.g2{grid-template-columns:1fr}.wrap{padding:32px 16px 64px}h1{font-size:30px}}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:20px}
+  .card .tag{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--faint);display:block;margin-bottom:8px}
+  .card p{margin:6px 0 0;font-size:14px;color:var(--muted)}
+
+  /* hub diagram */
+  .hub{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:28px 22px}
+  .hubrow{display:grid;grid-template-columns:1fr auto 1fr;align-items:stretch;gap:18px}
+  @media(max-width:760px){.hubrow{grid-template-columns:1fr;gap:14px}}
+  .node{border:1px solid var(--line);border-radius:12px;padding:18px;background:var(--panel2)}
+  .node .who{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint)}
+  .node h4{margin:6px 0 8px;font-size:16px}
+  .node ul{margin:8px 0 0;padding-left:16px}
+  .node li{font-size:13px;color:var(--muted);margin:3px 0}
+  .node.laptop{border-color:#3a4654}
+  .node.phone{border-color:#4a3f54}
+  .hubcenter{display:flex;flex-direction:column;align-items:center;justify-content:center;
+    text-align:center;min-width:150px}
+  .hubcenter .core{background:linear-gradient(160deg,#23282f,#161a1f);border:1px solid var(--coral);
+    border-radius:12px;padding:16px 18px}
+  .hubcenter .core .gh{font-size:15px;font-weight:600;color:var(--txt)}
+  .hubcenter .core .sub{font-family:var(--mono);font-size:11px;color:var(--coral2);margin-top:4px}
+  .arrows{font-family:var(--mono);font-size:12px;color:var(--faint);margin:8px 0}
+  .agentbar{margin-top:18px;border-top:1px dashed var(--line);padding-top:16px;display:flex;
+    gap:12px;align-items:flex-start;flex-wrap:wrap}
+  .agentbar .lbl{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--gold);flex:0 0 auto;padding-top:3px}
+  .pill{font-family:var(--mono);font-size:12px;background:var(--panel2);border:1px solid var(--line);
+    border-radius:999px;padding:5px 11px;color:var(--muted)}
+  .pill b{color:var(--gold);font-weight:600}
+
+  /* land table */
+  table{width:100%;border-collapse:collapse;font-size:14px}
+  th,td{text-align:left;padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--faint)}
+  td code,.ic{font-family:var(--mono);font-size:12.5px;background:var(--panel2);border:1px solid var(--line);
+    padding:1px 6px;border-radius:5px;color:var(--coral2)}
+  .who-l{color:var(--blue)} .who-p{color:var(--coral2)} .who-a{color:var(--gold)}
+
+  /* rules */
+  ol.rules{counter-reset:r;list-style:none;padding:0;margin:0;display:grid;gap:12px}
+  ol.rules li{counter-increment:r;background:var(--panel);border:1px solid var(--line);border-radius:10px;
+    padding:16px 18px 16px 56px;position:relative}
+  ol.rules li::before{content:counter(r);position:absolute;left:16px;top:15px;width:26px;height:26px;
+    border-radius:7px;background:var(--coral);color:#1a1109;font-family:var(--mono);font-weight:700;
+    font-size:14px;display:flex;align-items:center;justify-content:center}
+  ol.rules b{color:var(--txt)}
+  ol.rules .why{display:block;margin-top:4px;font-size:13px;color:var(--muted)}
+
+  /* code blocks */
+  .play{background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-bottom:16px}
+  .play .head{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;
+    border-bottom:1px solid var(--line);background:var(--panel2)}
+  .play .head .t{font-size:14px;font-weight:600}
+  .play .head .t small{display:block;font-weight:400;color:var(--muted);font-size:12px;margin-top:2px}
+  pre{margin:0;padding:16px;overflow-x:auto;font-family:var(--mono);font-size:12.5px;line-height:1.7;color:#cdd3da}
+  pre .c{color:var(--faint)}      /* comment */
+  pre .k{color:var(--coral2)}     /* command keyword */
+  pre .o{color:var(--teal)}       /* output / emphasis */
+  .copy{font-family:var(--mono);font-size:11px;color:var(--muted);background:transparent;
+    border:1px solid var(--line);border-radius:6px;padding:5px 10px;cursor:pointer}
+  .copy:hover{color:var(--txt);border-color:var(--faint)}
+  .copy.ok{color:var(--green);border-color:var(--green)}
+
+  .callout{background:linear-gradient(160deg,#241a14,#171213);border:1px solid #5a3d2c;
+    border-radius:12px;padding:18px 20px;margin-top:8px}
+  .callout .tag{color:var(--coral);font-family:var(--mono);font-size:11px;letter-spacing:.1em;
+    text-transform:uppercase}
+  .callout p{color:#e7d8cd;margin:6px 0 0;font-size:14px}
+
+  .steps{display:grid;gap:10px}
+  .step{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:start;
+    background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+  .step .n{font-family:var(--mono);color:var(--teal);font-weight:700;font-size:14px}
+  .step .x{font-size:14px;color:var(--muted)}
+  .step .x b{color:var(--txt)}
+
+  footer{margin-top:56px;border-top:1px solid var(--line);padding-top:20px;color:var(--faint);font-size:12.5px;
+    font-family:var(--mono)}
+  .legend{display:flex;gap:18px;flex-wrap:wrap;margin-top:10px}
+  .legend span{font-size:12.5px;color:var(--muted)}
+  .dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:6px;vertical-align:middle}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <p class="eyebrow">Claude Code · Operations</p>
+    <h1>Working across your laptop, your phone, and your agents</h1>
+    <p class="lede">Three things write to your code now: <b style="color:var(--blue)">you on the laptop</b>,
+      <b style="color:var(--coral2)">you on the phone</b>, and your <b style="color:var(--gold)">scheduled agents</b>.
+      They never see each other directly — they meet on GitHub. Master that one idea and the rest is mechanics.</p>
+  </header>
+
+  <!-- THE MODEL -->
+  <section>
+    <h2>The mental model · GitHub is the hub</h2>
+    <div class="hub">
+      <div class="hubrow">
+        <div class="node laptop">
+          <span class="who">You · Laptop</span>
+          <h4>Local Claude Code</h4>
+          <ul>
+            <li>Real checkouts in <span class="ic">~/my-app</span>, <span class="ic">~/idaho-fishing-dashboard</span></li>
+            <li>Local files, dev server, browser testing</li>
+            <li>You push straight to <span class="ic">main</span></li>
+          </ul>
+        </div>
+        <div class="hubcenter">
+          <div class="arrows">push ⇄ pull</div>
+          <div class="core">
+            <div class="gh">GitHub</div>
+            <div class="sub">source of truth</div>
+          </div>
+          <div class="arrows">push ⇄ pull</div>
+        </div>
+        <div class="node phone">
+          <span class="who">You · Phone / Web</span>
+          <h4>claude.ai/code</h4>
+          <ul>
+            <li>Isolated <b>cloud</b> session — fresh checkout</li>
+            <li>No access to your laptop's files</li>
+            <li>Lands work on a <span class="ic">claude/&hellip;</span> branch</li>
+          </ul>
+        </div>
+      </div>
+      <div class="agentbar">
+        <span class="lbl">+ Agents</span>
+        <span class="pill"><b>Dream agent</b> · every 2h → main</span>
+        <span class="pill"><b>Concept jury</b> · 6:00 AM → main</span>
+        <span class="pill"><b>Fishing report</b> · 6:30 AM → main</span>
+        <span class="pill" style="border-style:dashed">same cloud as your phone, just scheduled</span>
+      </div>
+    </div>
+    <p style="margin-top:14px;font-size:14px">The phone and the agents run in the <b>same cloud infrastructure</b> — the
+      only difference is a person typing vs. a cron schedule. Everything reconciles by pushing to and pulling from GitHub.
+      There is no laptop↔phone direct link.</p>
+  </section>
+
+  <!-- WHERE WORK LANDS -->
+  <section>
+    <h2>Where does my work land?</h2>
+    <table>
+      <thead><tr><th>Writer</th><th>Runs on</th><th>Lands on</th><th>How you pick it up</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="who-l">Laptop (you)</span></td>
+          <td>your Mac, local checkout</td>
+          <td><code>main</code> (direct push)</td>
+          <td>it's already local</td>
+        </tr>
+        <tr>
+          <td><span class="who-p">Phone / web (you)</span></td>
+          <td>Anthropic cloud, isolated</td>
+          <td><code>claude/&lt;slug&gt;</code> branch</td>
+          <td>fetch + merge the branch into main</td>
+        </tr>
+        <tr>
+          <td><span class="who-a">Agents (routines)</span></td>
+          <td>Anthropic cloud, scheduled</td>
+          <td><code>main</code> (direct push)</td>
+          <td><code>git pull --rebase</code></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="callout">
+      <span class="tag">The trap you just hit</span>
+      <p>Your iPhone work sat on <code style="color:var(--coral2)">claude/connect-resonance-project-nIxHM</code> while the
+        laptop and the agents kept pushing to <code style="color:var(--coral2)">main</code>. Nothing was lost — but the two
+        sides had drifted and needed a deliberate merge. That is the <i>normal</i> state of multi-device work. The habits
+        below keep the drift small and boring instead of large and scary.</p>
+    </div>
+  </section>
+
+  <!-- GOLDEN RULES -->
+  <section>
+    <h2>The five basics</h2>
+    <ol class="rules">
+      <li><b>Pull before you start. Pull before you push.</b>
+        <span class="why">The other two writers may have moved while you were away. A 2-second fetch prevents a 20-minute conflict.</span></li>
+      <li><b>Push small and often.</b>
+        <span class="why">Your phone and laptop can only see what's on GitHub. Unpushed work is invisible to your other device — and to you, an hour later.</span></li>
+      <li><b>Know which branch your work is on.</b>
+        <span class="why">Phone/web work is always on a <code>claude/…</code> branch. It is not on main until you merge it. Check <code>git branch -r | grep claude</code> when something "isn't showing up."</span></li>
+      <li><b>One change → one push → one build.</b>
+        <span class="why">Each push to main triggers exactly one Vercel deploy. Batch a coherent change, push once.</span></li>
+      <li><b>Don't let three writers collide silently.</b>
+        <span class="why">Agents push to main every 2 hours. If you're also editing main, rebase often so you're never more than a couple commits out of sync.</span></li>
+    </ol>
+  </section>
+
+  <!-- PLAYBOOKS -->
+  <section>
+    <h2>Daily playbooks · copy &amp; paste</h2>
+
+    <div class="play">
+      <div class="head">
+        <div class="t">① Start a laptop session<small>See what the phone & agents did while you were gone</small></div>
+        <button class="copy" data-copy="git fetch origin
+git log --oneline HEAD..origin/main
+git branch -r | grep claude
+git pull --rebase origin main">Copy</button>
+      </div>
+<pre><span class="c"># what changed on main since I last looked?</span>
+<span class="k">git</span> fetch origin
+<span class="k">git</span> log --oneline HEAD..origin/main
+<span class="c"># any phone/web work waiting on a branch?</span>
+<span class="k">git</span> branch -r | grep claude
+<span class="c"># catch up (replays your local commits on top, if any)</span>
+<span class="k">git</span> pull --rebase origin main</pre>
+    </div>
+
+    <div class="play">
+      <div class="head">
+        <div class="t">② Pull in your phone's work<small>The exact move we just did — merge a claude/… branch into main</small></div>
+        <button class="copy" data-copy="git fetch origin
+git branch -r | grep claude
+git log --oneline main..origin/claude/<slug>
+git merge --ff-only origin/claude/<slug>
+git push origin main">Copy</button>
+      </div>
+<pre><span class="k">git</span> fetch origin
+<span class="k">git</span> branch -r | grep claude            <span class="c"># find the branch name</span>
+<span class="k">git</span> log --oneline main..origin/claude/<span class="o">&lt;slug&gt;</span>   <span class="c"># preview the commits</span>
+<span class="k">git</span> merge --ff-only origin/claude/<span class="o">&lt;slug&gt;</span>       <span class="c"># clean merge, no merge commit</span>
+<span class="k">git</span> push origin main
+<span class="c"># If --ff-only fails (you ALSO changed main), the branch diverged:</span>
+<span class="c">#   git merge origin/claude/&lt;slug&gt;   → makes a merge commit, resolve conflicts, push</span></pre>
+    </div>
+
+    <div class="play">
+      <div class="head">
+        <div class="t">③ Before every push<small>One habit that prevents almost all conflicts</small></div>
+        <button class="copy" data-copy="git pull --rebase origin main && git push origin main">Copy</button>
+      </div>
+<pre><span class="k">git</span> pull --rebase origin main <span class="o">&amp;&amp;</span> <span class="k">git</span> push origin main</pre>
+    </div>
+
+    <div class="play">
+      <div class="head">
+        <div class="t">④ "It says diverged — ahead X, behind Y"<small>Both sides moved. Replay your commits on top of theirs.</small></div>
+        <button class="copy" data-copy="git fetch origin
+git rev-list --left-right --count origin/main...HEAD
+git pull --rebase origin main
+# resolve any conflicts, then:
+git push origin main">Copy</button>
+      </div>
+<pre><span class="k">git</span> fetch origin
+<span class="k">git</span> rev-list --left-right --count origin/main...HEAD   <span class="c"># behind &lt;tab&gt; ahead</span>
+<span class="k">git</span> pull --rebase origin main
+<span class="c"># fix conflicts if git stops, `git add` them, `git rebase --continue`</span>
+<span class="k">git</span> push origin main</pre>
+    </div>
+  </section>
+
+  <!-- INVENTORY -->
+  <section>
+    <h2>Your inventory today</h2>
+    <div class="grid g2">
+      <div class="card">
+        <span class="tag">Repos (laptop ⇄ GitHub)</span>
+        <h3>2 active + 1 side project</h3>
+        <p><span class="ic">~/my-app</span> → kbarnoski/resonance<br>
+           <span class="ic">~/idaho-fishing-dashboard</span> → kbarnoski/idaho-fishing-dashboard<br>
+           <span class="ic">~/agentic_finance</span> → Workday oCFO design work</p>
+      </div>
+      <div class="card">
+        <span class="tag">Agents (routines, opus 4.8)</span>
+        <h3>3 scheduled · 15 fires/day budget</h3>
+        <p>Dream agent — every 2h → resonance<br>
+           Concept jury — 6:00 AM → resonance<br>
+           Fishing report — 6:30 AM → idaho-fishing-dashboard</p>
+      </div>
+    </div>
+    <p style="margin-top:14px;font-size:14px">Monitor & manage every agent at
+      <a href="https://claude.ai/code/routines">claude.ai/code/routines</a> — run now, edit the prompt, enable/disable,
+      see last-fired. This is your agent control panel.</p>
+  </section>
+
+  <!-- FLEET SNAPSHOT -->
+  <section>
+    <h2>Fleet snapshot</h2>
+    <p style="margin-top:-8px;font-size:13px;font-family:var(--mono);color:var(--faint)">
+      as of 2026-05-31 21:13 PDT · static snapshot, baked at publish time · live control: <a href="https://claude.ai/code/routines">claude.ai/code/routines</a></p>
+    <table>
+      <thead><tr><th>Routine</th><th>Schedule</th><th>Status</th><th>Last fired</th><th>Next run</th><th>Repo</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>Resonance Dream Agent</td><td>every 2h</td>
+          <td><span class="dot" style="background:var(--green)"></span>enabled</td>
+          <td>9:03 PM today</td><td>11:02 PM today</td><td><code>resonance</code></td>
+        </tr>
+        <tr>
+          <td>Concept Jury</td><td>daily 6:00 AM</td>
+          <td><span class="dot" style="background:var(--green)"></span>enabled</td>
+          <td>—</td><td>6:07 AM Jun 1</td><td><code>resonance</code></td>
+        </tr>
+        <tr>
+          <td>Greater Yellowstone Fishing</td><td>daily 6:30 AM</td>
+          <td><span class="dot" style="background:var(--green)"></span>enabled</td>
+          <td>9:06 PM today <span style="color:var(--faint)">(manual)</span></td><td>6:32 AM Jun 1</td><td><code>idaho-fishing-dashboard</code></td>
+        </tr>
+        <tr style="opacity:.55">
+          <td>Installation pitch check-in</td><td>one-shot</td>
+          <td><span class="dot" style="background:var(--faint)"></span>retired</td>
+          <td>May 15</td><td>—</td><td><code>resonance</code></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="callout" style="background:linear-gradient(160deg,#14201a,#121613);border-color:#2f4a3c">
+      <span class="tag" style="color:var(--gold)">Budget</span>
+      <p style="color:#dce7df"><b style="color:var(--txt)">14 of 15</b> daily fires committed: 12 (dream, every 2h) + 1 (jury) + 1 (fishing). One slot of headroom for an ad-hoc run. Add a recurring routine and you're over — stagger or downgrade something to daily first.</p>
+    </div>
+  </section>
+
+  <!-- SCALING -->
+  <section>
+    <h2>From here to hundreds of projects &amp; agents</h2>
+    <div class="steps">
+      <div class="step"><span class="n">01</span><span class="x"><b>One repo = one source of truth.</b> Every project is a GitHub repo. Laptop, phone, and agents all reconcile there. Never edit a file in two places without GitHub in the middle.</span></div>
+      <div class="step"><span class="n">02</span><span class="x"><b>Decide who owns <code>main</code> per repo.</b> If an agent regenerates a file daily (like the fishing dashboard's <code>index.html</code>), treat the agent as the owner — your hand-edits there will be overwritten. Put human work elsewhere or in the agent's prompt.</span></div>
+      <div class="step"><span class="n">03</span><span class="x"><b>Naming conventions scale, memory doesn't.</b> Branch <code>claude/&lt;project&gt;-&lt;task&gt;</code>, name routines <code>&lt;repo&gt; — &lt;job&gt;</code>. When you have 100 of each, the name is the only thing that tells you what it does.</span></div>
+      <div class="step"><span class="n">04</span><span class="x"><b>Keep a registry.</b> A single table (repo → URL → owning agents → schedule → budget) is what turns "a pile of projects" into "a fleet you can review." This dashboard is v1 of that registry.</span></div>
+      <div class="step"><span class="n">05</span><span class="x"><b>Respect the fire budget.</b> 15 routine fires / 24h account-wide. At scale, schedule deliberately — stagger crons, prefer daily over hourly, reserve headroom for ad-hoc runs.</span></div>
+      <div class="step"><span class="n">06</span><span class="x"><b>Review from one pane.</b> <a href="https://claude.ai/code/routines">claude.ai/code/routines</a> for agents; GitHub's commit feed per repo for output. As the count grows, a daily "what did my fleet ship" rollup (itself an agent) becomes the thing you actually read.</span></div>
+    </div>
+  </section>
+
+  <footer>
+    <div>claude-workflow.html · personal ops reference · live at idaho-fishing-dashboard.vercel.app/claude-workflow.html</div>
+    <div class="legend">
+      <span><span class="dot" style="background:var(--blue)"></span>laptop (you, local)</span>
+      <span><span class="dot" style="background:var(--coral2)"></span>phone/web (you, cloud)</span>
+      <span><span class="dot" style="background:var(--gold)"></span>agents (scheduled, cloud)</span>
+      <span><span class="dot" style="background:var(--coral)"></span>GitHub = the hub</span>
+    </div>
+  </footer>
+
+</div>
+<script>
+  document.querySelectorAll('.copy').forEach(function(b){
+    b.addEventListener('click',function(){
+      navigator.clipboard.writeText(b.getAttribute('data-copy')).then(function(){
+        var t=b.textContent; b.textContent='Copied ✓'; b.classList.add('ok');
+        setTimeout(function(){b.textContent=t; b.classList.remove('ok')},1400);
+      });
+    });
+  });
+</script>
+</body>
+</html>
