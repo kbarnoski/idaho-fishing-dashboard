@@ -3,994 +3,562 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Greater Yellowstone Fly Fishing Dashboard — May 31, 2026</title>
+<title>Greater Yellowstone Fly Fishing Dashboard — Jun 1, 2026</title>
 <style>
-:root {
-  --green: #2d4a3e;
-  --lg: #3d6b59;
-  --cream: #f5f1e8;
-  --dcream: #e8e0d0;
-  --brown: #8b6f47;
-  --gold: #c9a86b;
-  --rust: #8b4513;
-  --card: #fff8f0;
-  --muted: #5a5a5a;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;background:var(--cream);color:#1a1a1a;line-height:1.55}
-h1,h2,h3,h4{font-family:Georgia,'Times New Roman',serif;color:var(--green)}
-a{color:#5a9e7a;text-decoration:none}
-a:hover{text-decoration:underline}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: #1a2e28; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: #f5f1e8; min-height: 100vh; }
+.container { max-width: 840px; margin: 0 auto; padding: 20px 16px; }
 
-.hero{background:var(--green);color:var(--cream);padding:26px 0 18px}
-.hero h1{color:var(--gold);font-size:1.85rem;margin-bottom:4px}
-.hero-sub{color:#b0c8be;font-size:.87rem;margin-bottom:14px}
-.hero-row{display:flex;gap:14px;flex-wrap:wrap;align-items:flex-start}
-.countdown{background:var(--gold);color:var(--green);border-radius:8px;padding:10px 20px;font-weight:700;font-size:1.5rem;font-family:Georgia,serif;flex-shrink:0;line-height:1.1}
-.countdown small{display:block;font-size:.68rem;font-weight:400;font-family:sans-serif;text-transform:uppercase;letter-spacing:.08em}
-.hero-info{color:#c4d4cd;font-size:.85rem;padding-top:4px;line-height:1.7}
-.hero-info strong{color:var(--gold)}
+/* ── Hero ── */
+.hero { background: linear-gradient(140deg, #2d4a3e 0%, #1e3530 100%); border: 2px solid #c9a86b; border-radius: 12px; padding: 28px 24px 22px; margin-bottom: 20px; text-align: center; }
+.hero h1 { font-family: Georgia, serif; font-size: 1.9rem; color: #c9a86b; letter-spacing: 0.5px; margin-bottom: 10px; line-height: 1.2; }
+.countdown-card { display: inline-block; background: #c9a86b; color: #1a2e28; font-family: Georgia, serif; font-size: 1.6rem; font-weight: bold; padding: 10px 28px; border-radius: 8px; margin: 10px 0 12px; letter-spacing: 0.5px; }
+.hero-sub { font-size: 0.87rem; color: #a8c0a8; line-height: 1.6; }
+.hero-sub strong { color: #c9a86b; }
 
-.c{max-width:840px;margin:0 auto;padding:0 16px}
+/* ── Generic section ── */
+.section { background: #2d4a3e; border-radius: 10px; padding: 20px; margin-bottom: 18px; }
+.section-title { font-family: Georgia, serif; font-size: 1.15rem; color: #c9a86b; border-bottom: 1px solid rgba(201,168,107,0.3); padding-bottom: 8px; margin-bottom: 14px; }
 
-.strategy{background:#3a2008;color:#f0dfc0;border-left:4px solid var(--gold);border-radius:8px;padding:16px 18px;margin:18px 0}
-.strategy h2{color:var(--gold);font-size:1.1rem;margin-bottom:10px}
-.strategy p{font-size:.88rem;margin-bottom:8px;line-height:1.6}
-.strategy p:last-child{margin-bottom:0}
-.closures{background:rgba(0,0,0,.28);border-radius:6px;padding:10px 14px;margin-top:10px}
-.closures h4{color:var(--gold);font-size:.78rem;text-transform:uppercase;letter-spacing:.07em;font-family:sans-serif;margin-bottom:7px;font-weight:700}
-.closures li{font-size:.85rem;padding:2px 0;list-style:none}
-.cls-closed{color:#ff9980;font-weight:600}
-.cls-open{color:#8fe8a0}
-.cls-caution{color:#ffd080}
+/* ── Trip plan ── */
+.trip-plan-header { font-family: Georgia, serif; font-size: 1.4rem; color: #c9a86b; margin-bottom: 4px; }
+.trip-plan-meta { font-size: 0.83rem; color: #8aaa8a; margin-bottom: 16px; }
 
-.sf-tracker{background:var(--rust);color:#fff0e8;border-radius:8px;padding:14px 18px;margin:10px 0;border-left:4px solid var(--gold)}
-.sf-tracker h3{color:var(--gold);font-family:Georgia,serif;font-size:1rem;margin-bottom:8px}
-.sf-tracker p{font-size:.86rem;line-height:1.6;margin-bottom:6px}
-.sf-tracker p:last-child{margin-bottom:0}
+.card-active { border: 2px solid #c9a86b; border-radius: 10px; padding: 20px; margin-bottom: 14px; background: #233c30; }
+.card-projected { border: 1px solid #3d5e4a; border-radius: 8px; padding: 14px 16px; margin-bottom: 10px; background: #263d32; }
+.card-midweek { border: 1px solid #3a6040; border-radius: 8px; padding: 14px 16px; margin-bottom: 10px; background: #243428; }
+.card-label { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 1.2px; font-weight: bold; margin-bottom: 6px; }
+.card-label.active { color: #c9a86b; }
+.card-label.projected { color: #6a8a7a; }
+.card-label.midweek { color: #7abf7a; }
+.card-dates { font-size: 0.8rem; color: #c9a86b; font-weight: bold; margin-bottom: 7px; font-family: Georgia, serif; }
+.card-headline { font-family: Georgia, serif; font-size: 1.05rem; color: #f0e8d8; margin-bottom: 11px; line-height: 1.3; }
+.card-projected .card-headline, .card-midweek .card-headline { font-size: 0.95rem; }
+.card-body { font-size: 0.84rem; line-height: 1.68; color: #c8c0b0; }
+.card-body p { margin-bottom: 8px; }
+.card-body ul { padding-left: 16px; margin-bottom: 8px; }
+.card-body li { margin-bottom: 3px; }
+.card-body strong { color: #ede4d0; }
+.hatch-callout { background: #1a2e28; border-left: 3px solid #c9a86b; padding: 9px 12px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 0.81rem; color: #e0d0a8; line-height: 1.6; }
+.trip-updated { font-size: 0.72rem; color: #5a7a6a; margin-top: 6px; }
 
-.river-section{margin:26px 0;border-top:2px solid var(--gold);padding-top:14px}
-.river-section h2{font-size:1.3rem;margin-bottom:3px}
-.tag{display:inline-block;font-size:.68rem;font-weight:700;padding:2px 7px;border-radius:10px;font-family:sans-serif;text-transform:uppercase;letter-spacing:.06em;vertical-align:middle;margin-left:6px}
-.tag-home{background:var(--gold);color:var(--green)}
-.tag-day{background:var(--brown);color:#fff}
-.tag-overnight{background:#5c3a1e;color:var(--gold)}
-.section-note{font-size:.82rem;color:var(--muted);margin-bottom:10px}
+/* ── Strategy block ── */
+.strategy-block { background: #4a2e0e; border: 1px solid #c9a86b; border-radius: 10px; padding: 18px; margin-bottom: 18px; }
+.strategy-block .section-title { color: #f0c060; border-bottom-color: rgba(201,168,107,0.35); }
+.strategy-body { font-size: 0.84rem; line-height: 1.68; color: #e8d8b0; }
+.strategy-body p { margin-bottom: 8px; }
+.strategy-body strong { color: #fff8e8; }
+.strategy-body ul { padding-left: 18px; margin-bottom: 6px; }
+.strategy-body li { margin-bottom: 4px; }
 
-.stat-row{display:flex;gap:9px;flex-wrap:wrap;margin:12px 0}
-.sc{flex:1;min-width:145px;background:var(--card);border:1px solid var(--dcream);border-radius:8px;padding:10px 11px;text-align:center}
-.sc-label{font-size:.68rem;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);font-weight:600;margin-bottom:3px}
-.sc-val{font-size:1.55rem;font-weight:700;color:var(--green);font-family:Georgia,serif;line-height:1.1}
-.sc-val.v-hot{color:#b34d00}
-.sc-val.v-hatch{color:#7a1f00;background:#fff0e0;border-radius:4px;padding:0 4px}
-.sc-val.v-high{color:var(--rust)}
-.sc-val.v-good{color:#1a7a3a}
-.sc-unit{font-size:.72rem;color:var(--muted);margin-top:2px}
-.sc-meta{font-size:.65rem;color:var(--muted);margin-top:3px;font-style:italic}
-.prov{display:inline-block;background:#fff3cd;color:#856404;font-size:.63rem;padding:1px 4px;border-radius:3px;font-weight:600;font-style:normal}
+/* ── River sections ── */
+.river-block { margin-bottom: 12px; background: #243d31; border-radius: 8px; padding: 14px 16px; }
+.river-name { font-family: Georgia, serif; font-size: 0.98rem; color: #c9a86b; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.river-body { font-size: 0.82rem; line-height: 1.65; color: #c0b8a8; }
+.river-body p { margin-bottom: 6px; }
+.river-body strong { color: #ede4d0; }
+.river-body ul { padding-left: 16px; margin-bottom: 6px; }
+.river-body li { margin-bottom: 3px; }
 
-.wx-strip{background:#1a3a2e;border-radius:6px;padding:8px 12px;margin:8px 0;display:flex;gap:6px;flex-wrap:wrap}
-.wx-period{flex:1;min-width:120px;text-align:center;border-right:1px solid rgba(255,255,255,.1);padding:3px 6px}
-.wx-period:last-child{border-right:none}
-.wx-name{font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;color:#7aa098;margin-bottom:1px}
-.wx-temp{font-size:1.05rem;font-weight:700;color:var(--gold);font-family:Georgia,serif}
-.wx-desc{font-size:.68rem;color:#9ab8b0;margin-top:1px;line-height:1.3}
+/* ── Badges / pills ── */
+.badge-home { background: #c9a86b; color: #1a2e28; font-size: 0.62rem; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px; padding: 2px 7px; border-radius: 3px; }
+.badge-primary { background: #8b4513; color: #f5e8d8; font-size: 0.62rem; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px; padding: 2px 7px; border-radius: 3px; }
+.pill { display: inline-block; border: 1px solid; border-radius: 4px; padding: 2px 8px; font-size: 0.74rem; margin: 2px 2px 2px 0; font-family: monospace; }
+.pill-norm { border-color: #4a6a5a; color: #a8c0a8; }
+.pill-warm { border-color: #c9a86b; color: #f0c060; }
+.pill-cold { border-color: #4a7a9b; color: #8ab4d0; }
+.pill-high { border-color: #8b4513; color: #d07050; }
 
-.two-col{display:flex;gap:16px;flex-wrap:wrap;margin:10px 0}
-.two-col>div{flex:1;min-width:220px}
-.two-col h4{font-size:.78rem;text-transform:uppercase;letter-spacing:.07em;color:var(--brown);margin-bottom:6px;font-family:sans-serif;font-weight:700}
-.two-col ul{list-style:none;font-size:.86rem}
-.two-col ul li{padding:2px 0;border-bottom:1px solid var(--dcream)}
-.two-col ul li:last-child{border-bottom:none}
+/* ── Info boxes ── */
+.hatch-tracker-box { background: #1a2e28; border: 1px solid rgba(201,168,107,0.4); border-radius: 6px; padding: 10px 12px; margin: 8px 0; font-size: 0.8rem; color: #e0d0a8; line-height: 1.6; }
+.hatch-tracker-box .hatch-lbl { font-size: 0.68rem; text-transform: uppercase; color: #c9a86b; letter-spacing: 1px; margin-bottom: 4px; font-weight: bold; }
+.alert-box { background: #3a1a08; border: 1px solid #8b4513; border-radius: 6px; padding: 8px 12px; margin: 6px 0; font-size: 0.8rem; color: #e0b080; line-height: 1.5; }
 
-.shop-quote{background:#eef5f0;border-left:3px solid var(--lg);border-radius:0 6px 6px 0;padding:10px 14px;margin:10px 0;font-size:.86rem;font-style:italic;color:#2a3a2a}
-.shop-name{font-style:normal;font-weight:700;font-size:.78rem;color:var(--green);margin-bottom:4px;display:block}
-.shop-date{font-style:normal;color:var(--brown);font-size:.75rem}
+/* ── Weather grid ── */
+.wx-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 10px; }
+@media (max-width: 600px) { .wx-grid { grid-template-columns: repeat(2, 1fr); } }
+.wx-card { background: #1a2e28; border-radius: 6px; padding: 10px 8px; text-align: center; border: 1px solid #2d4a3e; }
+.wx-loc { font-size: 0.67rem; color: #6a8a7a; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+.wx-temp { font-family: Georgia, serif; font-size: 1.1rem; color: #f5f1e8; margin-bottom: 3px; }
+.wx-desc { font-size: 0.67rem; color: #a8b8a8; line-height: 1.35; }
+.wx-precip { font-size: 0.67rem; color: #8ab4d0; margin-top: 3px; }
 
-.access{background:var(--green);color:#c4d4cd;border-radius:8px;padding:12px 16px;margin-top:12px;font-size:.84rem}
-.access h4{color:var(--gold);font-family:sans-serif;font-size:.78rem;text-transform:uppercase;letter-spacing:.07em;margin-bottom:7px;font-weight:700}
-.access ul{list-style:none}
-.access ul li{padding:3px 0;border-bottom:1px solid rgba(255,255,255,.08)}
-.access ul li:last-child{border-bottom:none}
-.access .warn{color:#ffb380;font-weight:600}
-.access .good{color:#90e090}
+/* ── Lodging ── */
+.lodge-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+@media (max-width: 600px) { .lodge-grid { grid-template-columns: 1fr; } }
+.lodge-card { background: #243d31; border-radius: 8px; padding: 14px; }
+.lodge-area { font-family: Georgia, serif; font-size: 0.9rem; color: #c9a86b; margin-bottom: 8px; }
+.lodge-body { font-size: 0.78rem; line-height: 1.65; color: #b8b0a0; }
+.lodge-body p { margin-bottom: 4px; }
+.lodge-body strong { color: #ddd4c0; }
 
-footer{background:#1a2e25;color:#9ab8a8;padding:24px 0 32px;margin-top:40px;font-size:.82rem}
-footer h3{color:var(--gold);font-size:.88rem;margin-bottom:8px;margin-top:18px;font-family:Georgia,serif}
-footer h3:first-child{margin-top:0}
-footer a{color:#7ecfa8}
-footer ul{list-style:none;padding:0}
-footer ul li{padding:2px 0}
-.footer-cols{display:flex;gap:28px;flex-wrap:wrap}
-.footer-col{flex:1;min-width:200px}
-.ts{margin-top:20px;padding-top:12px;border-top:1px solid #2d4a3e;font-size:.74rem;color:#5a7a68}
-
-@media(max-width:600px){
-  .hero h1{font-size:1.4rem}
-  .sc{min-width:120px}
-  .two-col>div{min-width:100%}
-  .wx-period{min-width:100%;border-right:none;border-bottom:1px solid rgba(255,255,255,.1)}
-  .wx-period:last-child{border-bottom:none}
-}
+/* ── Footer ── */
+.footer { text-align: center; font-size: 0.75rem; color: #5a7a6a; padding: 20px 0 10px; border-top: 1px solid #2d4a3e; margin-top: 8px; line-height: 1.9; }
+.footer a { color: #7aaa7a; text-decoration: none; }
+.footer a:hover { color: #c9a86b; }
+.footer-ts { font-size: 0.7rem; color: #3a5a4a; margin-top: 4px; }
 </style>
 </head>
 <body>
+<div class="container">
 
+<!-- ═══════════════════════════════════════════════════ HERO ══ -->
 <div class="hero">
-<div class="c">
   <h1>Greater Yellowstone Fly Fishing Dashboard</h1>
-  <div class="hero-sub">Sunday, May 31, 2026 &nbsp;&middot;&nbsp; All gauge data provisional, subject to revision &nbsp;&middot;&nbsp; Updated 7:30 AM MDT</div>
-  <div class="hero-row">
-    <div class="countdown">5<br><small>Days to Trip</small></div>
-    <div class="hero-info">
-      <strong>Arriving:</strong> Friday, June 5 &nbsp;&middot;&nbsp; Home base: St. Anthony, ID<br>
-      <strong>Home waters:</strong> Henry's Fork &nbsp;&middot;&nbsp; South Fork Snake &nbsp;&middot;&nbsp; Teton River<br>
-      <strong>Side trips:</strong> West Yellowstone (Madison salmonfly &mdash; ~2 hr) &nbsp;&middot;&nbsp; Twin Bridges MT (Big Hole salmonfly &mdash; ~3 hr, overnight) &nbsp;&middot;&nbsp; Jackson Hole (Teton Pass day)
+  <div class="countdown-card">4 DAYS TO TRIP</div>
+  <p class="hero-sub">
+    <strong>Monday, June 1, 2026</strong><br>
+    Home base: St. Anthony, ID &nbsp;·&nbsp; Mon–Wed Vernon evenings &nbsp;·&nbsp; Thu–Sun hatch chase<br>
+    <strong>Salmonflies &rarr; Green Drakes &rarr; Golden Stones</strong> &nbsp;·&nbsp; Jun 5 – 27, 2026
+  </p>
+</div>
+
+<!-- ═══════════════════════════════════════ TRIP PLAN BLOCK ══ -->
+<div class="section">
+  <div class="trip-plan-header">Trip Plan &middot; Hatch Chase &middot; Jun 5 &ndash; Jun 27</div>
+  <div class="trip-plan-meta">Monday, June 1, 2026 &nbsp;&middot;&nbsp; 4 days until departure &nbsp;&middot;&nbsp; 23-day trip</div>
+
+  <!-- ACTIVE — A1: Weekend 1 -->
+  <div class="card-active">
+    <div class="card-label active">&#9654; NEXT UP &mdash; ACTIVE PLAN</div>
+    <div class="card-dates">Fri Jun 5 &ndash; Sun Jun 7</div>
+    <div class="card-headline">Weekend 1 &middot; Salmonfly leading edge on the upper Madison</div>
+    <div class="card-body">
+      <p><strong>Fri Jun 5 &mdash; Arrival + Vernon evening.</strong> Fly in &rarr; bags at St. Anthony Airbnb &rarr; Vernon Bridge on the lower Henry's Fork, 18:00&ndash;21:00. Golden stone dries + evening caddis + salmonfly adults still present (WorldCast May 30: &ldquo;Salmonflies &amp; Goldens firing on lower Henry's Fork&rdquo;). River elevated at 2,390 cfs Rexburg &mdash; work bank edges and slower inside bends. Best attractor: Yellow Stimulator #10-12 or Sofa Pillow #6-8; switch to Elk Hair Caddis #14-16 as light fades. Window: 19:30&ndash;21:15.</p>
+      <p><strong>Sat Jun 6 &mdash; Madison salmonfly chase.</strong> 05:30 wake &rarr; drive ~2h to West Yellowstone &rarr; 07:30 stop at Blue Ribbon Flies or Madison River Outfitters for same-morning leading-edge intel &rarr; wade fish 09:00&ndash;17:00.</p>
+      <div class="hatch-callout">
+        <strong>&#128027; Hatch Tracker &mdash; Madison Salmonfly Leading Edge:</strong><br>
+        Water temps: 14.6&deg;C (58&deg;F) near West Yellowstone &#10003;, 15.8&deg;C (60&deg;F) below Ennis &#10003; &mdash; both above 55&deg;F trigger. Hebgen tailwater cold at 9.3&deg;C (49&deg;F) &mdash; no hatch there. Blue Ribbon Flies (May 28): no salmonflies yet in upper section, only smaller mixed bugs. Hebgen-to-Quake section currently CLOSED (bear activity). Warm sunny week ahead: W. Yellowstone 63&deg;F &rarr; 73&deg;F Mon&ndash;Thu. <strong>Leading edge projection by Sat Jun 6: Varney Bridge to Cameron corridor.</strong> Confirm at shop morning of Jun 5. If leading edge hasn&rsquo;t arrived, wade below Quake outlet (check bear closure).
+      </div>
+      <p><strong>Sat stretch recommendation:</strong> Varney&ndash;Cameron wade, targeting foam lines, bank eddies, back-eddies with Sofa Pillow #4-6 or Chernobyl Ant #6. Madison: 487 cfs at W. Yellowstone &middot; 2,280 cfs below Ennis. Bring golden stone backup (Yellow Stimulator #10).</p>
+      <p><strong>Sun Jun 7 &mdash; Recommendation: Option A, Madison repeat toward Quake Lake outlet.</strong> If leading edge moved upstream Saturday, the Slide Inn/below-Quake stretch should be firing Sunday morning. 20-min location advantage over Box Canyon = more time on the hatch. Switch to <strong>Option B (Box Canyon)</strong> if Saturday evening shop report says lower Henry's Fork or Box Canyon outperformed the Madison. Box Canyon ~45 min from St. Anthony.</p>
+      <ul>
+        <li><strong>Sleep Sat:</strong> West Yellowstone recommended (Brandin&rsquo; Iron Inn / Stage Coach Inn) &mdash; on water at first light Sun</li>
+        <li><strong>Flies:</strong> Sofa Pillow #4-6, Chernobyl Ant #6, Henry&rsquo;s Fork Salmonfly #6, Yellow Stimulator #8-10, Elk Hair Caddis #14-16, Golden Stimulator #12</li>
+        <li><strong>Shop intel:</strong> Blue Ribbon Flies (406-646-7642) &middot; Madison River Outfitters (406-646-9644)</li>
+      </ul>
     </div>
   </div>
-</div>
+
+  <!-- B1 — Vernon Evenings 1 -->
+  <div class="card-midweek">
+    <div class="card-label midweek">MID-WEEK EVENINGS</div>
+    <div class="card-dates">Mon Jun 8 &ndash; Wed Jun 10</div>
+    <div class="card-headline">After-work lower Henry's Fork &mdash; Vernon Bridge</div>
+    <div class="card-body">
+      <p>Evenings 18:00&ndash;21:30 (sunset ~21:30 in June). Drive ~20 min from St. Anthony &rarr; Vernon Bridge access off ID-32. Post-Madison debrief &mdash; apply what worked on bigger salmonfly water. Expected hatches: caddis evening rises, PMD spinner fall, golden stone searching dries, BWO on overcast days.</p>
+      <p><strong>Access points (lower Henry's Fork):</strong> Vernon Bridge (ID-32) &middot; Chester Dam pool &middot; HF Twin Bridges access &middot; Fun Farm Bridge &middot; Riverside Park (in-town St. Anthony) &middot; Ora Bridge &middot; Stinker Lane. Log what worked each evening to refine for the next night.</p>
+      <p><strong>Fly box:</strong> Elk Hair Caddis #14-16 &middot; PMD Sparkle Dun #16 &middot; CDC Caddis Emerger #14 &middot; Yellow Stimulator #10-12 &middot; Parachute Adams #14-16 &middot; Zebra Midge #20 (dropper).</p>
+    </div>
+  </div>
+
+  <!-- A2 — Weekend 2 -->
+  <div class="card-projected">
+    <div class="card-label projected">PROJECTED &mdash; WEEKEND 2</div>
+    <div class="card-dates">Thu Jun 11 &ndash; Sun Jun 14</div>
+    <div class="card-headline">Big Hole salmonflies + Box Canyon firing</div>
+    <div class="card-body">
+      <p>Thu Jun 11 afternoon: drive ~3h to Twin Bridges MT (depart ~14:00 after work). Evening wade on Big Hole near Melrose. Sleep: The Old Hotel / Stardust Country Inn / Four Rivers guest house. Fri&ndash;Sat: full Big Hole days at leading edge (Wise River&ndash;Divide corridor projected). Sun: drive back via Madison (golden stones post-salmonfly) or stay extra Big Hole half-day.</p>
+      <div class="hatch-callout">
+        <strong>&#128027; Big Hole Salmonfly Tracker:</strong><br>
+        Big Hole at Wisdom: 9.5&deg;C (49&deg;F) &mdash; 6&deg;F below 55&deg;F trigger. Lower river near Melrose likely warmer. Jefferson at Twin Bridges 12.2&deg;C (54&deg;F) &mdash; nearly at trigger. Hatch ~1 week behind Madison. <strong>By Sat Jun 13: leading edge projected Melrose to Divide corridor.</strong> Monitor fourriversfishing.com &amp; bigholeriver.com Jun 8&ndash;10. If Box Canyon hits 55&deg;F+ mid-week, weigh home water vs. overnight Big Hole trip.
+      </div>
+    </div>
+  </div>
+
+  <!-- B2 — Vernon Evenings 2 -->
+  <div class="card-midweek">
+    <div class="card-label midweek">MID-WEEK EVENINGS</div>
+    <div class="card-dates">Mon Jun 15 &ndash; Wed Jun 17</div>
+    <div class="card-headline">Vernon after work + Ranch opens Jun 15</div>
+    <div class="card-body">
+      <p>Key shift: <strong>Harriman State Park / Henry's Fork Ranch opens Monday Jun 15.</strong> After-work Monday is your first Ranch evening opportunity &mdash; walking-only, sight-fishing technical risers, PMD spinner / first green drakes possible. A completely different kind of evening than Vernon.</p>
+      <p><strong>Evening decision:</strong> Ranch = technical hatch puzzle (overcast + calm forecast). Vernon = unwind and catch fish (any conditions). Overcast Mon Jun 15 &rarr; Ranch. Sunny + wind &rarr; Vernon. Monitor TroutHunter and WorldCast daily for first green drake sightings.</p>
+    </div>
+  </div>
+
+  <!-- A3 — Weekend 3 -->
+  <div class="card-projected">
+    <div class="card-label projected">PROJECTED &mdash; WEEKEND 3</div>
+    <div class="card-dates">Thu Jun 18 &ndash; Sun Jun 21</div>
+    <div class="card-headline">Ranch green drakes &mdash; the technical hatch of the year</div>
+    <div class="card-body">
+      <p><em>Drunella grandis</em> typically appears Jun 18&ndash;22 on the Ranch. Sat Jun 20: full day on Ranch (walk the meadow stretches, sight-fish rising fish). Fri Jun 19 evening: Last Chance or Box Canyon. Sun Jun 21: Madison or Yellowstone golden stones (YNP runoff clearing by now).</p>
+      <div class="hatch-callout">
+        <strong>&#127807; Green Drake Projection:</strong><br>
+        Drake on Ranch when water ~55&deg;F + overcast conditions. Ranch opens Jun 15. <strong>Estimated first appearance: Jun 18&ndash;20 at Last Chance / Box Canyon, Ranch main stem shortly after.</strong> Confirm via TroutHunter and WorldCast daily from Jun 15.
+      </div>
+      <p>Sleep: St. Anthony all weekend &mdash; Ranch ~45 min from Airbnb, no overnight needed. Flies: Green Drake Comparadun #10, Extended Body Drake #10, PMD Sparkle Dun #16, Parachute Hare&rsquo;s Ear #14.</p>
+    </div>
+  </div>
+
+  <!-- B3 — Vernon Evenings 3 -->
+  <div class="card-midweek">
+    <div class="card-label midweek">MID-WEEK EVENINGS</div>
+    <div class="card-dates">Mon Jun 22 &ndash; Wed Jun 24</div>
+    <div class="card-headline">Peak hatches &mdash; pick your poison</div>
+    <div class="card-body">
+      <p>Every hatch is on simultaneously. Choose your evening:</p>
+      <ul>
+        <li><strong>Vernon Bridge</strong> &mdash; PMD spinner, evening caddis, brown drake possible. Easy, reliable.</li>
+        <li><strong>Ranch (45 min)</strong> &mdash; PMDs + green drakes + golden stone spinner at full peak. The technical challenge.</li>
+        <li><strong>Teton canyon (~20 min lower, ~1h Driggs)</strong> &mdash; brown drake hatch evenings 18:00&ndash;21:00.</li>
+        <li><strong>South Fork (float)</strong> &mdash; salmonfly leading edge arriving; guide trip option.</li>
+      </ul>
+      <p>Pick based on overcast forecast and what fired best the previous weekend.</p>
+    </div>
+  </div>
+
+  <!-- A4 — Weekend 4 -->
+  <div class="card-projected">
+    <div class="card-label projected">PROJECTED &mdash; WEEKEND 4 &middot; FINAL LAPS</div>
+    <div class="card-dates">Thu Jun 25 &ndash; Sat Jun 27</div>
+    <div class="card-headline">Last casts: lingering goldens, South Fork salmonfly tail, Teton brown drakes</div>
+    <div class="card-body">
+      <p><strong>Thu Jun 25 evening:</strong> Teton canyon brown drakes if at peak, else Vernon farewell session.</p>
+      <p><strong>Fri Jun 26:</strong> South Fork salmonfly tail &mdash; float trip (full day if bugs are heavy, half-day if quiet). Backup: Box Canyon golden stones. South Fork cutthroat + browns sipping salmonflies from foam = the perfect closing act.</p>
+      <p><strong>Sat Jun 27:</strong> Half-day Box Canyon farewell, or Ranch closing-the-trip session (PMDs + drake spinner overlap). Sleep: St. Anthony &rarr; fly out Sun Jun 28.</p>
+    </div>
+  </div>
+
+  <div class="trip-updated">Trip Plan last updated Mon Jun 1, 2026 &middot; 03:43 UTC &middot; regenerated daily 06:30 MDT</div>
 </div>
 
-<div class="c">
-
-<!-- TRIP STRATEGY -->
-<div class="strategy">
-  <h2>&#9654; Trip Strategy &mdash; June 5&ndash;15, 2026</h2>
-  <p><strong>Madison salmonfly:</strong> Water at West Yellowstone reads <strong>56.1&deg;F right now</strong> &mdash; the hatch threshold is met. Blue Ribbon Flies (May 28) reports the Madison below Quake Lake fishing well with dry flies; no salmonflies called out explicitly yet, but with 56&deg;F water the adults will be appearing. The lower Madison below Ennis Lake is already at 61.7&deg;F &mdash; that stretch is past peak. The upper stretch between West Yellowstone and Hebgen is the prime zone. Progressing at 3&ndash;5 mi/day, by June 5 the leading edge should be 15&ndash;25 miles above town in the upper canyon below Quake Lake. <strong>Target: June 5&ndash;8</strong> &mdash; easy 2-hr day trip from St. Anthony.</p>
-  <p><strong>Big Hole salmonfly:</strong> Melrose gauge reads <strong>50.5&deg;F, 3,250 CFS</strong> &mdash; water temp is ~4&deg;F below hatch threshold but warming. Upper Big Hole at Wisdom is 48.4&deg;F. The lower river (Divide&ndash;Melrose) should hit 55&deg;F by roughly June 4&ndash;6 given the warming trend. <strong>Target: June 8&ndash;12</strong> for the Melrose&ndash;Wise River corridor. High water (3,250 CFS) will drop as snowmelt slows &mdash; by June 5&ndash;8 expect 2,200&ndash;2,800 CFS, fishable by boat. Best as overnight: stay Wisdom or Wise River, fish 2 days.</p>
-  <p><strong>Home waters:</strong> Box Canyon running 630 CFS &mdash; excellent. WorldCast Anglers confirms salmonflies and golden stones hatching on the lower Henry's Fork right now. South Fork is blown out at 13,600 CFS &mdash; float-only through June 5; may ease to 9,000&ndash;11,000 by mid-June. Teton is elevated but wadeable in spots. All looks good for June 5 arrival.</p>
-  <p><strong>Weather:</strong> Storms today (May 31) clearing tonight. Sunny streak: Mon June 1 through Thu June 4, then your arrival Friday June 5 looks clear and 70s. Perfect hatch weather incoming.</p>
-  <div class="closures">
-    <h4>Closures &amp; Restrictions</h4>
+<!-- ══════════════════════════════════════ STRATEGY CALLOUT ══ -->
+<div class="strategy-block">
+  <div class="section-title">Trip Strategy &amp; Key Closures / Openings</div>
+  <div class="strategy-body">
+    <p><strong>The hatch sequence:</strong> Salmonflies active NOW on lower Henry's Fork &middot; Madison leading edge arrives Jun 5&ndash;6 (Varney/Cameron corridor) &middot; Big Hole follows ~Jun 11&ndash;13 &middot; Golden stones as background hatch all trip, weeks 2&ndash;4 &middot; Green drakes on Ranch Jun 18&ndash;22 &middot; Brown drakes on Teton canyon + South Fork salmonfly tail in final week. Karel's trip is timed near-perfectly for the salmonfly-to-drake overlap.</p>
+    <p><strong>Key dates &amp; closures:</strong></p>
     <ul>
-      <li class="cls-closed">&#9632; Flat Creek (Jackson) &mdash; CLOSED until August 1 (entire trip)</li>
-      <li class="cls-closed">&#9632; Yellowstone River inside YNP &mdash; CLOSED until July 15 (entire trip)</li>
-      <li class="cls-caution">&#9651; Henry's Fork Ranch / Harriman State Park &mdash; opens June 15; can fish it mid-trip</li>
-      <li class="cls-caution">&#9651; Snake River nr Jackson (13022500) &mdash; open but blown out at 14,300 CFS; wait until mid-June</li>
-      <li class="cls-open">&#9632; YNP general waters (Madison, Firehole, Gibbon) &mdash; open since May 23 (Memorial Day weekend Saturday)</li>
-      <li class="cls-open">&#9632; Idaho waters (Henry's Fork, South Fork, Teton) &mdash; no seasonal closures</li>
+      <li><strong>Harriman Ranch opens: Mon Jun 15</strong> &mdash; walking only, day-use, no overnight, fee required</li>
+      <li><strong>Yellowstone R. in YNP: closed until Jul 15</strong> &mdash; Paradise Valley section (Corwin Springs&ndash;Livingston) OPEN</li>
+      <li>Flat Creek (National Elk Refuge, Jackson): closes Aug 1 &mdash; open during trip &#10003;</li>
+      <li>Madison (Hebgen to Quake Lake): currently CLOSED &mdash; bear activity; check status by Jun 5</li>
+      <li>YNP general fishing: open since May 23 &#10003;</li>
+      <li>South Fork Snake: peak runoff ~13,400&ndash;13,700 cfs &mdash; float-only through mid-June; <strong>Palisades Dam gate commissioning Jun 2 (9am&ndash;noon)</strong>: flows drop ~4,000 cfs temporarily then return</li>
+      <li>Snake R. near Jackson: peak runoff ~13,600 cfs &mdash; float-only through mid-June</li>
     </ul>
   </div>
 </div>
 
-<!-- SALMONFLY TRACKER -->
-<div class="sf-tracker">
-  <h3>&#127801; Salmonfly Hatch Tracker &mdash; May 31, 2026</h3>
-  <p><strong>Madison River:</strong> Upper gauge (West Yellowstone / above Hebgen): <strong>56.1&deg;F</strong> &mdash; threshold crossed. Hatch imminent or just starting on the stretch from the park boundary to Hebgen backwater (~10&ndash;12 mi). Lower Madison (below Ennis Lake): <strong>61.7&deg;F</strong> &mdash; that stretch peaked and may be winding down. The Hebgen tailwater at 49.8&deg;F stays cold from dam release and suppresses bugs in that stretch. <em>June 5 forecast:</em> Upper Madison near West Yellowstone should be in prime. Blue Ribbon Flies confirms dry fly conditions improving (May 28). Day trip from St. Anthony: leave 6 AM, arrive 8 AM, home by 6 PM.</p>
-  <p><strong>Big Hole River:</strong> Melrose gauge: <strong>50.5&deg;F, 3,250 CFS</strong> &mdash; ~4&deg;F below hatch threshold, high water from runoff. Wisdom (upper): 48.4&deg;F, 330 CFS. Hatch window: lower Big Hole (Divide&ndash;Melrose) likely June 4&ndash;8; Wise River&ndash;Melrose corridor June 8&ndash;14. Overnight trip target: <strong>June 8&ndash;10 for Melrose / June 10&ndash;14 for Wise River</strong>. High water will ease; boat fishing is the call at these flows anyway.</p>
-</div>
+<!-- ═══════════════════════════════════════════ RIVER SECTIONS ══ -->
 
+<!-- Henry's Fork -->
+<div class="section">
+  <div class="section-title">Henry's Fork &mdash; Home Water</div>
 
-<!-- ===== HENRY'S FORK ===== -->
-<div class="river-section">
-  <h2>Henry's Fork of the Snake <span class="tag tag-home">Home Water</span></h2>
-  <div class="section-note">Lower river / Ashton: 5&ndash;10 min from St. Anthony &nbsp;&middot;&nbsp; Pinehaven / Hatchery Ford: ~25 min &nbsp;&middot;&nbsp; Box Canyon: ~45 min &nbsp;&middot;&nbsp; Harriman opens June 15</div>
-
-  <div class="stat-row">
-    <div class="sc">
-      <div class="sc-label">Island Park / Box Canyon (13042500)</div>
-      <div class="sc-val v-good">630</div>
-      <div class="sc-unit">CFS &nbsp;<span class="prov">PROV</span></div>
-      <div class="sc-meta">06:45 MDT May 31</div>
+  <div class="river-block">
+    <div class="river-name">
+      Lower River: Vernon Bridge &amp; Evening Access
+      <span class="badge-primary">PRIMARY EVENING</span>
     </div>
-    <div class="sc">
-      <div class="sc-label">nr Rexburg (13056500)</div>
-      <div class="sc-val">2,080</div>
-      <div class="sc-unit">CFS &nbsp;<span class="prov">PROV</span></div>
-      <div class="sc-meta">07:15 MDT May 31</div>
-    </div>
-    <div class="sc">
-      <div class="sc-label">Water Temp (Box Canyon)</div>
-      <div class="sc-val" style="font-size:1rem;color:#888">No Data</div>
-      <div class="sc-unit">Sensor offline</div>
-      <div class="sc-meta">Estimate 46&ndash;52&deg;F</div>
-    </div>
-    <div class="sc">
-      <div class="sc-label">Air &mdash; St. Anthony</div>
-      <div class="sc-val">66&deg;F</div>
-      <div class="sc-unit">Mon &rarr; 70&deg;F Tue &rarr; 75&deg;F Wed</div>
-      <div class="sc-meta">Sunny stretch ahead</div>
-    </div>
-  </div>
-
-  <div class="wx-strip">
-    <div class="wx-period"><div class="wx-name">Mon Jun 1</div><div class="wx-temp">66&deg;F</div><div class="wx-desc">Mostly Sunny, SSE 5&ndash;10 mph</div></div>
-    <div class="wx-period"><div class="wx-name">Tue Jun 2</div><div class="wx-temp">70&deg;F</div><div class="wx-desc">Sunny, calm</div></div>
-    <div class="wx-period"><div class="wx-name">Wed Jun 3</div><div class="wx-temp">75&deg;F</div><div class="wx-desc">Sunny, SE 3&ndash;8 mph</div></div>
-    <div class="wx-period"><div class="wx-name">Thu Jun 4</div><div class="wx-temp">75&deg;F</div><div class="wx-desc">Mostly Sunny, ESE 6&ndash;14 mph</div></div>
-  </div>
-
-  <div class="two-col">
-    <div>
-      <h4>Hatches &mdash; Early June</h4>
+    <div class="river-body">
+      <p><span class="pill pill-high">2,390 cfs &middot; Rexburg</span> <span class="pill pill-norm">temp sensor inactive</span></p>
+      <p>Elevated flows &mdash; above typical early-June levels. Wading trickier; focus on bank edges, slower inside bends, softer pockets. Access points (~20 min from St. Anthony Airbnb):</p>
       <ul>
-        <li><strong>Salmonfly (Pteronarcys)</strong> &mdash; lower river / Ashton, ACTIVE NOW</li>
-        <li><strong>Golden Stonefly</strong> &mdash; lower river, overlapping with salmonflies</li>
-        <li><strong>Pale Morning Dun</strong> &mdash; Box Canyon, mid-morning to noon</li>
-        <li><strong>Early Caddis (#14&ndash;16)</strong> &mdash; evenings, improving</li>
-        <li><strong>Blue-Winged Olive (#18&ndash;20)</strong> &mdash; overcast conditions</li>
-        <li>Green Drake &mdash; not yet; typically mid-June in Box Canyon</li>
+        <li><strong>Vernon Bridge</strong> &mdash; off ID-32, primary access; gravel bar below bridge, classic evening rise</li>
+        <li><strong>Chester Dam pool</strong> &mdash; ~15 min from town, tailwater pool holds fish all day</li>
+        <li><strong>Henry's Fork Twin Bridges access</strong> &mdash; downstream alternative to Vernon</li>
+        <li><strong>Fun Farm Bridge</strong> &mdash; good BWO and caddis access</li>
+        <li><strong>Riverside Park</strong> &mdash; in-town St. Anthony, easy after-work access</li>
+        <li><strong>Ora Bridge</strong> &mdash; upstream of Vernon, different angle on evening rise</li>
+        <li><strong>Stinker Lane</strong> &mdash; local access road, typically less crowded</li>
       </ul>
-    </div>
-    <div>
-      <h4>Recommended Flies</h4>
-      <ul>
-        <li>Stimulator #4&ndash;8 (orange/red) &mdash; lower river salmonflies</li>
-        <li>Chubby Chernobyl #6&ndash;8 &mdash; attractor, lower river</li>
-        <li>Henry's Fork Salmonfly (Kaufmann) #4&ndash;6</li>
-        <li>PMD Comparadun / Sparkle Dun #16</li>
-        <li>Elk Hair Caddis #14&ndash;16 (tan/olive)</li>
-        <li>Copper John / Pheasant Tail #14&ndash;16 (dropper)</li>
-        <li>Soft Hackle Wet Fly #14&ndash;16 (subsurface PMD)</li>
-        <li>Pat's Rubber Legs #6&ndash;8 (streamer searching)</li>
-      </ul>
+      <p><strong>Evening hatch schedule:</strong> Caddis 19:00&ndash;21:30 &middot; PMD spinner fall 19:30&ndash;20:30 &middot; Golden stones searching attractor all evening &middot; BWO on overcast days.</p>
+      <div class="hatch-tracker-box">
+        <div class="hatch-lbl">&#127843; Vernon Hatch Tracker &mdash; Tonight (Jun 1)</div>
+        Water: 2,390 cfs (elevated), temp sensor inactive. Today: Sunny, high 66&deg;F &rarr; low 50s by 7pm. <strong>WorldCast Anglers (May 30):</strong> &ldquo;Salmonflies &amp; Goldens&rdquo; active on lower Henry's Fork &mdash; multiple fishing windows. <strong>Tonight: Yellow Stimulator #10-12 or Sofa Pillow #6-8 as lead attractor; switch to Elk Hair Caddis #14-16 as light fades. Best window 19:30&ndash;21:15. High water &rarr; bank edges and slower pockets.</strong>
+      </div>
+      <p><strong>Fly box for Vernon evenings:</strong> Elk Hair Caddis #14-16 &middot; PMD Sparkle Dun #16 &middot; CDC Caddis #14 &middot; Yellow Stimulator #10-12 &middot; Sofa Pillow #6-8 &middot; Parachute Adams #14-16 &middot; Zebra Midge #20 (dropper) &middot; Brown Drake Comparadun #10 (late June).</p>
     </div>
   </div>
 
-  <div class="shop-quote">
-    <span class="shop-name">WorldCast Anglers &mdash; Henry's Fork Report &nbsp;<span class="shop-date">May 30, 2026</span></span>
-    "Salmonflies &amp; Goldens &mdash; Spring continues on the lower Henry's Fork and that comes [with] some great windows of fishing opportunities." Salmonflies and Golden Stoneflies are the main story on the lower river right now.
+  <div class="river-block">
+    <div class="river-name">Box Canyon <span class="badge-home">HOME WATER</span></div>
+    <div class="river-body">
+      <p><span class="pill pill-norm">636 cfs &middot; Island Park</span> <span class="pill pill-norm">temp sensor offline</span> &nbsp;&nbsp;~45 min from St. Anthony</p>
+      <p>Normal-ish flows at 636 cfs. Classic big-fish technical water &mdash; deep wading, stonefly nymph + dry searching. Golden stones active mornings. PMDs afternoons. Reliable fallback for any weekend when travel plans shift. Watch shop reports for water temp vs. green drake timing trigger (~55&deg;F).</p>
+    </div>
   </div>
 
-  <div class="access">
-    <h4>Access &amp; Notes</h4>
-    <ul>
-      <li><strong>Lower River / Ashton stretch:</strong> Public access at Riverside Dr, Chester Bridge. <span class="good">Salmonflies hatching NOW</span> &mdash; this is literally out the door from St. Anthony.</li>
-      <li><strong>Box Canyon:</strong> 630 CFS is excellent wading flow (ideal ~400&ndash;900 CFS). Launch from Cardiac Hill or Big Springs. PMDs morning&ndash;midday; salmonflies building lower.</li>
-      <li><strong>Harriman / Henry's Fork Ranch:</strong> <span class="warn">Opens June 15.</span> Classic PMD / Green Drake water. Plan a trip mid-trip if still there.</li>
-      <li><strong>Last Chance flats:</strong> At 630 CFS the flat is fishable but technical; good for late-June Green Drakes.</li>
-      <li>Rexburg gauge at 2,080 CFS reflects full watershed at lower end; lower river is the best early-June play.</li>
-    </ul>
+  <div class="river-block">
+    <div class="river-name">Harriman Ranch / Last Chance <span class="badge-home">OPENS JUN 15</span></div>
+    <div class="river-body">
+      <p>Walking-only, sight-fishing spring-creek character. <strong>Opens Monday June 15.</strong> Fee required. No dogs or float tubes. Access via Last Chance trailhead (~45 min from St. Anthony).</p>
+      <p>Green drakes expected Jun 18&ndash;22 &mdash; the marquee technical hatch of the trip. PMD spinner falls evenings. First use: Monday evening Jun 15 (option vs. Vernon). Full Ranch days: Weekend 3 (Jun 18&ndash;21).</p>
+    </div>
   </div>
 </div>
 
-
-<!-- ===== SOUTH FORK ===== -->
-<div class="river-section">
-  <h2>South Fork of the Snake <span class="tag tag-home">Home Water</span></h2>
-  <div class="section-note">Heise / Menan area: ~35 min from St. Anthony &nbsp;&middot;&nbsp; Swan Valley: ~1 hr &nbsp;&middot;&nbsp; Currently float-only, no wading</div>
-
-  <div class="stat-row">
-    <div class="sc">
-      <div class="sc-label">Heise (13037500)</div>
-      <div class="sc-val v-high">13,600</div>
-      <div class="sc-unit">CFS &nbsp;<span class="prov">PROV</span></div>
-      <div class="sc-meta">06:30 MDT May 31</div>
+<!-- South Fork -->
+<div class="section">
+  <div class="section-title">South Fork Snake River &mdash; Home Water</div>
+  <div class="river-block">
+    <div class="river-name">South Fork <span class="badge-home">HOME WATER</span></div>
+    <div class="river-body">
+      <p><span class="pill pill-high">13,500 cfs &middot; Heise</span> <span class="pill pill-cold">~9&deg;C (49&deg;F) &middot; Irwin</span></p>
+      <div class="alert-box">&#9888;&#65039; Peak runoff &mdash; float-only. 13,400&ndash;13,700 cfs. <strong>Palisades Dam gate commissioning Jun 2 (9am&ndash;noon):</strong> flows drop ~4,000 cfs temporarily to ~9,500 cfs then return; stage change ~14&rdquo; at Irwin, 4&rdquo; at Heise (~7h later).</div>
+      <p>Cold water (49&deg;F), limited dry-fly opportunity now. Best approach: midges + BWOs #18-22 during overcast windows 10am&ndash;2pm; deep nymphing with tungsten anchor + smaller dropper; streamers fished low and slow. Target soft-water refuges &mdash; buckets, tailouts, seams, back eddies. World-class cutthroat + brown trout fishery.</p>
+      <p><strong>Salmonfly arrival (South Fork):</strong> projected late June (~Jun 22&ndash;27) &mdash; timed for Karel's final weekend (Card A4).</p>
     </div>
-    <div class="sc">
-      <div class="sc-label">nr Irwin (13032500)</div>
-      <div class="sc-val v-high">13,200</div>
-      <div class="sc-unit">CFS &nbsp;<span class="prov">PROV</span></div>
-      <div class="sc-meta">06:30 MDT May 31</div>
-    </div>
-    <div class="sc">
-      <div class="sc-label">Water Temp (Irwin)</div>
-      <div class="sc-val">48.9&deg;F</div>
-      <div class="sc-unit">9.4&deg;C &mdash; cold runoff</div>
-      <div class="sc-meta">May 31</div>
-    </div>
-    <div class="sc">
-      <div class="sc-label">Air &mdash; Swan Valley</div>
-      <div class="sc-val">67&deg;F</div>
-      <div class="sc-unit">Mon; 62&deg;F today</div>
-      <div class="sc-meta">Partly sunny, chance T-storms</div>
-    </div>
-  </div>
-
-  <div class="wx-strip">
-    <div class="wx-period"><div class="wx-name">Today</div><div class="wx-temp">62&deg;F</div><div class="wx-desc">Rain &amp; T-storms likely</div></div>
-    <div class="wx-period"><div class="wx-name">Mon Jun 1</div><div class="wx-temp">67&deg;F</div><div class="wx-desc">Partly sunny, chance T-storms</div></div>
-    <div class="wx-period"><div class="wx-name">Tue Jun 2</div><div class="wx-temp">70&deg;F+</div><div class="wx-desc">Improving, mostly sunny</div></div>
-    <div class="wx-period"><div class="wx-name">Trip week</div><div class="wx-temp">70s&deg;F</div><div class="wx-desc">Flows should ease to ~9,000 CFS</div></div>
-  </div>
-
-  <div class="two-col">
-    <div>
-      <h4>Hatches (when flows drop)</h4>
-      <ul>
-        <li><strong>Midge (#18&ndash;22)</strong> &mdash; active now at any flow</li>
-        <li><strong>Blue-Winged Olive (#16&ndash;20)</strong> &mdash; overcast, building</li>
-        <li><strong>Early Caddis (#14&ndash;16)</strong> &mdash; evenings</li>
-        <li><strong>Salmonfly</strong> &mdash; <em>approaching; late June expected</em> (FlyFishFood)</li>
-        <li>PMD / Green Drake &mdash; July+</li>
-      </ul>
-    </div>
-    <div>
-      <h4>Recommended Flies (now)</h4>
-      <ul>
-        <li>Tungsten Pat's Rubber Legs #6 &mdash; indicator rig</li>
-        <li>Blowtorch / Hare's Ear #12&ndash;14</li>
-        <li>Egan's Thread Frenchie Jig #12</li>
-        <li>Midge pupa #18&ndash;22 (zebra, WD-40)</li>
-        <li>Streamer: Sculpzilla, Dungeons (olive/black)</li>
-        <li>BWO #18&ndash;20 &mdash; afternoon dry fly if overcast</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="shop-quote">
-    <span class="shop-name">FlyFishFood &mdash; South Fork Report &nbsp;<span class="shop-date">May 31, 2026</span></span>
-    "Full peak runoff, float-only access. Target soft-water refuges exclusively." Flow 13,700 CFS. "Prime fishing windows are going to align during the warmest parts of the day &mdash; concentrate on slower water types like buckets, tailouts, holes, seams and eddies."
-  </div>
-
-  <div class="shop-quote">
-    <span class="shop-name">WorldCast Anglers &mdash; South Fork &nbsp;<span class="shop-date">May 30, 2026</span></span>
-    "Flows have been mostly stable and cold." 13,400 CFS. Streamer fishing productive kept "low and slow." Float trips widely available.
-  </div>
-
-  <div class="access">
-    <h4>Access &amp; Notes</h4>
-    <ul>
-      <li><span class="warn">Float only at these flows. No safe wade access.</span> Ramp at Heise Hot Springs, Conant Valley, Byington, Lorenzo.</li>
-      <li>Drift target: slow water &mdash; eddies, current seams, back-channels. Nymphs and streamers only.</li>
-      <li>Expect flows to drop toward 8,000&ndash;10,000 CFS by June 5&ndash;8 as warming weather slows snowmelt.</li>
-      <li>At 8,000 CFS the South Fork transitions to excellent float/wade fishing &mdash; watch the gauge.</li>
-      <li>Salmonfly hatch is 3&ndash;4 weeks out (late June per FlyFishFood); plan a return trip if extended.</li>
-    </ul>
   </div>
 </div>
 
-
-<!-- ===== TETON RIVER ===== -->
-<div class="river-section">
-  <h2>Teton River <span class="tag tag-home">Home Water</span></h2>
-  <div class="section-note">Lower Teton / St. Anthony area: ~15&ndash;20 min &nbsp;&middot;&nbsp; Upper canyon nr Driggs: ~1 hr &nbsp;&middot;&nbsp; Both running above normal</div>
-
-  <div class="stat-row">
-    <div class="sc">
-      <div class="sc-label">Upper &mdash; Driggs (13052200)</div>
-      <div class="sc-val v-high">966</div>
-      <div class="sc-unit">CFS &nbsp;<span class="prov">PROV</span></div>
-      <div class="sc-meta">06:45 MDT May 31</div>
-    </div>
-    <div class="sc">
-      <div class="sc-label">Lower &mdash; nr St. Anthony (13055000)</div>
-      <div class="sc-val v-high">1,990</div>
-      <div class="sc-unit">CFS &nbsp;<span class="prov">PROV</span></div>
-      <div class="sc-meta">07:15 MDT May 31</div>
-    </div>
-    <div class="sc">
-      <div class="sc-label">Water Temp</div>
-      <div class="sc-val" style="font-size:1rem;color:#888">No Data</div>
-      <div class="sc-unit">Sensor offline both gauges</div>
-      <div class="sc-meta">Estimate 44&ndash;50&deg;F</div>
-    </div>
-    <div class="sc">
-      <div class="sc-label">Air &mdash; Driggs</div>
-      <div class="sc-val">65&deg;F</div>
-      <div class="sc-unit">Mon; 58&deg;F today</div>
-      <div class="sc-meta">Clearing Monday</div>
+<!-- Teton -->
+<div class="section">
+  <div class="section-title">Teton River &mdash; Home Water</div>
+  <div class="river-block">
+    <div class="river-name">Lower Teton (St. Anthony area) <span class="badge-home">HOME WATER</span></div>
+    <div class="river-body">
+      <p><span class="pill pill-high">1,980 cfs &middot; near St. Anthony</span> &nbsp;&nbsp;~20 min from Airbnb</p>
+      <p>Elevated but fishable from bank. Caddis + PMD evenings. Good alternative to Vernon if that stretch is crowded. Golden stones background hatch during trip.</p>
     </div>
   </div>
-
-  <div class="wx-strip">
-    <div class="wx-period"><div class="wx-name">Today</div><div class="wx-temp">58&deg;F</div><div class="wx-desc">Rain likely, T-storms</div></div>
-    <div class="wx-period"><div class="wx-name">Mon Jun 1</div><div class="wx-temp">65&deg;F</div><div class="wx-desc">Partly sunny, chance T-storms</div></div>
-    <div class="wx-period"><div class="wx-name">Tue Jun 2</div><div class="wx-temp">68&deg;F</div><div class="wx-desc">Improving</div></div>
-    <div class="wx-period"><div class="wx-name">Trip week</div><div class="wx-temp">68&ndash;72&deg;F</div><div class="wx-desc">Flows easing through June</div></div>
-  </div>
-
-  <div class="two-col">
-    <div>
-      <h4>Hatches &mdash; Early June</h4>
-      <ul>
-        <li><strong>Salmonfly</strong> &mdash; lower Teton, possible late May&ndash;early June</li>
-        <li><strong>Golden Stonefly</strong> &mdash; lower to mid canyon</li>
-        <li><strong>Pale Morning Dun</strong> &mdash; upper canyon near Driggs</li>
-        <li><strong>Caddis (#14&ndash;16)</strong> &mdash; evenings</li>
-        <li><strong>Blue-Winged Olive</strong> &mdash; overcast days, lower river</li>
-      </ul>
+  <div class="river-block">
+    <div class="river-name">Upper Teton Canyon (Driggs area)</div>
+    <div class="river-body">
+      <p><span class="pill pill-norm">792 cfs &middot; near Driggs</span> &nbsp;&nbsp;~1h drive to Driggs</p>
+      <p>Brown drake hatch: expect late June evenings in upper canyon (Jun 20&ndash;27), 18:00&ndash;21:00. Can be spectacular in the narrow canyon. Driggs forecast: Mon 65&deg;F sunny &rarr; Tue 70&deg;F sunny &mdash; warming favorably. Worth a weeknight run during Weeks 3&ndash;4 (Cards B3, A4).</p>
     </div>
-    <div>
-      <h4>Recommended Flies</h4>
-      <ul>
-        <li>Stimulator #4&ndash;8 &mdash; lower river salmonfly water</li>
-        <li>Foam Golden Stone #6&ndash;8</li>
-        <li>PMD Sparkle Dun / Comparadun #16 (upper canyon)</li>
-        <li>Elk Hair Caddis #14&ndash;16</li>
-        <li>Hare's Ear / Pheasant Tail #14&ndash;16 (nymph dropper)</li>
-        <li>Wooly Bugger #8&ndash;10 (streamer, lower river)</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="access">
-    <h4>Access &amp; Notes</h4>
-    <ul>
-      <li><strong>Lower Teton (nr St. Anthony):</strong> Best quick-hit from home base. At 1,990 CFS the lower river is high but some wade access in shallower tailouts. Good salmonfly water when in timing.</li>
-      <li><strong>Upper canyon (Driggs area):</strong> At 966 CFS manageable for floating; wading in some canyon sections. Drive Hwy 33 into Driggs, access below South Leigh Creek confluence.</li>
-      <li>Normal summer flow: Driggs ~400&ndash;600 CFS; lower St. Anthony ~600&ndash;1,000 CFS. Expect to be at upper end through June.</li>
-      <li>Teton Canyon above Driggs is spectacular technical dry fly water &mdash; patience required for hatch windows.</li>
-      <li>No float permit required on Teton; primitive camping available in canyon.</li>
-    </ul>
   </div>
 </div>
 
-
-<!-- ===== MADISON ===== -->
-<div class="river-section">
-  <h2>Madison River <span class="tag tag-day">Day Trip ~2 hr</span></h2>
-  <div class="section-note">St. Anthony &rarr; West Yellowstone: ~2 hrs (US-20 W) &nbsp;&middot;&nbsp; Upper Madison (park boundary to Hebgen): prime zone right now</div>
-
-  <div class="stat-row">
-    <div class="sc">
-      <div class="sc-label">nr West Yellowstone (06037500)</div>
-      <div class="sc-val v-good">495</div>
-      <div class="sc-unit">CFS &nbsp;<span class="prov">PROV</span></div>
-      <div class="sc-meta">06:30 MDT May 31</div>
+<!-- Madison -->
+<div class="section">
+  <div class="section-title">Madison River &mdash; Salmonfly Priority Wks 1&ndash;2</div>
+  <div class="river-block">
+    <div class="river-name">Madison River &mdash; Quake Lake to Ennis</div>
+    <div class="river-body">
+      <p>
+        <span class="pill pill-warm">487 cfs &middot; 14.6&deg;C (58&deg;F) &middot; near W. Yellow</span>
+        <span class="pill pill-cold">494 cfs &middot; 9.3&deg;C (49&deg;F) &middot; below Hebgen</span>
+        <span class="pill pill-warm">2,280 cfs &middot; 15.8&deg;C (60&deg;F) &middot; below Ennis</span>
+      </p>
+      <div class="hatch-tracker-box">
+        <div class="hatch-lbl">&#128027; Salmonfly Leading Edge Tracker</div>
+        Temps above 55&deg;F trigger from W. Yellowstone to below Ennis (except cold Hebgen tailwater at 49&deg;F). Blue Ribbon Flies (May 28, 2026): no salmonflies yet in upper section &mdash; March Browns, Caddis, Baetis, Midges; Royal Wulff Cripples + Red Necks / Green Machine nymphs recommended. Warm sunny week ahead: W. Yellow 63&deg;F &rarr; 73&deg;F Mon&ndash;Thu. <strong>Leading edge projection by Sat Jun 6: Varney Bridge to Cameron corridor.</strong> Confirm at shop morning of Jun 5.
+      </div>
+      <div class="alert-box">&#9888;&#65039; Hebgen Lake to Quake Lake: currently CLOSED (bear activity). Confirm status before Jun 5 &mdash; call Blue Ribbon Flies (406-646-7642).</div>
+      <p>~2h drive from St. Anthony to West Yellowstone. Salmonfly flies: Sofa Pillow #4-6, Chernobyl Ant #6, Henry's Fork Salmonfly #6, large foam stones. Golden stone backup: Yellow Stimulator #8-10.</p>
+      <p>Ennis area: Mon 65&deg;F / 30% T-storms &rarr; Tue 70&deg;F mostly sunny &rarr; warming through week. Good building conditions for hatch progression.</p>
     </div>
-    <div class="sc">
-      <div class="sc-label">Below Hebgen Lake (06038500)</div>
-      <div class="sc-val">494</div>
-      <div class="sc-unit">CFS &nbsp;<span class="prov">PROV</span></div>
-      <div class="sc-meta">06:45 MDT May 31</div>
-    </div>
-    <div class="sc">
-      <div class="sc-label">Water Temp &mdash; W. Yellowstone</div>
-      <div class="sc-val v-hatch">56.1&deg;F</div>
-      <div class="sc-unit">13.4&deg;C &mdash; hatch threshold met!</div>
-      <div class="sc-meta">May 31</div>
-    </div>
-    <div class="sc">
-      <div class="sc-label">Air &mdash; West Yellowstone</div>
-      <div class="sc-val">63&deg;F</div>
-      <div class="sc-unit">Mon; 53&deg;F today (rain)</div>
-      <div class="sc-meta">Clearing Monday</div>
-    </div>
-  </div>
-
-  <div class="stat-row">
-    <div class="sc">
-      <div class="sc-label">Below Ennis Lake / Lower Madison (06041000)</div>
-      <div class="sc-val v-hot">1,710</div>
-      <div class="sc-unit">CFS &nbsp;<span class="prov">PROV</span></div>
-      <div class="sc-meta">06:00 MDT May 31</div>
-    </div>
-    <div class="sc">
-      <div class="sc-label">Temp &mdash; Below Hebgen (tailwater)</div>
-      <div class="sc-val">49.8&deg;F</div>
-      <div class="sc-unit">9.9&deg;C &mdash; dam-cooled</div>
-      <div class="sc-meta">Suppresses hatch in tailwater stretch</div>
-    </div>
-    <div class="sc">
-      <div class="sc-label">Temp &mdash; Lower Madison</div>
-      <div class="sc-val v-hot">61.7&deg;F</div>
-      <div class="sc-unit">16.5&deg;C &mdash; past peak</div>
-      <div class="sc-meta">Hatch winding down Ennis area</div>
-    </div>
-    <div class="sc">
-      <div class="sc-label">Air &mdash; W. Yellowstone (Tue+)</div>
-      <div class="sc-val">67&deg;F</div>
-      <div class="sc-unit">Tue Jun 2, warming week</div>
-      <div class="sc-meta">Ideal salmonfly weather</div>
-    </div>
-  </div>
-
-  <div class="sf-tracker" style="margin:8px 0">
-    <h3>&#127801; Madison Salmonfly Leading Edge &mdash; May 31</h3>
-    <p><strong>NOW:</strong> West Yellowstone stretch (above Hebgen, 56.1&deg;F) &mdash; adults appearing, hatch very early stages or imminent.</p>
-    <p><strong>June 5 estimate:</strong> Leading edge ~15&ndash;20 mi above West Yellowstone, approaching or in the upper canyon section below Quake Lake. Best reach: from US-20 pull-offs east of town up toward Hebgen backwater.</p>
-    <p><strong>June 8&ndash;12:</strong> Hatch likely in the Quake Lake corridor and moving toward the park boundary. The park section (above park boundary) feeds the gauged water.</p>
-    <p><strong>Note:</strong> The Hebgen tailwater (49.8&deg;F) will stay cold and act as a barrier; hatch will not progress through that stretch. The warm upper section (56&deg;F) and the YNP section (Firehole + Gibbon thermal input) are the zones to target.</p>
-  </div>
-
-  <div class="wx-strip">
-    <div class="wx-period"><div class="wx-name">Today</div><div class="wx-temp">53&deg;F</div><div class="wx-desc">Light rain, WSW 2&ndash;7 mph</div></div>
-    <div class="wx-period"><div class="wx-name">Mon Jun 1</div><div class="wx-temp">63&deg;F</div><div class="wx-desc">Mostly sunny, slight chance T-storms</div></div>
-    <div class="wx-period"><div class="wx-name">Tue Jun 2</div><div class="wx-temp">67&deg;F</div><div class="wx-desc">Mostly sunny, improving</div></div>
-    <div class="wx-period"><div class="wx-name">Trip (Jun 5+)</div><div class="wx-temp">65&ndash;70&deg;F</div><div class="wx-desc">Warm stretch, ideal hatch weather</div></div>
-  </div>
-
-  <div class="two-col">
-    <div>
-      <h4>Hatches &mdash; Upper Madison</h4>
-      <ul>
-        <li><strong>Salmonfly (Pteronarcys)</strong> &mdash; IMMINENT / early start, 56&deg;F</li>
-        <li><strong>Golden Stonefly</strong> &mdash; overlapping, follows salmonfly</li>
-        <li><strong>Pale Morning Dun (#16)</strong> &mdash; late morning</li>
-        <li><strong>March Brown / Gray Drake</strong> &mdash; active (BRF May 28)</li>
-        <li><strong>Caddis (#14&ndash;16)</strong> &mdash; evenings, building</li>
-        <li><strong>Baetis / BWO (#18&ndash;20)</strong> &mdash; overcast conditions</li>
-      </ul>
-    </div>
-    <div>
-      <h4>Recommended Flies</h4>
-      <ul>
-        <li>Kaufmann Salmonfly #4&ndash;6, orange belly</li>
-        <li>Stimulator #4&ndash;8 (orange/yellow)</li>
-        <li>Chubby Chernobyl #4&ndash;6 (attractor)</li>
-        <li>March Brown Comparadun / Sparkle Dun #12&ndash;14</li>
-        <li>PMD Sparkle Dun #16</li>
-        <li>Elk Hair Caddis #14&ndash;16, X-Caddis</li>
-        <li>Soft hackle: White Miller #16, Partridge &amp; Pheasant (BRF)</li>
-        <li>Rubber Legs / Copper John #8&ndash;12 (dropper nymph)</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="shop-quote">
-    <span class="shop-name">Blue Ribbon Flies &mdash; West Yellowstone &nbsp;<span class="shop-date">May 28, 2026</span></span>
-    "Cool, wet weather expected this weekend with decent hatches of PMDs and Caddis." Madison below Quake Lake "fishing well with strong dry fly conditions." Soft hackles highly effective: "white Miller soft hackles, #16 Hot Spot Mints, #16&ndash;14 Partridge and Pheasant." Carry "#16 Stealth Link PMDs, #18&ndash;20 Missing Link Baetis, #16 White Miller X-caddis."
-  </div>
-
-  <div class="access">
-    <h4>Access &amp; Notes</h4>
-    <ul>
-      <li><strong>Drive from St. Anthony:</strong> US-20 W through Ashton and Island Park to West Yellowstone, ~2 hrs. Leave 5:30&ndash;6 AM for full day on the water.</li>
-      <li><strong>Upper Madison (park boundary to Hebgen backwater):</strong> ~10&ndash;12 mi. Wade access from US-191 pull-offs. This is the prime salmonfly zone for June 5+.</li>
-      <li><strong>Baker's Hole area:</strong> Good wade and bank access. Classic salmonfly water in early June.</li>
-      <li><strong>Cable Car Run / Bagnell Flat:</strong> Access via FS roads off US-191 north of West Yellowstone.</li>
-      <li>Lower Madison (Ennis area, 2.5 hrs from St. Anthony): Hatch likely past peak by June 5.</li>
-      <li><span class="good">Upper Madison is open year-round; no seasonal closures outside YNP boundary.</span></li>
-      <li>Bear activity common in corridor; carry spray and make noise especially near Quake Lake.</li>
-    </ul>
   </div>
 </div>
 
-
-<!-- ===== YNP (FIREHOLE / GIBBON) ===== -->
-<div class="river-section">
-  <h2>Firehole &middot; Gibbon &middot; Madison-in-Park (YNP) <span class="tag tag-day">Pair w/ Madison Day</span></h2>
-  <div class="section-note">All inside Yellowstone NP &nbsp;&middot;&nbsp; <strong>Open since May 23</strong> (YNP general season) &nbsp;&middot;&nbsp; All artificial lures and flies only</div>
-
-  <div class="stat-row">
-    <div class="sc">
-      <div class="sc-label">Firehole nr W. Yellowstone (06036905)</div>
-      <div class="sc-val v-hot">340</div>
-      <div class="sc-unit">CFS &nbsp;<span class="prov">PROV</span></div>
-      <div class="sc-meta">07:00 MDT May 31</div>
-    </div>
-    <div class="sc">
-      <div class="sc-label">Gibbon at Madison Jct (06037100)</div>
-      <div class="sc-val">126</div>
-      <div class="sc-unit">CFS &nbsp;<span class="prov">PROV</span></div>
-      <div class="sc-meta">07:00 MDT May 31</div>
-    </div>
-    <div class="sc">
-      <div class="sc-label">Firehole Temp</div>
-      <div class="sc-val v-hot">59.4&deg;F</div>
-      <div class="sc-unit">15.2&deg;C &mdash; warm (geothermal)</div>
-      <div class="sc-meta">May 31</div>
-    </div>
-    <div class="sc">
-      <div class="sc-label">Gibbon Temp</div>
-      <div class="sc-val v-hatch">55.0&deg;F</div>
-      <div class="sc-unit">12.8&deg;C &mdash; at hatch threshold</div>
-      <div class="sc-meta">May 31</div>
+<!-- Firehole / Gibbon / YNP -->
+<div class="section">
+  <div class="section-title">Firehole &middot; Gibbon &middot; Madison (in YNP)</div>
+  <div class="river-block">
+    <div class="river-name">Firehole River (YNP)</div>
+    <div class="river-body">
+      <p><span class="pill pill-warm">315 cfs &middot; 16.1&deg;C (61&deg;F)</span></p>
+      <p>Warm from geothermal input &mdash; 61&deg;F. Fish go lethargic at midday; best early morning or overcast. Pair with a Madison day from West Yellowstone. PMDs, baetis, caddis. YNP open since May 23 &#10003;.</p>
     </div>
   </div>
-
-  <div class="wx-strip">
-    <div class="wx-period"><div class="wx-name">W. Yellowstone Today</div><div class="wx-temp">53&deg;F</div><div class="wx-desc">Rain, WSW 2&ndash;7</div></div>
-    <div class="wx-period"><div class="wx-name">Mon Jun 1</div><div class="wx-temp">63&deg;F</div><div class="wx-desc">Mostly sunny</div></div>
-    <div class="wx-period"><div class="wx-name">Tue Jun 2</div><div class="wx-temp">67&deg;F</div><div class="wx-desc">Sunny, improving</div></div>
-    <div class="wx-period"><div class="wx-name">Trip week</div><div class="wx-temp">65&ndash;70&deg;F</div><div class="wx-desc">Prime PMD / Caddis conditions</div></div>
-  </div>
-
-  <div class="two-col">
-    <div>
-      <h4>Hatches &mdash; YNP Early June</h4>
-      <ul>
-        <li><strong>Pale Morning Dun (#16)</strong> &mdash; Firehole, mid-morning, <em>excellent</em></li>
-        <li><strong>Caddis (#16)</strong> &mdash; Firehole evenings, Gibbon above falls</li>
-        <li><strong>Baetis / BWO (#18&ndash;20)</strong> &mdash; overcast, Firehole</li>
-        <li><strong>Midges (#20&ndash;24)</strong> &mdash; morning before PMDs</li>
-        <li>Firehole too warm for salmonfly; Gibbon right at threshold</li>
-      </ul>
+  <div class="river-block">
+    <div class="river-name">Gibbon River (YNP)</div>
+    <div class="river-body">
+      <p><span class="pill pill-warm">131 cfs &middot; 14.2&deg;C (57&deg;F)</span></p>
+      <p>Light flows, warm water. Brook trout + brown trout in canyon reaches. Good half-day option paired with Firehole visit. Stoneflies + caddis; easy roadside access.</p>
     </div>
-    <div>
-      <h4>Recommended Flies</h4>
-      <ul>
-        <li>PMD Comparadun / Hackle Stacker #16 (Firehole)</li>
-        <li>Stealth Link PMD #16, Missing Link Baetis #18&ndash;20</li>
-        <li>X-Caddis / Elk Hair Caddis #16 (tan)</li>
-        <li>Hot Spot Mints #16, Partridge &amp; Pheasant soft hackle</li>
-        <li>Midge cluster #20&ndash;24 &mdash; Firehole flats AM</li>
-        <li>Olive Bugger #8&ndash;10 &mdash; Gibbon below Norris</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="shop-quote">
-    <span class="shop-name">Blue Ribbon Flies &mdash; YNP Section &nbsp;<span class="shop-date">May 28, 2026</span></span>
-    "Firehole River: good PMD and Caddis hatches occurring. Gibbon River: productive both above and below falls. Yellowstone below falls: now open with Caddis and PMD activity." Soft hackles leading: "white Miller soft hackles, #16 Hot Spot Mints."
-  </div>
-
-  <div class="access">
-    <h4>Access &amp; Notes</h4>
-    <ul>
-      <li><span class="good">Open since May 23. No special permit beyond YNP entry fee ($35/vehicle or America the Beautiful pass).</span></li>
-      <li><strong>Firehole:</strong> Firehole Canyon Drive parallels prime water. Ojo Caliente flat, Goose Lake Meadows, old faithful area. Watch water temp &mdash; above 70&deg;F fish go deep.</li>
-      <li><strong>Gibbon:</strong> Gibbon Meadows accessible from Norris area. Above and below Gibbon Falls are distinct fisheries.</li>
-      <li><strong>Madison in-park:</strong> From Madison Junction west to park boundary &mdash; wade access at campground, National Park Meadows.</li>
-      <li>All flies and lures only (no bait). Single barbless hooks strongly encouraged.</li>
-      <li><span class="warn">Yellowstone River inside YNP: CLOSED until July 15.</span></li>
-    </ul>
   </div>
 </div>
 
-
-<!-- ===== TWIN BRIDGES ===== -->
-<div class="river-section">
-  <h2>Twin Bridges &mdash; Big Hole &middot; Beaverhead &middot; Jefferson <span class="tag tag-overnight">Overnight ~3 hr</span></h2>
-  <div class="section-note">St. Anthony &rarr; Twin Bridges: ~3 hrs (US-20 W / I-15 N / US-41 W) &nbsp;&middot;&nbsp; Best as 2-night trip &nbsp;&middot;&nbsp; Big Hole salmonfly hatch approaching</div>
-
-  <div class="stat-row">
-    <div class="sc">
-      <div class="sc-label">Big Hole nr Wisdom (06024450)</div>
-      <div class="sc-val">330</div>
-      <div class="sc-unit">CFS &nbsp;<span class="prov">PROV</span></div>
-      <div class="sc-meta">06:45 MDT May 31</div>
-    </div>
-    <div class="sc">
-      <div class="sc-label">Big Hole nr Melrose (06025500)</div>
-      <div class="sc-val v-high">3,250</div>
-      <div class="sc-unit">CFS &nbsp;<span class="prov">PROV</span></div>
-      <div class="sc-meta">07:15 MDT May 31</div>
-    </div>
-    <div class="sc">
-      <div class="sc-label">Big Hole Temp (Wisdom)</div>
-      <div class="sc-val">48.4&deg;F</div>
-      <div class="sc-unit">9.1&deg;C &mdash; below hatch threshold</div>
-      <div class="sc-meta">May 31</div>
-    </div>
-    <div class="sc">
-      <div class="sc-label">Big Hole Temp (Melrose)</div>
-      <div class="sc-val">50.5&deg;F</div>
-      <div class="sc-unit">10.3&deg;C &mdash; needs ~4&ndash;5&deg;F more</div>
-      <div class="sc-meta">May 31 &mdash; warming</div>
+<!-- Twin Bridges MT -->
+<div class="section">
+  <div class="section-title">Twin Bridges, MT &mdash; Big Hole &middot; Beaverhead &middot; Jefferson &middot; Ruby</div>
+  <div class="river-block">
+    <div class="river-name">Big Hole River</div>
+    <div class="river-body">
+      <p><span class="pill pill-cold">620 cfs &middot; 9.5&deg;C (49&deg;F) &middot; Wisdom</span></p>
+      <div class="hatch-tracker-box">
+        <div class="hatch-lbl">&#128027; Big Hole Salmonfly Tracker</div>
+        Big Hole at Wisdom: 9.5&deg;C (49&deg;F) &mdash; 6&deg;F below 55&deg;F trigger. Lower river (Melrose/Twin Bridges) likely 3&ndash;5&deg;F warmer. Hatch ~1 week behind Madison. Twin Bridges: Mon 65&deg;F partly sunny (22&ndash;33% T-storm risk). <strong>By Sat Jun 13: leading edge projected Melrose to Divide corridor.</strong> Monitor fourriversfishing.com &amp; bigholeriver.com starting Jun 8.
+      </div>
+      <p>~3h drive from St. Anthony &mdash; overnight required (Thu&ndash;Sun, Week 2). Salmonfly + golden stone overlap. Sleep: The Old Hotel &middot; Stardust Country Inn &middot; Four Rivers guest house (Twin Bridges). Dillon Best Western ~30 min south as backup.</p>
     </div>
   </div>
-
-  <div class="stat-row">
-    <div class="sc">
-      <div class="sc-label">Beaverhead at Barretts (06016000)</div>
-      <div class="sc-val v-good">588</div>
-      <div class="sc-unit">CFS &nbsp;<span class="prov">PROV</span></div>
-      <div class="sc-meta">06:15 MDT May 31</div>
-    </div>
-    <div class="sc">
-      <div class="sc-label">Jefferson nr Twin Bridges (06026500)</div>
-      <div class="sc-val v-high">3,070</div>
-      <div class="sc-unit">CFS &nbsp;<span class="prov">PROV</span></div>
-      <div class="sc-meta">07:15 MDT May 31</div>
-    </div>
-    <div class="sc">
-      <div class="sc-label">Jefferson Temp</div>
-      <div class="sc-val">53.4&deg;F</div>
-      <div class="sc-unit">11.9&deg;C &mdash; close to threshold</div>
-      <div class="sc-meta">May 31</div>
-    </div>
-    <div class="sc">
-      <div class="sc-label">Air &mdash; Twin Bridges</div>
-      <div class="sc-val">64&deg;F</div>
-      <div class="sc-unit">Mon; 58&deg;F today (rain)</div>
-      <div class="sc-meta">Gradual clearing</div>
+  <div class="river-block">
+    <div class="river-name">Beaverhead River</div>
+    <div class="river-body">
+      <p><span class="pill pill-norm">575 cfs &middot; Barretts (temp N/A)</span></p>
+      <p>Technical tailwater, brown trout. Good nymph + dry-fly fishing near Dillon. Can fish alongside Big Hole trip on drive in or out.</p>
     </div>
   </div>
-
-  <div class="sf-tracker" style="margin:8px 0">
-    <h3>&#127801; Big Hole Salmonfly Leading Edge &mdash; May 31</h3>
-    <p><strong>NOW:</strong> Melrose at 50.5&deg;F &mdash; ~4&ndash;5 degrees below hatch threshold of 55&deg;F. High water (3,250 CFS) from snowmelt. Lower river (Divide area, downstream of Melrose) may be marginally warmer and closer to threshold.</p>
-    <p><strong>June 4&ndash;7 estimate:</strong> Temperatures should cross 55&deg;F at Melrose as the sunny week arrives. First adults appearing in the lower canyon (Divide&ndash;Melrose). Flows dropping toward 2,000&ndash;2,500 CFS.</p>
-    <p><strong>June 8&ndash;12 (TARGET):</strong> Hatch in full swing Melrose to lower Wise River. This is the money window. Boat fishing from Maiden Rock or Wise River launch. Dry fly paradise on warm afternoons.</p>
-    <p><strong>June 10&ndash;15:</strong> Hatch progresses upstream toward Wisdom. Wade fishing improving as flows drop. Consider 2-night stay to cover both the float water (Melrose) and the wade water (Wise River).</p>
-  </div>
-
-  <div class="wx-strip">
-    <div class="wx-period"><div class="wx-name">Today</div><div class="wx-temp">58&deg;F</div><div class="wx-desc">Light rain, WSW 8 mph</div></div>
-    <div class="wx-period"><div class="wx-name">Mon Jun 1</div><div class="wx-temp">64&deg;F</div><div class="wx-desc">Chance light rain, improving</div></div>
-    <div class="wx-period"><div class="wx-name">Tue Jun 2</div><div class="wx-temp">66&deg;F</div><div class="wx-desc">Mostly sunny</div></div>
-    <div class="wx-period"><div class="wx-name">Trip week</div><div class="wx-temp">65&ndash;70&deg;F</div><div class="wx-desc">Warming &mdash; hatch conditions building</div></div>
-  </div>
-
-  <div class="two-col">
-    <div>
-      <h4>Hatches &mdash; Big Hole</h4>
-      <ul>
-        <li><strong>Salmonfly (Pteronarcys)</strong> &mdash; lower river IMMINENT, ~June 5&ndash;8</li>
-        <li><strong>Golden Stonefly</strong> &mdash; overlapping, June 8&ndash;15+</li>
-        <li><strong>Pale Morning Dun</strong> &mdash; mid-river / upper sections</li>
-        <li><strong>Caddis (#14&ndash;16)</strong> &mdash; evenings Beaverhead</li>
-        <li>Beaverhead (tailwater): midges, BWO year-round; no salmonfly</li>
-      </ul>
+  <div class="river-block">
+    <div class="river-name">Jefferson River</div>
+    <div class="river-body">
+      <p><span class="pill pill-high">3,710 cfs &middot; 12.2&deg;C (54&deg;F) &middot; near Twin Bridges</span></p>
+      <p>Elevated runoff, 54&deg;F &mdash; nearly at salmonfly trigger. Confluence activity near Twin Bridges worth checking Jun 8&ndash;10. Typically clears mid-June.</p>
     </div>
-    <div>
-      <h4>Recommended Flies</h4>
-      <ul>
-        <li>Salmonfly: Kaufmann Stone #4&ndash;6, Chubby #4&ndash;6</li>
-        <li>Golden Stone: Stimulator #6&ndash;8, Madame X</li>
-        <li>Nymph: Pat's Rubber Legs #6&ndash;8, Golden Stone Nymph</li>
-        <li>Streamer: Olive Dungeons, Sparkle Minnow #4&ndash;6</li>
-        <li>Beaverhead: Midge / RS2 #20&ndash;22, BWO #18&ndash;20</li>
-        <li>PMD Sparkle Dun #16 (upper Big Hole near Wisdom)</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="access">
-    <h4>Access &amp; Notes</h4>
-    <ul>
-      <li><strong>Drive:</strong> St. Anthony &rarr; Rexburg &rarr; I-15 N &rarr; Dillon &rarr; MT-41 N to Twin Bridges. ~3 hrs. Stay in Twin Bridges or Wise River.</li>
-      <li><strong>Big Hole float (prime salmonfly):</strong> Launch at Maiden Rock, Divide, or Wise River boat ramps. Drift to Melrose. Full day float, ideal for June 8&ndash;12 at 2,000&ndash;2,500 CFS.</li>
-      <li><strong>Beaverhead:</strong> Clark Canyon Dam tailwater at 588 CFS &mdash; excellent and fishable now. Wade access below dam and Barretts Diversion. Brown trout midge fishing, consistent year-round.</li>
-      <li><strong>Jefferson:</strong> 3,070 CFS and 53&deg;F &mdash; high, marginally fishable. Better in mid-June as flows recede.</li>
-      <li>Montana license required ($20 conservation + $15 fishing, ~$35 total). No special permits needed.</li>
-      <li>Four Rivers Fishing Co. in Twin Bridges: best local intel, guide service available.</li>
-    </ul>
   </div>
 </div>
 
-
-<!-- ===== JACKSON ===== -->
-<div class="river-section">
-  <h2>Jackson Hole Waters <span class="tag tag-day">Teton Pass Day Trip</span></h2>
-  <div class="section-note">St. Anthony &rarr; Jackson WY: ~2.5 hrs via Teton Pass (Hwy 33 / WY-22) &nbsp;&middot;&nbsp; Most waters high runoff &nbsp;&middot;&nbsp; Flat Creek CLOSED</div>
-
-  <div class="stat-row">
-    <div class="sc">
-      <div class="sc-label">Snake nr Alpine (13022500)</div>
-      <div class="sc-val v-high">14,300</div>
-      <div class="sc-unit">CFS &nbsp;<span class="prov">PROV</span></div>
-      <div class="sc-meta">06:30 MDT May 31</div>
+<!-- Jackson Hole -->
+<div class="section">
+  <div class="section-title">Jackson Hole &mdash; Teton Pass Day Trip</div>
+  <div class="river-block">
+    <div class="river-name">Snake River near Jackson / Flat Creek</div>
+    <div class="river-body">
+      <p><span class="pill pill-high">13,600 cfs &middot; 11.3&deg;C (53&deg;F) &middot; above Alpine</span> <span class="pill pill-norm">27.5 cfs &middot; 6.0&deg;C &middot; Cache Creek</span></p>
+      <p>Snake at peak runoff &mdash; float-only recommended through mid-June. Water 53&deg;F, approaching stonefly range. Jackson forecast: Mon 68&deg;F &rarr; Tue 73&deg;F &rarr; Wed 78&deg;F &mdash; warming fast, salmonfly conditions building.</p>
+      <p><strong>Flat Creek (National Elk Refuge):</strong> open during trip (closes Aug 1 &#10003;). Technical dry-fly for cutthroat. Check Jack Dennis Fly Shop for report. ~2.5h drive from St. Anthony over Teton Pass.</p>
     </div>
-    <div class="sc">
-      <div class="sc-label">Greys nr Alpine (13023000)</div>
-      <div class="sc-val v-high">1,330</div>
-      <div class="sc-unit">CFS &nbsp;<span class="prov">PROV</span></div>
-      <div class="sc-meta">06:30 MDT May 31</div>
-    </div>
-    <div class="sc">
-      <div class="sc-label">Cache Creek nr Jackson (13018300)</div>
-      <div class="sc-val v-good">27.5</div>
-      <div class="sc-unit">CFS &nbsp;<span class="prov">PROV</span></div>
-      <div class="sc-meta">06:45 MDT May 31</div>
-    </div>
-    <div class="sc">
-      <div class="sc-label">Air &mdash; Jackson WY</div>
-      <div class="sc-val">68&deg;F</div>
-      <div class="sc-unit">Mon; 60&deg;F today (T-storms)</div>
-      <div class="sc-meta">Mostly sunny Monday</div>
-    </div>
-  </div>
-
-  <div class="stat-row">
-    <div class="sc">
-      <div class="sc-label">Snake Temp (nr Alpine)</div>
-      <div class="sc-val">48.4&deg;F</div>
-      <div class="sc-unit">9.1&deg;C &mdash; cold runoff</div>
-      <div class="sc-meta">May 31</div>
-    </div>
-    <div class="sc">
-      <div class="sc-label">Cache Creek Temp</div>
-      <div class="sc-val">39.7&deg;F</div>
-      <div class="sc-unit">4.3&deg;C &mdash; snowmelt cold</div>
-      <div class="sc-meta">Very small stream</div>
-    </div>
-    <div class="sc" style="background:#fff0ec;border-color:#ffb39a">
-      <div class="sc-label" style="color:var(--rust)">Flat Creek</div>
-      <div class="sc-val v-high" style="font-size:.95rem">CLOSED</div>
-      <div class="sc-unit">Until August 1</div>
-      <div class="sc-meta">NWR closure, no exceptions</div>
-    </div>
-    <div class="sc">
-      <div class="sc-label">Snake nr Jackson (Hoback Jct area)</div>
-      <div class="sc-val v-high">High</div>
-      <div class="sc-unit">Runoff; wade caution</div>
-      <div class="sc-meta">Float only recommended</div>
-    </div>
-  </div>
-
-  <div class="wx-strip">
-    <div class="wx-period"><div class="wx-name">Today</div><div class="wx-temp">60&deg;F</div><div class="wx-desc">Showers &amp; T-storms, WSW 7&ndash;12</div></div>
-    <div class="wx-period"><div class="wx-name">Mon Jun 1</div><div class="wx-temp">68&deg;F</div><div class="wx-desc">Mostly sunny, chance T-storms PM</div></div>
-    <div class="wx-period"><div class="wx-name">Tue Jun 2</div><div class="wx-temp">70&deg;F</div><div class="wx-desc">Mostly clear, improving</div></div>
-    <div class="wx-period"><div class="wx-name">Trip week</div><div class="wx-temp">65&ndash;72&deg;F</div><div class="wx-desc">Good weather; Snake still high</div></div>
-  </div>
-
-  <div class="two-col">
-    <div>
-      <h4>Hatches &mdash; Jackson Area</h4>
-      <ul>
-        <li><strong>Caddis (#14&ndash;16)</strong> &mdash; evenings on calmer stretches</li>
-        <li><strong>Blue-Winged Olive</strong> &mdash; overcast, slower water</li>
-        <li><strong>Golden Stonefly</strong> &mdash; building on Hoback</li>
-        <li>Snake mainstem: mostly nymph / streamer at these flows</li>
-        <li>Fish Creek / Spread Creek: smaller, more accessible</li>
-      </ul>
-    </div>
-    <div>
-      <h4>Recommended Flies</h4>
-      <ul>
-        <li>Streamer: Slumpbuster, Sex Dungeon #4&ndash;6</li>
-        <li>Nymph: Pat's Rubber Legs #6, Golden Bead Hare's Ear</li>
-        <li>Attractor: Chubby Chernobyl #6 (where fishable)</li>
-        <li>Caddis: Elk Hair #14&ndash;16 for evenings</li>
-        <li>BWO #18&ndash;20 (Sparkle Dun) &mdash; overcast days</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="access">
-    <h4>Access &amp; Notes</h4>
-    <ul>
-      <li><span class="warn">Flat Creek (National Elk Refuge): CLOSED until August 1. Do not fish.</span></li>
-      <li><strong>Snake River:</strong> 14,300 CFS near Alpine &mdash; extreme runoff. Float fishing below Hoback Junction is possible with a guide; wading is dangerous. Worth waiting until mid-June for flows to drop below 8,000 CFS.</li>
-      <li><strong>Greys River:</strong> 1,330 CFS &mdash; high but a smaller system. Middle Greys may have wade pockets. Worth scouting if visiting Alpine area.</li>
-      <li><strong>Hoback River:</strong> Tributary of the Snake nr Hoback Junction; smaller system, may have fishable stretches sooner than the mainstem.</li>
-      <li><strong>Fish Creek (Wilson area):</strong> Small private-access creek; ask at Jackson shops (Jack Dennis) for current status.</li>
-      <li>Wyoming fishing license: $14/day or $92/year. Available at Jack Dennis Outdoor Shop on Town Square.</li>
-      <li>Drive time from St. Anthony: ~2.5 hrs via Hwy 33 to Driggs, then WY-22 over Teton Pass. Check pass conditions before June 5.</li>
-    </ul>
   </div>
 </div>
 
-
-<!-- ===== YELLOWSTONE RIVER ===== -->
-<div class="river-section">
-  <h2>Yellowstone River &mdash; Paradise Valley</h2>
-  <div class="section-note">Corwin Springs / Gardiner to Livingston &nbsp;&middot;&nbsp; St. Anthony to Livingston: ~3.5 hrs &nbsp;&middot;&nbsp; YNP section CLOSED until July 15</div>
-
-  <div class="stat-row">
-    <div class="sc">
-      <div class="sc-label">Corwin Springs / Gardiner (06191500)</div>
-      <div class="sc-val v-high">10,800</div>
-      <div class="sc-unit">CFS &nbsp;<span class="prov">PROV</span></div>
-      <div class="sc-meta">07:15 MDT May 31</div>
+<!-- Yellowstone River -->
+<div class="section">
+  <div class="section-title">Yellowstone River &mdash; Paradise Valley</div>
+  <div class="river-block">
+    <div class="river-name">Yellowstone River &mdash; Corwin Springs to Livingston</div>
+    <div class="river-body">
+      <p><span class="pill pill-high">9,980 cfs &middot; 8.6&deg;C &middot; Corwin Springs</span> <span class="pill pill-high">12,700 cfs &middot; 9.5&deg;C &middot; Livingston</span></p>
+      <div class="alert-box">&#9888;&#65039; Yellowstone River in YNP: CLOSED until Jul 15. Paradise Valley section (Corwin Springs&ndash;Livingston) OPEN.</div>
+      <p>High runoff, cold (9&deg;C). Livingston forecast: Mon 66&deg;F / 35% T-storms &rarr; improving mid-week. Best visiting late June as runoff recedes (golden stones + PMDs in Paradise Valley). ~4h drive from St. Anthony &mdash; not a priority Weeks 1&ndash;2.</p>
     </div>
-    <div class="sc">
-      <div class="sc-label">nr Livingston MT (06192500)</div>
-      <div class="sc-val v-high">11,600</div>
-      <div class="sc-unit">CFS &nbsp;<span class="prov">PROV</span></div>
-      <div class="sc-meta">06:00 MDT May 31</div>
-    </div>
-    <div class="sc">
-      <div class="sc-label">Temp &mdash; Corwin Springs</div>
-      <div class="sc-val">47.5&deg;F</div>
-      <div class="sc-unit">8.6&deg;C &mdash; cold snowmelt</div>
-      <div class="sc-meta">May 31</div>
-    </div>
-    <div class="sc">
-      <div class="sc-label">Temp &mdash; Livingston</div>
-      <div class="sc-val">48.7&deg;F</div>
-      <div class="sc-unit">9.3&deg;C &mdash; cold</div>
-      <div class="sc-meta">May 31</div>
-    </div>
-  </div>
-
-  <div class="wx-strip">
-    <div class="wx-period"><div class="wx-name">Today</div><div class="wx-temp">54&deg;F</div><div class="wx-desc">Rain showers, WSW 15&ndash;18 mph</div></div>
-    <div class="wx-period"><div class="wx-name">Mon Jun 1</div><div class="wx-temp">67&deg;F</div><div class="wx-desc">Chance showers / T-storms</div></div>
-    <div class="wx-period"><div class="wx-name">Tue Jun 2</div><div class="wx-temp">70&deg;F</div><div class="wx-desc">Partly sunny</div></div>
-    <div class="wx-period"><div class="wx-name">Trip week</div><div class="wx-temp">65&ndash;72&deg;F</div><div class="wx-desc">High flows persist through June</div></div>
-  </div>
-
-  <div class="two-col">
-    <div>
-      <h4>Hatches (when fishable)</h4>
-      <ul>
-        <li><strong>Salmonfly</strong> &mdash; typically mid-June on Paradise Valley reach</li>
-        <li><strong>Golden Stonefly</strong> &mdash; follows salmonfly</li>
-        <li><strong>PMD</strong> &mdash; July on this section typically</li>
-        <li>Currently too high and cold for consistent hatch activity</li>
-      </ul>
-    </div>
-    <div>
-      <h4>Recommended Flies (when fishable)</h4>
-      <ul>
-        <li>Salmonfly: Kaufmann Stone / Chubby #4&ndash;6</li>
-        <li>Streamer: Olive Dungeons, Wooly Bugger #4&ndash;6</li>
-        <li>Nymph: Pat's Rubber Legs, Barr's Net Builder</li>
-        <li>Attractor dry: Stimulator #6&ndash;8, Madame X</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="access">
-    <h4>Access &amp; Notes</h4>
-    <ul>
-      <li><span class="warn">Yellowstone River inside YNP: CLOSED until July 15. The mainstem from the YNP boundary (Gardiner) downstream through Paradise Valley is OPEN.</span></li>
-      <li>At 10,800&ndash;11,600 CFS these are flood-stage flows. <strong>Wading is dangerous; float fishing is the only safe option.</strong> Guide trips strongly recommended.</li>
-      <li>Flows typically peak late May to mid-June, then drop to fishable 3,000&ndash;5,000 CFS range by late June.</li>
-      <li>Paradise Valley access: Carbella, Mallard's Rest, Carter Bridge, Point of Rocks. All on Hwy 89 between Gardiner and Livingston.</li>
-      <li>Livingston is 3.5 hrs from St. Anthony &mdash; a long day trip or better as add-on to Big Hole overnight via Bozeman.</li>
-      <li>Montana license required. Yellowstone Angler and Dan Bailey's in Livingston for local intel.</li>
-    </ul>
   </div>
 </div>
 
-</div><!-- /.c -->
-
-
-<!-- FOOTER -->
-<footer>
-<div class="c">
-  <div class="footer-cols">
-    <div class="footer-col">
-      <h3>Live Gauges (USGS)</h3>
-      <ul>
-        <li><strong>Henry's Fork</strong></li>
-        <li><a href="https://waterdata.usgs.gov/monitoring-location/13042500/" target="_blank">13042500 &mdash; Island Park / Box Canyon</a></li>
-        <li><a href="https://waterdata.usgs.gov/monitoring-location/13056500/" target="_blank">13056500 &mdash; nr Rexburg</a></li>
-        <li><strong>South Fork Snake</strong></li>
-        <li><a href="https://waterdata.usgs.gov/monitoring-location/13037500/" target="_blank">13037500 &mdash; Heise</a></li>
-        <li><a href="https://waterdata.usgs.gov/monitoring-location/13032500/" target="_blank">13032500 &mdash; nr Irwin</a></li>
-        <li><strong>Teton River</strong></li>
-        <li><a href="https://waterdata.usgs.gov/monitoring-location/13055000/" target="_blank">13055000 &mdash; nr St. Anthony</a></li>
-        <li><a href="https://waterdata.usgs.gov/monitoring-location/13052200/" target="_blank">13052200 &mdash; Driggs</a></li>
-        <li><strong>Jackson Area</strong></li>
-        <li><a href="https://waterdata.usgs.gov/monitoring-location/13022500/" target="_blank">13022500 &mdash; Snake nr Alpine</a></li>
-        <li><a href="https://waterdata.usgs.gov/monitoring-location/13023000/" target="_blank">13023000 &mdash; Greys nr Alpine</a></li>
-        <li><a href="https://waterdata.usgs.gov/monitoring-location/13018300/" target="_blank">13018300 &mdash; Cache Creek nr Jackson</a></li>
-      </ul>
+<!-- ═══════════════════════════════════════════════ WEATHER ══ -->
+<div class="section">
+  <div class="section-title">4-Day Weather Forecast &mdash; Jun 1&ndash;4, 2026</div>
+  <div class="wx-grid">
+    <div class="wx-card">
+      <div class="wx-loc">St. Anthony / Ashton</div>
+      <div class="wx-temp">66&deg;F Mon</div>
+      <div class="wx-desc">Sunny &middot; 70&deg;F Tue sunny</div>
+      <div class="wx-precip">&le;2% rain</div>
     </div>
-    <div class="footer-col">
-      <h3>Live Gauges cont.</h3>
-      <ul>
-        <li><strong>Madison &amp; YNP</strong></li>
-        <li><a href="https://waterdata.usgs.gov/monitoring-location/06037500/" target="_blank">06037500 &mdash; Madison nr West Yellowstone</a></li>
-        <li><a href="https://waterdata.usgs.gov/monitoring-location/06038500/" target="_blank">06038500 &mdash; Madison bl Hebgen Lake</a></li>
-        <li><a href="https://waterdata.usgs.gov/monitoring-location/06041000/" target="_blank">06041000 &mdash; Madison bl Ennis Lake</a></li>
-        <li><a href="https://waterdata.usgs.gov/monitoring-location/06036905/" target="_blank">06036905 &mdash; Firehole nr W. Yellowstone</a></li>
-        <li><a href="https://waterdata.usgs.gov/monitoring-location/06037100/" target="_blank">06037100 &mdash; Gibbon at Madison Jct</a></li>
-        <li><strong>Twin Bridges / Big Hole</strong></li>
-        <li><a href="https://waterdata.usgs.gov/monitoring-location/06024450/" target="_blank">06024450 &mdash; Big Hole nr Wisdom</a></li>
-        <li><a href="https://waterdata.usgs.gov/monitoring-location/06025500/" target="_blank">06025500 &mdash; Big Hole nr Melrose</a></li>
-        <li><a href="https://waterdata.usgs.gov/monitoring-location/06016000/" target="_blank">06016000 &mdash; Beaverhead at Barretts</a></li>
-        <li><a href="https://waterdata.usgs.gov/monitoring-location/06026500/" target="_blank">06026500 &mdash; Jefferson nr Twin Bridges</a></li>
-        <li><strong>Yellowstone</strong></li>
-        <li><a href="https://waterdata.usgs.gov/monitoring-location/06191500/" target="_blank">06191500 &mdash; Corwin Springs / Gardiner</a></li>
-        <li><a href="https://waterdata.usgs.gov/monitoring-location/06192500/" target="_blank">06192500 &mdash; nr Livingston</a></li>
-      </ul>
+    <div class="wx-card">
+      <div class="wx-loc">Island Park</div>
+      <div class="wx-temp">64&deg;F Mon</div>
+      <div class="wx-desc">Sunny &middot; slight T-storm Mon night</div>
+      <div class="wx-precip">20% Mon night</div>
     </div>
-    <div class="footer-col">
-      <h3>Shop Reports</h3>
-      <ul>
-        <li><strong>Henry's Fork / Teton</strong></li>
-        <li><a href="https://www.worldcastanglers.com/fishing-reports-henrys-fork/" target="_blank">WorldCast Anglers &mdash; Henry's Fork</a></li>
-        <li><a href="https://www.trouthunter.com/fishing-reports/" target="_blank">TroutHunter (Last Chance)</a></li>
-        <li><a href="https://www.henrysforkanglers.com/fishing-reports" target="_blank">Henry's Fork Anglers</a></li>
-        <li><a href="https://www.yostmark.com/fishing-reports" target="_blank">Yost Mark Outfitters (Teton)</a></li>
-        <li><strong>South Fork</strong></li>
-        <li><a href="https://www.flyfishfood.com/blogs/fly-fishing-reports/south-fork-of-the-snake" target="_blank">FlyFishFood &mdash; South Fork</a></li>
-        <li><a href="https://www.worldcastanglers.com/south-fork-fishing-report-worldcast-anglers/" target="_blank">WorldCast Anglers &mdash; South Fork</a></li>
-        <li><a href="https://www.southforklodge.com/fishing-report/" target="_blank">South Fork Lodge</a></li>
-        <li><strong>Madison / West Yellowstone</strong></li>
-        <li><a href="https://www.blueribbonflies.com/fishing-report/" target="_blank">Blue Ribbon Flies</a></li>
-        <li><a href="https://www.slideinn.com/fishing-report/" target="_blank">Galloup's Slide Inn</a></li>
-        <li><a href="https://www.madisonriveroutfitters.com/fishing-reports" target="_blank">Madison River Outfitters</a></li>
-        <li><strong>Big Hole / Twin Bridges</strong></li>
-        <li><a href="https://www.fourriversfishing.com" target="_blank">Four Rivers Fishing Co.</a></li>
-        <li><a href="https://troutfitters.com/river-reports" target="_blank">Montana Troutfitters (Big Hole)</a></li>
-        <li><strong>Jackson</strong></li>
-        <li><a href="https://www.jackdennis.com/fishing-reports" target="_blank">Jack Dennis Outdoor Shop</a></li>
-        <li><a href="https://www.snakeriveranglers.com/blogs/fishing-report" target="_blank">Snake River Anglers</a></li>
-        <li><strong>Yellowstone / Paradise Valley</strong></li>
-        <li><a href="https://www.yellowstoneangler.com/fishing-reports/" target="_blank">Yellowstone Angler</a></li>
-        <li><a href="https://www.danbailey.com/fishing-reports/" target="_blank">Dan Bailey's Fly Shop</a></li>
-        <li><a href="https://sweetwaterflyshop.com/yellowstone-fishing-report/" target="_blank">Sweetwater Fly Shop</a></li>
-      </ul>
-
-      <h3>Licenses &amp; Permits</h3>
-      <ul>
-        <li><a href="https://idfg.idaho.gov/licenses" target="_blank">Idaho fishing license &mdash; IDFG</a> (resident/nonresident)</li>
-        <li><a href="https://wgfd.wyo.gov/apply" target="_blank">Wyoming fishing license &mdash; WGFD</a> ($14/day)</li>
-        <li><a href="https://fwp.mt.gov/license" target="_blank">Montana fishing license &mdash; FWP</a> (~$35 for 2-day)</li>
-        <li><a href="https://www.nps.gov/yell/planyourvisit/fishing.htm" target="_blank">YNP fishing permit &mdash; NPS</a> ($18/3-day, $25/7-day)</li>
-        <li>YNP entry: $35/vehicle or America the Beautiful pass</li>
-      </ul>
+    <div class="wx-card">
+      <div class="wx-loc">West Yellowstone</div>
+      <div class="wx-temp">63&rarr;73&deg;F</div>
+      <div class="wx-desc">Sunny Mon&ndash;Wed &middot; 73&deg;F Thu</div>
+      <div class="wx-precip">20% Thu only</div>
     </div>
-  </div>
-
-  <div class="ts">
-    Generated automatically &nbsp;&middot;&nbsp; Sunday, May 31, 2026 at 07:30 AM MDT &nbsp;&middot;&nbsp;
-    Gauge data: USGS NWIS instantaneous values, provisional &nbsp;&middot;&nbsp;
-    Weather: NOAA/NWS api.weather.gov &nbsp;&middot;&nbsp;
-    Shop reports: WorldCast Anglers (May 30), FlyFishFood (May 31), Blue Ribbon Flies (May 28) &nbsp;&middot;&nbsp;
-    Next update: Monday, June 1 at 6:30 AM PDT
+    <div class="wx-card">
+      <div class="wx-loc">Driggs, ID</div>
+      <div class="wx-temp">65&deg;F Mon</div>
+      <div class="wx-desc">Sunny &middot; 70&deg;F Tue sunny</div>
+      <div class="wx-precip">20% Mon night</div>
+    </div>
+    <div class="wx-card">
+      <div class="wx-loc">Jackson, WY</div>
+      <div class="wx-temp">68&rarr;78&deg;F</div>
+      <div class="wx-desc">Mostly sunny Mon &rarr; 78&deg;F Wed</div>
+      <div class="wx-precip">30% Mon &middot; clear Tue&ndash;Wed</div>
+    </div>
+    <div class="wx-card">
+      <div class="wx-loc">Swan Valley, ID</div>
+      <div class="wx-temp">68&deg;F Mon</div>
+      <div class="wx-desc">Sunny &middot; 72&deg;F Tue sunny</div>
+      <div class="wx-precip">20% Mon</div>
+    </div>
+    <div class="wx-card">
+      <div class="wx-loc">Ennis, MT</div>
+      <div class="wx-temp">65&deg;F Mon</div>
+      <div class="wx-desc">Mostly sunny / T-storms Mon pm</div>
+      <div class="wx-precip">30% Mon &middot; 14% Tue</div>
+    </div>
+    <div class="wx-card">
+      <div class="wx-loc">Twin Bridges, MT</div>
+      <div class="wx-temp">65&deg;F Mon</div>
+      <div class="wx-desc">Partly sunny &middot; 69&deg;F Tue</div>
+      <div class="wx-precip">22% Mon &middot; 33% Mon night</div>
+    </div>
+    <div class="wx-card">
+      <div class="wx-loc">Livingston, MT</div>
+      <div class="wx-temp">66&deg;F Mon</div>
+      <div class="wx-desc">Partly sunny / T-storms Mon&ndash;Tue</div>
+      <div class="wx-precip">33&ndash;35% Mon&ndash;Tue</div>
+    </div>
   </div>
 </div>
-</footer>
 
+<!-- ════════════════════════════════════════════════ LODGING ══ -->
+<div class="section">
+  <div class="section-title">Lodging Reference</div>
+  <p style="font-size:0.8rem; color:#6a8a7a; margin-bottom:14px;">Home base: <strong style="color:#c9a86b;">St. Anthony Airbnb (booked)</strong> &mdash; all mid-week evenings and Ranch weekends return here. Options below for overnight Madison / Big Hole / Paradise Valley trips.</p>
+  <div class="lodge-grid">
+    <div class="lodge-card">
+      <div class="lodge-area">West Yellowstone &mdash; Wk 1 (Madison)</div>
+      <div class="lodge-body">
+        <p><strong>Brandin&rsquo; Iron Inn</strong> &mdash; classic western motel, walking to fly shops</p>
+        <p><strong>Stage Coach Inn</strong> &mdash; comfortable, local favorite</p>
+        <p><strong>Madison Arm Resort</strong> &mdash; Hebgen Lake cabins, rustic &amp; scenic</p>
+        <p><strong>Slide Inn Cabins</strong> &mdash; on the Madison, ~12 mi east of town</p>
+      </div>
+    </div>
+    <div class="lodge-card">
+      <div class="lodge-area">Ennis, MT &mdash; Madison alt.</div>
+      <div class="lodge-body">
+        <p><strong>El Western Cabins</strong> &mdash; riverside, great location on the Madison</p>
+        <p><strong>Hi Country Motel</strong> &mdash; budget-friendly, downtown Ennis</p>
+        <p><strong>Riverside Motel</strong> &mdash; on the Madison River</p>
+      </div>
+    </div>
+    <div class="lodge-card">
+      <div class="lodge-area">Twin Bridges, MT &mdash; Wk 2 (Big Hole)</div>
+      <div class="lodge-body">
+        <p><strong>The Old Hotel</strong> &mdash; excellent renovated historic hotel, top pick</p>
+        <p><strong>Stardust Country Inn</strong> &mdash; comfortable, fishing-friendly</p>
+        <p><strong>Four Rivers guest house</strong> &mdash; affiliated with Four Rivers Fishing Co.</p>
+        <p><strong>Dillon Best Western</strong> &mdash; ~30 min south, backup if Twin Bridges full</p>
+      </div>
+    </div>
+    <div class="lodge-card">
+      <div class="lodge-area">Paradise Valley &mdash; Yellowstone R.</div>
+      <div class="lodge-body">
+        <p><strong>Chico Hot Springs</strong> &mdash; Emigrant, MT; rustic resort + hot springs</p>
+        <p><strong>Murray Hotel</strong> &mdash; Livingston, historic downtown hotel</p>
+        <p><strong>Yellowstone Valley Lodge</strong> &mdash; Paradise Valley ranch-style setting</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════ FOOTER ══ -->
+<div class="footer">
+  <p>
+    <strong>Live USGS Gauges:</strong>
+    <a href="https://waterdata.usgs.gov/nwis/uv?site_no=13042500" target="_blank">HF Island Park</a> &middot;
+    <a href="https://waterdata.usgs.gov/nwis/uv?site_no=13056500" target="_blank">HF Rexburg</a> &middot;
+    <a href="https://waterdata.usgs.gov/nwis/uv?site_no=13055000" target="_blank">Teton nr St. Anthony</a> &middot;
+    <a href="https://waterdata.usgs.gov/nwis/uv?site_no=13037500" target="_blank">S Fork Heise</a> &middot;
+    <a href="https://waterdata.usgs.gov/nwis/uv?site_no=06037500" target="_blank">Madison W. Yellow</a> &middot;
+    <a href="https://waterdata.usgs.gov/nwis/uv?site_no=06041000" target="_blank">Madison Ennis</a> &middot;
+    <a href="https://waterdata.usgs.gov/nwis/uv?site_no=06024450" target="_blank">Big Hole Wisdom</a> &middot;
+    <a href="https://waterdata.usgs.gov/nwis/uv?site_no=06191500" target="_blank">Yellowstone Corwin Spgs</a>
+  </p>
+  <p>
+    <strong>Shop Reports:</strong>
+    <a href="https://www.blueribbonflies.com/fishing-report/" target="_blank">Blue Ribbon Flies</a> &middot;
+    <a href="https://slideinn.com/fishing-report/" target="_blank">Slide Inn</a> &middot;
+    <a href="https://worldcastanglers.com/fishing-reports-henrys-fork/" target="_blank">WorldCast HF</a> &middot;
+    <a href="https://www.trouthunter.com/fishing-reports/" target="_blank">TroutHunter</a> &middot;
+    <a href="https://henrysforkanglers.com/fishing-reports" target="_blank">HF Anglers</a> &middot;
+    <a href="https://www.fourriversfishing.com" target="_blank">Four Rivers (Big Hole)</a> &middot;
+    <a href="https://www.jackdennis.com/fishing-reports" target="_blank">Jack Dennis (Jackson)</a> &middot;
+    <a href="https://flyfishfood.com/blogs/fly-fishing-reports/south-fork-of-the-snake" target="_blank">Fly Fish Food (S Fork)</a>
+  </p>
+  <p>
+    <strong>Licenses &amp; Permits:</strong>
+    <a href="https://idfg.idaho.gov/licenses" target="_blank">Idaho IDFG</a> &middot;
+    <a href="https://fwp.mt.gov/buyandapply/licenses" target="_blank">Montana FWP</a> &middot;
+    <a href="https://wgfd.wyo.gov/Licensing" target="_blank">Wyoming G&amp;F</a> &middot;
+    <a href="https://www.nps.gov/yell/planyourvisit/fishing.htm" target="_blank">YNP Fishing Permit</a> &middot;
+    <a href="https://harrimanstatepark.org" target="_blank">Harriman Ranch (opens Jun 15)</a>
+  </p>
+  <div class="footer-ts">Generated Mon Jun 1, 2026 &middot; 03:43 UTC &middot; Greater Yellowstone Fishing Agent &middot; idaho-fishing-dashboard.vercel.app</div>
+</div>
+
+</div><!-- /container -->
 </body>
 </html>
