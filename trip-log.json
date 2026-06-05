@@ -1,0 +1,28 @@
+{
+  "trip": "Greater Yellowstone Fly Fishing — June 2026",
+  "homeBase": "St. Anthony, ID",
+  "arrive": "2026-06-05",
+  "depart": "2026-06-28",
+  "lastFishingDay": "2026-06-26",
+  "updated": "2026-06-05",
+  "entries": [
+    {
+      "date": "2026-06-05",
+      "day": "Friday",
+      "leg": "Weekend 1 · Arrival",
+      "status": "pending",
+      "locations": ["Vernon Bridge / Lower Henry's Fork"],
+      "summary": "",
+      "catches": [],
+      "flies": [],
+      "notes": "Travel day — land, grab the rental, shake-out evening session 18:00–21:00. Tell me how it fished and I'll fill this in with the day's conditions.",
+      "conditions": {
+        "air": "Warm, low 70s°F — ideal evening rises",
+        "waterTemp": "Est. 50–56°F evenings (Rexburg sensor offline)",
+        "flowCfs": "Lower Henry's Fork ~2,390 CFS (Rexburg gauge, prov.)",
+        "weather": "Sunny warming stretch statewide",
+        "hatch": "Evening caddis #14–16 + building PMD spinner; golden-stone attractor #10–12; BWO if clouds build. Best window 19:00–21:30."
+      }
+    }
+  ]
+}
