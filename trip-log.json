@@ -4,24 +4,26 @@
   "arrive": "2026-06-05",
   "depart": "2026-06-28",
   "lastFishingDay": "2026-06-26",
-  "updated": "2026-06-05",
+  "updated": "2026-06-06",
   "entries": [
     {
       "date": "2026-06-05",
       "day": "Friday",
       "leg": "Weekend 1 · Arrival",
-      "status": "pending",
-      "locations": ["Vernon Bridge / Lower Henry's Fork"],
-      "summary": "",
-      "catches": [],
-      "flies": [],
-      "notes": "Travel day — land, grab the rental, shake-out evening session 18:00–21:00. Tell me how it fished and I'll fill this in with the day's conditions.",
+      "status": "logged",
+      "locations": ["Vernon Bridge / Lower Henry's Fork — Bill's Hole"],
+      "summary": "Drove straight from the airport to Vernon and walked down to Bill's Hole — the same water where last June I floated rose petals down the river for Dad. A lady was already in the hole, so I hung back above her and worked the run. Stuck with a Chubby Chernobyl all evening even though no golden stones showed. Around 8pm, as the sun dropped, the first head appeared against the bank above me — a nice brown. Cast a few times, hung the bush over him, then spooked him walking up to free the fly. When the lady below packed out I dropped into Bill's Hole and fished it for about an hour and a half, right where I wanted to be. A pod started working a heavy caddis hatch; I stayed with the Chubby and after a lot of casts one finally swiped and I came tight.",
+      "catches": [
+        {"species": "Rainbow Trout", "count": 1, "notes": "18\" — hooked on the underside of the mouth, maybe a partial take, but I'm counting it. Forgot my net, so I banked it. Cleaned it after."}
+      ],
+      "flies": ["Chubby Chernobyl"],
+      "notes": "Bill's Hole is where I held the rose-petal ceremony for Dad (d. March 4, 2025) last year — good to be back on that water.\n\nThe one that got away: a solid brown rising tight to the bank above me, lost to a snagged bush and a careless step. Fished a while longer over the rising pod after landing the rainbow, stopped around 10pm and got home about 10:30. A few beers and American Spirits along the way.",
       "conditions": {
-        "air": "Warm, low 70s°F — ideal evening rises",
-        "waterTemp": "Est. 50–56°F evenings (Rexburg sensor offline)",
-        "flowCfs": "Lower Henry's Fork ~2,390 CFS (Rexburg gauge, prov.)",
-        "weather": "Sunny warming stretch statewide",
-        "hatch": "Evening caddis #14–16 + building PMD spinner; golden-stone attractor #10–12; BWO if clouds build. Best window 19:00–21:30."
+        "air": "Cooled from 79°F at 6pm → 73°F at 8pm (first riser) → 67°F by 10pm",
+        "waterTemp": "Est. ~52–56°F evening (Rexburg sensor offline)",
+        "flowCfs": "1,770 CFS — lower Henry's Fork at Rexburg (USGS 13056500), dropping off runoff",
+        "weather": "Clear skies all evening (0% cloud). Wind ~14 mph at 6pm easing to dead calm by 9pm — the calm at dusk lined up with the caddis pod going. On the water ~6pm–10pm.",
+        "hatch": "Heavy caddis hatch after ~8pm with a pod feeding hard; no golden stones seen. Chubby Chernobyl drew the eats."
       }
     }
   ]
