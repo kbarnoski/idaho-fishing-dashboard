@@ -4,8 +4,35 @@
   "arrive": "2026-06-05",
   "depart": "2026-06-27",
   "lastFishingDay": "2026-06-26",
-  "updated": "2026-06-06",
+  "updated": "2026-06-07",
   "entries": [
+    {
+      "date": "2026-06-06",
+      "day": "Saturday",
+      "leg": "Weekend 1 · Vernon",
+      "status": "logged",
+      "locations": ["Lower Henry's Fork — Vernon Bridge down to the rapids", "Bill's Hole (evening)"],
+      "summary": "A ten-hour grind on about 3–4 hours of sleep — adrenaline from being here and that big rainbow, plus a new place always taking some adjusting. On the water by 10am. Started just below Vernon Bridge near the two metal farm-feed silos, backpack loaded with beer, Gatorade, and snacks. Not much rising, so I worked down to the big-rock spot above the famous big-bank pool (up above the rapids, the deep run into the duck-pond pool). Nothing on the way down and nothing there. Wind picked up. Pushed down to the big bend that's known for holding big browns on the bank — had a large brown turn and look at the Chubby but he didn't commit. Went just above the rapids, turned, and worked my way back up. Took two spills — one heading down, a worse one coming back up where I cracked my knee on a river rock (lucky it wasn't worse). By then I was wiped. Back to the car around midday-ish to restock, then over to Bill's Hole about 6pm. Caddis started a little but nothing like Friday night. The intense wind finally laid down after about 5pm, temps cooled, and there were stretches of very low light. Hooked into a brown at the head of the pool but it was a surprise and I didn't set — lesson learned. Worked back and forth below and at the head trying to reach feeding pods, but I was too exhausted to see my fly in the low light and couldn't track a caddis well enough to time the eats.",
+      "catches": [
+        {"species": "Brown Trout", "count": 1, "notes": "8\" — small, by the big-rock pool on the way back up."}
+      ],
+      "flies": ["Chubby Chernobyl"],
+      "notes": "Basically a 10-hour day on the river with very little activity. Wind was the story until ~5pm; after it dropped the light went flat and low. A big brown at the big bend turned on the Chubby but didn't eat. Beers and snacks throughout.",
+      "lessons": [
+        "Rest matters — fishing on 3–4 hours of sleep wrecked my stamina and focus by evening. Get a real night before a full day.",
+        "Set on the surprise eat. Lost a brown at the head of Bill's Hole because I wasn't ready — keep tension and be ready to set even when it's slow.",
+        "Low-light fly visibility is the limiter. Need a plan: a higher-vis post/indicator on the dry, a lighter sighter, or fishing a known seam by feel so I can time the eat when I can't see the fly.",
+        "These Vernon pods see heavy pressure (anglers + boats) and get picky. Feeding line to them below me was a struggle — work on a clean downstream/reach presentation so the fly leads the leader.",
+        "Wind = stay home until it lays down. The productive window opened only after ~5pm when it calmed; could've saved energy by starting later or resting through the gusts."
+      ],
+      "conditions": {
+        "air": "Warm midday — 71°F at 10am climbing to ~80°F by 2pm, then a cloud bank rolled in and cooled it to ~73°F by 6pm and 69°F by 8pm",
+        "waterTemp": "Est. ~54–58°F (Rexburg sensor offline)",
+        "flowCfs": "1,630 CFS — lower Henry's Fork at Rexburg (USGS 13056500), still dropping off runoff",
+        "weather": "Sunny and windy through the afternoon — clear skies midday with sustained 14–16 mph wind. Around 4pm clouds built to overcast (99% cloud) and the wind eased to ~7–8 mph by evening. On the water ~10am–8pm.",
+        "hatch": "Very little all day. A weak caddis start at Bill's Hole after ~6pm — nothing like Friday's blizzard. Sporadic pods in the low evening light."
+      }
+    },
     {
       "date": "2026-06-05",
       "day": "Friday",

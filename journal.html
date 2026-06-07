@@ -47,6 +47,12 @@ a{color:var(--rust)}
 
 .notes{font-size:.88rem;background:rgba(201,168,107,.07);border-left:3px solid var(--gold);padding:8px 12px;margin:12px 0;border-radius:0 6px 6px 0;white-space:pre-wrap}
 
+.lessons{font-size:.88rem;background:rgba(45,74,62,.06);border-left:3px solid var(--green);padding:10px 14px;margin:12px 0;border-radius:0 6px 6px 0}
+.lessons .ll-h{text-transform:uppercase;font-size:.66rem;letter-spacing:.07em;color:var(--green);font-weight:700;margin-bottom:6px}
+.lessons .ll-h::before{content:"\1F4A1";margin-right:5px}
+.lessons ul{margin:0;padding-left:18px}
+.lessons li{margin:4px 0}
+
 .cond{margin-top:14px;border-top:1px dashed var(--dcream);padding-top:12px}
 .cond h4{font-size:.68rem;text-transform:uppercase;letter-spacing:.07em;color:var(--brown);margin-bottom:9px}
 .cond h4::before{content:"\1F321\FE0F";margin-right:5px}
@@ -104,6 +110,8 @@ function renderEntry(e){
   ).join("");
   const flies = (e.flies||[]).length
     ? `<div class="flies"><span class="lbl">Flies</span>${e.flies.map(f=>`<span class="fly">${esc(f)}</span>`).join("")}</div>` : "";
+  const lessons = (e.lessons||[]).length
+    ? `<div class="lessons"><div class="ll-h">Lessons learned</div><ul>${e.lessons.map(l=>`<li>${esc(l)}</li>`).join("")}</ul></div>` : "";
   const c = e.conditions||{};
   const cond = [
     condCell("Air", c.air), condCell("Water Temp", c.waterTemp),
@@ -115,7 +123,8 @@ function renderEntry(e){
     : `${e.summary?`<p class="e-summary">${esc(e.summary)}</p>`:""}
        ${catches?`<div class="catches">${catches}</div>`:""}
        ${flies}
-       ${e.notes?`<div class="notes">${esc(e.notes)}</div>`:""}`;
+       ${e.notes?`<div class="notes">${esc(e.notes)}</div>`:""}
+       ${lessons}`;
   return `<div class="entry${pending?" pending":""}">
     <div class="e-date"><h2>${fmtDate(e.date)}</h2>${e.leg?`<span class="e-leg">${esc(e.leg)}</span>`:""}</div>
     ${locs?`<div class="e-loc">${locs}</div>`:""}
