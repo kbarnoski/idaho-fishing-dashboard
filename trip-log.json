@@ -7,6 +7,33 @@
   "updated": "2026-06-07",
   "entries": [
     {
+      "date": "2026-06-07",
+      "day": "Sunday",
+      "leg": "Weekend 1 · Vernon",
+      "status": "logged",
+      "locations": ["Bill's Hole — lower Henry's Fork (evening)"],
+      "summary": "Inside all day cooking and working, but the wind gusts started to ease so I went for it. Got to Bill's Hole at 8pm and fished until 9:45pm. Tied on a medium attractor with a caddis-emerger type dropper about a foot off the back. No clean takes at first but a couple of tugs, then I came tight to a 12\" rainbow on the emerger — again hooked on the bottom side of the mouth, so not sure if it was a partial/uncommitted take or lightly foul-hooked, but I'm counting it. The wind died right down as it got later and the air went cool. Not a big hatch, but some caddis activity, a pod working below me again and some movement at the head of the riffle. Never landed a bigger fish off either pod, but visibility was slightly better than last night. Didn't get skunked.",
+      "catches": [
+        {"species": "Rainbow Trout", "count": 1, "notes": "12\" — on the caddis emerger dropper. Hooked on the underside of the mouth again; possibly an uncommitted take, counting it."}
+      ],
+      "flies": ["Medium attractor (dry)", "Caddis emerger (dropper, ~1 ft)"],
+      "notes": "Short, focused evening session that paid off after two slow days. Wind eased through the night; cool air at dark. Then a real scare — couldn't find my car key and started worrying I'd be stuck outside all night, until I found it zipped in a pocket of my fly vest back at the car. Big panic.",
+      "lessons": [
+        "Even in bad wind and behind a cold front, the last couple hours toward dark can fish well as things calm — worth going out late instead of writing the day off.",
+        "Have a car-key system. Nearly got stranded; the key was buried in a zipped vest pocket. Pick one dedicated spot for it every time, or leave the car unlocked (with the key hidden in it) so I could sleep in it in a pinch.",
+        "The dry-dropper (attractor + caddis emerger ~1 ft back) out-fished the single dry — the emerger drew the eat when nothing committed on top.",
+        "Still need to crack these pressured pods. Slightly better visibility tonight; next try stalking closer and shortening the cast rather than reaching from distance — they see a lot of anglers and boats.",
+        "Two fish in a row hooked on the underside of the mouth suggests short/late takes — maybe slow the swing, add a touch of hesitation before the set, or downsize the emerger to get cleaner eats."
+      ],
+      "conditions": {
+        "air": "Cool and dropping — ~63°F at 6pm to 58°F by 8pm and 54°F by 9pm; clear skies (cold front behind it)",
+        "waterTemp": "Est. ~52–56°F (Rexburg sensor offline)",
+        "flowCfs": "~1,620 CFS — lower Henry's Fork at Rexburg (USGS 13056500), still easing off runoff",
+        "weather": "Clear and windy early — sustained ~20–23 mph gusting to 34 mph at 6pm — laying down through the evening to ~10–12 mph by 9–10pm. On the water 8pm–9:45pm.",
+        "hatch": "Modest caddis activity after dark, not a heavy hatch. A pod working below and some movement at the head of the riffle."
+      }
+    },
+    {
       "date": "2026-06-06",
       "day": "Saturday",
       "leg": "Weekend 1 · Vernon",
