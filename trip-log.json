@@ -4,8 +4,35 @@
   "arrive": "2026-06-05",
   "depart": "2026-06-27",
   "lastFishingDay": "2026-06-26",
-  "updated": "2026-06-07",
+  "updated": "2026-06-08",
   "entries": [
+    {
+      "date": "2026-06-08",
+      "day": "Monday",
+      "leg": "Work-week · Vernon",
+      "status": "logged",
+      "locations": ["Bill's Hole — lower Henry's Fork"],
+      "summary": "Arrived at Bill's Hole about 6pm and fished until 9pm. Ran through several flies early with no luck — I think BWO and caddis. Then switched to a golden stone foam, cast it into the head of the riffle, and let it float down into the hole. Amazed to see a big brown turn in the riffle, follow the stone down, and slam it — my best eat of the trip so far because I watched it all happen. Landed it by banking it: a thick 16-incher. Switched to a couple of two-fly setups after that and only landed a 6\" brown on a spinner tied off the back of the lead fly. It cooled down and the rises shut down rather than building into a big caddis hatch, so I left content and a little earlier than previous nights.",
+      "catches": [
+        {"species": "Brown Trout", "count": 1, "notes": "16\" — thick. Golden stone foam cast into the head of the riffle and drifted into the hole; watched a big brown turn, follow, and slam it. Best eat of the trip. Banked it."},
+        {"species": "Brown Trout", "count": 1, "notes": "6\" — on a spinner tied off the back of the lead fly in a two-fly setup."}
+      ],
+      "flies": ["BWO (tried early, no luck)", "Caddis (tried early, no luck)", "Golden stone foam (dry)", "Spinner (dropper off lead fly)"],
+      "notes": "Best eat of the trip — watched the whole thing happen: the golden stone foam drifted off the riffle head and a big brown turned, followed it down, and crushed it. Banked a thick 16\". Now I've pulled a big rainbow and a nice brown out of Bill's Hole. Left a little earlier and content once the rises shut down. Taking a couple nights off to restock, hit the fly shop for floatant and small flies, plan the Thursday–Sunday trip, and rest up / catch up on work.",
+      "lessons": [
+        "When the small stuff fails, swing big. BWO and caddis drew nothing, but a high-floating golden stone foam fished through the head of the riffle and drifted into the hole pulled the best fish of the trip up out of the pool — a 16\" brown that followed and slammed it.",
+        "Fish where you can see the eat. The reason this was the best take of the trip is I watched it unfold in the riffle — positioning to sight-fish the riffle head beats blind-casting into the dark of the pool.",
+        "The two-fly rig only produced the small brown on the spinner dropper while the lead golden stone did the real work — when one fly is clearly carrying the session, weigh the dropper's tangle/drag cost against its payoff.",
+        "Read the closing window. No big caddis blizzard this night — the cooling shut the rises down instead of building a hatch. Leaving content rather than grinding a dead pool preserved energy and morale for the Thursday–Sunday trip."
+      ],
+      "conditions": {
+        "air": "Cooling steadily through the session — 70°F at 6pm → 69°F at 7pm → 64°F at 8pm → 60°F by 9pm",
+        "waterTemp": "Est. ~54–58°F (Rexburg sensor offline)",
+        "flowCfs": "~1,620 CFS easing to ~1,580 by 9:30pm — lower Henry's Fork at Rexburg (USGS 13056500), still dropping off runoff",
+        "weather": "Fully overcast all evening (98–100% cloud), as the Monday forecast called. Light wind — ~3 mph at 6pm building to ~10 mph gusting 17 by 8pm, then easing. On the water 6pm–9pm.",
+        "hatch": "Tried BWO and caddis early with no eats. No big caddis blizzard this night — the cooling shut the rises down rather than building a hatch. A golden stone foam attractor drew the big brown out of the riffle head."
+      }
+    },
     {
       "date": "2026-06-07",
       "day": "Sunday",
