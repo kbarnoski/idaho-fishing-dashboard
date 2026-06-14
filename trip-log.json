@@ -40,28 +40,29 @@
       "leg": "Weekend 2 · Big Hole",
       "status": "logged",
       "locations": ["Fish Trap access — upper Big Hole", "Powerhouse access — Big Hole"],
-      "summary": "Drove to the Fish Trap access on the upper Big Hole. Caught 3 brook trout, 1 rainbow, 1 grayling, and 1 whitefish — the grayling was the real highlight, and it ate a stonefly dry. Didn't spot any big fish, but it was nice to see these upper waters. On the way back I went looking for bigger water and stopped at the Powerhouse access. Walked under the bridge and worked slowly downstream — immediately caught a small brown on the stonefly dry. Saw a split in the river with an island forming, followed it up, and in the first hole a trout attacked the stonefly. From there it was one after another, all violent eats. The run turned out to be a diversion channel. In about 90 minutes I caught at least 10 trout from 12–15\", almost all brown and a bit sleek and thin. The key: skating the stonefly on the swing triggered hit after hit — I've never seen takes like that on a swung stonefly dry. Saw one bigger fish come look but that was the closest I got. A memorable session I'll never forget.",
+      "summary": "Drove to the Fish Trap access on the upper Big Hole. Caught 3 brook trout, 1 rainbow, 1 grayling, and 1 whitefish — the grayling was the real highlight, and it ate a golden stone dry. Didn't spot any big fish, but it was nice to see these upper waters. On the way back I went looking for bigger water and stopped at the Powerhouse access. Walked under the bridge and worked slowly downstream — immediately caught a small brown on the golden stone dry. Saw a split in the river with an island forming, followed it up, and in the first hole a trout attacked the golden stone. From there it was one after another, all violent eats. The run turned out to be a diversion channel. In about 90 minutes I caught at least 10 trout from 12–15\", almost all brown and a bit sleek and thin. The key: skating the golden stone on the swing triggered hit after hit — I've never seen takes like that on a swung golden stone dry. Saw one bigger fish come look but that was the closest I got. A memorable session I'll never forget.",
       "catches": [
-        {"species": "Brook Trout", "count": 3, "notes": "Fish Trap access, stonefly dry"},
+        {"species": "Brook Trout", "count": 3, "notes": "Fish Trap access, golden stone dry"},
         {"species": "Rainbow Trout", "count": 1, "notes": "Fish Trap access"},
-        {"species": "Arctic Grayling", "count": 1, "notes": "Highlight of the day — ate a stonefly dry at Fish Trap"},
+        {"species": "Arctic Grayling", "count": 1, "notes": "Highlight of the day — ate a golden stone dry at Fish Trap"},
         {"species": "Mountain Whitefish", "count": 1, "notes": "Fish Trap access"},
-        {"species": "Brown Trout", "count": 11, "notes": "Powerhouse diversion channel, 12–15\", sleek and thin — violent eats on a SKATED stonefly dry swung across the current"}
+        {"species": "Brown Trout", "count": 11, "notes": "Powerhouse diversion channel, 12–15\", sleek and thin — violent eats on a SKATED golden stone dry swung across the current"}
       ],
-      "flies": ["Stonefly dry (skated/swung)"],
-      "notes": "Two very different stretches: upper Big Hole at Fish Trap for species variety, then the Powerhouse diversion channel for a stacked run of aggressive browns. The diversion channel was the find of the day.",
+      "flies": ["Golden stone dry (skated/swung)"],
+      "notes": "Two very different stretches: upper Big Hole at Fish Trap for species variety, then the Powerhouse diversion channel for a stacked run of aggressive browns. The diversion channel was the find of the day. No salmonfly hatch going — Sunrise Fly Shop said the Big Hole salmonflies were long gone this year and it had been a short hatch; the fish ate a golden stone dry, not salmonflies.",
       "lessons": [
-        "Skating/swinging the stonefly dry across the current — not a dead drift — triggered violent hit-after-hit eats. New go-to trigger when fish are aggressive.",
+        "Skating/swinging the golden stone dry across the current — not a dead drift — triggered violent hit-after-hit eats. New go-to trigger when fish are aggressive.",
         "Scouting for bigger water paid off — leaving Fish Trap to check the Powerhouse access is what found the hot run.",
         "Diversion and side channels can stack aggressive fish; the split/island that looked like a dead end was the best water of the day.",
-        "Upper Big Hole gives species variety (brookies, grayling, whitefish) but smaller fish — drop downstream for size."
+        "Upper Big Hole gives species variety (brookies, grayling, whitefish) but smaller fish — drop downstream for size.",
+        "Don't trust calendar/seasonal salmonfly hype — Sunrise Fly Shop confirmed the Big Hole salmonfly was long gone and short this year. The golden stone carried the day. Chasing the salmonfly proper, head to the Madison."
       ],
       "conditions": {
         "air": "56°F at 10am to a high of 64°F early afternoon, 54°F by evening",
         "waterTemp": "≈57–60°F at Melrose (lower); thin upper flow ≈58–64°F at Wisdom",
         "flowCfs": "≈1,370–1,420 (Big Hole near Melrose); ≈48–53 (upper Big Hole at Wisdom)",
         "weather": "Warm and windy — variable cloud 13–79%; wind 6–9 mph gusting 18–28 mph",
-        "hatch": "Stoneflies (fish keyed on the stonefly dry)"
+        "hatch": "No salmonfly (long gone this year per Sunrise Fly Shop — a short hatch); fish took a golden stone dry"
       }
     },
     {
