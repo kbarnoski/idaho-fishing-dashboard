@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Greater Yellowstone Fly Fishing Dashboard — June 13, 2026</title>
+<title>Greater Yellowstone Fly Fishing Dashboard — June 14, 2026</title>
 <style>
 :root {
   --green: #2d4a3e;
@@ -74,6 +74,20 @@ a:hover{text-decoration:underline}
 .sf-tracker h3{color:var(--gold);font-family:Georgia,serif;font-size:1rem;margin-bottom:8px}
 .sf-tracker p{font-size:.86rem;line-height:1.6;margin-bottom:6px}
 .sf-tracker p:last-child{margin-bottom:0}
+
+/* ---- TIMED FLY PLAN ---- */
+.timed{background:#1f3a2e;border-radius:10px;padding:18px;margin:18px 0;border:1px solid var(--lg)}
+.timed h2{color:var(--gold);font-size:1.2rem;margin-bottom:3px}
+.timed .t-sub{color:#9ab8b0;font-size:.82rem;margin-bottom:14px}
+.t-row{display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.09)}
+.t-row:last-of-type{border-bottom:none}
+.t-clock{flex-shrink:0;width:108px;font-family:Georgia,serif;color:var(--gold);font-weight:700;font-size:.92rem;line-height:1.3}
+.t-clock small{display:block;font-family:sans-serif;font-weight:400;font-size:.66rem;color:#7aa098;text-transform:uppercase;letter-spacing:.05em}
+.t-body{flex:1;color:#dce8e2;font-size:.86rem;line-height:1.5}
+.t-body b{color:#fff}
+.t-fly{color:var(--gold);font-weight:600}
+.t-rule{background:#3a2008;color:#f0dfc0;border-left:3px solid var(--gold);border-radius:6px;padding:11px 14px;margin-top:14px;font-size:.82rem;line-height:1.55}
+.t-rule b{color:var(--gold)}
 
 .river-section{margin:26px 0;border-top:2px solid var(--gold);padding-top:14px}
 .river-section h2{font-size:1.3rem;margin-bottom:3px}
@@ -148,6 +162,7 @@ footer ul li{padding:2px 0}
   .two-col>div{min-width:100%}
   .wx-period{min-width:100%;border-right:none;border-bottom:1px solid rgba(255,255,255,.1)}
   .wx-period:last-child{border-bottom:none}
+  .t-clock{width:84px}
 }
 </style>
 </head>
@@ -156,12 +171,12 @@ footer ul li{padding:2px 0}
 <div class="hero">
 <div class="c">
   <h1>Greater Yellowstone Fly Fishing Dashboard</h1>
-  <div class="hero-sub">Saturday, June 13, 2026 &nbsp;&middot;&nbsp; All gauge data provisional &nbsp;&middot;&nbsp; <strong>Facts &amp; reported conditions only &mdash; hatch status shown ONLY where a dated shop report or Karel's own log confirms it</strong> &nbsp;&middot;&nbsp; <strong>Big Hole wrapped (Jun 12&ndash;13): great fishing on golden stones &mdash; salmonfly was OVER (Sunrise Fly Shop). Tomorrow: Madison drift home.</strong></div>
+  <div class="hero-sub">Sunday, June 14, 2026 &nbsp;&middot;&nbsp; All gauge data provisional &nbsp;&middot;&nbsp; <strong>Facts &amp; reported conditions only &mdash; hatch status shown ONLY where a dated shop report or Karel's own log confirms it</strong> &nbsp;&middot;&nbsp; <strong>Madison drift-home day. Heads up: the Madison salmonfly is NOT out yet (Fly Fish Food, Jun 14 &mdash; "just starting"). Caddis &amp; goldens are the play.</strong></div>
   <div class="hero-row">
-    <div class="countdown">DAY 9<br><small>of 23 &middot; Big Hole &rarr; Madison</small></div>
+    <div class="countdown">DAY 10<br><small>of 23 &middot; Madison drift home</small></div>
     <div class="hero-info">
       Home base: <strong>St. Anthony, ID</strong> &nbsp;&middot;&nbsp; Mon&ndash;Wed Vernon evenings &nbsp;&middot;&nbsp; Thu&ndash;Sun hatch chase<br>
-      <strong>Salmonflies &rarr; Drakes &rarr; Goldens</strong> &nbsp;&middot;&nbsp; Day 9 on the water &nbsp;&middot;&nbsp; Last day Fri Jun 26 &middot; fly out Sat morning Jun 27<br>
+      <strong>Salmonflies &rarr; Drakes &rarr; Goldens</strong> &nbsp;&middot;&nbsp; Day 10 on the water &nbsp;&middot;&nbsp; Last day Fri Jun 26 &middot; fly out Sat morning Jun 27<br>
       Home waters: Henry's Fork &middot; South Fork Snake &middot; Teton &nbsp;|&nbsp; Chase: Madison &middot; Big Hole &middot; The Ranch<br>
       <a href="./journal.html" style="display:inline-block;margin-top:12px;background:var(--gold);color:var(--green);font-weight:700;font-family:sans-serif;font-size:.82rem;text-decoration:none;padding:8px 16px;border-radius:20px;letter-spacing:.03em">&#128214; Trip Journal &mdash; log &amp; look back</a>
     </div>
@@ -174,853 +189,308 @@ footer ul li{padding:2px 0}
 <!-- ================= TRIP PLAN BLOCK ================= -->
 <div class="tripplan">
   <h2>&#127907; Trip Plan &middot; Hatch Chase &middot; Jun 5 &ndash; Jun 27</h2>
-  <div class="tp-sub">Saturday, June 13, 2026 &mdash; <strong style="color:#e8d4a8">Day 9 of 23</strong>. <strong>Big Hole weekend, wrapped.</strong> Karel fished Fish Trap (upper) and the Powerhouse access Jun 12&ndash;13: variety up top (brookies, a grayling, whitefish) and a stacked run of 12&ndash;15&Prime; browns in a Powerhouse diversion channel &mdash; <strong>all on a golden stone dry, skated on the swing.</strong> <strong>No salmonfly &mdash; Sunrise Fly Shop confirmed it was long gone this year (a short hatch).</strong> Tomorrow (Sun Jun 14) he drifts home via the Madison. Full write-ups in the <a href="./journal.html" style="color:var(--rust)">journal</a>.</div>
+  <div class="tp-sub">Sunday, June 14, 2026 &mdash; <strong style="color:#e8d4a8">Day 10 of 23</strong>. <strong>Final day of the Big Hole weekend &mdash; the drift home via the Madison.</strong> Karel intercepts the Madison near Ennis to scout the salmonfly. Honest read from the only fresh report: <strong>adults are NOT out yet</strong> &mdash; Fly Fish Food (Jun 14) calls it "approaching / just starting," with Monday's warmth maybe lighting the first fuse. Today's real game is <strong>caddis after 4&nbsp;PM + building golden stones</strong>. Big-Hole write-ups in the <a href="./journal.html" style="color:var(--rust)">journal</a>.</div>
   <div class="tp-legend">&#9733; gold = active leg &nbsp;&middot;&nbsp; faded = projected &nbsp;&middot;&nbsp; green stripe = mid-week Vernon evenings</div>
 
-  <!-- CARD A1 — weekend wrapped -->
+  <!-- CARD A1 — weekend 1 done -->
   <div class="tp-card projected">
-    <span class="tp-when">Weekend 1 &middot; Fri Jun 5 &ndash; Sun Jun 7 (wrapped)</span><span class="tp-badge proj">Done</span>
-    <div class="tp-head">Vernon weekend &mdash; 3 fish on the board</div>
-    <div class="tp-mini"><span class="d" style="color:var(--rust);font-weight:700">Fri Jun 5:</span> 18&Prime; rainbow at Bill's Hole on a Chubby off the dark caddis pod. &nbsp;<span class="d" style="color:var(--rust);font-weight:700">Sat Jun 6:</span> 10-hr grind on little sleep &mdash; 8&Prime; brown, a big brown looked but didn't eat. &nbsp;<span class="d" style="color:var(--rust);font-weight:700">Sun Jun 7:</span> short evening, 12&Prime; rainbow on a caddis emerger as the wind finally laid down. Full write-ups + lessons in the <a href="./journal.html" style="color:var(--rust)">Trip Journal</a>.</div>
+    <span class="tp-when">Weekend 1 &middot; Fri Jun 5 &ndash; Sun Jun 7</span><span class="tp-badge proj">Done</span>
+    <div class="tp-head">Vernon weekend &mdash; lower Henry's Fork (home water)</div>
+    <div class="tp-mini">Fri: 18&Prime; rainbow on a Chubby Chernobyl off a heavy caddis pod after dark. Sat&ndash;Sun: Vernon evenings / Box Canyon recovery.</div>
   </div>
 
-  <!-- CARD B1 — Vernon work week, wrapped -->
+  <!-- CARD B1 — mid-week 1 done -->
   <div class="tp-card projected evening">
-    <span class="tp-when">Vernon Evenings &middot; Mon Jun 8 &ndash; Wed Jun 10 (wrapped)</span><span class="tp-badge proj">Done</span>
+    <span class="tp-when">Vernon Evenings &middot; Mon Jun 8 &ndash; Wed Jun 10</span><span class="tp-badge proj">Done</span>
     <div class="tp-head">After-work lower Henry's Fork &mdash; Vernon Bridge</div>
-    <div class="tp-mini"><span class="d" style="color:var(--rust);font-weight:700">Mon Jun 8:</span> the week's best eat &mdash; a thick <strong>16&Prime; brown at Bill's Hole</strong>, watched it turn and slam a golden stone foam through the riffle head (logged in the <a href="./journal.html" style="color:var(--rust)">journal</a>). &nbsp;<span class="d" style="color:var(--rust);font-weight:700">Tue Jun 9:</span> the storm day &mdash; fished the late calm window. &nbsp;<span class="d" style="color:var(--rust);font-weight:700">Wed Jun 10:</span> cold, windy backside of the front &mdash; a tough farewell evening before packing for the Big Hole. The takeaway from the week: <strong>when the small stuff fails, swing a big high-floating attractor</strong>, and the productive window is the last hour as the wind lays down.</div>
+    <div class="tp-mini">Caddis evening rises, PMD spinner falls, golden-stone leftovers as searching attractors.</div>
   </div>
 
   <!-- CARD A2 — ACTIVE -->
   <div class="tp-card active">
-    <span class="tp-when">Weekend 2 &middot; Thu Jun 11 &ndash; Sun Jun 14</span><span class="tp-badge act">&#9733; Active Now</span>
-    <div class="tp-head">Big Hole wrapped (goldens, salmonfly over) &rarr; Sunday Madison drift home</div>
-    <div class="tp-line"><span class="d">Thu Jun 11 (done):</span> worked the morning, drove ~3h to Twin Bridges, fished the Melrose evening on arrival.</div>
-    <div class="tp-line"><span class="d">Fri Jun 12 (done):</span> Fish Trap (upper) &mdash; 3 brookies, 1 rainbow, 1 grayling, 1 whitefish on a golden stone dry. Then the Powerhouse access: a diversion channel held a stacked run &mdash; ~11 browns 12&ndash;15&Prime;, violent eats on a <strong>skated golden stone dry on the swing.</strong> Logged in the <a href="./journal.html" style="color:var(--rust)">journal</a>.</div>
-    <div class="tp-line"><span class="d">Sat Jun 13 (done):</span> reported by Karel &mdash; cool, bright, windy day. <strong>No salmonfly: Sunrise Fly Shop says the Big Hole hatch was long gone this year (short hatch).</strong> Golden stones are the dry; nymphing/streamers otherwise.</div>
-    <div class="tp-line"><span class="d">Sun Jun 14:</span> drift home via the <strong>Madison</strong>, fishing near Ennis. <strong>Salmonfly status (reported):</strong> the most recent dated reports &mdash; FlyFishFood (Jun 7) and The River's Edge upper Madison (Jun 10) &mdash; have it <strong>just approaching / not yet a blanket hatch.</strong> Don't count on adults; <strong>call an Ennis shop morning-of</strong> for the live read.</div>
-    <div class="tp-call">
-      <b>Reported conditions (this morning's gauges, Jun 13):</b> Twin Bridges 65&deg;F, windy (~20 mph sustained). <b>Big Hole at Melrose 1,330 CFS, 54&deg;F at dawn.</b> Jefferson 1,510 CFS; Beaverhead 581. Madison nr W. Yellowstone 385 CFS / 60&deg;F; below Hebgen 53&deg;F; below Ennis Lake 1,560 CFS. <em>No confirmed salmonfly adult-hatch report for the Big Hole or upper Madison as of the latest dated shop reports.</em>
+    <span class="tp-when">Weekend 2 &middot; Thu Jun 11 &ndash; Sun Jun 14</span><span class="tp-badge act">&#9733; Active &middot; Today</span>
+    <div class="tp-head">Big Hole goldens (salmonfly is over) &rarr; Sunday Madison salmonfly scout</div>
+    <div class="tp-line"><span class="d">Thu Jun 11:</span> Drove ~3h to Twin Bridges after work, evening on the Big Hole near Melrose. <span style="color:var(--muted)">(done)</span></div>
+    <div class="tp-line"><span class="d">Fri&ndash;Sat Jun 12&ndash;13:</span> Big Hole &mdash; <b>salmonfly was OVER</b> (Sunrise Fly Shop: long gone, short hatch this year). Golden stones were the play: skating/swinging a golden stone dry triggered violent eats in a Powerhouse diversion channel. <span style="color:var(--muted)">(fished &mdash; see journal)</span></div>
+    <div class="tp-line"><span class="d">Sun Jun 14 (today):</span> Drift home via the <b>Madison near Ennis</b> to chase the salmonfly. Today's plan &amp; timed flies below.</div>
+    <div class="sf-tracker" style="margin-top:11px">
+      <h3>&#128205; This weekend's hatch leading edge &mdash; what's actually confirmed</h3>
+      <p><b>Madison salmonfly:</b> <span style="color:#ffd9c2">NOT yet emerged.</span> Fly Fish Food (Jun&nbsp;14): "approaching / just starting &mdash; Monday's warmer forecast may trigger the first serious activity." Blue Ribbon Flies (Jun&nbsp;11): below Quake is "shaping up nicely with caddis, PMDs &mdash; carry a few salmonfly patterns." <b>UNCONFIRMED &mdash; no adults reported on the water. Don't bank on a hatch today; call the shop before committing a stretch.</b></p>
+      <p><b>Golden stones:</b> "building" (#8&ndash;10), afternoon bankside &mdash; warmth-driven, your best dry shot today. <b>Caddis:</b> active &amp; building, best after 4&nbsp;PM. These are the real game.</p>
     </div>
-    <div class="tp-rec" style="margin-top:8px"><b>&#9733; Tomorrow's call (Madison):</b> Based on the Jun 7&ndash;10 reports, lead with <strong>nymphing &mdash; Pat's Rubber Legs #6&ndash;8 (tan/brown) with a Frenchie/Blowtorch dropper</strong> &mdash; and fish the <strong>evening caddis</strong> (X-Caddis / Elk Hair #14&ndash;16); streamers for the bigger fish. Carry a foam salmonfly/golden in case the leading edge has popped near Ennis, but treat it as a bonus. <strong>Call a West Yellowstone / Ennis shop in the morning for the live read.</strong> Carry bear spray.</div>
-    <div class="tp-mini"><strong>Madison fly box (from Jun 7&ndash;10 reports):</strong> Nymph &mdash; Pat's Rubber Legs #6&ndash;8 (tan/brown), Frenchie / Blowtorch droppers; Dry &mdash; X-Caddis / Elk Hair Caddis #14&ndash;16, Hi-Vis Micro Chubby #14; Streamer &mdash; Sparkle Minnow / Sculpzilla #6. Foam salmonfly #4&ndash;6 in the truck as a bonus.</div>
+    <div class="tp-rec"><b>Today's call:</b> Treat the Madison as a caddis-and-goldens day, not a salmonfly day. Nymph big rubberlegs through the morning, work a golden-stone dry tight to the banks as the day warms mid-afternoon, then ride the caddis into dark below Ennis. If you want the salmonfly, it's still ahead of you &mdash; it'll be a week-3 / South Fork story, not today.</div>
   </div>
 
   <!-- CARD B2 -->
   <div class="tp-card projected evening">
-    <span class="tp-when">Vernon Evenings &middot; Mon Jun 15 &ndash; Wed Jun 17</span><span class="tp-badge proj">Projected</span>
-    <div class="tp-head">Vernon after work + <span style="color:var(--rust)">the Ranch opens Jun 15</span></div>
-    <div class="tp-mini">Key shift: <strong>Harriman / Henry's Fork Ranch opens Monday Jun 15.</strong> After-work Monday could be a Ranch evening instead of Vernon &mdash; walking-only, sight-fishing technical risers (PMD spinner, maybe first drakes). Vernon = &ldquo;unwind and catch fish&rdquo;; Ranch = &ldquo;I want a hatch puzzle.&rdquo; Pick on energy + that day's overcast. Watch shop reports for the first green-drake sighting.</div>
+    <span class="tp-when">Vernon Evenings &middot; Mon Jun 15 &ndash; Wed Jun 17</span><span class="tp-badge proj">Next up</span>
+    <div class="tp-head">Vernon after work + the RANCH opens Mon Jun 15</div>
+    <div class="tp-mini"><b>Harriman / Henry's Fork Ranch opens tomorrow.</b> Mon could be a Ranch evening (technical sight-fishing, first drakes maybe) instead of Vernon. Vernon = "unwind &amp; catch fish"; Ranch = "hatch puzzle." Mon forecast is cloudier (~50% cover) &mdash; favorable for a Ranch evening. Watch for the first drake reports.</div>
   </div>
 
   <!-- CARD A3 -->
   <div class="tp-card projected">
     <span class="tp-when">Weekend 3 &middot; Thu Jun 18 &ndash; Sun Jun 21</span><span class="tp-badge proj">Projected</span>
-    <div class="tp-head">Green drakes on the Ranch &mdash; the technical hatch of the year</div>
-    <div class="tp-mini"><em>Drunella grandis</em> typically appears Jun 18&ndash;22 on the Ranch (needs ~55&deg;F + overcast). <strong>Sat:</strong> full Ranch day, walking the meadow stretches sight-fishing. <strong>Fri PM:</strong> Last Chance or Box Canyon. <strong>Sun:</strong> Madison or Yellowstone goldens (YNP runoff should be clearing). Sleep St. Anthony &mdash; Ranch is close, no overnight needed.</div>
+    <div class="tp-head">Ranch green drakes &mdash; the technical hatch of the year</div>
+    <div class="tp-mini">Drunella grandis typically Jun 18&ndash;22 on the Ranch &mdash; expectation, not yet confirmed for the caldera. <b>Note: Fly Fish Food (Jun 14) already reports first drake sightings on the LOWER river.</b> Sat full day walking/sight-fishing the meadows; Fri eve Last Chance/Box; Sun Madison or YNP goldens.</div>
   </div>
 
   <!-- CARD B3 -->
   <div class="tp-card projected evening">
     <span class="tp-when">Vernon Evenings &middot; Mon Jun 22 &ndash; Wed Jun 24</span><span class="tp-badge proj">Projected</span>
     <div class="tp-head">Peak hatches &mdash; pick your poison</div>
-    <div class="tp-mini"><em>Projected window &mdash; confirm with shop reports closer to the date.</em> Typically by now: <strong>Vernon:</strong> PMD spinner, evening caddis, brown drake possible. <strong>Ranch:</strong> PMDs, drakes, golden stone spinner. <strong>Teton</strong> (~20 min): brown drake evenings, upper canyon. <strong>South Fork:</strong> salmonfly often arriving late June. Pick on overcast + what worked last weekend.</div>
+    <div class="tp-mini">PMD spinner, evening caddis, brown drake possible at Vernon; PMDs/drakes at the Ranch; Teton brown drakes begin upper canyon; South Fork salmonfly leading edge arriving. Confirm from reports.</div>
   </div>
 
   <!-- CARD A4 -->
   <div class="tp-card projected">
-    <span class="tp-when">Weekend 4 &middot; Thu Jun 25 &ndash; Fri Jun 26 (last day)</span><span class="tp-badge proj">Projected</span>
-    <div class="tp-head">Final laps &mdash; goldens, South Fork salmonfly tail, Teton brown drakes</div>
-    <div class="tp-mini"><strong>Thu PM:</strong> Teton brown drakes if peak, else a Vernon farewell. <strong>Fri Jun 26 (LAST DAY):</strong> go big &mdash; South Fork salmonfly tail (full day if peak), or a Box Canyon goldens farewell, or the Ranch to close it out (PMDs + drake spinner). Make it count. <strong>Sat Jun 27:</strong> fly out in the morning &mdash; no fishing.</div>
+    <span class="tp-when">Weekend 4 &middot; Thu Jun 25 &ndash; Fri Jun 26</span><span class="tp-badge proj">Projected</span>
+    <div class="tp-head">Last casts &mdash; Fri Jun 26 is the LAST fishing day</div>
+    <div class="tp-mini">Thu: Teton brown drakes if peak, else Vernon farewell. Fri (last day): go big &mdash; South Fork salmonfly tail, Box Canyon goldens, or the Ranch. Sat Jun 27: fly out, no fishing.</div>
   </div>
 
-  <div class="tp-updated">Trip plan corrected Sat Jun 13, 2026 (evening) &mdash; facts &amp; reported conditions only &middot; Big Hole salmonfly OVER per Sunrise Fly Shop + Karel on the water &middot; Madison salmonfly "just approaching" per FlyFishFood Jun 7 / River's Edge Jun 10</div>
+  <div class="tp-updated">Updated Sun Jun 14, 2026 &middot; 5:35 AM MDT</div>
 </div>
 
-<!-- TRIP STRATEGY -->
+<!-- ================= TODAY — TIMED FLY PLAN ================= -->
+<div class="timed">
+  <h2>&#9201;&#65039; Today on the Madison (near Ennis) &mdash; when to fish what</h2>
+  <div class="t-sub">Bluebird &amp; breezy: Ennis high <b>~70&deg;F</b>, ~5% cloud, wind <b>~15 mph</b>. Water: below Ennis Lake <b>58.5&deg;F / 1,530 cfs</b>, below Hebgen <b>51.8&deg;F / 1,010 cfs</b> (provisional). Salmonfly NOT confirmed &mdash; everything below is searching/attractor unless a hatch shows. Tune as the day unfolds.</div>
+
+  <div class="t-row">
+    <div class="t-clock">Morning<small>to ~11 AM</small></div>
+    <div class="t-body">Cold overnight (low 38&deg;F) + sunny, so water's slow to wake. <b>Nymph deep along the banks.</b> <span class="t-fly">Pat's Rubber Legs / black-brown stone #6&ndash;8</span> (golden &amp; salmonfly nymphs are migrating bankward) with a <span class="t-fly">PMD nymph or Prince #14&ndash;16</span> dropper. Fish riffle seams and inside corners.</div>
+  </div>
+  <div class="t-row">
+    <div class="t-clock">11 AM&ndash;2 PM<small>midday</small></div>
+    <div class="t-body">Sun's high, bite spreads out. Run a <b>hopper-dropper search</b> along grassy banks: <span class="t-fly">Chubby Chernobyl #8&ndash;10</span> over the rubberlegs. BWO unlikely on a 5%-cloud day &mdash; don't waste time on small mayflies. Wind starts to build; fish the protected banks.</div>
+  </div>
+  <div class="t-row">
+    <div class="t-clock">2&ndash;5 PM<small>warmth window</small></div>
+    <div class="t-body"><b>Golden-stone dry window.</b> Stoneflies are warmth-driven and the goldens are "building" &mdash; as the air peaks, skate a <span class="t-fly">yellow Stimulator / Water Walker #8&ndash;10</span> or a <span class="t-fly">yellow sally #14</span> tight to willows, boulders, and undercut banks. Keep an orange foam salmonfly on as a searching attractor near willows &mdash; but no adult salmonflies are reported, so don't expect a blanket eat.</div>
+  </div>
+  <div class="t-row">
+    <div class="t-clock">5&ndash;7:30 PM<small>caddis builds</small></div>
+    <div class="t-body"><b>Caddis turn on (best after 4 PM per the shop).</b> <span class="t-fly">Elk Hair Caddis / X-Caddis #14&ndash;16</span> on the swing and dead-drift; swing a <span class="t-fly">soft-hackle pheasant tail</span> through the riffle tailouts as the rises start.</div>
+  </div>
+  <div class="t-row">
+    <div class="t-clock">7:30&ndash;9:30 PM<small>money window</small></div>
+    <div class="t-body"><b>The dusk caddis blizzard + PMD spinner &mdash; biggest fish of the day.</b> Spent <span class="t-fly">caddis / X-Caddis #14&ndash;16</span> and a <span class="t-fly">PMD rusty spinner #16</span> in the film. Fish until you can't see the fly, then one more drift. (Madison sunset ~9:25 PM MDT.)</div>
+  </div>
+
+  <div class="t-rule"><b>Weather rule of thumb:</b> Gray/cool day &rarr; bugs come early and the dry bite holds longer. Hot/sunny (like today) &rarr; action jams into the last 2 hours of light &mdash; so don't burn out at midday, save energy for the evening. Stoneflies are warmth-driven and fire mid-afternoon to early evening on warm days. <b>Wind kills the dry bite</b> &mdash; with 15 mph gusts, nymph through the chop and hunt the sheltered banks until it lays down toward dusk.</div>
+</div>
+
+<!-- ================= STRATEGY ================= -->
 <div class="strategy">
-  <h2>&#9654; Trip Strategy &mdash; Day 9, facts &amp; reported conditions</h2>
-  <p><strong>The big picture:</strong> The Big Hole weekend is wrapped. Karel fished Fish Trap and the Powerhouse access Jun 12&ndash;13 and did well on golden stones (a skated golden stone dry on the swing turned a Powerhouse diversion channel into a stacked run of 12&ndash;15&Prime; browns). <strong>There was no salmonfly hatch &mdash; Sunrise Fly Shop confirmed the Big Hole salmonfly was long gone this year (a short hatch).</strong> Reported river conditions this morning: Melrose 1,330 CFS, 54&deg;F at dawn; cool 65&deg;F high, bright, windy (~20 mph sustained).</p>
-  <p><strong>Big Hole salmonfly &mdash; the honest status:</strong> OVER for 2026. This is confirmed by Karel on the water and by Sunrise Fly Shop, not a guess. (A generic web aggregator still echoes a "Glen&ndash;Melrose" salmonfly line, but it is undated and contradicted by the local shop and Karel's own days &mdash; so it is not reported here as current.) The Big Hole dry game now is <strong>golden stones</strong>; nymph Pat's Rubber Legs / streamers otherwise.</p>
-  <p><strong>Madison &mdash; your Sunday drift home (the only forward water):</strong> Most recent dated reports: <strong>FlyFishFood (Jun 7)</strong> rates the salmonfly "approaching / just starting" with flows ~455 CFS, 56.8&deg;F and calls <strong>nymphing exceptional</strong> (Pat's Rubber Legs #6 + Frenchie/Blowtorch); <strong>The River's Edge upper Madison (Jun 10)</strong> doesn't mention salmonfly at all and points to <strong>evening caddis + nymph rigs + streamers</strong> (842 CFS at Kirby Ranch). So plan for nymph-and-caddis fishing; treat adult salmonflies near Ennis as a possible bonus and <strong>call an Ennis / West Yellowstone shop the morning you fish</strong> for the live read. Do not assume a blanket hatch.</p>
-  <p><strong>Home waters (while you're away):</strong> Lower Henry's Fork (Vernon) has eased to <strong>~1,170 CFS</strong> at Rexburg &mdash; dropping nicely into shape for your Monday return; BWO #18&ndash;22 the gray afternoons, caddis #16&ndash;20 the evening event, golden stone nymphs and yellow sallies in the warm hours, PMDs approaching. Box Canyon ~943 CFS is good wading (white streamers and goldens/sallies dry-dropper). South Fork still high but easing, float-only &mdash; its salmonfly is a late-June story (weekend 4). Teton dropping and wadeable in tailouts. All here waiting for you Monday &mdash; and the Ranch opens that day too.</p>
+  <h2>&#9888;&#65039; Trip Strategy &mdash; Week 2 winding down, the Ranch opens tomorrow</h2>
+  <p>The Big Hole leg delivered on golden stones with the salmonfly long gone. Today is a low-key drift home on the Madison &mdash; scout the salmonfly honestly (it hasn't started), but fish the day for caddis and goldens, not a hatch that isn't here yet. The pivot now is to <b>home water and the green drake</b>: Harriman/the Ranch opens Monday Jun 15, and Fly Fish Food already reports first drake sightings on the lower river. Watch the Ranch reports daily this week &mdash; weekend 3 is the drake weekend.</p>
+  <p>Mon&ndash;Wed are work + Vernon (or a Ranch evening) evenings. Monday looks cloudier (~50% cover), which favors a technical Ranch evening over Vernon if energy's there.</p>
   <div class="closures">
-    <h4>Closures &amp; Restrictions</h4>
+    <h4>Closures &amp; openers</h4>
     <ul>
-      <li class="cls-closed">&#9632; Flat Creek (Jackson, National Elk Refuge) &mdash; CLOSED until August 1 (entire trip)</li>
-      <li class="cls-closed">&#9632; Yellowstone River inside YNP &mdash; CLOSED until July 15 (entire trip)</li>
-      <li class="cls-caution">&#9651; Henry's Fork Ranch / Harriman State Park &mdash; OPENS Monday June 15 (weekend 3 is built around it)</li>
-      <li class="cls-caution">&#9651; Snake River nr Jackson &mdash; open but high (~9,630 CFS Alpine, dropping from ~11,400); wait for mid-late June</li>
-      <li class="cls-open">&#9632; YNP general waters (Madison, Firehole, Gibbon) &mdash; open since May 23</li>
-      <li class="cls-open">&#9632; Idaho home waters (Henry's Fork, South Fork, Teton) &mdash; no seasonal closures</li>
+      <li class="cls-open">&#9989; Harriman / Henry's Fork Ranch &mdash; OPENS Mon Jun 15 (walking-only, sight-fishing)</li>
+      <li class="cls-open">&#9989; YNP general season &mdash; open (since May 23)</li>
+      <li class="cls-closed">&#9940; YNP Yellowstone River &amp; tributaries &mdash; closed until Jul 15</li>
+      <li class="cls-closed">&#9940; Flat Creek (NER, Jackson) &mdash; closed until Aug 1</li>
+      <li class="cls-caution">&#9888; Snake nr Jackson &mdash; runoff, watch clarity/flows</li>
     </ul>
   </div>
 </div>
 
-<!-- ===== HATCH TRACKERS ===== -->
-<div class="sf-tracker">
-  <h3>&#127801; Hatch Status &mdash; confirmed reports only &middot; June 13, 2026</h3>
-  <p><strong>Big Hole salmonfly &mdash; OVER (CONFIRMED):</strong> Sunrise Fly Shop told Karel the Big Hole salmonfly was long gone this year (a short hatch), and his Jun 12&ndash;13 days bear that out &mdash; the fish ate golden stones, not salmonflies. <strong>No active Big Hole salmonfly.</strong> Reported water: Melrose 1,330 CFS, 54&deg;F at dawn.</p>
-  <p><strong>Madison salmonfly &mdash; APPROACHING / not confirmed up (per dated reports):</strong> FlyFishFood (Jun 7) rates it "approaching / just starting," 455 CFS, 56.8&deg;F, with nymphing the strong play; The River's Edge upper Madison (Jun 10) makes no mention of salmonfly and points to evening caddis + nymphs + streamers. <strong>No dated report confirms adults out near Ennis.</strong> Karel is fishing it Sun Jun 14 &mdash; call an Ennis shop morning-of for the live read.</p>
-  <p><strong>Henry's Fork green drake &mdash; NOT YET (UNCONFIRMED, seasonal estimate):</strong> Typical first Ranch appearance is ~Jun 18&ndash;22, needs overcast + ~55&deg;F; Ranch opens Jun 15. Henry's Fork Anglers' Jun 6 report said they were "anticipating green drakes soon" &mdash; no confirmed sighting yet. Watch shop reports daily.</p>
-  <p><strong>Lower Henry's Fork (Vernon) &mdash; reported (FlyFishFood Jun 7):</strong> BWO #18&ndash;22 on overcast afternoons, midges, golden-stone nymphs active in the seams, caddis #16&ndash;20 late afternoon/evening, PMDs approaching. Rexburg gauge ~1,170 CFS. Waiting for Karel's Monday return.</p>
-  <p style="font-style:italic;color:#ffd9c0;font-size:.8rem">Golden stones are a real, reported background hatch on these rivers right now (per shop reports). Any hatch above is labeled CONFIRMED (dated source / Karel's log) or UNCONFIRMED (seasonal estimate) &mdash; nothing is asserted without a source.</p>
-</div>
+<!-- ================= RIVERS ================= -->
 
-<!-- ===== TOMORROW ON THE MADISON — PLAN FROM REPORTED CONDITIONS ===== -->
-<div style="background:var(--card);border:1px solid var(--dcream);border-left:5px solid var(--gold);border-radius:10px;padding:18px 20px;margin:18px 0">
-  <h3 style="font-family:Georgia,serif;color:var(--green);font-size:1.12rem;margin-bottom:4px">&#127907; Tomorrow on the Madison (Sun Jun 14, drift home near Ennis) &mdash; plan from reported conditions</h3>
-  <div style="font-size:.82rem;color:var(--muted);margin-bottom:12px">Forecast Sun Jun 14: warmer (~71&deg;F up the corridor), wind easing. <strong>Sourced hatch status:</strong> the salmonfly is <strong>"approaching / just starting"</strong> per FlyFishFood (Jun 7, 455 CFS / 56.8&deg;F) and is <strong>not mentioned at all</strong> in The River's Edge upper Madison report (Jun 10, 842 CFS at Kirby). Both point to <strong>nymphing + evening caddis + streamers</strong> as the actual game. <strong>Treat adult salmonflies as a possible bonus near Ennis, not a sure thing &mdash; call an Ennis / West Yellowstone shop in the morning for the live read.</strong> This plan will be replaced by the routine's fresh, gauge-tuned plan in the morning regen.</div>
-
-  <div style="display:flex;flex-direction:column;gap:8px">
-    <div style="display:flex;gap:12px;align-items:baseline;border-bottom:1px solid var(--dcream);padding-bottom:8px">
-      <div style="min-width:96px;font-weight:700;color:#5a5a5a;font-family:Georgia,serif;font-size:.9rem">Midday</div>
-      <div style="font-size:.86rem"><strong>Nymph &mdash; the strongest play per the reports.</strong> Run a <strong>Pat's Rubber Legs #6&ndash;8 (tan/brown)</strong> on the bank seams and riffle drop-offs, with a smaller dropper (<strong>Frenchie / Blowtorch #14&ndash;16</strong>) below. FlyFishFood calls the nymphing "exceptional." Cover water; the banks and structure hold the fish.</div>
-    </div>
-    <div style="display:flex;gap:12px;align-items:baseline;border-bottom:1px solid var(--dcream);padding-bottom:8px">
-      <div style="min-width:96px;font-weight:700;color:#b34d00;font-family:Georgia,serif;font-size:.9rem">Afternoon</div>
-      <div style="font-size:.86rem"><strong>Search the banks with a dry-dropper.</strong> A <strong>Hi-Vis Micro Chubby #14</strong> or foam golden up top with the Rubberlegs underneath. If you actually see salmonfly or golden-stone adults on the willows near Ennis, switch to a <strong>foam salmonfly #4&ndash;6</strong> and pound the banks &mdash; but only if you see bugs. Don't fish a hatch that isn't there.</div>
-    </div>
-    <div style="display:flex;gap:12px;align-items:baseline">
-      <div style="min-width:96px;font-weight:700;color:var(--rust);font-family:Georgia,serif;font-size:.9rem">Evening</div>
-      <div style="font-size:.86rem"><strong>Caddis &mdash; the consistent dry per both reports.</strong> <strong>X-Caddis / Elk Hair Caddis #14&ndash;16</strong> over riffles and tailouts as the light goes; streamers (<strong>Sparkle Minnow / Sculpzilla #6</strong>) for the bigger fish along the banks.</div>
-    </div>
-  </div>
-
-  <div style="margin-top:12px;background:rgba(45,74,62,.08);border-left:3px solid var(--rust);border-radius:0 6px 6px 0;padding:9px 12px;font-size:.82rem">
-    <strong>Honest note:</strong> No dated report confirms an adult salmonfly hatch up near Ennis yet &mdash; so this plan leads with nymphs and caddis, the things the shops actually reported. Carry the foam salmonfly as a bonus and let your eyes (and the morning shop call) tell you if the leading edge has popped. Bear spray in the corridor.</div>
-</div>
-
-
-<!-- ===== TWIN BRIDGES / BIG HOLE (active water — moved up) ===== -->
+<!-- HENRY'S FORK -->
 <div class="river-section">
-  <h2>Twin Bridges &mdash; Big Hole &middot; Beaverhead &middot; Jefferson &middot; Ruby <span class="tag tag-overnight">Active &middot; Overnight ~3 hr</span></h2>
-  <div class="section-note">St. Anthony &rarr; Twin Bridges: ~3 hrs (US-20 / I-15 N / MT-41) &nbsp;&middot;&nbsp; <strong>Weekend 2 water (Jun 11&ndash;14) &mdash; Big Hole salmonfly is OVER this year; golden stones the dry</strong></div>
+  <h2>Henry's Fork <span class="tag tag-home">Home Water</span></h2>
+  <div class="section-note">The center of the trip. Lower river (Vernon) for work-night evenings; Box Canyon, the Ranch (opens tomorrow), Last Chance &amp; Riverside for the chase.</div>
 
   <div class="stat-row">
-    <div class="sc">
-      <div class="sc-label">Big Hole nr Melrose (06025500)</div>
-      <div class="sc-val v-good">1,330</div>
-      <div class="sc-unit">CFS &nbsp;<span class="prov">PROV</span></div>
-      <div class="sc-meta">Jun 13 &middot; the fishing water &mdash; dropping into shape</div>
-    </div>
-    <div class="sc">
-      <div class="sc-label">Big Hole Temp (Melrose)</div>
-      <div class="sc-val v-hatch">54&deg;F</div>
-      <div class="sc-unit">12.4&deg;C &mdash; dawn, warming through afternoon</div>
-      <div class="sc-meta">Jun 13 dawn read &middot; warming through the day</div>
-    </div>
-    <div class="sc">
-      <div class="sc-label">Beaverhead at Barretts (06016000)</div>
-      <div class="sc-val v-good">581</div>
-      <div class="sc-unit">CFS &nbsp;<span class="prov">PROV</span></div>
-      <div class="sc-meta">Jun 13 &middot; latest reading</div>
-    </div>
-    <div class="sc">
-      <div class="sc-label">Jefferson nr Twin Bridges (06026500)</div>
-      <div class="sc-val v-high">1,510</div>
-      <div class="sc-unit">CFS &middot; 57&deg;F &nbsp;<span class="prov">PROV</span></div>
-      <div class="sc-meta">Runoff easing, Jun 13</div>
-    </div>
+    <div class="sc"><div class="sc-label">Box Canyon (Island Park)</div><div class="sc-val">937</div><div class="sc-unit">cfs <span class="prov">provisional</span></div><div class="sc-meta">USGS 13042500 &middot; temp n/a</div></div>
+    <div class="sc"><div class="sc-label">Lower @ Rexburg (Vernon)</div><div class="sc-val">1,110</div><div class="sc-unit">cfs <span class="prov">provisional</span></div><div class="sc-meta">USGS 13056500 &middot; temp sensor down</div></div>
   </div>
 
-  <div class="wx-strip">
-    <div class="wx-period"><div class="wx-name">Today Sat Jun 13</div><div class="wx-temp">65&deg;F</div><div class="wx-desc">Cool &amp; bright but WINDY &mdash; ~20 mph sustained; nymph first, dry the afternoon</div></div>
-    <div class="wx-period"><div class="wx-name">Sun Jun 14</div><div class="wx-temp">71&deg;F</div><div class="wx-desc">Warmer, wind easing &mdash; drift home via Madison; nymph + evening caddis (salmonfly unconfirmed)</div></div>
-    <div class="wx-period"><div class="wx-name">Mon Jun 15</div><div class="wx-temp">79&deg;F</div><div class="wx-desc">Hot &mdash; you're home; Ranch opens this day</div></div>
-    <div class="wx-period"><div class="wx-name">Tue Jun 16</div><div class="wx-temp">85&deg;F</div><div class="wx-desc">Hot &amp; breezy &mdash; Vernon evenings; watch for first drakes</div></div>
-  </div>
-
-  <div class="sf-tracker" style="margin:8px 0">
-    <h3>&#127801; Big Hole Salmonfly &mdash; OVER for 2026 (confirmed)</h3>
-    <p><strong>Status &mdash; done:</strong> Sunrise Fly Shop told Karel the Big Hole salmonfly was long gone this year &mdash; it was a short hatch &mdash; and his Jun 12&ndash;13 days confirmed it (fish ate golden stones, no salmonflies seen). <strong>This dashboard will not report a Big Hole salmonfly leading edge.</strong></p>
-    <p><strong>What's actually working (Karel, Jun 12&ndash;13):</strong> a <strong>golden stone dry, skated/swung on the swing,</strong> drew violent eats &mdash; a Powerhouse diversion channel gave up a stacked run of 12&ndash;15&Prime; browns. Upper river at Fish Trap held variety (brookies, a grayling, whitefish). Nymph Pat's Rubber Legs / streamers when the dry is slow.</p>
-    <p><strong>Reported water (Jun 13):</strong> Melrose 1,330 CFS, 54&deg;F at dawn, dropping into shape. For the current local read, call Four Rivers Fishing Co. in Twin Bridges.</p>
-  </div>
-
-  <div class="shop-quote">
-    <span class="shop-name">Sunrise Fly Shop &mdash; via Karel, Big Hole &nbsp;<span class="shop-date">reported Jun 12&ndash;13, 2026</span></span>
-    The Big Hole salmonfly hatch was <strong>long gone this year &mdash; a short hatch.</strong> Golden stones are the dry to fish; the river was in good shape near Melrose. <em>Karel's own days (Fish Trap + Powerhouse access) matched this &mdash; no salmonflies; fish ate a skated golden stone. A generic web aggregator still echoes an undated "Glen&ndash;Melrose" salmonfly line; it is contradicted by the local shop and Karel on the water, so it is not reported here as current.</em>
-  </div>
-
+  <div class="subhead">Lower river: Vernon Bridge &amp; nearby evening access</div>
+  <p class="section-note">Karel's bread-and-butter for Mon&ndash;Wed work evenings (~20 min from the St. Anthony Airbnb, off ID-32). Tonight he's on the Madison, but Vernon resumes Monday. Flow ~1,110 cfs &mdash; fishable, on the fuller side.</p>
   <div class="two-col">
     <div>
-      <h4>Hatches &mdash; Big Hole (reported)</h4>
+      <h4>Evening hatch timing (lower river)</h4>
       <ul>
-        <li><strong>Salmonfly</strong> &mdash; <em>OVER this year</em> (Sunrise Fly Shop + Karel, Jun 12&ndash;13)</li>
-        <li><strong>Golden Stone</strong> &mdash; the working dry now, into July</li>
-        <li><strong>Caddis / PMD</strong> &mdash; evenings, mid &amp; upper</li>
-        <li>Beaverhead (tailwater): midge / BWO, PMD &mdash; Poindexter Slough spring creek near Dillon fishes technical PMD</li>
+        <li>Caddis &mdash; 19:00&ndash;21:30 (main event)</li>
+        <li>PMD spinner fall &mdash; 19:30&ndash;20:30 most evenings</li>
+        <li>Golden-stone leftovers &mdash; searching attractors</li>
+        <li>BWO &mdash; only on overcast/cool windows</li>
       </ul>
     </div>
     <div>
-      <h4>Recommended flies</h4>
+      <h4>Lower-river fly box</h4>
       <ul>
-        <li>Golden stone dry: Stimulator #6&ndash;8, Madame X, foam golden &mdash; <strong>skate/swing it (Karel's hot move)</strong></li>
-        <li>Nymph: Pat's Rubber Legs #6&ndash;8, tight to banks</li>
-        <li>Streamer: Sculpzilla / Sparkle Minnow for bigger fish</li>
-        <li>Beaverhead / Poindexter: small PMD, RS2 / midge #20&ndash;22, BWO #18&ndash;20</li>
+        <li>Elk Hair Caddis #14&ndash;16</li>
+        <li>PMD Sparkle Dun #16 &middot; rusty spinner #16</li>
+        <li>Yellow Stimulator #10&ndash;12</li>
+        <li>Parachute Adams #14&ndash;16 &middot; Zebra Midge #20 dropper</li>
       </ul>
     </div>
   </div>
-
-  <div class="access">
-    <h4>Access &amp; Notes</h4>
-    <ul>
-      <li><strong>Drive:</strong> St. Anthony &rarr; I-15 N &rarr; Dillon &rarr; MT-41 to Twin Bridges, ~3 hrs.</li>
-      <li><strong>Big Hole float / wade:</strong> launch Maiden Rock, Divide or Wise River; drift to Melrose. Best wade access Wise River&rarr;Divide; Melrose FAS has a ramp + in-town wading. Karel scored at <strong>Fish Trap</strong> (upper) and the <strong>Powerhouse access</strong> (a diversion channel below the bridge).</li>
-      <li><strong>Beaverhead:</strong> Clark Canyon tailwater, 569 CFS at Barretts &mdash; fishable now, brown-trout midging below the dam.</li>
-      <li>Montana license ~\$35 (2-day). Four Rivers Fishing Co. in Twin Bridges for the best local intel. <span class="warn">Carry bear spray &mdash; low-risk valley floor, but still GYE.</span></li>
-    </ul>
+  <div class="sf-tracker">
+    <h3>Tonight's Vernon outlook (lower-river tracker)</h3>
+    <p>Flow ~1,110 cfs at Rexburg (provisional). Karel's on the Madison tonight, so this is a Monday-forward read: <b>best window 19:00&ndash;dark, caddis + PMD spinner</b> on the warm evenings; lead with an Elk Hair Caddis #14&ndash;16 and a rusty spinner trailer. If Monday clouds up (~50% cover forecast), add a BWO for the early window. Alternates if Vernon is crowded: Chester Dam pool, Henry's Fork Twin Bridges access, Fun Farm Bridge, Riverside Park in St. Anthony, Ora Bridge, Stinker Lane.</p>
   </div>
+
+  <div class="subhead">The Ranch (Harriman) &mdash; OPENS Mon Jun 15</div>
+  <p class="section-note">Walking-only, sight-fishing to technical risers. <b>Opens tomorrow.</b> Green drake outlook: typical first appearance Jun 18&ndash;22 (expectation only). Fly Fish Food (Jun 14) reports the drake "emerging &mdash; first sightings on the lower river, caldera arrival imminent" &mdash; so the bug is starting downstream, but <b>Ranch/caldera drakes are NOT yet confirmed.</b> Monitor reports daily; the drake weekend is Jun 18&ndash;21.</p>
+
+  <div class="subhead">Box Canyon &middot; Last Chance &middot; Riverside</div>
+  <p class="section-note">Box Canyon ~937 cfs &mdash; good nymphing (rubberlegs, worms) and streamer water along deeper structure; a solid cold-front / recovery option ~45 min from St. Anthony. Last Chance &amp; Riverside fish the same caldera hatches as the Ranch once it opens.</p>
 </div>
 
-
-<!-- ===== HENRY'S FORK ===== -->
-<div class="river-section">
-  <h2>Henry's Fork of the Snake <span class="tag tag-home">Home Water</span></h2>
-  <div class="section-note">Vernon / lower river: ~20 min from St. Anthony &nbsp;&middot;&nbsp; Box Canyon: ~45 min &nbsp;&middot;&nbsp; Ranch / Harriman opens June 15 &nbsp;&middot;&nbsp; <em>waiting for you Monday</em></div>
-
-  <div class="stat-row">
-    <div class="sc">
-      <div class="sc-label">Island Park / Box Canyon (13042500)</div>
-      <div class="sc-val v-good">943</div>
-      <div class="sc-unit">CFS &nbsp;<span class="prov">PROV</span></div>
-      <div class="sc-meta">Jun 13 &middot; good wading flow</div>
-    </div>
-    <div class="sc">
-      <div class="sc-label">nr Rexburg / lower (13056500)</div>
-      <div class="sc-val">1,170</div>
-      <div class="sc-unit">CFS &nbsp;<span class="prov">PROV</span></div>
-      <div class="sc-meta">Jun 13 &middot; dropping into shape</div>
-    </div>
-    <div class="sc">
-      <div class="sc-label">Water Temp (Rexburg gauge)</div>
-      <div class="sc-val" style="font-size:1rem;color:#888">No Data</div>
-      <div class="sc-unit">Sensor offline (2016)</div>
-      <div class="sc-meta">Estimate ~56&ndash;60&deg;F evenings (warming)</div>
-    </div>
-    <div class="sc">
-      <div class="sc-label">Air &mdash; St. Anthony</div>
-      <div class="sc-val">71&deg;F</div>
-      <div class="sc-unit">Sat 71 &rarr; 73 Sun &rarr; 76 Mon</div>
-      <div class="sc-meta">Bright &amp; breezy, warming</div>
-    </div>
-  </div>
-
-  <div class="wx-strip">
-    <div class="wx-period"><div class="wx-name">Today Sat Jun 13</div><div class="wx-temp">71&deg;F</div><div class="wx-desc">Bright &amp; breezy &mdash; lower river dropping into shape (you're on the Big Hole)</div></div>
-    <div class="wx-period"><div class="wx-name">Sun Jun 14</div><div class="wx-temp">73&deg;F</div><div class="wx-desc">Warm, some cloud &mdash; you drift home today</div></div>
-    <div class="wx-period"><div class="wx-name">Mon Jun 15</div><div class="wx-temp">76&deg;F</div><div class="wx-desc">Hot &mdash; you're home; Vernon or Ranch opener tonight</div></div>
-    <div class="wx-period"><div class="wx-name">Tue Jun 16</div><div class="wx-temp">85&deg;F</div><div class="wx-desc">Hot &amp; breezy &mdash; Vernon evening, watch for first drakes</div></div>
-  </div>
-
-  <div class="subhead">Lower river: Vernon Bridge &amp; nearby evening access &mdash; your Mon&ndash;Wed home</div>
-  <div class="two-col">
-    <div>
-      <h4>Evening hatch timing</h4>
-      <ul>
-        <li><strong>Caddis</strong> #14&ndash;16 &mdash; 19:00&ndash;21:30 into dark</li>
-        <li><strong>PMD spinner fall</strong> #16 &mdash; 19:30&ndash;20:30 most evenings (building)</li>
-        <li><strong>Golden stone leftovers</strong> &mdash; searching attractor all evening</li>
-        <li><strong>Yellow Sallies</strong> #14&ndash;16 &mdash; warm afternoons/evenings</li>
-        <li><strong>BWO</strong> #18&ndash;20 &mdash; overcast days</li>
-        <li>Salmonflies have <em>passed</em> down here (late May)</li>
-      </ul>
-    </div>
-    <div>
-      <h4>Access points (off ID-32)</h4>
-      <ul>
-        <li><strong>Vernon Bridge</strong> &mdash; primary spot, ~20 min</li>
-        <li>Chester Dam pool</li>
-        <li>Henry's Fork Twin Bridges access (NOT MT)</li>
-        <li>Fun Farm Bridge</li>
-        <li>Riverside Park, in-town St. Anthony</li>
-        <li>Ora Bridge &middot; Stinker Lane</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="shop-quote">
-    <span class="shop-name">FlyFishFood &mdash; Henry's Fork &nbsp;<span class="shop-date">report Jun 7 (posted Jun 8, 2026)</span></span>
-    "BWOs #18&ndash;22 at <strong>peak</strong>, 10 AM&ndash;3 PM on overcast days; midges #20&ndash;22 morning &amp; evening; golden stone nymphs #8&ndash;12 increasingly active all day in the fast seams; caddis #16&ndash;20 late afternoon/evening; PMDs #16&ndash;20 approaching." Box Canyon fishing well on nymphs &amp; streamers; lower river on golden stones, caddis and BWOs on the gray afternoons. <em>Still the freshest Henry's Fork report (posted Jun 8, now ~6 days old); their next update is expected ~Jun 15 with the Ranch opener. USGS temp sensor offline.</em>
-  </div>
-
-  <div class="shop-quote">
-    <span class="shop-name">Henry's Fork Anglers &nbsp;<span class="shop-date">report Jun 6 (posted Jun 5, 2026)</span></span>
-    "<strong>Massive caddis hatches in the evening</strong>" on the Upper Fork; the Lower Fork is "full of caddis and PMD hatches," more consistent at dusk. <strong>Golden-stone shucks showing at Osbourn Bridge</strong> as the adults start to fly, and the shop is "<strong>anticipating green drakes soon.</strong>" Box Canyon fish "extremely responsive to white streamers." <em>Posted Jun 5 (~7 days old) &mdash; shown honestly, no fresher HFA post yet; supports the weekend-3 drake timeline.</em>
-  </div>
-
-  <div class="access">
-    <h4>Box Canyon &middot; Ranch &middot; Last Chance &middot; Riverside</h4>
-    <ul>
-      <li><strong>Box Canyon (943 CFS):</strong> <span class="good">good wading flow.</span> Fish "extremely responsive to white streamers" (HFA Jun 6) &mdash; grab a #4 articulated white streamer, or dry-dropper a foam golden with a Rubberlegs. Hatchery Ford &amp; Riverside the productive runs. ~45 min from St. Anthony.</li>
-      <li><strong>Ranch / Harriman:</strong> <span class="warn">OPENS Monday June 15.</span> Walking-only, sight-fishing flats. Green drake outlook: first appearance ~Jun 18&ndash;22 on overcast/55&deg;F days; PMD spinner before that. Weekend 3 is built here.</li>
-      <li><strong>Last Chance flats:</strong> technical at this flow; comes alive with the late-June drakes &amp; PMDs.</li>
-      <li><strong>Riverside:</strong> good dry-dropper water between Box Canyon and the Ranch.</li>
-      <li>Rexburg gauge ~1,170 CFS, dropping into shape &mdash; the lower river fishes best in edges, tailouts and the evening caddis. All here for your Monday return.</li>
-    </ul>
-  </div>
-</div>
-
-
-<!-- ===== SOUTH FORK ===== -->
+<!-- SOUTH FORK -->
 <div class="river-section">
   <h2>South Fork of the Snake <span class="tag tag-home">Home Water</span></h2>
-  <div class="section-note">Heise / Menan: ~35 min from St. Anthony &nbsp;&middot;&nbsp; Swan Valley: ~1 hr &nbsp;&middot;&nbsp; Float-only at current flows &nbsp;&middot;&nbsp; Salmonfly = late June (weekend 4)</div>
-
+  <div class="section-note">~1h to Swan Valley from St. Anthony. Big-water salmonfly arrives late June &mdash; a strong week-4 / last-day candidate.</div>
   <div class="stat-row">
-    <div class="sc">
-      <div class="sc-label">Heise (13037500)</div>
-      <div class="sc-val v-high">10,800</div>
-      <div class="sc-unit">CFS &nbsp;<span class="prov">PROV</span></div>
-      <div class="sc-meta">Jun 13 &middot; easing</div>
-    </div>
-    <div class="sc">
-      <div class="sc-label">nr Irwin (13032500)</div>
-      <div class="sc-val v-high">10,500</div>
-      <div class="sc-unit">CFS &nbsp;<span class="prov">PROV</span></div>
-      <div class="sc-meta">Jun 13 &middot; easing</div>
-    </div>
-    <div class="sc">
-      <div class="sc-label">Water Temp (Irwin)</div>
-      <div class="sc-val" style="font-size:1rem;color:#888">No Data</div>
-      <div class="sc-unit">Sensor offline</div>
-      <div class="sc-meta">Cold snowmelt, est. ~48&deg;F</div>
-    </div>
-    <div class="sc">
-      <div class="sc-label">Air &mdash; Swan Valley</div>
-      <div class="sc-val">69&deg;F</div>
-      <div class="sc-unit">Sat 69 &rarr; 72 Sun &rarr; 75 Mon</div>
-      <div class="sc-meta">Bright &amp; breezy</div>
-    </div>
+    <div class="sc"><div class="sc-label">@ Irwin (below Palisades)</div><div class="sc-val v-high">10,400</div><div class="sc-unit">cfs <span class="prov">provisional</span></div><div class="sc-meta">USGS 13037500</div></div>
+    <div class="sc"><div class="sc-label">@ Heise</div><div class="sc-val v-high">10,700</div><div class="sc-unit">cfs <span class="prov">provisional</span></div><div class="sc-meta">USGS 13032500</div></div>
   </div>
-
-  <div class="two-col">
-    <div>
-      <h4>Hatches (seasonal &mdash; float-only in runoff, no dated SF report on the board)</h4>
-      <ul>
-        <li><strong>Midge / BWO</strong> &mdash; soft-water staples</li>
-        <li><strong>Caddis</strong> #14&ndash;16 &mdash; evenings</li>
-        <li><strong>Salmonfly</strong> &mdash; <em>late June</em> &mdash; your weekend-4 target</li>
-        <li>PMD / Golden &mdash; follow the salmonfly into July</li>
-      </ul>
-    </div>
-    <div>
-      <h4>Recommended flies (now)</h4>
-      <ul>
-        <li>Pat's Rubber Legs #6 &mdash; indicator rig</li>
-        <li>Blowtorch / Hare's Ear #12&ndash;14</li>
-        <li>Sculpzilla, olive Dungeon &mdash; low &amp; slow streamer</li>
-        <li>BWO #18&ndash;20 &mdash; overcast afternoons</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="access">
-    <h4>Access &amp; Notes</h4>
-    <ul>
-      <li><span class="warn">Float only at ~10,800 CFS &mdash; no safe wading.</span> Ramps: Heise, Conant Valley, Byington, Lorenzo. Target soft water: buckets, tailouts, seams, eddies.</li>
-      <li>Expect flows to ease toward 8,000&ndash;10,000 CFS by mid-late June; it transitions to excellent float/wade fishing once it drops.</li>
-      <li><strong>Salmonfly hatch is the late-June story</strong> &mdash; this is your <strong>weekend-4 Friday (Jun 26)</strong> play. Watch the gauge through the trip.</li>
-    </ul>
-  </div>
+  <p class="section-note">Running high &amp; full on dam releases &mdash; heavy nymphing / streamer water for now, fish the banks and soft edges. <b>Salmonfly:</b> typical arrival late June, leading edge climbing from the lower river &mdash; UNCONFIRMED, no dated adult report yet. This is the play to watch for the final weekend (Fri Jun 26). (South Fork Lodge report was unreachable this run.)</p>
 </div>
 
-
-<!-- ===== TETON RIVER ===== -->
+<!-- TETON -->
 <div class="river-section">
-  <h2>Teton River <span class="tag tag-home">Home Water</span></h2>
-  <div class="section-note">Lower Teton / St. Anthony: ~20 min &nbsp;&middot;&nbsp; Upper canyon nr Driggs: ~1 hr &nbsp;&middot;&nbsp; Brown drakes late June evenings (Driggs upper canyon)</div>
-
+  <h2>Teton <span class="tag tag-home">Home Water</span></h2>
+  <div class="section-note">~20 min to the lower river; ~1h to the Driggs upper canyon. Brown drake hatch late-June evenings on the upper canyon.</div>
   <div class="stat-row">
-    <div class="sc">
-      <div class="sc-label">Upper &mdash; ab S. Leigh Ck nr Driggs (13052200)</div>
-      <div class="sc-val v-good">488</div>
-      <div class="sc-unit">CFS &nbsp;<span class="prov">PROV</span></div>
-      <div class="sc-meta">Jun 13 &middot; dropping</div>
-    </div>
-    <div class="sc">
-      <div class="sc-label">Lower &mdash; nr St. Anthony (13055000)</div>
-      <div class="sc-val">889</div>
-      <div class="sc-unit">CFS &nbsp;<span class="prov">PROV</span></div>
-      <div class="sc-meta">Jun 13 &middot; dropping</div>
-    </div>
-    <div class="sc">
-      <div class="sc-label">Water Temp</div>
-      <div class="sc-val" style="font-size:1rem;color:#888">No Data</div>
-      <div class="sc-unit">Sensors offline</div>
-      <div class="sc-meta">Estimate ~52&ndash;57&deg;F (warming)</div>
-    </div>
-    <div class="sc">
-      <div class="sc-label">Air &mdash; Driggs</div>
-      <div class="sc-val">69&deg;F</div>
-      <div class="sc-unit">Fri 69 &rarr; 65 Sat &rarr; 67 Sun</div>
-      <div class="sc-meta">Warm &amp; sunny</div>
-    </div>
+    <div class="sc"><div class="sc-label">Ab South Leigh Cr (upper)</div><div class="sc-val">531</div><div class="sc-unit">cfs <span class="prov">provisional</span></div><div class="sc-meta">USGS 13055000</div></div>
+    <div class="sc"><div class="sc-label">Nr St. Anthony (lower)</div><div class="sc-val">918</div><div class="sc-unit">cfs <span class="prov">provisional</span></div><div class="sc-meta">USGS 13052200</div></div>
   </div>
-
-  <div class="two-col">
-    <div>
-      <h4>Hatches &mdash; June</h4>
-      <ul>
-        <li><strong>Golden Stonefly</strong> &mdash; lower to mid canyon</li>
-        <li><strong>Caddis</strong> #14&ndash;16 &mdash; evenings</li>
-        <li><strong>PMD</strong> &mdash; upper canyon, Driggs</li>
-        <li><strong>Brown Drake</strong> &mdash; <em>late June evenings, upper canyon</em> &mdash; weekends 3&ndash;4</li>
-        <li>BWO &mdash; overcast lower river</li>
-      </ul>
-    </div>
-    <div>
-      <h4>Recommended flies</h4>
-      <ul>
-        <li>Foam Golden Stone #6&ndash;8, Yellow Stimulator #10&ndash;12</li>
-        <li>Brown Drake dun/spinner #10&ndash;12 (late June)</li>
-        <li>PMD Sparkle Dun #16 (upper canyon)</li>
-        <li>Elk Hair Caddis #14&ndash;16</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="access">
-    <h4>Access &amp; Notes</h4>
-    <ul>
-      <li><strong>Lower Teton (nr St. Anthony):</strong> quick hit from base, ~20 min. 933 CFS and dropping &mdash; wadeable in shallow tailouts; good golden-stone water.</li>
-      <li><strong>Upper canyon (Driggs):</strong> ~526 CFS, manageable to float; some canyon wading. <strong>The brown drake hatch here is a marquee late-June evening event</strong> &mdash; pencil it into weekend 3/4 nights.</li>
-      <li>No float permit required; primitive camping in the canyon.</li>
-    </ul>
-  </div>
+  <p class="section-note">Flows dropping into shape. <b>Brown drake</b> (Driggs upper canyon evenings) typically late June &mdash; UNCONFIRMED so far. A good week-3/4 evening option close to home; Driggs today high ~68&deg;F.</p>
 </div>
 
-
-<!-- ===== MADISON ===== -->
+<!-- MADISON -->
 <div class="river-section">
-  <h2>Madison River <span class="tag tag-day">Sunday Drift-Home Intercept ~2 hr</span></h2>
-  <div class="section-note">Big Hole &rarr; Ennis &rarr; West Yellowstone &rarr; home &nbsp;&middot;&nbsp; Sunday Jun 14 drift home &mdash; salmonfly "just approaching" per dated reports; nymph + caddis the real game</div>
-
+  <h2>Madison <span class="tag tag-day">Today &middot; ~2h</span></h2>
+  <div class="section-note">Today's water &mdash; the drift home near Ennis. Salmonfly chase target.</div>
   <div class="stat-row">
-    <div class="sc">
-      <div class="sc-label">nr West Yellowstone (06037500)</div>
-      <div class="sc-val v-good">385</div>
-      <div class="sc-unit">CFS &nbsp;<span class="prov">PROV</span></div>
-      <div class="sc-meta">Jun 13 &middot; latest reading</div>
-    </div>
-    <div class="sc">
-      <div class="sc-label">Below Hebgen (06038500)</div>
-      <div class="sc-val">1,010</div>
-      <div class="sc-unit">CFS &nbsp;<span class="prov">PROV</span></div>
-      <div class="sc-meta">Jun 13 &middot; latest reading</div>
-    </div>
-    <div class="sc">
-      <div class="sc-label">Temp &mdash; nr W. Yellowstone</div>
-      <div class="sc-val v-hatch">60&deg;F</div>
-      <div class="sc-unit">15.4&deg;C &mdash; dawn read, cool day</div>
-      <div class="sc-meta">Over the bug threshold</div>
-    </div>
-    <div class="sc">
-      <div class="sc-label">Air &mdash; West Yellowstone</div>
-      <div class="sc-val">62&deg;F</div>
-      <div class="sc-unit">Sat 62 &rarr; 66 Sun &rarr; 72 Mon</div>
-      <div class="sc-meta">Cool &amp; breezy, warming Sun</div>
-    </div>
+    <div class="sc"><div class="sc-label">Below Hebgen (upper)</div><div class="sc-val">1,010</div><div class="sc-unit">cfs &middot; 51.8&deg;F <span class="prov">prov.</span></div><div class="sc-meta">USGS 06038500</div></div>
+    <div class="sc"><div class="sc-label">Below Ennis Lake (lower)</div><div class="sc-val">1,530</div><div class="sc-unit">cfs &middot; 58.5&deg;F <span class="prov">prov.</span></div><div class="sc-meta">USGS 06041000</div></div>
+    <div class="sc"><div class="sc-label">Nr West Yellowstone (in park)</div><div class="sc-val">370</div><div class="sc-unit">cfs &middot; 60&deg;F <span class="prov">prov.</span></div><div class="sc-meta">USGS 06037500</div></div>
   </div>
-
-  <div class="stat-row">
-    <div class="sc">
-      <div class="sc-label">Below Ennis Lake / Lower (06041000)</div>
-      <div class="sc-val v-high">1,560</div>
-      <div class="sc-unit">CFS &nbsp;<span class="prov">PROV</span></div>
-      <div class="sc-meta">Jun 13 &middot; latest reading</div>
-    </div>
-    <div class="sc">
-      <div class="sc-label">Temp &mdash; Below Hebgen (tailwater)</div>
-      <div class="sc-val">53&deg;F</div>
-      <div class="sc-unit">11.6&deg;C &mdash; dam-cooled barrier</div>
-      <div class="sc-meta">Coolest reach &mdash; lags the rest</div>
-    </div>
-    <div class="sc">
-      <div class="sc-label">Temp &mdash; Lower Madison (bl Ennis)</div>
-      <div class="sc-val v-hot">60&deg;F</div>
-      <div class="sc-unit">15.7&deg;C &mdash; Jun 13 reading</div>
-      <div class="sc-meta">Warmest reach</div>
-    </div>
-    <div class="sc">
-      <div class="sc-label">Salmonfly status</div>
-      <div class="sc-val" style="font-size:.95rem;color:#b34d00">Approaching</div>
-      <div class="sc-unit">"just starting" &mdash; FlyFishFood Jun 7</div>
-      <div class="sc-meta">No adult hatch confirmed up near Ennis</div>
-    </div>
-  </div>
-
-  <div class="sf-tracker" style="margin:8px 0">
-    <h3>&#127801; Madison Salmonfly &mdash; approaching, NOT confirmed up (dated reports)</h3>
-    <p><strong>Status (sourced):</strong> The most recent dated reports do <strong>not</strong> confirm adult salmonflies out near Ennis. <strong>FlyFishFood (Jun 7)</strong> rates the salmonfly "approaching / just starting," 455 CFS, 56.8&deg;F, and calls nymphing "exceptional." <strong>The River's Edge upper Madison (Jun 10)</strong> doesn't mention salmonfly at all &mdash; caddis evenings, nymph rigs, streamers; 842 CFS at Kirby Ranch.</p>
-    <p><strong>Karel's Sunday plan (Jun 14):</strong> drift home past Ennis. Lead with <strong>nymphs (Pat's Rubber Legs + Frenchie/Blowtorch)</strong> and the <strong>evening caddis</strong>; streamers for size. Carry a foam salmonfly as a bonus and fish it only if you see adults on the willows. <strong>Call a West Yellowstone / Ennis shop the morning you fish</strong> for the live read &mdash; don't bank on a hatch the reports haven't confirmed.</p>
-  </div>
-
-  <div class="shop-quote">
-    <span class="shop-name">FlyFishFood &mdash; Madison River &nbsp;<span class="shop-date">report Jun 7 (for Jun 8&ndash;15), 2026</span></span>
-    Salmonfly "approaching / just starting" &mdash; expect activity warm midday&ndash;afternoon as flows stabilize. Flows 455 CFS, water 56.8&deg;F, clear. <strong>Nymphing exceptional right now:</strong> Tungsten Pat's Rubber Legs (tan/brown) #6 with a Frenchie or Blowtorch dropper; CDC Corn-fed Caddis #20 for evening caddis.
-  </div>
-
-  <div class="shop-quote">
-    <span class="shop-name">The River's Edge &mdash; Upper Madison &nbsp;<span class="shop-date">June 10, 2026</span></span>
-    No salmonfly mentioned. 842 CFS at Kirby Ranch; caddis coming off in the evening, nymph rigs productive, streamers for larger fish. Flies: X-Caddis Olive #16, Para Elk Hair Caddis Tan #14, Shop Vac #16, Tungsten Frenchdipity Olive #16, Sparkle Minnow JJ #6.
-  </div>
-
-  <div class="shop-quote">
-    <span class="shop-name">Blue Ribbon Flies &mdash; Madison River &nbsp;<span class="shop-date">June 4, 2026</span></span>
-    Madison below Quake Lake "coming into nice shape" with improving dry-fly prospects; flows low but expected to rise. Dries: #14 Hi-Vis Micro Chubby or #14 Royal PMX, #16&ndash;18 Spanish Bullets, #16 Missing Link / Center Stage Caddis. Nymphs: <strong>#6&ndash;8 Sunken Stones</strong> as backup. <em>Posted Jun 4, shown honestly with its date. Hebgen&ndash;Quake reach: watch for grizzly activity.</em>
-  </div>
-
-  <div class="access">
-    <h4>Access &amp; Notes</h4>
-    <ul>
-      <li><strong>Sunday route:</strong> from Twin Bridges, drop down to Ennis, fish the lower river edge, then home via West Yellowstone / US-20. Stop at a West Yellowstone / Ennis shop for the morning leading-edge call.</li>
-      <li><strong>Wade sections:</strong> Valley Garden &amp; Varney FAS just below Ennis are easy wade water and the first reach to get salmonflies when they do come; US-191 pull-offs up top later.</li>
-      <li><span class="warn">Carry bear spray throughout the corridor;</span> watch shop notes for any Hebgen&ndash;Quake grizzly closures.</li>
-      <li>Lower Madison (Ennis) is the first to get salmonflies &mdash; but as of the Jun 7&ndash;10 reports they're "just approaching," so plan for nymph + caddis and confirm any hatch with a morning shop call.</li>
-    </ul>
+  <div class="sf-tracker">
+    <h3>&#128205; Madison salmonfly leading-edge tracker</h3>
+    <p><b>Status: NOT yet emerged &mdash; UNCONFIRMED.</b> Fly Fish Food (Jun&nbsp;14): salmonflies "approaching / just starting; Monday's warmer forecast may trigger the first serious salmonfly activity." Blue Ribbon Flies (Jun&nbsp;11): below Quake "shaping up with caddis, PMDs &mdash; carry a few salmonfly patterns (#6&ndash;8 Water Walker / Sunken Stone)." No dated report of adults on the water yet.</p>
+    <p>Water below Ennis is at 58.5&deg;F (over the 55&deg;F trigger), so the lower river is warm enough &mdash; the front edge could pop any warm day, climbing ~3&ndash;5 mi/day toward Lyons Bridge. Below Hebgen lags at 51.8&deg;F. <b>Karel: call a shop (Blue Ribbon 406-646-7642) before committing &mdash; today, fish caddis &amp; goldens, not a salmonfly hatch that hasn't arrived.</b></p>
   </div>
 </div>
 
-
-<!-- ===== YNP (FIREHOLE / GIBBON) ===== -->
+<!-- FIREHOLE / GIBBON -->
 <div class="river-section">
-  <h2>Firehole &middot; Gibbon &middot; Madison-in-Park (YNP) <span class="tag tag-day">Rainy-Day Insurance</span></h2>
-  <div class="section-note">Inside Yellowstone NP &nbsp;&middot;&nbsp; <strong>Open since May 23</strong> &nbsp;&middot;&nbsp; Flies/lures only &mdash; the wet-weather backup for any Madison day</div>
-
-  <div class="stat-row">
-    <div class="sc">
-      <div class="sc-label">Firehole nr W. Yellowstone (06036905)</div>
-      <div class="sc-val v-good">262</div>
-      <div class="sc-unit">CFS &nbsp;<span class="prov">PROV</span></div>
-      <div class="sc-meta">Jun 12 &middot; latest reading</div>
-    </div>
-    <div class="sc">
-      <div class="sc-label">Gibbon at Madison Jct (06037100)</div>
-      <div class="sc-val">111</div>
-      <div class="sc-unit">CFS &nbsp;<span class="prov">PROV</span></div>
-      <div class="sc-meta">Jun 12 &middot; latest reading</div>
-    </div>
-    <div class="sc">
-      <div class="sc-label">Firehole Temp</div>
-      <div class="sc-val v-hot">71&deg;F</div>
-      <div class="sc-unit">21.8&deg;C &mdash; warm PM peak</div>
-      <div class="sc-meta">Fish mornings only &mdash; off in the heat</div>
-    </div>
-    <div class="sc">
-      <div class="sc-label">Gibbon Temp</div>
-      <div class="sc-val v-hatch">67&deg;F</div>
-      <div class="sc-unit">19.6&deg;C &mdash; warm PM peak</div>
-      <div class="sc-meta">Productive above &amp; below falls</div>
-    </div>
-  </div>
-
-  <div class="two-col">
-    <div>
-      <h4>Hatches &mdash; YNP early June</h4>
-      <ul>
-        <li><strong>PMD</strong> #16 &mdash; Firehole, mid-morning, <em>excellent</em></li>
-        <li><strong>Caddis</strong> #16 &mdash; Firehole evenings</li>
-        <li><strong>Baetis / BWO</strong> #18&ndash;20 &mdash; overcast</li>
-        <li><strong>Midges</strong> #20&ndash;24 &mdash; mornings</li>
-      </ul>
-    </div>
-    <div>
-      <h4>Recommended flies</h4>
-      <ul>
-        <li>PMD Comparadun / Hackle Stacker #16</li>
-        <li>X-Caddis / Elk Hair #16 (tan)</li>
-        <li>Partridge &amp; Pheasant / White Miller soft hackle</li>
-        <li>Olive Bugger #8&ndash;10 &mdash; Gibbon below Norris</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="access">
-    <h4>Access &amp; Notes</h4>
-    <ul>
-      <li><span class="good">Open since May 23. YNP entry \$35/vehicle or America the Beautiful pass; \$18/3-day fishing permit.</span></li>
-      <li><strong>Firehole:</strong> Firehole Canyon Dr parallels the prime water; fish mornings &mdash; above ~70&deg;F the fish go off.</li>
-      <li><strong>Gibbon:</strong> Gibbon Meadows from the Norris area; above/below the falls are distinct fisheries.</li>
-      <li><span class="warn">Yellowstone River inside YNP: CLOSED until July 15.</span></li>
-    </ul>
-  </div>
+  <h2>Firehole &middot; Gibbon &middot; Madison-in-Park <span class="tag tag-day">Pairs with Madison</span></h2>
+  <div class="section-note">YNP general season open. The in-park Madison ~370 cfs / 60&deg;F. Firehole &amp; Gibbon fish caddis and PMD/BWO &mdash; a nice morning warm-up before the upper Madison, though the Firehole warms fast as summer comes on.</div>
 </div>
 
-
-<!-- ===== WEEKEND 2 LOGISTICS — TAP-READY MAPS ===== -->
+<!-- TWIN BRIDGES -->
 <div class="river-section">
-  <h2>&#128205; Weekend 2 Logistics &mdash; Lodging &amp; Low-Grizzly Wade Access</h2>
-  <div class="section-note">Tap-ready Google Maps links for the Big Hole &amp; Madison salmonfly chase &mdash; lodging + park-and-wade spots chosen to stay off core grizzly ground</div>
-
-  <div style="background:#fff4e6;border-left:4px solid var(--rust);border-radius:0 6px 6px 0;padding:10px 14px;margin:12px 0;font-size:.85rem">
-    <strong style="color:var(--rust)">&#128059; Grizzly note:</strong> Both valley floors are <strong>low-risk</strong> &mdash; bear activity sits in the <em>mountains</em> (Madison Range above Ennis, the upper Big Hole high country), not the open ranch-valley river corridors below. What you're avoiding is the <strong>upper Madison near West Yellowstone/Hebgen and inside Yellowstone</strong> (core grizzly country). The Ennis valley sites and the Melrose&ndash;Divide canyon are dispersal zones with only occasional transient bears. <strong>Carry bear spray anyway</strong> &mdash; you're still in the GYE.
-  </div>
-
-  <div class="two-col">
-    <div>
-      <h4>&#127754; Big Hole &mdash; base Melrose / Twin Bridges</h4>
-      <p style="font-size:.82rem;color:var(--muted);margin-bottom:6px">Best wade access is <strong>Wise River&rarr;Divide</strong>; below Divide the river widens and access tightens. Grizzly density very low (first confirmed bear only 2016).</p>
-      <strong style="font-size:.78rem;color:var(--brown);text-transform:uppercase;letter-spacing:.05em">Overnight</strong>
-      <ul>
-        <li><a href="https://www.google.com/maps/search/?api=1&query=Sportsman+Motel+Melrose+MT" target="_blank">Sportsman Motel, Melrose</a> &mdash; on the salmonfly water</li>
-        <li><a href="https://www.google.com/maps/search/?api=1&query=The+Old+Hotel+Twin+Bridges+MT" target="_blank">The Old Hotel, Twin Bridges</a></li>
-        <li><a href="https://www.google.com/maps/search/?api=1&query=Stardust+Country+Inn+Twin+Bridges+MT" target="_blank">Stardust Country Inn, Twin Bridges</a></li>
-        <li><a href="https://www.google.com/maps/search/?api=1&query=Wise+River+Club+Wise+River+MT" target="_blank">Wise River Club, Wise River</a></li>
-      </ul>
-      <strong style="font-size:.78rem;color:var(--brown);text-transform:uppercase;letter-spacing:.05em">Park &amp; wade (Melrose&ndash;Divide canyon)</strong>
-      <ul>
-        <li><a href="https://www.google.com/maps/search/?api=1&query=Melrose+Fishing+Access+Site+Big+Hole+River+MT" target="_blank">Melrose / Salmonfly FAS</a> &mdash; in town, ramp + wade</li>
-        <li><a href="https://www.google.com/maps/search/?api=1&query=Maiden+Rock+Fishing+Access+Big+Hole+River+MT" target="_blank">Maiden Rock FAS</a> &mdash; canyon, top salmonfly stretch</li>
-        <li><a href="https://www.google.com/maps/search/?api=1&query=Brownes+Bridge+Fishing+Access+Big+Hole+River+MT" target="_blank">Brownes Bridge FAS</a></li>
-        <li><a href="https://www.google.com/maps/search/?api=1&query=Divide+Bridge+Fishing+Access+Big+Hole+River+MT" target="_blank">Divide Bridge FAS</a> &mdash; upper end of prime wade reach</li>
-        <li><a href="https://www.google.com/maps/search/?api=1&query=Jerry+Creek+Fishing+Access+Big+Hole+River+MT" target="_blank">Jerry Creek / Dewey access</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>&#127754; Madison &mdash; Sunday intercept, base Ennis (open valley)</h4>
-      <p style="font-size:.82rem;color:var(--muted);margin-bottom:6px">Note: the salmonfly typically <em>starts</em> on the lower river around Valley Garden &mdash; so the low-grizzly water is also the early-edge water when it does arrive. (Not confirmed up yet per the Jun 7&ndash;10 reports.)</p>
-      <strong style="font-size:.78rem;color:var(--brown);text-transform:uppercase;letter-spacing:.05em">Overnight (Ennis, if you linger)</strong>
-      <ul>
-        <li><a href="https://www.google.com/maps/search/?api=1&query=El+Western+Cabins+%26+Lodges+Ennis+MT" target="_blank">El Western Cabins &amp; Lodges</a></li>
-        <li><a href="https://www.google.com/maps/search/?api=1&query=Rainbow+Valley+Lodge+Ennis+MT" target="_blank">Rainbow Valley Lodge</a></li>
-        <li><a href="https://www.google.com/maps/search/?api=1&query=Fan+Mountain+Inn+Ennis+MT" target="_blank">Fan Mountain Inn</a></li>
-      </ul>
-      <strong style="font-size:.78rem;color:var(--brown);text-transform:uppercase;letter-spacing:.05em">Park &amp; wade (low grizzly)</strong>
-      <ul>
-        <li><a href="https://www.google.com/maps/search/?api=1&query=Valley+Garden+Fishing+Access+Site+Ennis+MT" target="_blank">Valley Garden FAS</a> &mdash; classic salmonfly water, braided wade water</li>
-        <li><a href="https://www.google.com/maps/search/?api=1&query=Ennis+Fishing+Access+Site+Montana" target="_blank">Ennis FAS</a> &mdash; town bridge, easy</li>
-        <li><a href="https://www.google.com/maps/search/?api=1&query=Eight+Mile+Ford+Fishing+Access+Madison+River+MT" target="_blank">Eight Mile Ford FAS</a> &mdash; shallow side channels</li>
-        <li><a href="https://www.google.com/maps/search/?api=1&query=Varney+Bridge+Fishing+Access+Site+MT" target="_blank">Varney Bridge FAS</a> &mdash; ~10 mi S of Ennis</li>
-      </ul>
-      <div style="background:#fbe7e0;border-left:4px solid var(--rust);border-radius:0 6px 6px 0;padding:9px 12px;margin:10px 0 0;font-size:.8rem">
-        <strong style="color:var(--rust)">&#127907; Slide Inn pilgrimage (Kelly Galloup) &mdash; <span style="text-transform:uppercase;letter-spacing:.03em">shop stop, not solo wade water</span>:</strong> <a href="https://www.google.com/maps/search/?api=1&query=Galloup%27s+Slide+Inn+Madison+River+MT" target="_blank">Galloup's Slide Inn</a> sits on the <strong>upper Madison &ldquo;between the lakes&rdquo; just below Quake Lake</strong> &mdash; ~45 river miles <em>above</em> Ennis and squarely in <strong>core grizzly country</strong> (the Hebgen&ndash;Quake reach BRF flagged closed for bear activity; the stretch where guide Carl Mock was killed in 2021). No dated report confirms adult salmonflies up there yet &mdash; the Jun 7&ndash;10 shop reports have the salmonfly only just approaching the lower river, not confirmed at Ennis. <strong>Go visit the shop &amp; see the famous water, but keep your wade-and-salmonfly fishing on the valley floor; if you fish up top, don&rsquo;t go alone in low light and carry spray.</strong>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<!-- ===== JACKSON ===== -->
-<div class="river-section">
-  <h2>Jackson Hole Waters <span class="tag tag-day">Teton Pass Day Trip</span></h2>
-  <div class="section-note">St. Anthony &rarr; Jackson: ~2.5 hrs via Teton Pass (Hwy 33 / WY-22) &nbsp;&middot;&nbsp; Most waters in heavy runoff &nbsp;&middot;&nbsp; Flat Creek CLOSED</div>
-
+  <h2>Twin Bridges MT &mdash; Big Hole &middot; Beaverhead &middot; Jefferson &middot; Ruby <span class="tag tag-overnight">Wk 2 &middot; just fished</span></h2>
+  <div class="section-note">~3h drive. Karel's Big Hole leg, wrapping today.</div>
   <div class="stat-row">
-    <div class="sc">
-      <div class="sc-label">Snake nr Alpine (13022500)</div>
-      <div class="sc-val v-high">9,630</div>
-      <div class="sc-unit">CFS &middot; 54&deg;F &nbsp;<span class="prov">PROV</span></div>
-      <div class="sc-meta">Jun 13 &middot; holding, still high</div>
-    </div>
-    <div class="sc">
-      <div class="sc-label">Greys nr Alpine (13023000)</div>
-      <div class="sc-val v-high">879</div>
-      <div class="sc-unit">CFS &nbsp;<span class="prov">PROV</span></div>
-      <div class="sc-meta">Jun 13 &middot; easing</div>
-    </div>
-    <div class="sc">
-      <div class="sc-label">Cache Creek nr Jackson (13018300)</div>
-      <div class="sc-val v-good">16</div>
-      <div class="sc-unit">CFS &middot; 41&deg;F &nbsp;<span class="prov">PROV</span></div>
-      <div class="sc-meta">Small, cold snowmelt</div>
-    </div>
-    <div class="sc" style="background:#fff0ec;border-color:#ffb39a">
-      <div class="sc-label" style="color:var(--rust)">Flat Creek</div>
-      <div class="sc-val v-high" style="font-size:.95rem">CLOSED</div>
-      <div class="sc-unit">Until August 1</div>
-      <div class="sc-meta">NWR closure, no exceptions</div>
-    </div>
+    <div class="sc"><div class="sc-label">Beaverhead @ Barretts</div><div class="sc-val">588</div><div class="sc-unit">cfs <span class="prov">provisional</span></div><div class="sc-meta">USGS 06016000</div></div>
+    <div class="sc"><div class="sc-label">Jefferson nr Twin Bridges</div><div class="sc-val">1,420</div><div class="sc-unit">cfs &middot; 54.9&deg;F <span class="prov">prov.</span></div><div class="sc-meta">USGS 06026500</div></div>
+    <div class="sc"><div class="sc-label">Big Hole @ Wisdom (upper)</div><div class="sc-val">34</div><div class="sc-unit">cfs <span class="prov">provisional</span></div><div class="sc-meta">USGS 06024450 (small upper trib gauge)</div></div>
   </div>
-
-  <div class="access">
-    <h4>Access &amp; Notes</h4>
-    <ul>
-      <li><span class="warn">Flat Creek: CLOSED until August 1.</span> <span class="warn">Snake at ~9,630 CFS &mdash; dropping but still high runoff; guided float only, no wading.</span></li>
-      <li>Wait for flows below ~8,000 CFS (mid-late June) for the Snake to fish well. Greys/Hoback tributaries clear sooner if you want a Teton Pass day.</li>
-      <li>Wyoming license \$14/day. Jack Dennis on the Town Square for current intel.</li>
-    </ul>
-  </div>
+  <p class="section-note"><b>Big Hole salmonfly: OVER for 2026</b> &mdash; confirmed gone by Sunrise Fly Shop and by Karel on the water Jun 12&ndash;13 (a short hatch this year). <b>Golden stones are the dry play</b> &mdash; skated/swung golden-stone dries triggered violent eats. Beaverhead (Poindexter Slough spring creek near Dillon) fishes technical PMDs.</p>
 </div>
 
-
-<!-- ===== YELLOWSTONE RIVER ===== -->
+<!-- JACKSON -->
 <div class="river-section">
-  <h2>Yellowstone River &mdash; Paradise Valley</h2>
-  <div class="section-note">Gardiner to Livingston &nbsp;&middot;&nbsp; St. Anthony &rarr; Livingston: ~3.5 hrs &nbsp;&middot;&nbsp; YNP section CLOSED until July 15</div>
-
-  <div class="stat-row">
-    <div class="sc">
-      <div class="sc-label">Corwin Springs / Gardiner (06191500)</div>
-      <div class="sc-val v-high">6,500</div>
-      <div class="sc-unit">CFS &middot; 54&deg;F &nbsp;<span class="prov">PROV</span></div>
-      <div class="sc-meta">Jun 13 &middot; high, slow drop</div>
-    </div>
-    <div class="sc">
-      <div class="sc-label">nr Livingston (06192500)</div>
-      <div class="sc-val v-high">7,390</div>
-      <div class="sc-unit">CFS &middot; 53&deg;F &nbsp;<span class="prov">PROV</span></div>
-      <div class="sc-meta">Jun 13 &middot; dropping</div>
-    </div>
-    <div class="sc">
-      <div class="sc-label">Status</div>
-      <div class="sc-val v-high" style="font-size:1.1rem">High &amp; dropping</div>
-      <div class="sc-unit">Float only, dangerous wade</div>
-      <div class="sc-meta">Cold snowmelt, clearing slowly</div>
-    </div>
-    <div class="sc">
-      <div class="sc-label">Outlook</div>
-      <div class="sc-val" style="font-size:1rem;color:#1a7a3a">Late June</div>
-      <div class="sc-unit">Clears for weekend 3 Sundays</div>
-      <div class="sc-meta">Golden stones as it drops</div>
-    </div>
-  </div>
-
-  <div class="access">
-    <h4>Access &amp; Notes</h4>
-    <ul>
-      <li><span class="warn">Yellowstone inside YNP: CLOSED until July 15.</span> Mainstem from Gardiner down through Paradise Valley is OPEN but at flood-stage flows &mdash; guided float only. (Livingston forecast: storms Fri night, rain likely Sat.)</li>
-      <li>Flows typically peak late May to mid-June then drop toward fishable 3,000&ndash;5,000 CFS by late June &mdash; a possible weekend-3 Sunday golden-stone option as it clears.</li>
-      <li>Paradise Valley ramps: Carbella, Mallard's Rest, Carter Bridge. Yellowstone Angler &amp; Dan Bailey's in Livingston for intel.</li>
-    </ul>
-  </div>
+  <h2>Jackson Hole <span class="tag tag-day">Teton Pass day trip</span></h2>
+  <div class="section-note">Snake nr Jackson still in runoff &mdash; watch clarity. Flat Creek (NER) closed until Aug 1. Today Jackson high ~70&deg;F. A day-trip option later in the trip once the Snake drops.</div>
 </div>
 
+<!-- YELLOWSTONE -->
+<div class="river-section">
+  <h2>Yellowstone River <span class="tag tag-day">Wk 3&ndash;4</span></h2>
+  <div class="section-note"><b>YNP section closed to fishing until Jul 15</b> &mdash; off the table inside the park this trip. Outside the park, the Yellowstone is in runoff and should clear toward the back half of the trip; goldens are the late-June draw near Livingston (today ~69&deg;F).</div>
+</div>
 
 <!-- ================= LODGING ================= -->
 <div class="lodging">
-  <h2 style="font-size:1.3rem;margin-bottom:3px">Lodging &mdash; on the hatch chase</h2>
-  <div class="section-note">Home base is the St. Anthony Airbnb. These are the road-trip nights: Twin Bridges (this weekend) is the only certain overnight; the rest are options if a chase runs long.</div>
+  <h2>&#127957;&#65039; Lodging &mdash; chase-weekend bases</h2>
   <div class="lodge-grid">
     <div class="lodge-panel">
-      <h4>Twin Bridges, MT</h4>
-      <div class="lp-note">This weekend &mdash; book tonight</div>
-      <ul>
-        <li>The Old Hotel</li>
-        <li>Stardust Country Inn</li>
-        <li>Four Rivers guest house</li>
-        <li>Best Western, Dillon (backup)</li>
-      </ul>
-    </div>
-    <div class="lodge-panel">
       <h4>West Yellowstone</h4>
-      <div class="lp-note">If the Sunday Madison runs late</div>
-      <ul>
-        <li>Brandin' Iron Inn</li>
-        <li>Stage Coach Inn</li>
-        <li>Madison Arm Resort</li>
-        <li>Slide Inn cabins</li>
-      </ul>
+      <div class="lp-note">Madison / YNP base</div>
+      <ul><li>Brandin' Iron Inn</li><li>Stage Coach Inn</li><li>Madison Arm Resort</li><li>Slide Inn cabins</li></ul>
     </div>
     <div class="lodge-panel">
-      <h4>Ennis, MT</h4>
-      <div class="lp-note">Lower-Madison salmonfly base</div>
-      <ul>
-        <li>El Western Cabins</li>
-        <li>Hi Country Motel</li>
-        <li>Riverside Motel</li>
-      </ul>
+      <h4>Ennis</h4>
+      <div class="lp-note">Lower Madison base</div>
+      <ul><li>El Western Cabins</li><li>Hi Country Motel</li><li>Riverside Motel</li></ul>
+    </div>
+    <div class="lodge-panel">
+      <h4>Twin Bridges MT</h4>
+      <div class="lp-note">Big Hole / Beaverhead</div>
+      <ul><li>The Old Hotel</li><li>Stardust Country Inn</li><li>Four Rivers guest house</li><li>Dillon Best Western (backup)</li></ul>
     </div>
     <div class="lodge-panel">
       <h4>Paradise Valley</h4>
-      <div class="lp-note">Only if Yellowstone clears</div>
-      <ul>
-        <li>Chico Hot Springs (Emigrant)</li>
-        <li>Murray Hotel (Livingston)</li>
-        <li>Yellowstone Valley Lodge</li>
-      </ul>
+      <div class="lp-note">Yellowstone R. base</div>
+      <ul><li>Chico Hot Springs (Emigrant)</li><li>Murray Hotel (Livingston)</li><li>Yellowstone Valley Lodge</li></ul>
     </div>
   </div>
 </div>
 
 </div><!-- /.c -->
 
-
-<!-- FOOTER -->
+<!-- ================= FOOTER ================= -->
 <footer>
 <div class="c">
   <div class="footer-cols">
     <div class="footer-col">
-      <h3>Live Gauges (USGS)</h3>
+      <h3>Live Gauges &amp; Forecasts</h3>
       <ul>
-        <li><strong>Henry's Fork</strong></li>
-        <li><a href="https://waterdata.usgs.gov/monitoring-location/13042500/" target="_blank">13042500 &mdash; Island Park / Box Canyon</a></li>
-        <li><a href="https://waterdata.usgs.gov/monitoring-location/13056500/" target="_blank">13056500 &mdash; nr Rexburg (lower)</a></li>
-        <li><strong>South Fork Snake</strong></li>
-        <li><a href="https://waterdata.usgs.gov/monitoring-location/13037500/" target="_blank">13037500 &mdash; Heise</a></li>
-        <li><a href="https://waterdata.usgs.gov/monitoring-location/13032500/" target="_blank">13032500 &mdash; nr Irwin</a></li>
-        <li><strong>Teton River</strong></li>
-        <li><a href="https://waterdata.usgs.gov/monitoring-location/13055000/" target="_blank">13055000 &mdash; nr St. Anthony</a></li>
-        <li><a href="https://waterdata.usgs.gov/monitoring-location/13052200/" target="_blank">13052200 &mdash; nr Driggs</a></li>
-        <li><strong>Jackson Area</strong></li>
-        <li><a href="https://waterdata.usgs.gov/monitoring-location/13022500/" target="_blank">13022500 &mdash; Snake nr Alpine</a></li>
-        <li><a href="https://waterdata.usgs.gov/monitoring-location/13023000/" target="_blank">13023000 &mdash; Greys nr Alpine</a></li>
-        <li><a href="https://waterdata.usgs.gov/monitoring-location/13018300/" target="_blank">13018300 &mdash; Cache Creek nr Jackson</a></li>
+        <li><a href="https://waterdata.usgs.gov/monitoring-location/13056500/">Henry's Fork @ Rexburg (Vernon)</a></li>
+        <li><a href="https://waterdata.usgs.gov/monitoring-location/13042500/">Henry's Fork @ Island Park (Box Canyon)</a></li>
+        <li><a href="https://waterdata.usgs.gov/monitoring-location/13032500/">South Fork @ Heise</a></li>
+        <li><a href="https://waterdata.usgs.gov/monitoring-location/06041000/">Madison below Ennis Lake</a></li>
+        <li><a href="https://waterdata.usgs.gov/monitoring-location/06038500/">Madison below Hebgen</a></li>
+        <li><a href="https://forecast.weather.gov/MapClick.php?lat=44.00&lon=-111.68">NWS forecast &mdash; St. Anthony</a></li>
       </ul>
-    </div>
-    <div class="footer-col">
-      <h3>Live Gauges cont.</h3>
-      <ul>
-        <li><strong>Madison &amp; YNP</strong></li>
-        <li><a href="https://waterdata.usgs.gov/monitoring-location/06037500/" target="_blank">06037500 &mdash; Madison nr West Yellowstone</a></li>
-        <li><a href="https://waterdata.usgs.gov/monitoring-location/06038500/" target="_blank">06038500 &mdash; Madison bl Hebgen Lake</a></li>
-        <li><a href="https://waterdata.usgs.gov/monitoring-location/06041000/" target="_blank">06041000 &mdash; Madison bl Ennis Lake</a></li>
-        <li><a href="https://waterdata.usgs.gov/monitoring-location/06036905/" target="_blank">06036905 &mdash; Firehole nr W. Yellowstone</a></li>
-        <li><a href="https://waterdata.usgs.gov/monitoring-location/06037100/" target="_blank">06037100 &mdash; Gibbon at Madison Jct</a></li>
-        <li><strong>Twin Bridges / Big Hole</strong></li>
-        <li><a href="https://waterdata.usgs.gov/monitoring-location/06024450/" target="_blank">06024450 &mdash; Big Hole nr Wisdom</a></li>
-        <li><a href="https://waterdata.usgs.gov/monitoring-location/06016000/" target="_blank">06016000 &mdash; Beaverhead at Barretts</a></li>
-        <li><a href="https://waterdata.usgs.gov/monitoring-location/06026500/" target="_blank">06026500 &mdash; Jefferson nr Twin Bridges</a></li>
-        <li><strong>Yellowstone</strong></li>
-        <li><a href="https://waterdata.usgs.gov/monitoring-location/06191500/" target="_blank">06191500 &mdash; Corwin Springs / Gardiner</a></li>
-        <li><a href="https://waterdata.usgs.gov/monitoring-location/06192500/" target="_blank">06192500 &mdash; nr Livingston</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h3>Shop Reports</h3>
-      <div style="background:rgba(255,255,255,.05);border-left:2px solid var(--gold);border-radius:0 4px 4px 0;padding:8px 10px;margin-bottom:10px;font-size:.78rem;color:#bcd8c8">
-        <strong style="color:var(--gold)">Henry's Fork &mdash; freshest first (Vernon / home water):</strong><br>
-        &middot; <strong>FlyFishFood</strong> &mdash; report Jun 7 (<em>posted Jun 8, now ~6 days old &mdash; still the freshest HF report</em>): BWOs at peak on gray afternoons, golden-stone nymphs active, caddis #16&ndash;20 evenings, PMDs approaching.<br>
-        &middot; <strong>Henry's Fork Anglers</strong> &mdash; report Jun 6 (<em>posted Jun 5, ~8 days old, shown honestly</em>): massive evening caddis, lower river full of caddis + PMD, golden shucks at Osbourn, "anticipating green drakes soon."<br>
-        <span style="color:#8aa89e">Honest freshness note: no Henry's Fork report newer than Jun 7/8 has posted as of Jun 13 (rechecked FlyFishFood, Henry's Fork Anglers, WorldCast, TroutHunter, Yostmark this morning &mdash; WorldCast's live page is dated May 30, TroutHunter Mar 13). FlyFishFood's next update is expected ~Jun 15 with the Ranch opener.</span>
-      </div>
-      <ul>
-        <li><strong>Henry's Fork / Teton</strong></li>
-        <li><a href="https://www.flyfishfood.com/blogs/fly-fishing-reports/henrys-fork" target="_blank">FlyFishFood &mdash; Henry's Fork</a></li>
-        <li><a href="https://henrysforkanglers.com/blogs/fishing-reports" target="_blank">Henry's Fork Anglers</a></li>
-        <li><a href="https://worldcastanglers.com/henrys-fork-fishing-report-2/" target="_blank">WorldCast Anglers &mdash; Henry's Fork</a></li>
-        <li><a href="https://trouthunter.com/fishing-report/" target="_blank">TroutHunter (Last Chance)</a></li>
-        <li><strong>South Fork</strong></li>
-        <li><a href="https://www.flyfishfood.com/blogs/fly-fishing-reports/south-fork-of-the-snake" target="_blank">FlyFishFood &mdash; South Fork</a></li>
-        <li><a href="https://southforklodge.com/fishing-report/" target="_blank">South Fork Lodge</a></li>
-        <li><strong>Madison / West Yellowstone</strong></li>
-        <li><a href="https://blueribbonflies.com/fishing-report/" target="_blank">Blue Ribbon Flies</a></li>
-        <li><a href="https://slideinn.com/fishing-report/" target="_blank">Galloup's Slide Inn</a></li>
-        <li><strong>Big Hole / Twin Bridges</strong></li>
-        <li><a href="https://troutfitters.com/reports/big-hole-river" target="_blank">Montana Troutfitters &mdash; Big Hole</a></li>
-        <li><a href="https://fourriversfishing.com" target="_blank">Four Rivers Fishing Co.</a></li>
-        <li><strong>Jackson / Yellowstone</strong></li>
-        <li><a href="https://jackdennis.com/fishing-reports" target="_blank">Jack Dennis Outdoor Shop</a></li>
-        <li><a href="https://yellowstoneangler.com/fishing-reports/" target="_blank">Yellowstone Angler</a></li>
-      </ul>
-
       <h3>Licenses &amp; Permits</h3>
       <ul>
-        <li><a href="https://idfg.idaho.gov/licenses" target="_blank">Idaho fishing license &mdash; IDFG</a></li>
-        <li><a href="https://wgfd.wyo.gov/apply" target="_blank">Wyoming fishing license &mdash; WGFD</a></li>
-        <li><a href="https://fwp.mt.gov/license" target="_blank">Montana fishing license &mdash; FWP</a></li>
-        <li><a href="https://www.nps.gov/yell/planyourvisit/fishing.htm" target="_blank">YNP fishing permit &mdash; NPS</a></li>
+        <li><a href="https://idfg.idaho.gov/licenses">Idaho Fish &amp; Game licenses</a></li>
+        <li><a href="https://fwp.mt.gov/buyandapply">Montana FWP licenses</a> (Madison, Big Hole)</li>
+        <li><a href="https://yellowstone.org/permits/">YNP fishing permit</a> (required in park)</li>
       </ul>
     </div>
-  </div>
+    <div class="footer-col">
+      <h3>Shop Reports &mdash; freshest intel (newest first)</h3>
 
+      <div class="shop-quote">
+        <span class="shop-name">Fly Fish Food &mdash; Henry's Fork <span class="shop-date">(Jun 14, 2026)</span></span>
+        Green drake: "Emerging &mdash; first sightings on lower river, caldera arrival imminent" (prime 11 AM&ndash;3 PM). PMD "building, trickling now." Caddis "heavy, 4 PM&ndash;dusk." BWO "moderate on overcast windows." Focus on the Railroad Ranch opener.
+      </div>
+
+      <div class="shop-quote">
+        <span class="shop-name">Fly Fish Food &mdash; Madison <span class="shop-date">(Jun 14, 2026)</span></span>
+        Salmonfly "approaching / just starting &mdash; Monday's warmer forecast may trigger the first serious activity." Golden stones "building" #8&ndash;10. Caddis "active &amp; building," best after 4 PM. Below Hebgen crystal-clear, 51.8&deg;F.
+      </div>
+
+      <div class="shop-quote">
+        <span class="shop-name">Blue Ribbon Flies &mdash; Madison <span class="shop-date">(Jun 11, 2026)</span></span>
+        Below Quake "shaping up nicely with caddis, PMDs." Carry "a few salmonfly patterns like a #8&ndash;6 Sunken Stone or Water Walker." Hebgen fishing well on chironomids &amp; nymphs.
+      </div>
+
+      <div class="shop-quote">
+        <span class="shop-name">WorldCast Anglers &mdash; Henry's Fork <span class="shop-date">(May 30, 2026 &mdash; older, shown for context)</span></span>
+        "PMDs should get going in the next 2&ndash;3 weeks." Goldens, caddis &amp; yellow sallies the focus after the salmonfly period; "perhaps some BWOs on cooler/cloudy days" on the lower river. Streamers effective low and slow.
+      </div>
+
+      <p style="font-size:.72rem;color:#5a7a68;margin-top:6px">No Henry's Fork shop posted a new lower-river/Vernon-specific update in the last 3 days beyond Fly Fish Food (Jun 14). Trout Hunter's on-file report is stale (Mar 13) and not carried as current; Henry's Fork Anglers' latest is a Jun 5 preview (body not loadable). South Fork Lodge &amp; Slide Inn were unreachable this run.</p>
+    </div>
+  </div>
   <div class="ts">
-    Updated &nbsp;&middot;&nbsp; Saturday, June 13, 2026 at 5:32 AM MDT (Mountain) &mdash; Big Hole day 2, cool, bright &amp; windy; nymph the Rubberlegs, dry the afternoon warmth; edge Melrose&ndash;Maiden Rock toward Wise River &nbsp;&middot;&nbsp;
-    Gauge data: USGS NWIS instantaneous values (latest readings Jun 13, ~5 AM), provisional &mdash; these are early-morning reads, so water temps are daily lows and will warm through the afternoon &nbsp;&middot;&nbsp;
-    Weather: Open-Meteo api.open-meteo.com &middot; freshest Henry's Fork shop report Jun 7 (FlyFishFood, posted Jun 8); HFA Jun 6 (posted Jun 5); Big Hole salmonfly leading-edge synthesis Jun 13 (Melrose&ndash;Maiden Rock); Blue Ribbon Jun 4 (Madison) &nbsp;&middot;&nbsp;
-    Next update: Sunday, June 14 at 5:30 AM MDT
+    Generated Sunday, June 14, 2026 &middot; 5:35 AM MDT &middot; Day 10 of 23 &middot; Greater Yellowstone Fly Fishing Agent.<br>
+    Gauge data USGS provisional. Hatch status shown only where a dated shop report or Karel's own log confirms it &mdash; seasonal calendars and water-temp thresholds are expectations, not confirmation. Call the shop before committing a stretch.
   </div>
 </div>
 </footer>
