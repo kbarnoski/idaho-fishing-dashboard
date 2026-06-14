@@ -4,8 +4,66 @@
   "arrive": "2026-06-05",
   "depart": "2026-06-27",
   "lastFishingDay": "2026-06-26",
-  "updated": "2026-06-08",
+  "updated": "2026-06-13",
   "entries": [
+    {
+      "date": "2026-06-13",
+      "day": "Saturday",
+      "leg": "Weekend 2 · Beaverhead / Dillon",
+      "status": "logged",
+      "locations": ["Poindexter Slough — spring creek near Dillon"],
+      "summary": "Bought a new rod and setup from Frontier Anglers in Dillon — the shop pointed me to the Poindexter access and gave me fly tips. Arrived at the creek around 11am. The sun came out and a strong PMD hatch came off with all kinds of trout rising in the first hole. Put on a small PMD and caught about 8 trout from 10–15\" without ever changing holes — technical fishing, drifting the fly into undercuts and tough spots. Eventually moved up to the next bend and saw a couple of nice trout feeding in the head of the pool in the riffle. Took a medium one first, then a couple more moved up to feed in the same lane; I didn't get the biggest to eat but landed a nice 15–16-incher. Took lots of breaks — another memorable session.",
+      "catches": [
+        {"species": "Trout (mixed)", "count": 8, "notes": "First hole on a small PMD, 10–15\", drifted into undercuts — never changed holes"},
+        {"species": "Trout", "count": 1, "notes": "Medium fish, head of the pool in the riffle at the next bend"},
+        {"species": "Trout", "count": 1, "notes": "Nice 15–16\" in the riffle-head feeding lane"}
+      ],
+      "flies": ["Small PMD dry"],
+      "notes": "New rod and setup from Frontier Anglers, Dillon — they tipped me off to Poindexter. Spring-creek fishing: clear water, technical drifts, feeding fish in defined lanes.",
+      "lessons": [
+        "Local shop intel pays off — Frontier Anglers put me on Poindexter and the right fly with one stop.",
+        "When a hatch is on and fish are stacked, work the one hole thoroughly instead of moving — 8 fish came from a single hole.",
+        "On clear spring creeks the eats are in the undercuts; getting a clean drift tight to the bank is what unlocked the tough spots.",
+        "Riffle heads pull feeders up into defined lanes — read the lane, drift it, and more fish keep moving up into the same spot."
+      ],
+      "conditions": {
+        "air": "57°F at 11am rising to 64°F by mid-afternoon",
+        "waterTemp": "—",
+        "flowCfs": "—",
+        "weather": "Clear early (2–23% cloud) clouding to ~54% by 5pm; wind 10–16 mph, gusts to 18 mph",
+        "hatch": "Strong PMD hatch once the sun came out"
+      }
+    },
+    {
+      "date": "2026-06-12",
+      "day": "Friday",
+      "leg": "Weekend 2 · Big Hole",
+      "status": "logged",
+      "locations": ["Fish Trap access — upper Big Hole", "Powerhouse access — Big Hole"],
+      "summary": "Drove to the Fish Trap access on the upper Big Hole. Caught 3 brook trout, 1 rainbow, 1 grayling, and 1 whitefish — the grayling was the real highlight, and it ate a stonefly dry. Didn't spot any big fish, but it was nice to see these upper waters. On the way back I went looking for bigger water and stopped at the Powerhouse access. Walked under the bridge and worked slowly downstream — immediately caught a small brown on the stonefly dry. Saw a split in the river with an island forming, followed it up, and in the first hole a trout attacked the stonefly. From there it was one after another, all violent eats. The run turned out to be a diversion channel. In about 90 minutes I caught at least 10 trout from 12–15\", almost all brown and a bit sleek and thin. The key: skating the stonefly on the swing triggered hit after hit — I've never seen takes like that on a swung stonefly dry. Saw one bigger fish come look but that was the closest I got. A memorable session I'll never forget.",
+      "catches": [
+        {"species": "Brook Trout", "count": 3, "notes": "Fish Trap access, stonefly dry"},
+        {"species": "Rainbow Trout", "count": 1, "notes": "Fish Trap access"},
+        {"species": "Arctic Grayling", "count": 1, "notes": "Highlight of the day — ate a stonefly dry at Fish Trap"},
+        {"species": "Mountain Whitefish", "count": 1, "notes": "Fish Trap access"},
+        {"species": "Brown Trout", "count": 11, "notes": "Powerhouse diversion channel, 12–15\", sleek and thin — violent eats on a SKATED stonefly dry swung across the current"}
+      ],
+      "flies": ["Stonefly dry (skated/swung)"],
+      "notes": "Two very different stretches: upper Big Hole at Fish Trap for species variety, then the Powerhouse diversion channel for a stacked run of aggressive browns. The diversion channel was the find of the day.",
+      "lessons": [
+        "Skating/swinging the stonefly dry across the current — not a dead drift — triggered violent hit-after-hit eats. New go-to trigger when fish are aggressive.",
+        "Scouting for bigger water paid off — leaving Fish Trap to check the Powerhouse access is what found the hot run.",
+        "Diversion and side channels can stack aggressive fish; the split/island that looked like a dead end was the best water of the day.",
+        "Upper Big Hole gives species variety (brookies, grayling, whitefish) but smaller fish — drop downstream for size."
+      ],
+      "conditions": {
+        "air": "56°F at 10am to a high of 64°F early afternoon, 54°F by evening",
+        "waterTemp": "≈57–60°F at Melrose (lower); thin upper flow ≈58–64°F at Wisdom",
+        "flowCfs": "≈1,370–1,420 (Big Hole near Melrose); ≈48–53 (upper Big Hole at Wisdom)",
+        "weather": "Warm and windy — variable cloud 13–79%; wind 6–9 mph gusting 18–28 mph",
+        "hatch": "Stoneflies (fish keyed on the stonefly dry)"
+      }
+    },
     {
       "date": "2026-06-08",
       "day": "Monday",
