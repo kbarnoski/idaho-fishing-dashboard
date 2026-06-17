@@ -4,8 +4,84 @@
   "arrive": "2026-06-05",
   "depart": "2026-06-27",
   "lastFishingDay": "2026-06-26",
-  "updated": "2026-06-13",
+  "updated": "2026-06-17",
   "entries": [
+    {
+      "date": "2026-06-16",
+      "day": "Tuesday",
+      "leg": "Work-week · Vernon",
+      "status": "logged",
+      "locations": ["Lower Henry's Fork — above the Vernon boat ramp"],
+      "summary": "An amazing session late afternoon into early evening above the Vernon boat ramp. High winds were blowing stoneflies onto the water and the fish were keyed on them. Everything was on a Mike Lawson–style smaller stonefly dry. I hooked several, missed a couple, and landed 2 browns — one a powerful, thick 16-incher. The eats came both out in the main current and in the seams a bit closer to the bank. Then it all shut off. A memorable evening because I could watch the wind put the bugs on the water and the fish respond. Later, late at night in the moonlight, there were lots of risers working at the boat ramp again — as there always is.",
+      "catches": [
+        {"species": "Brown Trout", "count": 1, "notes": "16\" — powerful and thick. On a Mike Lawson–style small stonefly dry; ate out in the main current."},
+        {"species": "Brown Trout", "count": 1, "notes": "Second brown on the same stonefly dry; also hooked several others and missed a couple this session."}
+      ],
+      "flies": ["Mike Lawson–style small stonefly dry"],
+      "notes": "Wind was the trigger, not the obstacle — it blew stoneflies onto the water and the fish ate hard in both the main current and the bank seams. Then the bite shut off. Notable: Sunday through tonight the reliable late-evening caddis hatch produced zero rises/activity — odd, since this water has had a strong evening caddis for the last 10 years. Yet late tonight under the moon the boat-ramp pod was up and feeding as it always does — feels like a big drop-off in the usual evening caddis.",
+      "lessons": [
+        "Wind can be the trigger, not the enemy — the high wind blew stoneflies onto the water and turned the fish on. When it's howling, look at what it's delivering to the surface and match it.",
+        "Don't only fish the edges. The eats came in the main current as well as the bank seams — when bugs are on the whole river, cover the heavy water too.",
+        "Sessions have a window; it 'all shut off' after the flurry. Fish hard while the bite is on and don't expect it to last.",
+        "Pay attention to a missing hatch. Three evenings with no caddis activity on water that's been reliable for a decade is a signal, not noise — log it and adjust expectations (the late-night moonlight risers are a separate, later window)."
+      ],
+      "conditions": {
+        "air": "Hot — ~85°F high, breezy building to strong, gusty wind through the evening (per Karel: high winds blew stoneflies onto the water)",
+        "waterTemp": "Est. ~58–62°F evening, warming (Rexburg sensor offline since 2016)",
+        "flowCfs": "≈1,050–1,150 CFS — lower Henry's Fork at Rexburg (USGS 13056500), continuing to drop off runoff (was ~1,170 on Jun 13)",
+        "weather": "Hot and very windy. Strong gusts actually blew stoneflies onto the water — the key to the evening.",
+        "hatch": "Stoneflies blown onto the water by the wind drove the eats on a small stonefly dry. The usual late-evening caddis hatch produced NO rises/activity (notably absent). Late-night moonlight risers at the boat ramp as always."
+      }
+    },
+    {
+      "date": "2026-06-15",
+      "day": "Monday",
+      "leg": "Work-week · Vernon",
+      "status": "logged",
+      "locations": ["Lower Henry's Fork — downstream of Bill's Hole"],
+      "summary": "Back home, fished downstream of Bill's Hole on the lower Henry's Fork and got skunked. The expected late-evening caddis hatch never showed — no rises, no activity — same as Sunday evening.",
+      "catches": [],
+      "flies": [],
+      "notes": "A blank night. Part of an odd stretch (Sun–Tue) where the reliable late-evening caddis hatch simply hasn't materialized on water that's had it for years.",
+      "lessons": [
+        "Even home water blanks. Working new water downstream of the usual Bill's Hole didn't produce — sometimes the known hole holds fish for a reason, and exploring on a dead night just confirms it.",
+        "Notice the pattern forming: a second straight evening with no caddis activity. When a dependable hatch goes missing two or three nights running, stop waiting on it and fish searching patterns / attractors instead.",
+        "A skunk on a short after-work session isn't worth grinding — bank the rest and save it for a night the conditions turn (which Tuesday's wind did)."
+      ],
+      "conditions": {
+        "air": "Hot — ~76°F+ high, breezy",
+        "waterTemp": "Est. ~57–61°F evening (Rexburg sensor offline since 2016)",
+        "flowCfs": "≈1,100–1,150 CFS — lower Henry's Fork at Rexburg (USGS 13056500), still easing off runoff",
+        "weather": "Hot and breezy evening on the lower river.",
+        "hatch": "No late-evening caddis activity — the expected hatch never came off (notably absent, same as Sunday)."
+      }
+    },
+    {
+      "date": "2026-06-14",
+      "day": "Sunday",
+      "leg": "Weekend 2 · Madison drift home",
+      "status": "logged",
+      "locations": ["Valley Garden — Madison below Ennis", "Lyons Bridge — upper Madison (between the lakes)", "Bill's Hole — lower Henry's Fork (home)"],
+      "summary": "Drove home from the Big Hole by way of the Madison. Started at Valley Garden below Ennis and got skunked — no salmonfly adults around, which matched the dated Jun 7–10 reports that had the hatch only just approaching, not up. Rather than write the day off, I gave it another try to end the evening up at Lyons Bridge, between the lakes. About 100 yards upstream I got 2 browns on a caddis dry. Then I continued home and hit Bill's Hole on the way in — nothing there.",
+      "catches": [
+        {"species": "Brown Trout", "count": 2, "notes": "Lyons Bridge, ~100 yards upstream — both on a caddis dry to end the evening."}
+      ],
+      "flies": ["Caddis dry"],
+      "notes": "Valley Garden was dead — no salmonfly adults, exactly as the FlyFishFood (Jun 7) / River's Edge (Jun 10) reports had it. Moving up to Lyons Bridge and fishing a simple caddis dry salvaged the evening. Bill's Hole gave up nothing on the way home — the start of three evenings with no caddis action there.",
+      "lessons": [
+        "The dated reports were right — no salmonfly adults at Valley Garden. Don't drive to the Madison banking on a hatch the reports haven't confirmed; treat adults as a bonus, not the plan.",
+        "Move to find willing fish. Valley Garden was a skunk, but driving up to Lyons Bridge and working ~100 yards turned 2 browns — fresh water beat grinding dead water.",
+        "A simple caddis dry out-produced chasing the unconfirmed salmonfly. Fish what the river is actually giving you.",
+        "Stacking one more stop at the end of a travel day paid off — the Lyons Bridge browns came after I'd already been skunked and could have gone straight home."
+      ],
+      "conditions": {
+        "air": "Warm with some cloud — ~73°F high on the drive-home day",
+        "waterTemp": "Madison ≈58–60°F; upper river between the lakes cooler",
+        "flowCfs": "Madison below Ennis Lake ≈1,500–1,560 CFS; upper Madison between the lakes ≈400–850 CFS; Bill's Hole / lower Henry's Fork ≈1,150 CFS (Rexburg, USGS 13056500)",
+        "weather": "Warm, some cloud on the Madison drift home.",
+        "hatch": "No salmonfly adults at Valley Garden (matching the Jun 7–10 reports — not up). A caddis dry drew 2 browns at Lyons Bridge. No caddis activity later at Bill's Hole."
+      }
+    },
     {
       "date": "2026-06-13",
       "day": "Saturday",
