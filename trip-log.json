@@ -4,8 +4,113 @@
   "arrive": "2026-06-05",
   "depart": "2026-06-27",
   "lastFishingDay": "2026-06-26",
-  "updated": "2026-06-17",
+  "updated": "2026-06-21",
   "entries": [
+    {
+      "date": "2026-06-20",
+      "day": "Saturday",
+      "leg": "Weekend 3 · Snake River with Rob & Mike",
+      "status": "logged",
+      "locations": ["Snake River — salmonfly float (guided by Rob; tip from his friend Chris)"],
+      "summary": "PRELIMINARY LOG — full write-up to come. After two brutally slow days on the lower Henry's Fork, on our Friday float we got a message that Rob would take us on a Snake River salmonfly float — his friend Chris said it was lights out. It goes down as the best fishing experience I've probably ever had in my life. The salmonflies were on and the eats were spectacular. I got into an epic 18\" cutthroat — fat, and Rob said about as good a fish as you can get on a dry. Also landed a 16\" cutthroat with spectacular spots and color, a 16\" brown, and a 16\" rainbow, plus some smaller cutties off a big gravel bar (those came on Rob's rod with his PMD). Everything else ate salmonflies. 10 fish landed total and a big rainbow broke me off.",
+      "catches": [
+        {"species": "Cutthroat Trout", "count": 1, "notes": "18\" — fat. THE fish: an epic dry-fly eat on a salmonfly. Rob said about as good as you can get on a dry. Highlight of the trip so far."},
+        {"species": "Cutthroat Trout", "count": 1, "notes": "16\" — spectacular spots and color, on a salmonfly."},
+        {"species": "Brown Trout", "count": 1, "notes": "16\" — on a salmonfly."},
+        {"species": "Rainbow Trout", "count": 1, "notes": "16\" — on a salmonfly."},
+        {"species": "Cutthroat (small)", "count": 6, "notes": "Off a big gravel bar — caught on Rob's rod with his PMD."}
+      ],
+      "flies": ["Salmonfly dry", "PMD (Rob's rod, gravel bar)"],
+      "notes": "Best fishing day of my life. The Snake salmonfly was genuinely on — confirmed on the water, not hype. Big dry-fly cutthroat eats, and a big rainbow broke off. Rob's local intel (via Chris) completely turned the trip around after the dead lower-river floats. Full details and conditions to be added in the next log.",
+      "lessons": [
+        "Chase the water that's actually fishing. Two dead days on the lower Henry's Fork flipped to the best day of my life the moment we moved to the Snake where the salmonfly was on — mobility and local intel beat grinding dead water.",
+        "Trust the network. Rob's tip from Chris ('lights out') was the whole difference — when a trusted local says a hatch is on somewhere, go.",
+        "When the salmonfly is genuinely on, the big fish come up for the dry — the 18\" cutthroat and a string of 16-inchers all ate on top.",
+        "Keep a PMD ready as the change-up — the gravel-bar cutties came on the PMD when the big-dry bite wasn't the play in that spot.",
+        "Pressure on light tippet with big fish: a big rainbow broke off — for fish this size on dries, check the tippet/knots and don't over-horse."
+      ],
+      "conditions": {
+        "air": "To be confirmed — warm early-summer day on the Snake.",
+        "waterTemp": "To be confirmed.",
+        "flowCfs": "To be confirmed.",
+        "weather": "To be added with the full write-up.",
+        "hatch": "Salmonfly ON — confirmed on the water (Karel fished it), tipped by Rob's friend Chris as 'lights out.' Big dry-fly eats; a PMD produced smaller cutthroat off a gravel bar."
+      }
+    },
+    {
+      "date": "2026-06-19",
+      "day": "Friday",
+      "leg": "Weekend 3 · Henry's Fork float with Rob & Mike",
+      "status": "logged",
+      "locations": ["Lower Henry's Fork — Ora to Chester (drift)"],
+      "summary": "Second float day with Rob and Mike, Ora down to Chester. Not a single eat or hookup for me all day. I stuck with stoneflies the entire day again — I've been wanting to get reps with them and pull up the bigger fish — but the river gave nothing. We pulled the boat out extremely disappointed. After two days floating the lower river, this was probably the least amount of fish and bug activity we've seen this time of year in 9 years of fishing this trip together. The one bright spot came on the float: a message that Rob would take us on a Snake River salmonfly float the next day — his friend Chris said it was lights out.",
+      "catches": [],
+      "flies": ["Stonefly dry (all day)"],
+      "notes": "A full skunk on the Ora–Chester float. Stuck deliberately with stoneflies to practice and target size. Lowest fish/bug activity we've seen on this stretch this time of year in 9 years. Saved by the news of a Snake River salmonfly float for Saturday.",
+      "lessons": [
+        "Know when the water is just off. Committing to stoneflies to practice is fine, but a zero-eat day with almost no bug activity meant the lower river was dead — no fly was going to fix it.",
+        "Two slow days on the same water is a signal to change rivers, not flies. The lower Henry's Fork was unusually quiet; the answer turned out to be moving to the Snake.",
+        "Deliberate practice has a cost on slow days — all-day stoneflies for reps and size meant passing up easier numbers; worth it only if size is genuinely the goal.",
+        "Stay plugged into local intel even mid-float — the Snake salmonfly tip that saved the trip came in while we were on the water."
+      ],
+      "conditions": {
+        "air": "Hot early-summer day, breezy",
+        "waterTemp": "Est. ~58–62°F (Rexburg sensor offline since 2016)",
+        "flowCfs": "≈1,000–1,100 CFS — lower Henry's Fork at Rexburg (USGS 13056500), continuing to drop off runoff",
+        "weather": "Hot and breezy float day on the lower river.",
+        "hatch": "Almost none — the standout was the near-total LACK of bug activity; lowest we've seen on this stretch this time of year in 9 years. No eats on stoneflies all day."
+      }
+    },
+    {
+      "date": "2026-06-18",
+      "day": "Thursday",
+      "leg": "Weekend 3 · Henry's Fork float with Rob & Mike",
+      "status": "logged",
+      "locations": ["Lower Henry's Fork — Ora to Vernon (drift)"],
+      "summary": "After staying the night in Jackson we picked up Mike's rental truck, met Rob, and grabbed his driftboat in Victor. First float of the weekend: Ora down to Vernon. I caught one 16\" brown on a stonefly and one very small brown. Fishing was very slow overall. I did miss a nice brown trout eat on a perfect drift against a rock — the kind you don't want to miss.",
+      "catches": [
+        {"species": "Brown Trout", "count": 1, "notes": "16\" — on a stonefly dry."},
+        {"species": "Brown Trout", "count": 1, "notes": "Very small brown."}
+      ],
+      "flies": ["Stonefly dry"],
+      "notes": "Met Rob, picked up his driftboat in Victor, floated Ora–Vernon with Mike. Slow day. Missed a nice brown on a perfect drift tight to a rock.",
+      "lessons": [
+        "Be ready on the perfect drift. The one good fish of the day — a nice brown against a rock — ate a clean drift and I missed the set. On slow days the few quality eats are precious; stay sharp on the bank targets.",
+        "Bank rocks hold the better browns. The quality eat came tight to a rock; prioritize tucking the fly to structure when the open water is dead.",
+        "Slow float days still produce if you grind the right water — one solid 16\" brown came on the stonefly even when activity was low."
+      ],
+      "conditions": {
+        "air": "Hot early-summer day, breezy",
+        "waterTemp": "Est. ~58–62°F (Rexburg sensor offline since 2016)",
+        "flowCfs": "≈1,050–1,150 CFS — lower Henry's Fork at Rexburg (USGS 13056500), dropping off runoff",
+        "weather": "Hot and breezy float day on the lower river.",
+        "hatch": "Very slow — little bug activity. A stonefly dry produced the 16\" brown."
+      }
+    },
+    {
+      "date": "2026-06-17",
+      "day": "Wednesday",
+      "leg": "Work-week · Vernon → drive to Jackson",
+      "status": "logged",
+      "locations": ["Lower Henry's Fork — above Vernon Bridge, river left (wade)"],
+      "summary": "Fished much of the day at Vernon until I needed to drive to Jackson to pick up Mike from the airport. I worked upriver on river left from Vernon, fishing the bank. Missed around 4 eats on the stonefly and didn't hook any. Just above Vernon Bridge on river left I worked a brown — he missed it once, and the second time I got a refusal. Then I drove to Jackson and stayed the night.",
+      "catches": [],
+      "flies": ["Stonefly dry"],
+      "notes": "A frustrating wade day before the drive to Jackson to pick up Mike — about 4 eats missed on the stonefly, no hookups, plus a miss-then-refusal from a brown just above Vernon Bridge (river left).",
+      "lessons": [
+        "Fix the hookup problem on the big stonefly. Four missed eats and no hookups in a day points to timing (setting too early/late) or the fly — consider a slight hesitation on the set, a smaller stone, or a trailing dropper to convert eats.",
+        "A refusal after a miss means the fish saw something off — drag, the size, or me. On a second look, change the angle or downsize rather than showing the same drift.",
+        "River-left bank above Vernon Bridge holds browns worth targeting — note it for next time.",
+        "Plan fishing around hard stops. With a Jackson airport pickup looming, the day was cut short — front-load the best water when the clock is running."
+      ],
+      "conditions": {
+        "air": "Hot — bluebird and windy day, wind easing toward dusk",
+        "waterTemp": "Est. ~58–62°F evening (Rexburg sensor offline since 2016)",
+        "flowCfs": "≈1,050–1,150 CFS — lower Henry's Fork at Rexburg (USGS 13056500), dropping off runoff",
+        "weather": "Bluebird and windy; wind tends to quit at dusk.",
+        "hatch": "Slow — fished a stonefly dry on the bank; ~4 eats missed, a brown refused above Vernon Bridge. No reliable hatch to key on."
+      }
+    },
     {
       "date": "2026-06-16",
       "day": "Tuesday",
