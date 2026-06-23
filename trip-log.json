@@ -11,15 +11,38 @@
       "day": "Monday",
       "leg": "Weekend 3 · South Fork of the Snake (wade)",
       "status": "logged",
-      "locations": ["South Fork of the Snake — Fall Creek Falls / island wade water (from South Fork Lodge)"],
+      "locations": [
+        "South Fork of the Snake — Fall Creek Falls / island wade water (from South Fork Lodge)"
+      ],
       "summary": "Took Sunday (Jun 21) off as a rest day, then went out Monday on the South Fork. Arrived at South Fork Lodge around 11; they pointed me upriver to Fall Creek Falls for a wade area around the islands. I scaled down to the water on the rope and walked up the entire channel — saw no fish activity. Continued upriver along the road and decided to start fishing at a kayak launch. Surprisingly caught a 14\" cutthroat on a stonefly, then missed a bigger fish tight to the bank just downriver. I worked downstream, wading and walking the road, and found a nice small island spot with a big riffle and a good-looking channel. Caught another cutthroat on the stonefly in the riffle where it dumps into the deeper water in a bucket. After those first two on the stonefly I switched down to smaller flies: behind the island, at a point where the channel converges, I caught 5 cutthroats all 10–12\" on PMDs and caddis. On the final stretch back to the car I picked up 2 browns on a caddis emerger, just dangling the fly downstream. After I got to the car and started driving there were a ton of stoneflies, so I pulled over and fished one last time — no eats. Went home with a solid day, just no bigger fish.",
       "catches": [
-        {"species": "Cutthroat Trout", "count": 1, "notes": "14\" — on a stonefly at the kayak launch. Then missed a bigger fish tight to the bank just downriver."},
-        {"species": "Cutthroat Trout", "count": 1, "notes": "On the stonefly — in the riffle at the small island, where it meets the deeper water in a bucket. After this I switched down to the smaller flies."},
-        {"species": "Cutthroat Trout", "count": 5, "notes": "10–12\" — behind the island at the point where the channel converges, on PMDs and caddis."},
-        {"species": "Brown Trout", "count": 2, "notes": "On the walk back to the car — caddis emerger just dangled/swung downstream."}
+        {
+          "species": "Cutthroat Trout",
+          "count": 1,
+          "notes": "14\" — on a stonefly at the kayak launch. Then missed a bigger fish tight to the bank just downriver."
+        },
+        {
+          "species": "Cutthroat Trout",
+          "count": 1,
+          "notes": "On the stonefly — in the riffle at the small island, where it meets the deeper water in a bucket. After this I switched down to the smaller flies."
+        },
+        {
+          "species": "Cutthroat Trout",
+          "count": 5,
+          "notes": "10–12\" — behind the island at the point where the channel converges, on PMDs and caddis."
+        },
+        {
+          "species": "Brown Trout",
+          "count": 2,
+          "notes": "On the walk back to the car — caddis emerger just dangled/swung downstream."
+        }
       ],
-      "flies": ["Stonefly dry", "PMD", "Caddis", "Caddis emerger (dangled downstream)"],
+      "flies": [
+        "Stonefly dry",
+        "PMD",
+        "Caddis",
+        "Caddis emerger (dangled downstream)"
+      ],
       "notes": "Solid numbers day (9 landed) but no size. Key observation: despite salmonfly/stonefly activity through the afternoon into evening, the stonefly only produced the first two cutthroat (the kayak-launch fish and the riffle fish) before it went quiet in my wading spots — after that the fish ate PMDs and caddis instead. A guide from a boat said they WERE getting eats, but out on the main river, not the side channels I could wade. The bugs were everywhere (tons of stoneflies on the drive home) but the players were on water I couldn't reach on foot.",
       "lessons": [
         "When salmonflies are on big water like the South Fork, the eating fish may be out in the main river where only a boat reaches — wading the side channels/islands got me numbers of small cutts but not the salmonfly eats. A float is the move when the hatch is on here.",
@@ -30,10 +53,10 @@
         "Numbers without size is still a good day — 9 fish on a tough wade beats forcing the big-fish water that wasn't accessible."
       ],
       "conditions": {
-        "air": "Warm early-summer day, salmonflies/stoneflies thick by afternoon",
-        "waterTemp": "To be confirmed — South Fork of the Snake.",
-        "flowCfs": "To be confirmed — South Fork of the Snake below Palisades.",
-        "weather": "Warm; heavy stonefly presence in the air through afternoon into evening.",
+        "air": "Daily high 78°F / low 50°F.",
+        "waterTemp": "South Fork of the Snake nr Heise has no temp sensor; dam-controlled tailwater, est. ~52–56°F.",
+        "flowCfs": "Snake River nr Heise (South Fork) 11,400 cfs (USGS 13037500) — high dam-controlled summer flow; Fall Creek Falls reach is below Heise.",
+        "weather": "Bright — 7% cloud mean (the bright wade water that didn't produce salmonfly eats). Wind max ~12 mph, gusts to ~29 mph. Salmonflies thick by afternoon. [Open-Meteo]",
         "hatch": "Salmonfly/stonefly active afternoon into evening (bugs everywhere) — but in the wadeable side channels the fish ate PMDs and caddis, not the stonefly. A boat guide reported salmonfly eats out on the main river. Confirmed on the water."
       }
     },
@@ -42,16 +65,41 @@
       "day": "Saturday",
       "leg": "Weekend 3 · Snake River with Rob & Mike",
       "status": "logged",
-      "locations": ["Snake River — salmonfly float (guided by Rob; tip from his friend Chris)"],
+      "locations": [
+        "Snake River — salmonfly float (guided by Rob; tip from his friend Chris)"
+      ],
       "summary": "PRELIMINARY LOG — full write-up to come. After two brutally slow days on the lower Henry's Fork, on our Friday float we got a message that Rob would take us on a Snake River salmonfly float — his friend Chris said it was lights out. It goes down as the best fishing experience I've probably ever had in my life. The salmonflies were on and the eats were spectacular. I got into an epic 18\" cutthroat — fat, and Rob said about as good a fish as you can get on a dry. Also landed a 16\" cutthroat with spectacular spots and color, a 16\" brown, and a 16\" rainbow, plus some smaller cutties off a big gravel bar (those came on Rob's rod with his PMD). Everything else ate salmonflies. 10 fish landed total and a big rainbow broke me off.",
       "catches": [
-        {"species": "Cutthroat Trout", "count": 1, "notes": "18\" — fat. THE fish: an epic dry-fly eat on a salmonfly. Rob said about as good as you can get on a dry. Highlight of the trip so far."},
-        {"species": "Cutthroat Trout", "count": 1, "notes": "16\" — spectacular spots and color, on a salmonfly."},
-        {"species": "Brown Trout", "count": 1, "notes": "16\" — on a salmonfly."},
-        {"species": "Rainbow Trout", "count": 1, "notes": "16\" — on a salmonfly."},
-        {"species": "Cutthroat (small)", "count": 6, "notes": "Off a big gravel bar — caught on Rob's rod with his PMD."}
+        {
+          "species": "Cutthroat Trout",
+          "count": 1,
+          "notes": "18\" — fat. THE fish: an epic dry-fly eat on a salmonfly. Rob said about as good as you can get on a dry. Highlight of the trip so far."
+        },
+        {
+          "species": "Cutthroat Trout",
+          "count": 1,
+          "notes": "16\" — spectacular spots and color, on a salmonfly."
+        },
+        {
+          "species": "Brown Trout",
+          "count": 1,
+          "notes": "16\" — on a salmonfly."
+        },
+        {
+          "species": "Rainbow Trout",
+          "count": 1,
+          "notes": "16\" — on a salmonfly."
+        },
+        {
+          "species": "Cutthroat (small)",
+          "count": 6,
+          "notes": "Off a big gravel bar — caught on Rob's rod with his PMD."
+        }
       ],
-      "flies": ["Salmonfly dry", "PMD (Rob's rod, gravel bar)"],
+      "flies": [
+        "Salmonfly dry",
+        "PMD (Rob's rod, gravel bar)"
+      ],
       "notes": "Best fishing day of my life. The Snake salmonfly was genuinely on — confirmed on the water, not hype. Big dry-fly cutthroat eats, and a big rainbow broke off. Rob's local intel (via Chris) completely turned the trip around after the dead lower-river floats. Full details and conditions to be added in the next log.",
       "lessons": [
         "Chase the water that's actually fishing. Two dead days on the lower Henry's Fork flipped to the best day of my life the moment we moved to the Snake where the salmonfly was on — mobility and local intel beat grinding dead water.",
@@ -61,10 +109,10 @@
         "Pressure on light tippet with big fish: a big rainbow broke off — for fish this size on dries, check the tippet/knots and don't over-horse."
       ],
       "conditions": {
-        "air": "To be confirmed — warm early-summer day on the Snake.",
-        "waterTemp": "To be confirmed.",
-        "flowCfs": "To be confirmed.",
-        "weather": "To be added with the full write-up.",
+        "air": "Daily high ~72°F / low ~53–55°F — a wet, cloudy, cool-ish day across the region.",
+        "waterTemp": "Depends on the exact stretch (to confirm): Snake at Moose/Jackson read 57.6°F; South Fork nr Heise has no temp sensor (tailwater, est. ~52–56°F).",
+        "flowCfs": "Snake River — exact stretch to confirm. Regional flows that day: South Fork of the Snake nr Heise ~11,400 cfs (USGS 13037500); Snake at Moose (Jackson Hole) ~7,920 cfs (USGS 13013650).",
+        "weather": "Heavy overcast (~63–66% cloud mean) with showers around — wind max ~10–14 mph, gusts to ~28–36 mph. The cloud cover made prime salmonfly dry-fly conditions. [Open-Meteo]",
         "hatch": "Salmonfly ON — confirmed on the water (Karel fished it), tipped by Rob's friend Chris as 'lights out.' Big dry-fly eats; a PMD produced smaller cutthroat off a gravel bar."
       }
     },
@@ -73,10 +121,14 @@
       "day": "Friday",
       "leg": "Weekend 3 · Henry's Fork float with Mike",
       "status": "logged",
-      "locations": ["Lower Henry's Fork — Ora to Chester (drift)"],
+      "locations": [
+        "Lower Henry's Fork — Ora to Chester (drift)"
+      ],
       "summary": "Second float day with Mike in Rob's borrowed driftboat, Ora down to Chester. Not a single eat or hookup for me all day. I stuck with stoneflies the entire day again — I've been wanting to get reps with them and pull up the bigger fish — but the river gave nothing. We pulled the boat out extremely disappointed. After two days floating the lower river, this was probably the least amount of fish and bug activity we've seen this time of year in 9 years of fishing this trip together. The one bright spot came on the float: a message that Rob would take us on a Snake River salmonfly float the next day — his friend Chris said it was lights out.",
       "catches": [],
-      "flies": ["Stonefly dry (all day)"],
+      "flies": [
+        "Stonefly dry (all day)"
+      ],
       "notes": "A full skunk on the Ora–Chester float. Stuck deliberately with stoneflies to practice and target size. Lowest fish/bug activity we've seen on this stretch this time of year in 9 years. Saved by the news of a Snake River salmonfly float for Saturday.",
       "lessons": [
         "Know when the water is just off. Committing to stoneflies to practice is fine, but a zero-eat day with almost no bug activity meant the lower river was dead — no fly was going to fix it.",
@@ -85,10 +137,10 @@
         "Stay plugged into local intel even mid-float — the Snake salmonfly tip that saved the trip came in while we were on the water."
       ],
       "conditions": {
-        "air": "Hot early-summer day, breezy",
-        "waterTemp": "Est. ~58–62°F (Rexburg sensor offline since 2016)",
-        "flowCfs": "≈1,000–1,100 CFS — lower Henry's Fork at Rexburg (USGS 13056500), continuing to drop off runoff",
-        "weather": "Hot and breezy float day on the lower river.",
+        "air": "Daily high 86°F / low 51°F — hot.",
+        "waterTemp": "No active gauge; est. ~60–64°F.",
+        "flowCfs": "Lower Henry's Fork ~1,150 cfs at St. Anthony (USGS 13050500) / 1,300 nr Rexburg (13056500). Ora–Chester reach.",
+        "weather": "Hot, ~38% cloud mean. Light wind — max ~9 mph, gusts to ~18 mph. [Open-Meteo]",
         "hatch": "Almost none — the standout was the near-total LACK of bug activity; lowest we've seen on this stretch this time of year in 9 years. No eats on stoneflies all day."
       }
     },
@@ -97,13 +149,25 @@
       "day": "Thursday",
       "leg": "Weekend 3 · Henry's Fork float with Mike",
       "status": "logged",
-      "locations": ["Lower Henry's Fork — Ora to Vernon (drift)"],
+      "locations": [
+        "Lower Henry's Fork — Ora to Vernon (drift)"
+      ],
       "summary": "After staying the night in Jackson we picked up Mike's rental truck and met Rob to grab his driftboat in Victor (Rob lent us the boat — he wasn't fishing with us). First float of the weekend: Mike and I ran Ora down to Vernon. I caught one 16\" brown on a stonefly and one very small brown. Fishing was very slow overall. I did miss a nice brown trout eat on a perfect drift against a rock — the kind you don't want to miss.",
       "catches": [
-        {"species": "Brown Trout", "count": 1, "notes": "16\" — on a stonefly dry."},
-        {"species": "Brown Trout", "count": 1, "notes": "Very small brown."}
+        {
+          "species": "Brown Trout",
+          "count": 1,
+          "notes": "16\" — on a stonefly dry."
+        },
+        {
+          "species": "Brown Trout",
+          "count": 1,
+          "notes": "Very small brown."
+        }
       ],
-      "flies": ["Stonefly dry"],
+      "flies": [
+        "Stonefly dry"
+      ],
       "notes": "Met Rob, picked up his driftboat in Victor, floated Ora–Vernon with Mike. Slow day. Missed a nice brown on a perfect drift tight to a rock.",
       "lessons": [
         "Be ready on the perfect drift. The one good fish of the day — a nice brown against a rock — ate a clean drift and I missed the set. On slow days the few quality eats are precious; stay sharp on the bank targets.",
@@ -111,10 +175,10 @@
         "Slow float days still produce if you grind the right water — one solid 16\" brown came on the stonefly even when activity was low."
       ],
       "conditions": {
-        "air": "Hot early-summer day, breezy",
-        "waterTemp": "Est. ~58–62°F (Rexburg sensor offline since 2016)",
-        "flowCfs": "≈1,050–1,150 CFS — lower Henry's Fork at Rexburg (USGS 13056500), dropping off runoff",
-        "weather": "Hot and breezy float day on the lower river.",
+        "air": "Daily high 79°F / low 46°F.",
+        "waterTemp": "No active gauge on this reach; est. ~58–62°F.",
+        "flowCfs": "Lower Henry's Fork ~1,140 cfs at St. Anthony (USGS 13050500) / 1,250 nr Rexburg (13056500). Ora–Vernon reach.",
+        "weather": "Mostly clear (35% cloud mean). Light wind — max ~9 mph, gusts to ~17 mph. [Open-Meteo]",
         "hatch": "Very slow — little bug activity. A stonefly dry produced the 16\" brown."
       }
     },
@@ -123,10 +187,14 @@
       "day": "Wednesday",
       "leg": "Work-week · Vernon → drive to Jackson",
       "status": "logged",
-      "locations": ["Lower Henry's Fork — above Vernon Bridge, river left (wade)"],
+      "locations": [
+        "Lower Henry's Fork — above Vernon Bridge, river left (wade)"
+      ],
       "summary": "Fished much of the day at Vernon until I needed to drive to Jackson to pick up Mike from the airport. I worked upriver on river left from Vernon, fishing the bank. Missed around 4 eats on the stonefly and didn't hook any. Just above Vernon Bridge on river left I worked a brown — he missed it once, and the second time I got a refusal. Then I drove to Jackson and stayed the night.",
       "catches": [],
-      "flies": ["Stonefly dry"],
+      "flies": [
+        "Stonefly dry"
+      ],
       "notes": "A frustrating wade day before the drive to Jackson to pick up Mike — about 4 eats missed on the stonefly, no hookups, plus a miss-then-refusal from a brown just above Vernon Bridge (river left).",
       "lessons": [
         "Fix the hookup problem on the big stonefly. Four missed eats and no hookups in a day points to timing (setting too early/late) or the fly — consider a slight hesitation on the set, a smaller stone, or a trailing dropper to convert eats.",
@@ -135,10 +203,10 @@
         "Plan fishing around hard stops. With a Jackson airport pickup looming, the day was cut short — front-load the best water when the clock is running."
       ],
       "conditions": {
-        "air": "Hot — bluebird and windy day, wind easing toward dusk",
-        "waterTemp": "Est. ~58–62°F evening (Rexburg sensor offline since 2016)",
-        "flowCfs": "≈1,050–1,150 CFS — lower Henry's Fork at Rexburg (USGS 13056500), dropping off runoff",
-        "weather": "Bluebird and windy; wind tends to quit at dusk.",
+        "air": "Daily high 82°F / low 58°F.",
+        "waterTemp": "No active gauge (Rexburg offline); est. ~58–62°F.",
+        "flowCfs": "1,250 cfs — Henry's Fork nr Rexburg (USGS 13056500); 1,160 at St. Anthony.",
+        "weather": "Bluebird — 1% cloud mean. Wind max ~16 mph, gusts to ~33 mph; eased toward dusk. [Open-Meteo]",
         "hatch": "Slow — fished a stonefly dry on the bank; ~4 eats missed, a brown refused above Vernon Bridge. No reliable hatch to key on."
       }
     },
@@ -147,13 +215,25 @@
       "day": "Tuesday",
       "leg": "Work-week · Vernon",
       "status": "logged",
-      "locations": ["Lower Henry's Fork — above the Vernon boat ramp"],
+      "locations": [
+        "Lower Henry's Fork — above the Vernon boat ramp"
+      ],
       "summary": "An amazing session late afternoon into early evening above the Vernon boat ramp. High winds were blowing stoneflies onto the water and the fish were keyed on them. Everything was on a Mike Lawson–style smaller stonefly dry. I hooked several, missed a couple, and landed 2 browns — one a powerful, thick 16-incher. The eats came both out in the main current and in the seams a bit closer to the bank. Then it all shut off. A memorable evening because I could watch the wind put the bugs on the water and the fish respond. Later, late at night in the moonlight, there were lots of risers working at the boat ramp again — as there always is.",
       "catches": [
-        {"species": "Brown Trout", "count": 1, "notes": "16\" — powerful and thick. On a Mike Lawson–style small stonefly dry; ate out in the main current."},
-        {"species": "Brown Trout", "count": 1, "notes": "Second brown on the same stonefly dry; also hooked several others and missed a couple this session."}
+        {
+          "species": "Brown Trout",
+          "count": 1,
+          "notes": "16\" — powerful and thick. On a Mike Lawson–style small stonefly dry; ate out in the main current."
+        },
+        {
+          "species": "Brown Trout",
+          "count": 1,
+          "notes": "Second brown on the same stonefly dry; also hooked several others and missed a couple this session."
+        }
       ],
-      "flies": ["Mike Lawson–style small stonefly dry"],
+      "flies": [
+        "Mike Lawson–style small stonefly dry"
+      ],
       "notes": "Wind was the trigger, not the obstacle — it blew stoneflies onto the water and the fish ate hard in both the main current and the bank seams. Then the bite shut off. Notable: Sunday through tonight the reliable late-evening caddis hatch produced zero rises/activity — odd, since this water has had a strong evening caddis for the last 10 years. Yet late tonight under the moon the boat-ramp pod was up and feeding as it always does — feels like a big drop-off in the usual evening caddis.",
       "lessons": [
         "Wind can be the trigger, not the enemy — the high wind blew stoneflies onto the water and turned the fish on. When it's howling, look at what it's delivering to the surface and match it.",
@@ -162,10 +242,10 @@
         "Pay attention to a missing hatch. Three evenings with no caddis activity on water that's been reliable for a decade is a signal, not noise — log it and adjust expectations (the late-night moonlight risers are a separate, later window)."
       ],
       "conditions": {
-        "air": "Hot — ~85°F high, breezy building to strong, gusty wind through the evening (per Karel: high winds blew stoneflies onto the water)",
-        "waterTemp": "Est. ~58–62°F evening, warming (Rexburg sensor offline since 2016)",
-        "flowCfs": "≈1,050–1,150 CFS — lower Henry's Fork at Rexburg (USGS 13056500), continuing to drop off runoff (was ~1,170 on Jun 13)",
-        "weather": "Hot and very windy. Strong gusts actually blew stoneflies onto the water — the key to the evening.",
+        "air": "Daily high 90°F / low 51°F — hot.",
+        "waterTemp": "No active gauge (Rexburg offline); est. ~58–62°F evening.",
+        "flowCfs": "1,240 cfs — Henry's Fork nr Rexburg (USGS 13056500); 1,180 at St. Anthony.",
+        "weather": "Hot, ~41% cloud mean. HIGH WIND — wind max ~21 mph, gusts to ~39 mph — the wind that blew stoneflies onto the water (confirmed by gauge). [Open-Meteo]",
         "hatch": "Stoneflies blown onto the water by the wind drove the eats on a small stonefly dry. The usual late-evening caddis hatch produced NO rises/activity (notably absent). Late-night moonlight risers at the boat ramp as always."
       }
     },
@@ -174,7 +254,9 @@
       "day": "Monday",
       "leg": "Work-week · Vernon",
       "status": "logged",
-      "locations": ["Lower Henry's Fork — downstream of Bill's Hole"],
+      "locations": [
+        "Lower Henry's Fork — downstream of Bill's Hole"
+      ],
       "summary": "Back home, fished downstream of Bill's Hole on the lower Henry's Fork and got skunked. The expected late-evening caddis hatch never showed — no rises, no activity — same as Sunday evening.",
       "catches": [],
       "flies": [],
@@ -185,10 +267,10 @@
         "A skunk on a short after-work session isn't worth grinding — bank the rest and save it for a night the conditions turn (which Tuesday's wind did)."
       ],
       "conditions": {
-        "air": "Hot — ~76°F+ high, breezy",
-        "waterTemp": "Est. ~57–61°F evening (Rexburg sensor offline since 2016)",
-        "flowCfs": "≈1,100–1,150 CFS — lower Henry's Fork at Rexburg (USGS 13056500), still easing off runoff",
-        "weather": "Hot and breezy evening on the lower river.",
+        "air": "Daily high 79°F / low 44°F — hot, breezy evening.",
+        "waterTemp": "No active gauge (Rexburg offline); est. ~57–61°F.",
+        "flowCfs": "1,270 cfs — Henry's Fork nr Rexburg (USGS 13056500); 1,180 at St. Anthony.",
+        "weather": "Partly cloudy (40% cloud mean). Wind max ~8 mph, gusts to ~17 mph. [Open-Meteo]",
         "hatch": "No late-evening caddis activity — the expected hatch never came off (notably absent, same as Sunday)."
       }
     },
@@ -197,12 +279,22 @@
       "day": "Sunday",
       "leg": "Weekend 2 · Madison drift home",
       "status": "logged",
-      "locations": ["Valley Garden — Madison below Ennis", "Lyons Bridge — upper Madison (between the lakes)", "Bill's Hole — lower Henry's Fork (home)"],
+      "locations": [
+        "Valley Garden — Madison below Ennis",
+        "Lyons Bridge — upper Madison (between the lakes)",
+        "Bill's Hole — lower Henry's Fork (home)"
+      ],
       "summary": "Drove home from the Big Hole by way of the Madison. Started at Valley Garden below Ennis and got skunked — no salmonfly adults around, which matched the dated Jun 7–10 reports that had the hatch only just approaching, not up. Rather than write the day off, I gave it another try to end the evening up at Lyons Bridge, between the lakes. About 100 yards upstream I got 2 browns on a caddis dry. Then I continued home and hit Bill's Hole on the way in — nothing there.",
       "catches": [
-        {"species": "Brown Trout", "count": 2, "notes": "Lyons Bridge, ~100 yards upstream — both on a caddis dry to end the evening."}
+        {
+          "species": "Brown Trout",
+          "count": 2,
+          "notes": "Lyons Bridge, ~100 yards upstream — both on a caddis dry to end the evening."
+        }
       ],
-      "flies": ["Caddis dry"],
+      "flies": [
+        "Caddis dry"
+      ],
       "notes": "Valley Garden was dead — no salmonfly adults, exactly as the FlyFishFood (Jun 7) / River's Edge (Jun 10) reports had it. Moving up to Lyons Bridge and fishing a simple caddis dry salvaged the evening. Bill's Hole gave up nothing on the way home — the start of three evenings with no caddis action there.",
       "lessons": [
         "The dated reports were right — no salmonfly adults at Valley Garden. Don't drive to the Madison banking on a hatch the reports haven't confirmed; treat adults as a bonus, not the plan.",
@@ -211,10 +303,10 @@
         "Stacking one more stop at the end of a travel day paid off — the Lyons Bridge browns came after I'd already been skunked and could have gone straight home."
       ],
       "conditions": {
-        "air": "Warm with some cloud — ~73°F high on the drive-home day",
-        "waterTemp": "Madison ≈58–60°F; upper river between the lakes cooler",
-        "flowCfs": "Madison below Ennis Lake ≈1,500–1,560 CFS; upper Madison between the lakes ≈400–850 CFS; Bill's Hole / lower Henry's Fork ≈1,150 CFS (Rexburg, USGS 13056500)",
-        "weather": "Warm, some cloud on the Madison drift home.",
+        "air": "Daily high 64°F / low 40°F (Madison/Ennis); warmer ~72°F / 50°F back home on the lower Henry's Fork.",
+        "waterTemp": "Madison below Ennis Lake (Valley Garden) 58.5°F; upper Madison between the lakes at Kirby Ranch (Lyons Bridge reach) 53.6°F (USGS 00010).",
+        "flowCfs": "Madison below Ennis Lake (Valley Garden) 1,530 cfs (USGS 06041000); upper Madison at Kirby Ranch (Lyons Bridge) 1,240 cfs (USGS 06038800); Bill's Hole / lower Henry's Fork 1,120 cfs (USGS 13056500).",
+        "weather": "Partly cloudy (27% cloud mean on the Madison). Wind max ~9 mph, gusts to ~21 mph. Warm with some cloud on the drift home. [Open-Meteo]",
         "hatch": "No salmonfly adults at Valley Garden (matching the Jun 7–10 reports — not up). A caddis dry drew 2 browns at Lyons Bridge. No caddis activity later at Bill's Hole."
       }
     },
@@ -223,14 +315,30 @@
       "day": "Saturday",
       "leg": "Weekend 2 · Beaverhead / Dillon",
       "status": "logged",
-      "locations": ["Poindexter Slough — spring creek near Dillon"],
+      "locations": [
+        "Poindexter Slough — spring creek near Dillon"
+      ],
       "summary": "Bought a new rod and setup from Frontier Anglers in Dillon — the shop pointed me to the Poindexter access and gave me fly tips. Arrived at the creek around 11am. The sun came out and a strong PMD hatch came off with all kinds of trout rising in the first hole. Put on a small PMD and caught about 8 trout from 10–15\" without ever changing holes — technical fishing, drifting the fly into undercuts and tough spots. Eventually moved up to the next bend and saw a couple of nice trout feeding in the head of the pool in the riffle. Took a medium one first, then a couple more moved up to feed in the same lane; I didn't get the biggest to eat but landed a nice 15–16-incher. Took lots of breaks — another memorable session.",
       "catches": [
-        {"species": "Trout (mixed)", "count": 8, "notes": "First hole on a small PMD, 10–15\", drifted into undercuts — never changed holes"},
-        {"species": "Trout", "count": 1, "notes": "Medium fish, head of the pool in the riffle at the next bend"},
-        {"species": "Trout", "count": 1, "notes": "Nice 15–16\" in the riffle-head feeding lane"}
+        {
+          "species": "Trout (mixed)",
+          "count": 8,
+          "notes": "First hole on a small PMD, 10–15\", drifted into undercuts — never changed holes"
+        },
+        {
+          "species": "Trout",
+          "count": 1,
+          "notes": "Medium fish, head of the pool in the riffle at the next bend"
+        },
+        {
+          "species": "Trout",
+          "count": 1,
+          "notes": "Nice 15–16\" in the riffle-head feeding lane"
+        }
       ],
-      "flies": ["Small PMD dry"],
+      "flies": [
+        "Small PMD dry"
+      ],
       "notes": "New rod and setup from Frontier Anglers, Dillon — they tipped me off to Poindexter. Spring-creek fishing: clear water, technical drifts, feeding fish in defined lanes.",
       "lessons": [
         "Local shop intel pays off — Frontier Anglers put me on Poindexter and the right fly with one stop.",
@@ -239,10 +347,10 @@
         "Riffle heads pull feeders up into defined lanes — read the lane, drift it, and more fish keep moving up into the same spot."
       ],
       "conditions": {
-        "air": "57°F at 11am rising to 64°F by mid-afternoon",
-        "waterTemp": "—",
-        "flowCfs": "—",
-        "weather": "Clear early (2–23% cloud) clouding to ~54% by 5pm; wind 10–16 mph, gusts to 18 mph",
+        "air": "Daily high 63°F / low 41°F (Dillon). Lived: 57°F at 11am rising to ~64°F mid-afternoon.",
+        "waterTemp": "Poindexter is a spring creek (no gauge) — spring-fed, runs cold and stable; est. ~50–54°F.",
+        "flowCfs": "No gauge on Poindexter Slough (small spring creek). Regional context: Beaverhead River at Barretts ~547 cfs (USGS 06016000).",
+        "weather": "Mixed sun and cloud (~30% cloud mean; clouded up through the afternoon as observed). Wind max ~13 mph, gusts to ~27 mph. [Open-Meteo]",
         "hatch": "Strong PMD hatch once the sun came out"
       }
     },
@@ -251,16 +359,41 @@
       "day": "Friday",
       "leg": "Weekend 2 · Big Hole",
       "status": "logged",
-      "locations": ["Fish Trap access — upper Big Hole", "Powerhouse access — Big Hole"],
+      "locations": [
+        "Fish Trap access — upper Big Hole",
+        "Powerhouse access — Big Hole"
+      ],
       "summary": "Drove to the Fish Trap access on the upper Big Hole. Caught 3 brook trout, 1 rainbow, 1 grayling, and 1 whitefish — the grayling was the real highlight, and it ate a golden stone dry. Didn't spot any big fish, but it was nice to see these upper waters. On the way back I went looking for bigger water and stopped at the Powerhouse access. Walked under the bridge and worked slowly downstream — immediately caught a small brown on the golden stone dry. Saw a split in the river with an island forming, followed it up, and in the first hole a trout attacked the golden stone. From there it was one after another, all violent eats. The run turned out to be a diversion channel. In about 90 minutes I caught at least 10 trout from 12–15\", almost all brown and a bit sleek and thin. The key: skating the golden stone on the swing triggered hit after hit — I've never seen takes like that on a swung golden stone dry. Saw one bigger fish come look but that was the closest I got. A memorable session I'll never forget.",
       "catches": [
-        {"species": "Brook Trout", "count": 3, "notes": "Fish Trap access, golden stone dry"},
-        {"species": "Rainbow Trout", "count": 1, "notes": "Fish Trap access"},
-        {"species": "Arctic Grayling", "count": 1, "notes": "Highlight of the day — ate a golden stone dry at Fish Trap"},
-        {"species": "Mountain Whitefish", "count": 1, "notes": "Fish Trap access"},
-        {"species": "Brown Trout", "count": 11, "notes": "Powerhouse diversion channel, 12–15\", sleek and thin — violent eats on a SKATED golden stone dry swung across the current"}
+        {
+          "species": "Brook Trout",
+          "count": 3,
+          "notes": "Fish Trap access, golden stone dry"
+        },
+        {
+          "species": "Rainbow Trout",
+          "count": 1,
+          "notes": "Fish Trap access"
+        },
+        {
+          "species": "Arctic Grayling",
+          "count": 1,
+          "notes": "Highlight of the day — ate a golden stone dry at Fish Trap"
+        },
+        {
+          "species": "Mountain Whitefish",
+          "count": 1,
+          "notes": "Fish Trap access"
+        },
+        {
+          "species": "Brown Trout",
+          "count": 11,
+          "notes": "Powerhouse diversion channel, 12–15\", sleek and thin — violent eats on a SKATED golden stone dry swung across the current"
+        }
       ],
-      "flies": ["Golden stone dry (skated/swung)"],
+      "flies": [
+        "Golden stone dry (skated/swung)"
+      ],
       "notes": "Two very different stretches: upper Big Hole at Fish Trap for species variety, then the Powerhouse diversion channel for a stacked run of aggressive browns. The diversion channel was the find of the day. No salmonfly hatch going — Sunrise Fly Shop said the Big Hole salmonflies were long gone this year and it had been a short hatch; the fish ate a golden stone dry, not salmonflies.",
       "lessons": [
         "Skating/swinging the golden stone dry across the current — not a dead drift — triggered violent hit-after-hit eats. New go-to trigger when fish are aggressive.",
@@ -270,10 +403,10 @@
         "Don't trust calendar/seasonal salmonfly hype — Sunrise Fly Shop confirmed the Big Hole salmonfly was long gone and short this year. The golden stone carried the day. Chasing the salmonfly proper, head to the Madison."
       ],
       "conditions": {
-        "air": "56°F at 10am to a high of 64°F early afternoon, 54°F by evening",
-        "waterTemp": "≈57–60°F at Melrose (lower); thin upper flow ≈58–64°F at Wisdom",
-        "flowCfs": "≈1,370–1,420 (Big Hole near Melrose); ≈48–53 (upper Big Hole at Wisdom)",
-        "weather": "Warm and windy — variable cloud 13–79%; wind 6–9 mph gusting 18–28 mph",
+        "air": "Daily high 73°F / low 42°F (Melrose). Lived: 56°F at 10am → ~64°F early afternoon → 54°F by evening.",
+        "waterTemp": "Lower Big Hole nr Melrose 57.2°F; upper Big Hole at Wisdom (Fish Trap reach) 58.5°F (USGS 00010, daily).",
+        "flowCfs": "Big Hole nr Melrose (Powerhouse reach) 1,430 cfs (USGS 06025500); upper Big Hole at Wisdom (Fish Trap) 52.5 cfs (USGS 06024450).",
+        "weather": "Mostly clear (21% cloud mean). Warm and windy — wind max ~13 mph, gusts to ~39 mph. [Open-Meteo]",
         "hatch": "No salmonfly (long gone this year per Sunrise Fly Shop — a short hatch); fish took a golden stone dry"
       }
     },
@@ -282,13 +415,28 @@
       "day": "Monday",
       "leg": "Work-week · Vernon",
       "status": "logged",
-      "locations": ["Bill's Hole — lower Henry's Fork"],
+      "locations": [
+        "Bill's Hole — lower Henry's Fork"
+      ],
       "summary": "Arrived at Bill's Hole about 6pm and fished until 9pm. Ran through several flies early with no luck — I think BWO and caddis. Then switched to a golden stone foam, cast it into the head of the riffle, and let it float down into the hole. Amazed to see a big brown turn in the riffle, follow the stone down, and slam it — my best eat of the trip so far because I watched it all happen. Landed it by banking it: a thick 16-incher. Switched to a couple of two-fly setups after that and only landed a 6\" brown on a spinner tied off the back of the lead fly. It cooled down and the rises shut down rather than building into a big caddis hatch, so I left content and a little earlier than previous nights.",
       "catches": [
-        {"species": "Brown Trout", "count": 1, "notes": "16\" — thick. Golden stone foam cast into the head of the riffle and drifted into the hole; watched a big brown turn, follow, and slam it. Best eat of the trip. Banked it."},
-        {"species": "Brown Trout", "count": 1, "notes": "6\" — on a spinner tied off the back of the lead fly in a two-fly setup."}
+        {
+          "species": "Brown Trout",
+          "count": 1,
+          "notes": "16\" — thick. Golden stone foam cast into the head of the riffle and drifted into the hole; watched a big brown turn, follow, and slam it. Best eat of the trip. Banked it."
+        },
+        {
+          "species": "Brown Trout",
+          "count": 1,
+          "notes": "6\" — on a spinner tied off the back of the lead fly in a two-fly setup."
+        }
       ],
-      "flies": ["BWO (tried early, no luck)", "Caddis (tried early, no luck)", "Golden stone foam (dry)", "Spinner (dropper off lead fly)"],
+      "flies": [
+        "BWO (tried early, no luck)",
+        "Caddis (tried early, no luck)",
+        "Golden stone foam (dry)",
+        "Spinner (dropper off lead fly)"
+      ],
       "notes": "Best eat of the trip — watched the whole thing happen: the golden stone foam drifted off the riffle head and a big brown turned, followed it down, and crushed it. Banked a thick 16\". Now I've pulled a big rainbow and a nice brown out of Bill's Hole. Left a little earlier and content once the rises shut down. Taking a couple nights off to restock, hit the fly shop for floatant and small flies, plan the Thursday–Sunday trip, and rest up / catch up on work.",
       "lessons": [
         "When the small stuff fails, swing big. BWO and caddis drew nothing, but a high-floating golden stone foam fished through the head of the riffle and drifted into the hole pulled the best fish of the trip up out of the pool — a 16\" brown that followed and slammed it.",
@@ -297,10 +445,10 @@
         "Read the closing window. No big caddis blizzard this night — the cooling shut the rises down instead of building a hatch. Leaving content rather than grinding a dead pool preserved energy and morale for the Thursday–Sunday trip."
       ],
       "conditions": {
-        "air": "Cooling steadily through the session — 70°F at 6pm → 69°F at 7pm → 64°F at 8pm → 60°F by 9pm",
-        "waterTemp": "Est. ~54–58°F (Rexburg sensor offline)",
-        "flowCfs": "~1,620 CFS easing to ~1,580 by 9:30pm — lower Henry's Fork at Rexburg (USGS 13056500), still dropping off runoff",
-        "weather": "Fully overcast all evening (98–100% cloud), as the Monday forecast called. Light wind — ~3 mph at 6pm building to ~10 mph gusting 17 by 8pm, then easing. On the water 6pm–9pm.",
+        "air": "Daily high 70°F / low 44°F. Lived: cooling through the session 70°F at 6pm → 60°F by 9pm.",
+        "waterTemp": "No active gauge; est. ~54–58°F.",
+        "flowCfs": "1,630 cfs — Henry's Fork nr Rexburg (USGS 13056500); 1,160 at St. Anthony. Dropping off runoff.",
+        "weather": "Fully overcast (81% cloud mean). Light wind — max ~6 mph, gusts to ~14 mph. On the water ~6–9pm. [Open-Meteo]",
         "hatch": "Tried BWO and caddis early with no eats. No big caddis blizzard this night — the cooling shut the rises down rather than building a hatch. A golden stone foam attractor drew the big brown out of the riffle head."
       }
     },
@@ -309,12 +457,21 @@
       "day": "Sunday",
       "leg": "Weekend 1 · Vernon",
       "status": "logged",
-      "locations": ["Bill's Hole — lower Henry's Fork (evening)"],
+      "locations": [
+        "Bill's Hole — lower Henry's Fork (evening)"
+      ],
       "summary": "Inside all day cooking and working, but the wind gusts started to ease so I went for it. Got to Bill's Hole at 8pm and fished until 9:45pm. Tied on a medium attractor with a caddis-emerger type dropper about a foot off the back. No clean takes at first but a couple of tugs, then I came tight to a 12\" rainbow on the emerger — again hooked on the bottom side of the mouth, so not sure if it was a partial/uncommitted take or lightly foul-hooked, but I'm counting it. The wind died right down as it got later and the air went cool. Not a big hatch, but some caddis activity, a pod working below me again and some movement at the head of the riffle. Never landed a bigger fish off either pod, but visibility was slightly better than last night. Didn't get skunked.",
       "catches": [
-        {"species": "Rainbow Trout", "count": 1, "notes": "12\" — on the caddis emerger dropper. Hooked on the underside of the mouth again; possibly an uncommitted take, counting it."}
+        {
+          "species": "Rainbow Trout",
+          "count": 1,
+          "notes": "12\" — on the caddis emerger dropper. Hooked on the underside of the mouth again; possibly an uncommitted take, counting it."
+        }
       ],
-      "flies": ["Medium attractor (dry)", "Caddis emerger (dropper, ~1 ft)"],
+      "flies": [
+        "Medium attractor (dry)",
+        "Caddis emerger (dropper, ~1 ft)"
+      ],
       "notes": "Short, focused evening session that paid off after two slow days. Wind eased through the night; cool air at dark. Then a real scare — couldn't find my car key and started worrying I'd be stuck outside all night, until I found it zipped in a pocket of my fly vest back at the car. Big panic.",
       "lessons": [
         "Even in bad wind and behind a cold front, the last couple hours toward dark can fish well as things calm — worth going out late instead of writing the day off.",
@@ -324,10 +481,10 @@
         "Two fish in a row hooked on the underside of the mouth suggests short/late takes — maybe slow the swing, add a touch of hesitation before the set, or downsize the emerger to get cleaner eats."
       ],
       "conditions": {
-        "air": "Cool and dropping — ~63°F at 6pm to 58°F by 8pm and 54°F by 9pm; clear skies (cold front behind it)",
-        "waterTemp": "Est. ~52–56°F (Rexburg sensor offline)",
-        "flowCfs": "~1,620 CFS — lower Henry's Fork at Rexburg (USGS 13056500), still easing off runoff",
-        "weather": "Clear and windy early — sustained ~20–23 mph gusting to 34 mph at 6pm — laying down through the evening to ~10–12 mph by 9–10pm. On the water 8pm–9:45pm.",
+        "air": "Daily high 65°F / low 49°F (cold front). Lived: ~63°F at 6pm → 58°F by 8pm → 54°F by 9pm.",
+        "waterTemp": "No active gauge; est. ~52–56°F.",
+        "flowCfs": "1,600 cfs — Henry's Fork nr Rexburg (USGS 13056500); 1,210 at St. Anthony.",
+        "weather": "Clear behind the front (41% cloud mean). Very windy early — wind max ~24 mph, gusts to ~45 mph — laying down through the evening. On the water ~8–9:45pm. [Open-Meteo]",
         "hatch": "Modest caddis activity after dark, not a heavy hatch. A pod working below and some movement at the head of the riffle."
       }
     },
@@ -336,12 +493,21 @@
       "day": "Saturday",
       "leg": "Weekend 1 · Vernon",
       "status": "logged",
-      "locations": ["Lower Henry's Fork — Vernon Bridge down to the rapids", "Bill's Hole (evening)"],
+      "locations": [
+        "Lower Henry's Fork — Vernon Bridge down to the rapids",
+        "Bill's Hole (evening)"
+      ],
       "summary": "A ten-hour grind on about 3–4 hours of sleep — adrenaline from being here and that big rainbow, plus a new place always taking some adjusting. On the water by 10am. Started just below Vernon Bridge near the two metal farm-feed silos, backpack loaded with beer, Gatorade, and snacks. Not much rising, so I worked down to the big-rock spot above the famous big-bank pool (up above the rapids, the deep run into the duck-pond pool). Nothing on the way down and nothing there. Wind picked up. Pushed down to the big bend that's known for holding big browns on the bank — had a large brown turn and look at the Chubby but he didn't commit. Went just above the rapids, turned, and worked my way back up. Took two spills — one heading down, a worse one coming back up where I cracked my knee on a river rock (lucky it wasn't worse). By then I was wiped. Back to the car around midday-ish to restock, then over to Bill's Hole about 6pm. Caddis started a little but nothing like Friday night. The intense wind finally laid down after about 5pm, temps cooled, and there were stretches of very low light. Hooked into a brown at the head of the pool but it was a surprise and I didn't set — lesson learned. Worked back and forth below and at the head trying to reach feeding pods, but I was too exhausted to see my fly in the low light and couldn't track a caddis well enough to time the eats.",
       "catches": [
-        {"species": "Brown Trout", "count": 1, "notes": "8\" — small, by the big-rock pool on the way back up."}
+        {
+          "species": "Brown Trout",
+          "count": 1,
+          "notes": "8\" — small, by the big-rock pool on the way back up."
+        }
       ],
-      "flies": ["Chubby Chernobyl"],
+      "flies": [
+        "Chubby Chernobyl"
+      ],
       "notes": "Basically a 10-hour day on the river with very little activity. Wind was the story until ~5pm; after it dropped the light went flat and low. A big brown at the big bend turned on the Chubby but didn't eat. Beers and snacks throughout.",
       "lessons": [
         "Rest matters — fishing on 3–4 hours of sleep wrecked my stamina and focus by evening. Get a real night before a full day.",
@@ -351,10 +517,10 @@
         "Wind = stay home until it lays down. The productive window opened only after ~5pm when it calmed; could've saved energy by starting later or resting through the gusts."
       ],
       "conditions": {
-        "air": "Warm midday — 71°F at 10am climbing to ~80°F by 2pm, then a cloud bank rolled in and cooled it to ~73°F by 6pm and 69°F by 8pm",
-        "waterTemp": "Est. ~54–58°F (Rexburg sensor offline)",
-        "flowCfs": "1,630 CFS — lower Henry's Fork at Rexburg (USGS 13056500), still dropping off runoff",
-        "weather": "Sunny and windy through the afternoon — clear skies midday with sustained 14–16 mph wind. Around 4pm clouds built to overcast (99% cloud) and the wind eased to ~7–8 mph by evening. On the water ~10am–8pm.",
+        "air": "Daily high 81°F / low 52°F. Lived: warm midday ~80°F by 2pm, a cloud bank cooled it to ~73°F by 6pm and 69°F by 8pm.",
+        "waterTemp": "No active gauge (Rexburg offline); est. ~54–58°F.",
+        "flowCfs": "1,630 cfs — Henry's Fork nr Rexburg (USGS 13056500); 1,210 at St. Anthony. Still dropping.",
+        "weather": "Clouding up — 60% cloud mean (clear midday building to overcast ~99% by ~4pm). Wind max ~16 mph, gusts to ~32 mph; eased to ~7–8 mph by evening. On the water ~10am–8pm. [Open-Meteo]",
         "hatch": "Very little all day. A weak caddis start at Bill's Hole after ~6pm — nothing like Friday's blizzard. Sporadic pods in the low evening light."
       }
     },
@@ -363,12 +529,20 @@
       "day": "Friday",
       "leg": "Weekend 1 · Arrival",
       "status": "logged",
-      "locations": ["Vernon Bridge / Lower Henry's Fork — Bill's Hole"],
+      "locations": [
+        "Vernon Bridge / Lower Henry's Fork — Bill's Hole"
+      ],
       "summary": "Drove straight from the airport to Vernon and walked down to Bill's Hole — the same water where last June I floated rose petals down the river for Dad. A lady was already in the hole, so I hung back above her and worked the run. Stuck with a Chubby Chernobyl all evening even though no golden stones showed. Around 8pm, as the sun dropped, the first head appeared against the bank above me — a nice brown. Cast a few times, hung the bush over him, then spooked him walking up to free the fly. When the lady below packed out I dropped into Bill's Hole and fished it for about an hour and a half, right where I wanted to be. A pod started working a heavy caddis hatch; I stayed with the Chubby and after a lot of casts one finally swiped and I came tight.",
       "catches": [
-        {"species": "Rainbow Trout", "count": 1, "notes": "18\" — hooked on the underside of the mouth, maybe a partial take, but I'm counting it. Forgot my net, so I banked it. Cleaned it after."}
+        {
+          "species": "Rainbow Trout",
+          "count": 1,
+          "notes": "18\" — hooked on the underside of the mouth, maybe a partial take, but I'm counting it. Forgot my net, so I banked it. Cleaned it after."
+        }
       ],
-      "flies": ["Chubby Chernobyl"],
+      "flies": [
+        "Chubby Chernobyl"
+      ],
       "notes": "Bill's Hole is where I held the rose-petal ceremony for Dad (d. March 4, 2025) last year — good to be back on that water.\n\nCast to a brown rising tight to the bank above me — never hooked him, just made a few presentations before moving on. Fished a while longer over the rising pod after landing the rainbow, stopped around 10pm and got home about 10:30. A few beers and American Spirits along the way.",
       "lessons": [
         "Bring the net. Forgot it and had to bank an 18\" fish — fine this time, but risky for the fish and for landing a good one.",
@@ -376,10 +550,10 @@
         "Confidence-fly persistence works. Stuck with the Chubby through a heavy caddis pod and got the eat after many casts — sometimes the fly isn't the problem, the count of good drifts is."
       ],
       "conditions": {
-        "air": "Cooled from 79°F at 6pm → 73°F at 8pm (first riser) → 67°F by 10pm",
-        "waterTemp": "Est. ~52–56°F evening (Rexburg sensor offline)",
-        "flowCfs": "1,770 CFS — lower Henry's Fork at Rexburg (USGS 13056500), dropping off runoff",
-        "weather": "Clear skies all evening (0% cloud). Wind ~14 mph at 6pm easing to dead calm by 9pm — the calm at dusk lined up with the caddis pod going. On the water ~6pm–10pm.",
+        "air": "Daily high 79°F / low 45°F. Lived: cooled from 79°F at 6pm → 73°F at 8pm (first riser) → 67°F by 10pm.",
+        "waterTemp": "Lower Henry's Fork has no active temp gauge (Rexburg 13056500 sensor offline since 2016); est. ~52–56°F evening.",
+        "flowCfs": "1,770 cfs — Henry's Fork nr Rexburg (USGS 13056500); 1,260 cfs at St. Anthony (13050500). Dropping off runoff.",
+        "weather": "Clear (5% cloud mean), no rain. Wind max ~12 mph, gusts to ~24 mph — easing to near calm at dusk (the calm lined up with the caddis pod). On the water ~6–10pm. [weather: Open-Meteo reanalysis]",
         "hatch": "Heavy caddis hatch after ~8pm with a pod feeding hard; no golden stones seen. Chubby Chernobyl drew the eats."
       }
     }
