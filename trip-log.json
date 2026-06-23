@@ -63,10 +63,10 @@
     {
       "date": "2026-06-20",
       "day": "Saturday",
-      "leg": "Weekend 3 · Snake River with Rob & Mike",
+      "leg": "Weekend 3 · South Fork of the Snake (Heise) with Rob & Mike",
       "status": "logged",
       "locations": [
-        "Snake River — salmonfly float (guided by Rob; tip from his friend Chris)"
+        "South Fork of the Snake — Heise reach, salmonfly float (guided by Rob; tip from his friend Chris)"
       ],
       "summary": "PRELIMINARY LOG — full write-up to come. After two brutally slow days on the lower Henry's Fork, on our Friday float we got a message that Rob would take us on a Snake River salmonfly float — his friend Chris said it was lights out. It goes down as the best fishing experience I've probably ever had in my life. The salmonflies were on and the eats were spectacular. I got into an epic 18\" cutthroat — fat, and Rob said about as good a fish as you can get on a dry. Also landed a 16\" cutthroat with spectacular spots and color, a 16\" brown, and a 16\" rainbow, plus some smaller cutties off a big gravel bar (those came on Rob's rod with his PMD). Everything else ate salmonflies. 10 fish landed total and a big rainbow broke me off.",
       "catches": [
@@ -110,8 +110,8 @@
       ],
       "conditions": {
         "air": "Daily high ~72°F / low ~53–55°F — a wet, cloudy, cool-ish day across the region.",
-        "waterTemp": "Depends on the exact stretch (to confirm): Snake at Moose/Jackson read 57.6°F; South Fork nr Heise has no temp sensor (tailwater, est. ~52–56°F).",
-        "flowCfs": "Snake River — exact stretch to confirm. Regional flows that day: South Fork of the Snake nr Heise ~11,400 cfs (USGS 13037500); Snake at Moose (Jackson Hole) ~7,920 cfs (USGS 13013650).",
+        "waterTemp": "South Fork of the Snake nr Heise — dam-controlled tailwater, no temp sensor, est. ~52–56°F.",
+        "flowCfs": "South Fork of the Snake nr Heise ~11,400 cfs (USGS 13037500) — high dam-controlled summer flow; the float was on this stretch (Heise reach).",
         "weather": "Heavy overcast (~63–66% cloud mean) with showers around — wind max ~10–14 mph, gusts to ~28–36 mph. The cloud cover made prime salmonfly dry-fly conditions. [Open-Meteo]",
         "hatch": "Salmonfly ON — confirmed on the water (Karel fished it), tipped by Rob's friend Chris as 'lights out.' Big dry-fly eats; a PMD produced smaller cutthroat off a gravel bar."
       }
