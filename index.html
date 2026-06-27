@@ -3,508 +3,250 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Greater Yellowstone Fly Fishing Dashboard — June 25, 2026</title>
+<title>Trip Complete — Greater Yellowstone Fly Fishing · June 2026</title>
 <style>
-:root {
-  --green: #2d4a3e;
-  --lg: #3d6b59;
-  --cream: #f5f1e8;
-  --dcream: #e8e0d0;
-  --brown: #8b6f47;
-  --gold: #c9a86b;
-  --rust: #8b4513;
-  --card: #fff8f0;
-  --muted: #5a5a5a;
+:root{
+  --green:#2d4a3e; --lg:#3d6b59; --cream:#f5f1e8; --dcream:#e8e0d0;
+  --brown:#8b6f47; --gold:#c9a86b; --rust:#8b4513; --card:#fff8f0; --muted:#5a5a5a;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;background:var(--cream);color:#1a1a1a;line-height:1.55}
 h1,h2,h3,h4{font-family:Georgia,'Times New Roman',serif;color:var(--green)}
 a{color:#5a9e7a;text-decoration:none}
 a:hover{text-decoration:underline}
-
-.hero{background:var(--green);color:var(--cream);padding:26px 0 18px}
-.hero h1{color:var(--gold);font-size:1.85rem;margin-bottom:4px}
-.hero-sub{color:#b0c8be;font-size:.87rem;margin-bottom:14px}
-.hero-row{display:flex;gap:14px;flex-wrap:wrap;align-items:flex-start}
-.countdown{background:var(--gold);color:var(--green);border-radius:8px;padding:10px 20px;font-weight:700;font-size:1.5rem;font-family:Georgia,serif;flex-shrink:0;line-height:1.1}
-.countdown small{display:block;font-size:.68rem;font-weight:400;font-family:sans-serif;text-transform:uppercase;letter-spacing:.08em}
-.hero-info{color:#c4d4cd;font-size:.85rem;padding-top:4px;line-height:1.7}
-.hero-info strong{color:var(--gold)}
-.journal-pill{display:inline-block;background:var(--gold);color:var(--green);font-weight:700;font-family:sans-serif;font-size:.9rem;padding:8px 18px;border-radius:22px;margin-top:10px;box-shadow:0 2px 8px rgba(0,0,0,.25)}
-.journal-pill:hover{background:#d8bd84;text-decoration:none}
-
 .c{max-width:840px;margin:0 auto;padding:0 16px}
 
-/* ---- TRIP PLAN BLOCK ---- */
-.tripplan{background:var(--green);border-radius:10px;padding:18px 18px 14px;margin:18px 0;border:2px solid var(--gold)}
-.tripplan h2{color:var(--gold);font-size:1.3rem;margin-bottom:2px}
-.tp-sub{color:#b0c8be;font-size:.82rem;margin-bottom:6px}
-.tp-legend{font-size:.7rem;color:#8aa89e;margin-bottom:12px}
-.tp-card{background:var(--card);border-radius:8px;padding:10px 13px;margin:9px 0;border:1px solid var(--dcream)}
-.tp-card.projected{background:#ece6da;color:#3a3a32}
-.tp-card.evening{background:#e7efe9;border-left:4px solid var(--lg)}
-.tp-card.active{border:3px solid var(--gold);background:#fffdf7;box-shadow:0 2px 16px rgba(201,168,107,.45);padding:15px 16px}
-.tp-card.active.evening{border-left:6px solid var(--gold)}
-.tp-when{font-size:.7rem;text-transform:uppercase;letter-spacing:.07em;font-weight:700;color:var(--brown);font-family:sans-serif}
-.tp-badge{font-size:.6rem;font-weight:700;padding:2px 8px;border-radius:10px;text-transform:uppercase;letter-spacing:.06em;margin-left:8px;vertical-align:middle}
-.tp-badge.act{background:var(--gold);color:var(--green)}
-.tp-badge.proj{background:#d8cfbd;color:#6a6354}
-.tp-badge.done{background:#9fb3a8;color:#1f2e26}
-.tp-head{font-family:Georgia,serif;color:var(--green);font-size:1.02rem;margin:3px 0 6px;font-weight:700}
-.tp-card.active .tp-head{font-size:1.2rem;margin-bottom:8px}
-.tp-card.projected .tp-head{font-size:.95rem;color:#33483f}
-.tp-line{font-size:.85rem;margin:5px 0;line-height:1.5}
-.tp-line .d{font-weight:700;color:var(--rust);font-family:Georgia,serif}
-.tp-call{background:#fff1e2;border-radius:6px;padding:9px 12px;margin-top:9px;font-size:.84rem;border-left:3px solid var(--rust);line-height:1.5}
-.tp-call b{color:var(--rust)}
-.tp-rec{background:#e8f7ee;border-radius:6px;padding:9px 12px;margin-top:7px;font-size:.84rem;border-left:3px solid #1a7a3a;line-height:1.5}
-.tp-rec b{color:#1a7a3a}
-.tp-mini{font-size:.82rem;color:#44504a;margin:3px 0;line-height:1.45}
-.tp-updated{color:#8aa89e;font-size:.72rem;margin-top:12px;text-align:right;font-style:italic}
+.hero{background:linear-gradient(135deg,#1a2e25,#2d4a3e);color:var(--cream);padding:34px 0 26px}
+.hero h1{color:var(--gold);font-size:2rem;margin-bottom:4px;letter-spacing:.01em}
+.hero-sub{color:#b0c8be;font-size:.9rem;margin-bottom:6px}
+.hero-flyout{color:#e9d9b4;font-size:.86rem;margin-bottom:14px}
+.hero-flyout strong{color:var(--gold)}
+.hero-row{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.fin{background:var(--gold);color:var(--green);border-radius:9px;padding:12px 22px;font-weight:700;font-size:1.4rem;font-family:Georgia,serif;line-height:1.05}
+.fin small{display:block;font-size:.66rem;font-weight:400;font-family:sans-serif;text-transform:uppercase;letter-spacing:.09em;margin-top:2px}
+.journal-pill{display:inline-block;background:var(--gold);color:var(--green);font-weight:700;font-family:sans-serif;font-size:.92rem;padding:10px 20px;border-radius:24px;box-shadow:0 2px 8px rgba(0,0,0,.28)}
+.journal-pill:hover{background:#d8bd84;text-decoration:none}
 
-.strategy{background:#3a2008;color:#f0dfc0;border-left:4px solid var(--gold);border-radius:8px;padding:16px 18px;margin:18px 0}
-.strategy h2{color:var(--gold);font-size:1.1rem;margin-bottom:10px}
-.strategy p{font-size:.88rem;margin-bottom:8px;line-height:1.6}
-.strategy p:last-child{margin-bottom:0}
-.closures{background:rgba(0,0,0,.28);border-radius:6px;padding:10px 14px;margin-top:10px}
-.closures h4{color:var(--gold);font-size:.78rem;text-transform:uppercase;letter-spacing:.07em;font-family:sans-serif;margin-bottom:7px;font-weight:700}
-.closures li{font-size:.85rem;padding:2px 0;list-style:none}
-.cls-closed{color:#ff9980;font-weight:600}
-.cls-open{color:#8fe8a0}
-.cls-caution{color:#ffd080}
+.section{margin:24px 0}
+.section>h2{font-size:1.35rem;margin-bottom:4px}
+.section>.lede{color:var(--muted);font-size:.9rem;margin-bottom:14px}
 
-.sf-tracker{background:var(--rust);color:#fff0e8;border-radius:8px;padding:14px 18px;margin:10px 0;border-left:4px solid var(--gold)}
-.sf-tracker h3{color:var(--gold);font-family:Georgia,serif;font-size:1rem;margin-bottom:8px}
-.sf-tracker p{font-size:.86rem;line-height:1.6;margin-bottom:6px}
-.sf-tracker p:last-child{margin-bottom:0}
-.sf-tracker.confirmed{background:#1f5130}
-.sf-tracker.unconf{background:#6a4a1a}
-.lbl{display:inline-block;font-size:.62rem;font-weight:700;padding:2px 7px;border-radius:4px;text-transform:uppercase;letter-spacing:.05em;font-family:sans-serif}
-.lbl-conf{background:#8fe8a0;color:#14361f}
-.lbl-unconf{background:#ffd080;color:#4a3000}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin:16px 0}
+.stat{background:var(--card);border:1px solid var(--dcream);border-top:4px solid var(--gold);border-radius:9px;padding:14px 16px;text-align:center}
+.stat b{display:block;font-family:Georgia,serif;font-size:2rem;color:var(--green);line-height:1}
+.stat span{display:block;font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-top:6px}
 
-/* ---- TIMED FLY PLAN ---- */
-.timed{background:#1f3a2e;border-radius:10px;padding:18px;margin:18px 0;border:1px solid var(--lg)}
-.timed h2{color:var(--gold);font-size:1.2rem;margin-bottom:3px}
-.timed .t-sub{color:#9ab8b0;font-size:.82rem;margin-bottom:14px}
-.t-row{display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.09)}
-.t-row:last-of-type{border-bottom:none}
-.t-clock{flex-shrink:0;width:108px;font-family:Georgia,serif;color:var(--gold);font-weight:700;font-size:.92rem;line-height:1.3}
-.t-clock small{display:block;font-family:sans-serif;font-weight:400;font-size:.66rem;color:#7aa098;text-transform:uppercase;letter-spacing:.05em}
-.t-body{flex:1;color:#dce8e2;font-size:.86rem;line-height:1.5}
-.t-body b{color:#fff}
-.t-fly{color:var(--gold);font-weight:600}
-.t-rule{background:#3a2008;color:#f0dfc0;border-left:3px solid var(--gold);border-radius:6px;padding:11px 14px;margin-top:14px;font-size:.82rem;line-height:1.55}
-.t-rule b{color:var(--gold)}
+.species{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.sp{background:rgba(45,74,62,.07);border:1px solid var(--dcream);border-radius:20px;padding:6px 13px;font-size:.84rem}
+.sp b{color:var(--green)}
 
-.river-section{margin:26px 0;border-top:2px solid var(--gold);padding-top:14px}
-.river-section h2{font-size:1.3rem;margin-bottom:3px}
-.tag{display:inline-block;font-size:.68rem;font-weight:700;padding:2px 7px;border-radius:10px;font-family:sans-serif;text-transform:uppercase;letter-spacing:.06em;vertical-align:middle;margin-left:6px}
-.tag-home{background:var(--gold);color:var(--green)}
-.tag-day{background:var(--brown);color:#fff}
-.tag-overnight{background:#5c3a1e;color:var(--gold)}
-.section-note{font-size:.82rem;color:var(--muted);margin-bottom:10px}
-.subhead{font-family:Georgia,serif;color:var(--rust);font-size:1.02rem;margin:16px 0 4px;border-bottom:1px dotted var(--brown);padding-bottom:3px}
+.callout{background:#3a2008;color:#f0dfc0;border-left:4px solid var(--gold);border-radius:9px;padding:18px 20px;margin:20px 0}
+.callout h2{color:var(--gold);font-size:1.2rem;margin-bottom:8px}
+.callout p{font-size:.9rem;line-height:1.65;margin-bottom:10px}
+.callout p:last-child{margin-bottom:0}
+.callout .quote{font-style:italic;color:#ffe9c0}
 
-.stat-row{display:flex;gap:9px;flex-wrap:wrap;margin:12px 0}
-.sc{flex:1;min-width:145px;background:var(--card);border:1px solid var(--dcream);border-radius:8px;padding:10px 11px;text-align:center}
-.sc-label{font-size:.68rem;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);font-weight:600;margin-bottom:3px}
-.sc-val{font-size:1.55rem;font-weight:700;color:var(--green);font-family:Georgia,serif;line-height:1.1}
-.sc-val.v-hot{color:#b34d00}
-.sc-val.v-hatch{color:#7a1f00;background:#fff0e0;border-radius:4px;padding:0 4px}
-.sc-val.v-high{color:var(--rust)}
-.sc-val.v-good{color:#1a7a3a}
-.sc-unit{font-size:.72rem;color:var(--muted);margin-top:2px}
-.sc-meta{font-size:.65rem;color:var(--muted);margin-top:3px;font-style:italic}
-.prov{display:inline-block;background:#fff3cd;color:#856404;font-size:.63rem;padding:1px 4px;border-radius:3px;font-weight:600;font-style:normal}
+.arc{display:flex;flex-direction:column;gap:0;margin:14px 0}
+.leg{background:var(--card);border:1px solid var(--dcream);border-left:5px solid var(--lg);border-radius:9px;padding:14px 18px;margin:10px 0}
+.leg.gold{border-left-color:var(--gold);background:#fffdf7;box-shadow:0 2px 12px rgba(201,168,107,.3)}
+.leg-when{font-size:.7rem;text-transform:uppercase;letter-spacing:.07em;font-weight:700;color:var(--brown);font-family:sans-serif}
+.leg h3{font-size:1.08rem;margin:4px 0 7px}
+.leg p{font-size:.88rem;line-height:1.55;margin-bottom:7px}
+.leg p:last-child{margin-bottom:0}
+.leg .tally{font-size:.78rem;color:var(--rust);font-weight:700;font-family:Georgia,serif}
 
-.wx-strip{background:#1a3a2e;border-radius:6px;padding:8px 12px;margin:8px 0;display:flex;gap:6px;flex-wrap:wrap}
-.wx-period{flex:1;min-width:120px;text-align:center;border-right:1px solid rgba(255,255,255,.1);padding:3px 6px}
-.wx-period:last-child{border-right:none}
-.wx-name{font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;color:#7aa098;margin-bottom:1px}
-.wx-temp{font-size:1.05rem;font-weight:700;color:var(--gold);font-family:Georgia,serif}
-.wx-desc{font-size:.68rem;color:#9ab8b0;margin-top:1px;line-height:1.3}
+.hl{background:var(--card);border:1px solid var(--dcream);border-radius:9px;padding:15px 18px;margin:11px 0;border-top:3px solid var(--gold)}
+.hl h3{font-size:1.02rem;margin-bottom:6px}
+.hl h3 .pin{font-weight:400}
+.hl p{font-size:.88rem;line-height:1.55}
 
-.two-col{display:flex;gap:16px;flex-wrap:wrap;margin:10px 0}
-.two-col>div{flex:1;min-width:220px}
-.two-col h4{font-size:.78rem;text-transform:uppercase;letter-spacing:.07em;color:var(--brown);margin-bottom:6px;font-family:sans-serif;font-weight:700}
-.two-col ul{list-style:none;font-size:.86rem}
-.two-col ul li{padding:2px 0;border-bottom:1px solid var(--dcream)}
-.two-col ul li:last-child{border-bottom:none}
+.score{background:var(--card);border:1px solid var(--dcream);border-radius:9px;overflow:hidden;margin:12px 0}
+.score-row{display:flex;gap:12px;padding:12px 16px;border-bottom:1px solid var(--dcream);align-items:flex-start}
+.score-row:last-child{border-bottom:none}
+.score-row .lbl{flex-shrink:0;font-size:.62rem;font-weight:700;padding:3px 8px;border-radius:4px;text-transform:uppercase;letter-spacing:.05em;font-family:sans-serif;margin-top:2px}
+.lbl-conf{background:#1f5130;color:#bdf0cd}
+.lbl-over{background:#7a2b15;color:#ffd6c5}
+.lbl-no{background:#6a6354;color:#efe7d6}
+.score-row .txt{font-size:.86rem;line-height:1.5}
+.score-row .txt b{color:var(--green)}
 
-.shop-quote{background:#eef5f0;border-left:3px solid var(--lg);border-radius:0 6px 6px 0;padding:10px 14px;margin:10px 0;font-size:.86rem;font-style:italic;color:#2a3a2a}
-.shop-name{font-style:normal;font-weight:700;font-size:.78rem;color:var(--green);margin-bottom:4px;display:block}
-.shop-date{font-style:normal;color:var(--brown);font-size:.75rem}
+.lessons{background:rgba(45,74,62,.05);border-left:4px solid var(--green);border-radius:0 8px 8px 0;padding:14px 18px;margin:12px 0}
+.lessons li{font-size:.88rem;margin:8px 0;line-height:1.5;list-style:none;padding-left:22px;position:relative}
+.lessons li::before{content:"\1F3A3";position:absolute;left:0;top:0}
 
-.access{background:var(--green);color:#c4d4cd;border-radius:8px;padding:12px 16px;margin-top:12px;font-size:.84rem}
-.access h4{color:var(--gold);font-family:sans-serif;font-size:.78rem;text-transform:uppercase;letter-spacing:.07em;margin-bottom:7px;font-weight:700}
-.access ul{list-style:none}
-.access ul li{padding:3px 0;border-bottom:1px solid rgba(255,255,255,.08)}
-.access ul li:last-child{border-bottom:none}
-.access .warn{color:#ffb380;font-weight:600}
-.access .good{color:#90e090}
+.signoff{background:linear-gradient(135deg,#2d4a3e,#1a2e25);color:#dfeee6;border-radius:10px;padding:22px;margin:24px 0;text-align:center}
+.signoff h2{color:var(--gold);font-size:1.3rem;margin-bottom:8px}
+.signoff p{font-size:.92rem;line-height:1.6;max-width:600px;margin:0 auto 8px}
 
-/* ---- LODGING ---- */
-.lodging{margin:26px 0;border-top:2px solid var(--gold);padding-top:14px}
-.lodge-grid{display:flex;gap:12px;flex-wrap:wrap;margin-top:10px}
-.lodge-panel{flex:1;min-width:190px;background:var(--card);border:1px solid var(--dcream);border-radius:8px;padding:12px 14px}
-.lodge-panel h4{color:var(--brown);font-size:.8rem;text-transform:uppercase;letter-spacing:.05em;font-family:sans-serif;margin-bottom:7px}
-.lodge-panel .lp-note{font-size:.72rem;color:var(--muted);font-style:italic;margin-bottom:6px}
-.lodge-panel ul{list-style:none;font-size:.84rem}
-.lodge-panel li{padding:3px 0;border-bottom:1px solid var(--dcream)}
-.lodge-panel li:last-child{border-bottom:none}
-
-footer{background:#1a2e25;color:#9ab8a8;padding:24px 0 32px;margin-top:40px;font-size:.82rem}
-footer h3{color:var(--gold);font-size:.88rem;margin-bottom:8px;margin-top:18px;font-family:Georgia,serif}
-footer h3:first-child{margin-top:0}
-footer a{color:#7ecfa8}
-footer ul{list-style:none;padding:0}
-footer ul li{padding:2px 0}
-.footer-cols{display:flex;gap:28px;flex-wrap:wrap}
-.footer-col{flex:1;min-width:200px}
-.ts{margin-top:20px;padding-top:12px;border-top:1px solid #2d4a3e;font-size:.74rem;color:#5a7a68}
-
-@media(max-width:600px){
-  .hero h1{font-size:1.4rem}
-  .sc{min-width:120px}
-  .two-col>div{min-width:100%}
-  .wx-period{min-width:100%;border-right:none;border-bottom:1px solid rgba(255,255,255,.1)}
-  .wx-period:last-child{border-bottom:none}
-  .t-clock{width:84px}
-}
+footer{background:#1a2e25;color:#9ab8a8;padding:24px 0;margin-top:30px;font-size:.78rem;text-align:center}
+@media(max-width:600px){.hero h1{font-size:1.5rem}.stat b{font-size:1.6rem}}
 </style>
-</head>
 </head>
 <body>
 
 <div class="hero">
-<div class="c">
-  <h1>Greater Yellowstone Fly Fishing Dashboard</h1>
-  <div class="hero-sub">Friday, June 26, 2026 &nbsp;&middot;&nbsp; All gauge data provisional &nbsp;&middot;&nbsp; <strong>Facts &amp; reported conditions only — a hatch is shown as active ONLY where a dated shop report or Karel's own log confirms it</strong> &nbsp;&middot;&nbsp; <strong>THIS IS IT — the last fishing day. Rob took you out yesterday (his call on the water); today is the game-time goodbye, and your lean is the Harriman Ranch to finally land Ranch fish. Warm &amp; partly-cloudy (Ranch ~79°F, ~68% cloud) but WINDY (~20–27 mph) — the catch for meadow sight-fishing. Last warm day: a cold front + rain rolls in tomorrow for the fly-out. Make it count.</strong></div>
-  <div class="hero-row">
-    <div class="countdown">DAY 22<br><small>of 23 &middot; the goodbye · LAST fishing day</small></div>
-    <div class="hero-info">
-      Home base: <strong>St. Anthony, ID</strong> &nbsp;&middot;&nbsp; Mon–Wed Vernon evenings &nbsp;&middot;&nbsp; Thu–Sun hatch chase<br>
-      <strong>Salmonflies &rarr; Drakes &rarr; Goldens</strong> &nbsp;&middot;&nbsp; Day 22 on the water &nbsp;&middot;&nbsp; <strong>LAST day is TODAY (Fri Jun 26) · fly out Sat morning Jun 27</strong>
+  <div class="c">
+    <h1>Trip Complete &mdash; the wrap-up</h1>
+    <div class="hero-sub">Greater Yellowstone Fly Fishing &middot; Jun 5 &ndash; Jun 27, 2026 &middot; Home base: St. Anthony, ID</div>
+    <div class="hero-flyout"><strong>Saturday, June 27</strong> &middot; flyout morning &mdash; no fishing today. The last day on the water was Fri Jun 26. Safe travels home, Karel.</div>
+    <div class="hero-row">
+      <div class="fin">23 DAYS<small>Salmonflies &rarr; Drakes &rarr; Goldens</small></div>
+      <a class="journal-pill" href="./journal.html">&#128214; Trip Journal</a>
     </div>
   </div>
-  <a class="journal-pill" href="./journal.html">📖 Trip Journal</a>
-</div>
 </div>
 
 <div class="c">
 
-<!-- ============ TRIP PLAN BLOCK ============ -->
-<div class="tripplan">
-  <h2>Trip Plan · Hatch Chase · Jun 5 – Jun 27</h2>
-  <div class="tp-sub">Friday, June 26, 2026 &middot; Day 22 of 23 &middot; <b>the LAST fishing day</b> · game-time goodbye · fly out tomorrow morning</div>
-  <div class="tp-legend">▸ Gold card = where you are now. Smaller cards = done / projected. Mid-week green cards = after-work evenings.</div>
-
-  <!-- A1 done -->
-  <div class="tp-card projected">
-    <span class="tp-when">Weekend 1 · Fri Jun 5 – Sun Jun 7</span><span class="tp-badge done">Done</span>
-    <div class="tp-head">Vernon weekend — lower Henry's Fork (home water)</div>
-    <div class="tp-mini">Fri: 18" rainbow on a Chubby off a heavy caddis pod after dark at Bill's Hole. Sat: 10-hr grind, one small brown, wind all day. Sun: cold-front evening, a 12" rainbow on a caddis emerger. Chose Vernon over the Madison salmonfly chase.</div>
+  <div class="section">
+    <h2>By the numbers</h2>
+    <p class="lede">Tallied from your own trip journal &mdash; logged days Jun 5&ndash;22 (Jun 23&ndash;26 still to be written up).</p>
+    <div class="stats">
+      <div class="stat"><b>57</b><span>Fish landed</span></div>
+      <div class="stat"><b>11</b><span>Days with catches</span></div>
+      <div class="stat"><b>6</b><span>Species</span></div>
+      <div class="stat"><b>18&Prime;</b><span>Best fish (twice)</span></div>
+      <div class="stat"><b>3</b><span>Skunks</span></div>
+    </div>
+    <div class="species">
+      <div class="sp"><b>Cutthroat</b> &mdash; the Snake &amp; South Fork stars</div>
+      <div class="sp"><b>Brown</b> &mdash; Vernon &amp; lower HF mainstay</div>
+      <div class="sp"><b>Rainbow</b> &mdash; opening &amp; closing of pods</div>
+      <div class="sp"><b>Brook</b> &mdash; upper Big Hole</div>
+      <div class="sp"><b>Arctic Grayling</b> &mdash; Big Hole highlight</div>
+      <div class="sp"><b>Mountain Whitefish</b> &mdash; bonus at Fish Trap</div>
+    </div>
   </div>
 
-  <!-- B1 done -->
-  <div class="tp-card projected evening">
-    <span class="tp-when">Vernon Evenings · Mon Jun 8 – Wed Jun 10</span><span class="tp-badge done">Done</span>
-    <div class="tp-head">After-work lower Henry's Fork — Vernon Bridge</div>
-    <div class="tp-mini">Mon Jun 8: best eat of week 1 — watched a thick 16" brown turn in the riffle and slam a golden-stone foam at Bill's Hole. Tue/Wed: rest, restock, plan the Big Hole trip.</div>
+  <div class="callout">
+    <h2>The day &mdash; June 20, South Fork of the Snake with Rob</h2>
+    <p class="quote">&ldquo;It goes down as the best fishing experience I&rsquo;ve probably ever had in my life.&rdquo;</p>
+    <p>After two dead floats on the lower Henry&rsquo;s Fork, Rob&rsquo;s tip from Chris flipped the whole trip: a Heise salmonfly float where the bugs were genuinely <em>on</em>. An epic, fat <b>18&Prime; cutthroat</b> on a dry &mdash; Rob said about as good a fish as you can get on top &mdash; plus a 16&Prime; cutthroat with spectacular color, a 16&Prime; brown, a 16&Prime; rainbow, and six smaller cutts off a gravel bar on a PMD. Ten landed, a big rainbow broke you off. That&rsquo;s the one you&rsquo;ll be telling for years.</p>
   </div>
 
-  <!-- A2 done -->
-  <div class="tp-card projected">
-    <span class="tp-when">Weekend 2 · Thu Jun 11 – Sun Jun 14</span><span class="tp-badge done">Done</span>
-    <div class="tp-head">Big Hole goldens (salmonfly was OVER) → Madison drift home</div>
-    <div class="tp-mini">Fri Jun 12: Big Hole — salmonfly long gone (Sunrise Fly Shop). Skated golden-stone dry on the swing in the Powerhouse channel = ~11 violent browns + grayling/brookies at Fish Trap. Sat Jun 13: Poindexter Slough near Dillon, ~10 trout on a small PMD. Sun Jun 14: drifted home past the Madison — salmonfly NOT out (no adults at Valley Garden), 2 browns on a caddis dry at Lyons Bridge.</div>
+  <div class="section">
+    <h2>How the trip unfolded</h2>
+    <p class="lede">The hatch chase, week by week &mdash; what actually happened on the water.</p>
+    <div class="arc">
+
+      <div class="leg">
+        <div class="leg-when">Weekend 1 &middot; Jun 5&ndash;8 &middot; Home water, Vernon</div>
+        <h3>Easing in on the lower Henry&rsquo;s Fork</h3>
+        <p>Straight from the airport to Bill&rsquo;s Hole &mdash; the rose-petal water for Dad &mdash; and an <b>18&Prime; rainbow</b> off a Chubby through a heavy caddis pod on night one. A grinding 10-hour Saturday gave up only a small brown; a short Sunday evening salvaged a 12&Prime; rainbow on a caddis-emerger dropper. Then the eat of the early trip: a thick <b>16&Prime; brown</b> that turned in the riffle and slammed a golden-stone foam at Bill&rsquo;s Hole.</p>
+        <p class="tally">5 fish &middot; rainbow + brown &middot; Chubby, caddis emerger, golden-stone foam</p>
+      </div>
+
+      <div class="leg gold">
+        <div class="leg-when">Weekend 2 &middot; Jun 11&ndash;14 &middot; Big Hole &rarr; Beaverhead &rarr; Madison</div>
+        <h3>The Montana swing &mdash; goldens, a grayling, and a spring creek</h3>
+        <p><b>Friday, Big Hole:</b> the salmonfly was long gone (Sunrise Fly Shop confirmed a short hatch this year), so the play was goldens. Species variety at Fish Trap &mdash; brookies, a rainbow, a <b>grayling</b>, a whitefish &mdash; then the find of the day: the Powerhouse diversion channel, where a <b>skated golden-stone dry on the swing</b> drew violent eat after eat. ~11 browns, 12&ndash;15&Prime;.</p>
+        <p><b>Saturday, Poindexter Slough:</b> a new rod from Frontier Anglers and a strong PMD hatch &mdash; ~10 technical spring-creek trout, eight from one hole.</p>
+        <p><b>Sunday, Madison home:</b> Valley Garden dead (no salmonfly adults, exactly as the dated reports had it), but two browns on a caddis dry up at Lyons Bridge to end the evening honest.</p>
+        <p class="tally">29 fish &middot; brook, rainbow, grayling, whitefish, brown, mixed trout &middot; skated golden stone, small PMD, caddis</p>
+      </div>
+
+      <div class="leg">
+        <div class="leg-when">Work week &middot; Jun 15&ndash;17 &middot; Vernon evenings</div>
+        <h3>The wind, the missing caddis, and two good browns</h3>
+        <p>An odd stretch &mdash; the reliable late-evening caddis simply didn&rsquo;t show three nights running. Monday and Wednesday blanked. But Tuesday, high wind <em>blew stoneflies onto the water</em> above the Vernon ramp and the fish keyed on a Mike Lawson&ndash;style small stonefly &mdash; two browns, one a powerful 16-incher, before it all shut off.</p>
+        <p class="tally">2 fish &middot; brown &middot; small stonefly dry (wind-driven)</p>
+      </div>
+
+      <div class="leg gold">
+        <div class="leg-when">Weekend 3 &middot; Jun 18&ndash;22 &middot; The Snake turnaround</div>
+        <h3>Two dead floats, then the day of a lifetime</h3>
+        <p>Mike arrived and Rob lent the driftboat. Thursday Ora&ndash;Vernon was slow (one 16&Prime; brown); Friday Ora&ndash;Chester was a full skunk &mdash; the least bug activity in nine years on that stretch. Then <b>Saturday on the Snake at Heise</b> turned the entire trip around (see above). Monday closed the weekend with a 9-fish South Fork wade &mdash; cutthroat on stoneflies then PMDs/caddis, two browns on a swung emerger &mdash; the lesson confirmed that the salmonfly eaters were out on boat water you couldn&rsquo;t reach on foot.</p>
+        <p class="tally">21 fish &middot; cutthroat, brown, rainbow &middot; salmonfly dry, PMD, caddis, stonefly</p>
+      </div>
+
+      <div class="leg">
+        <div class="leg-when">Final days &middot; Jun 23&ndash;26 &middot; The goodbye</div>
+        <h3>Rob&rsquo;s Thursday boat &amp; the Ranch finale</h3>
+        <p>The closing days &mdash; Rob&rsquo;s second boat day Thursday and a game-time Friday goodbye, with the Harriman Ranch as the lean to finally land Ranch fish &mdash; aren&rsquo;t in the journal yet. When you write them up, they&rsquo;ll round out the record. Fri Jun 26 was the last day on the water; today you fly home.</p>
+        <p class="tally">To be logged &mdash; add them in the <a href="./journal.html">journal</a></p>
+      </div>
+
+    </div>
   </div>
 
-  <!-- B2 done -->
-  <div class="tp-card projected evening">
-    <span class="tp-when">Vernon Evenings · Mon Jun 15 – Wed Jun 17</span><span class="tp-badge done">Done</span>
-    <div class="tp-head">Vernon work-nights (Ranch opened Jun 15)</div>
-    <div class="tp-mini">Mon Jun 15: skunked below Bill's Hole — the reliable evening caddis never showed. Tue Jun 16: the standout — high wind blew stoneflies onto the water above the Vernon ramp; 2 browns (one thick 16") on a small Lawson-style stonefly dry. Wed Jun 17: fished Vernon river-left, missed ~4 stonefly eats, then drove to Jackson to grab Mike. Caddis oddly absent all week.</div>
+  <div class="section">
+    <h2>The highlight reel</h2>
+    <div class="hl">
+      <h3><span class="pin">&#127942;</span> Best fish &mdash; the 18&Prime; Snake cutthroat (Jun 20)</h3>
+      <p>Fat, perfect, and on a dry &mdash; Rob called it about as good as it gets. The fish of the trip on the day of the trip.</p>
+    </div>
+    <div class="hl">
+      <h3><span class="pin">&#127907;</span> Best eat you watched &mdash; the Bill&rsquo;s Hole brown (Jun 8)</h3>
+      <p>A big brown turned in the riffle head, followed the golden-stone foam down, and crushed it in plain sight. Sight-fishing the riffle head beats blind-casting the dark pool every time.</p>
+    </div>
+    <div class="hl">
+      <h3><span class="pin">&#129403;</span> Rarest catch &mdash; the Big Hole grayling (Jun 12)</h3>
+      <p>An Arctic grayling on a golden-stone dry at Fish Trap &mdash; part of a six-species trip that also turned up brookies and a whitefish.</p>
+    </div>
+    <div class="hl">
+      <h3><span class="pin">&#127786;&#65039;</span> Best read &mdash; wind as the trigger (Jun 16)</h3>
+      <p>The howling wind that kills most dry bites instead blew stoneflies onto the water and turned the fish on. When it&rsquo;s blowing, look at what it&rsquo;s delivering to the surface.</p>
+    </div>
+    <div class="hl">
+      <h3><span class="pin">&#128640;</span> Best decision &mdash; trusting the network</h3>
+      <p>Two dead lower-river floats became the best day of your life the moment you moved to the Snake on Rob &amp; Chris&rsquo;s word. Mobility and local intel beat grinding dead water.</p>
+    </div>
   </div>
 
-  <!-- A3 done — the big surprise -->
-  <div class="tp-card projected">
-    <span class="tp-when">Weekend 3 · Thu Jun 18 – Sun Jun 21</span><span class="tp-badge done">Done</span>
-    <div class="tp-head">Plan was Ranch drakes — the trip was saved by a SNAKE salmonfly float</div>
-    <div class="tp-mini"><b>Thu Jun 18 &amp; Fri Jun 19:</b> two lower-Henry's-Fork floats in Rob's borrowed boat (Ora→Vernon, then Ora→Chester). Brutally slow — a 16" brown Thu, then a full skunk Friday. The least bug/fish activity in 9 years of this trip. <b>Sat Jun 20 — the day of the trip:</b> Rob took you and Mike on a <b>Snake-system salmonfly float</b> (his friend Chris said it was lights out). It was — "best fishing day of my life." 10 landed on salmonfly dries incl. an epic fat <b>18" cutthroat</b>, a 16" cutt, a 16" brown, a 16" rainbow; a big rainbow broke you off. <b>Salmonfly CONFIRMED.</b> See the 📖 journal.</div>
+  <div class="section">
+    <h2>Hatch scorecard &mdash; the honest record</h2>
+    <p class="lede">What was actually confirmed on the water vs. the seasonal hype.</p>
+    <div class="score">
+      <div class="score-row">
+        <span class="lbl lbl-conf">Confirmed</span>
+        <div class="txt"><b>Snake (South Fork) salmonfly &mdash; ON.</b> Genuinely up at Heise Jun 20, fished and confirmed. Big dry-fly eats. The one salmonfly hatch you actually hit.</div>
+      </div>
+      <div class="score-row">
+        <span class="lbl lbl-over">Was over</span>
+        <div class="txt"><b>Big Hole salmonfly &mdash; long gone.</b> Sunrise Fly Shop and the water both said so &mdash; a short hatch this year. Goldens carried the day instead, exactly as called.</div>
+      </div>
+      <div class="score-row">
+        <span class="lbl lbl-no">Never up</span>
+        <div class="txt"><b>Madison salmonfly &mdash; not at Valley Garden.</b> No adults Jun 14, matching the dated Jun 7&ndash;10 reports. The reports were right; the calendar wasn&rsquo;t a promise.</div>
+      </div>
+      <div class="score-row">
+        <span class="lbl lbl-conf">Workhorse</span>
+        <div class="txt"><b>Golden stones &mdash; everywhere.</b> The skated/swung golden-stone dry was the trip&rsquo;s breakout trigger &mdash; Powerhouse browns, the Bill&rsquo;s Hole 16-incher, searching attractor all over.</div>
+      </div>
+      <div class="score-row">
+        <span class="lbl lbl-no">No-show</span>
+        <div class="txt"><b>Lower-river evening caddis &mdash; missing.</b> The dependable Vernon caddis blizzard didn&rsquo;t materialize for several nights &mdash; a notable drop-off on water that&rsquo;s had it for a decade.</div>
+      </div>
+    </div>
   </div>
 
-  <!-- B3 done -->
-  <div class="tp-card projected evening">
-    <span class="tp-when">After-work Evenings · Mon Jun 22 – Wed Jun 24</span><span class="tp-badge done">Done</span>
-    <div class="tp-head">Last work-week — the clouds finally arrived for the Ranch</div>
-    <div class="tp-mini"><b>Mon Jun 22:</b> skipped Vernon — drove to the <b>South Fork</b> and waded above Fall Creek Falls. ~9 cutts &amp; browns; the first two cutthroat came on a <b>stonefly</b> tight to the bank, then you dropped to smaller bugs (logged in the 📖 journal). <b>Tue Jun 23:</b> hot, bright, breezy Vernon work-evening — the warm-evening stone/PMD/caddis program into dark. <b>Wed Jun 24:</b> the overcast you'd been holding out for finally showed (Island Park ~82% cloud, wind eased) — the soft-light Ranch sight-fishing window. <i>(Wed's outcome not yet written into the journal.)</i></div>
-  </div>
-
-  <!-- A4 ACTIVE -->
-  <div class="tp-card active">
-    <span class="tp-when">Weekend 4 · Thu Jun 25 – Fri Jun 26 (LAST fishing day)</span><span class="tp-badge act">You are here · LAST day</span>
-    <div class="tp-head">The goodbye — Rob's boat yesterday, game-time finale TODAY</div>
-    <div class="tp-line"><span class="d">Thu Jun 25 (yesterday):</span> <b>Rob took you out again — his call on the water.</b> He put you on the best day of the trip Jun 20 (the Snake-system salmonfly), so this was the shot at another big-water finale. <i>Outcome isn't written into the 📖 journal yet — log it while it's fresh; if it was the highlight, it deserves the entry.</i></div>
-    <div class="tp-line"><span class="d">Fri Jun 26 — TODAY, the LAST fishing day:</span> game-time call, shaped by how yesterday with Rob went + his input. <b>Your lean: the Harriman Ranch</b> to finally land Ranch fish before you fly out (PMDs + drake spinner over risers you can see, sight-fishing). Today is <b>warm (Ranch ~79°F, St. Anthony ~85°F)</b> and <b>partly cloudy (~68% cloud)</b> — decent soft light, better than a bluebird day — but <b>windy (~20–27 mph)</b>, which is the enemy of meadow sight-fishing. Go for the morning/evening wind lulls and pick sheltered flats. If it's howling all day, the calmer-water backups are a <b>Box Canyon goldens</b> farewell (wind-proof dry-dropper), the <b>South Fork salmonfly tail</b> tight to the banks (big water — Heise ~13,300), or a close <b>Vernon</b> evening. This is the last warm day; the front arrives tomorrow.</div>
-    <div class="tp-line"><span class="d">Sat Jun 27:</span> fly out in the morning — <b>NO fishing.</b> Cold &amp; rainy (~66°F, t-storms). Sleep St. Anthony tonight, then travel.</div>
-    <div class="tp-rec"><b>Today's call: make a run at the Ranch — it's the one box left to check.</b> You came in wanting to land Ranch fish, the light is workable (68% cloud), and it's your last chance. Beat the wind: fish early and late for the lulls, tuck into sheltered meadow flats, and only cast to noses you actually see — don't blind-flog the wind. If by mid-afternoon it's a sustained 25-mph grind and the flats are unfishable, don't burn the finale on it — pivot to <b>Box Canyon goldens</b> (a wind-proof dry-dropper close to home) and go out catching fish. Either way, end the trip with a bent rod.</div>
-    <div class="tp-call"><b>Salmonfly:</b> <span class="lbl lbl-conf">Confirmed — your Jun 20 float + 2 dated reports</span> Snake-system (your Jun 20 float) + South Fork (WorldCast Jun 18, FFF Jun 21). <b>But mind the flow:</b> Heise read ~13,300 cfs this morning — it <i>ticked up again</i> on the warm days, big &amp; pushy, not the clean drop we wanted. Fishable tight to the banks, just bigger than ideal. &nbsp; <b>Green drake:</b> <span class="lbl lbl-conf">Reported active — midday</span> on the FFF Jun 21 read (now 5 days old), and a <i>daytime</i> bug; the Ranch evening play is the PMD/drake spinner. &nbsp; <b>Madison:</b> still no firm dated edge — and you don't need it.</div>
-  </div>
-
-  <div class="tp-updated">Updated Fri Jun 26, 2026 · 5:32 AM MDT</div>
-</div>
-
-<!-- ============ TODAY — WHEN TO FISH WHAT ============ -->
-<div class="timed">
-  <h2>Today at the Harriman Ranch — when to fish what</h2>
-  <div class="t-sub">Fri Jun 26 · the LAST day &middot; <b>Your lean is the Ranch</b> (Henry's Fork meadow, walk-in, sight-fishing). Tuned to today: <b>warm</b> (Ranch/Island Park ~79°F, St. Anthony ~85°F), <b>partly cloudy ~68%</b> — workable soft light — but <b>windy ~20–27 mph</b>, the real obstacle for meadow risers. Ranch/Last Chance flow ~550 cfs clear; Box Canyon 1,260 cfs. <b>Hunt the wind lulls (early &amp; late), fish sheltered flats, cast only to noses you see — and keep Box Canyon goldens in your pocket as the wind-proof bail-out.</b></div>
-
-  <div class="t-row">
-    <div class="t-clock">Morning–11:00<small>Best wind lull · first risers</small></div>
-    <div class="t-body"><b>Get there early — the wind is lightest at the front of the day.</b> Walk the meadow flats and look before you cast. Early risers come to <span class="t-fly">PMD Sparkle Dun / Para PMD #16–18</span> and any leftover spinners on the film. On overcast-edged light a <span class="t-fly">BWO #20–22</span> is worth a look if you see small, steady sippers. Long leader (12'+), 5–6X, low-riding CDC; set on the slow sip, don't trout-set hard.</div>
-  </div>
-  <div class="t-row">
-    <div class="t-clock">11:00–3:00<small>Midday · drakes &amp; PMDs (if wind allows)</small></div>
-    <div class="t-body"><b>The reported drake window — but the wind is the gatekeeper.</b> FFF's Jun 21 read (now 5 days old) put <span class="t-fly">Green Drake #12–14</span> on 11 AM–3 PM with <span class="t-fly">PMD #18–20</span> heavy 10 AM–2 PM. A bigger drake dry is easier to track and turn fish in a chop. <b>But this is when today's wind peaks</b> — if the flats are a whitecapped grind, slide to the most sheltered bank/bend you can find, or this is your cue to pivot to Box Canyon. Fish to visible risers only; blind-flogging the meadow in 25-mph wind is a waste of the last day.</div>
-  </div>
-  <div class="t-row">
-    <div class="t-clock">3:00–7:00<small>Warm afternoon · goldens / searching</small></div>
-    <div class="t-body"><b>Warmth-driven stonefly window — the warm-day card.</b> 79–85°F afternoon is exactly when a <span class="t-fly">Golden Stone / Yellow Sally #10–14</span> or a small <span class="t-fly">Chubby</span> draws an opportunistic eat along the banks and weed-edges — a searching attractor, not a confirmed emergence. This doubles as your <b>Box Canyon plan</b>: a <span class="t-fly">Pat's Rubber Legs / golden-stone nymph #8–10</span> under a foam dry is wind-proof and fishes through gusts when the Ranch won't.</div>
-  </div>
-  <div class="t-row">
-    <div class="t-clock">7:00–dark<small>Prime · spinner fall &amp; the goodbye</small></div>
-    <div class="t-body"><b>The money window — and the wind usually lays down at dusk.</b> This is the Ranch evening play: <span class="t-fly">PMD Rusty Spinner #16</span> and spent <span class="t-fly">green-/brown-drake spinners</span> on the flats in soft light, with a <span class="t-fly">caddis #14–16</span> change-up if they skate. Stay until dark for the best fish of the day on the spinner fall. If you're at Last Chance instead, the upper-river caddis is reliable into dusk. This is the last hour of fishing on the trip — fish it slow and savor it.</div>
-  </div>
-
-  <div class="t-rule"><b>Weather rule of thumb.</b> <b>Warm &amp; partly cloudy (that's today)</b> → the 68% cloud is enough soft light to keep risers honest, better than a bluebird day, but it's not the full-overcast feeding window — expect the dry bite to concentrate into the morning lull and the evening spinner fall. <b>Stoneflies are warmth-driven</b> → the 79–85°F afternoon fires the golden/Sally searching window mid-afternoon. <b>Wind is today's enemy</b> (~20–27 mph): it kills meadow sight-fishing, so work the early/late lulls, tuck into sheltered flats, and if it howls all day, don't fight it — switch to Box Canyon's wind-proof dry-dropper and end the trip catching fish.</div>
-</div>
-
-<!-- ============ STRATEGY ============ -->
-<div class="strategy">
-  <h2>Trip Strategy — the goodbye: TODAY is the last fishing day</h2>
-  <p><b>This is it.</b> Rob took you out yesterday (his call on the water — log how it went while it's fresh), and today is the game-time finale before tomorrow's fly-out. Your lean has been steady all week: the <b>Harriman Ranch</b>, to finally land Ranch fish before you leave. The light is on your side — ~68% cloud is workable soft light, better than a bluebird day — but the honest obstacle is <b>wind (~20–27 mph)</b>, which is the enemy of meadow sight-fishing. The play is to hunt the wind lulls early and late, fish sheltered flats, and cast only to risers you can actually see.</p>
-  <p><b>Have a wind-proof bail-out ready.</b> If the Ranch is a sustained whitecapped grind by midday, don't burn the last day fighting it. The warm afternoon (79–85°F) is a golden-stone searching window, and <b>Box Canyon</b> (1,260 cfs, ~45 min) fishes a wind-proof dry-dropper through any gusts — a strong goldens farewell. The <b>South Fork salmonfly</b> is still confirmed on (your Jun 20 float + WorldCast Jun 18 + FFF Jun 21), but <b>Heise ticked up again to ~13,300 cfs</b> this morning on the warm-day snowmelt — big and pushy, a bank-only card, not the clean float you'd want. A close <b>Vernon</b> evening is the easy unwind option.</p>
-  <p><b>Last warm day.</b> Tomorrow (Sat Jun 27) the front arrives — cold, ~66°F, thunderstorms — and you fly out in the morning, no fishing. So today is the last warm-evening spinner fall of the trip. The Madison salmonfly never became a confirmed Ennis edge — and you never needed it; the Snake and South Fork already delivered the best day of the trip. End it with a bent rod.</p>
-  <div class="closures">
-    <h4>Closures &amp; openers</h4>
-    <ul>
-      <li class="cls-open">✓ Harriman / Railroad Ranch — <b>OPEN since Mon Jun 15</b> (walk-in, sight-fishing) — TODAY's lean</li>
-      <li class="cls-open">✓ Yellowstone NP general season — open (since May 23)</li>
-      <li class="cls-closed">✗ YNP Yellowstone River (Canyon) section — closed until Jul 15</li>
-      <li class="cls-closed">✗ Flat Creek (Jackson) — closed until Aug 1</li>
-      <li class="cls-caution">⚠ Snake near Jackson / South Fork — still big snowmelt flows and <b>ticked up again today</b> (Heise ~13,300); a bank-only card, watch the gauge before committing the last day to the salmonfly tail</li>
-    </ul>
-  </div>
-</div>
-
-<!-- ============ HATCH TRACKERS ============ -->
-<h2 style="border-top:2px solid var(--gold);padding-top:14px;margin-top:26px;font-size:1.3rem">Hatch Trackers <span style="font-size:.8rem;font-weight:400;color:var(--muted)">— CONFIRMED only where a dated source says so</span></h2>
-
-<div class="sf-tracker confirmed">
-  <h3>① Snake / South Fork salmonfly &nbsp;<span class="lbl lbl-conf">Confirmed — your Jun 20 float + 2 dated reports</span></h3>
-  <p><b>Confirmed on the water.</b> On Sat Jun 20 you floated a Snake-system stretch (Rob guiding) and the <b>salmonfly was genuinely on</b> — ten fish on salmonfly dries including an 18" cutthroat, your best day of the trip. First-hand, dated confirmation.</p>
-  <p><b>South Fork confirmed too — but mind the flow:</b> <b>WorldCast Anglers (Jun 18)</b> — "We have Salmonflies hatching in mid June!" — and <b>Fly Fish Food (Jun 21)</b> lists salmonflies (#6–8) "moderate" with PMDs "heavy," reporting Heise "trending down" from ~11,400. <b>The live gauge tells a different story this morning: Heise ~13,300 cfs — up again on the warm days, not down.</b> The salmonfly is still on and fishable tight to the banks, but the river is bigger than the reports implied — a bank-only card for the last day, and check the Heise gauge before you commit.</p>
-</div>
-
-<div class="sf-tracker confirmed">
-  <h3>② Henry's Fork green drake &nbsp;<span class="lbl lbl-conf">Reported active — midday (read now 5 days old)</span></h3>
-  <p><b>On the books, but a midday bug and the read is aging.</b> Fly Fish Food's <b>Jun 21</b> Henry's Fork report shows green drakes (#12–14) "moderate," <b>11 AM–3 PM</b>, with PMDs (#18–20) "heavy" 10 AM–2 PM and caddis (#16–18) "moderate" 6–8 PM. <b>No newer dated Henry's Fork report has posted since</b> (checked FFF, Trout Hunt, Henry's Fork Anglers, WorldCast this morning) — so this is now 5 days old. WorldCast (Jun 18) lists "Green Drakes, Brown Drakes, Flavs, PMDs and Caddis" as the Ranch hatches.</p>
-  <p><b>The honest caveat:</b> it's a hatch-chart read, and your own Jun 18–19 lower-river floats found almost no bugs. If you fish the Ranch today, the <i>daytime</i> drake emergence is the headline but the <b>evening play is the spinner</b> — spent green-/brown-drake and PMD spinners on the meadow flats in soft light. Today's wind makes the midday flats tough, so the morning lull and the evening spinner fall are your real windows. Fish to risers you actually see, and call Trout Hunt / Henry's Fork Anglers for a live Ranch read first.</p>
-</div>
-
-<div class="sf-tracker unconf">
-  <h3>③ Madison salmonfly leading edge &nbsp;<span class="lbl lbl-unconf">Progressing — UNCONFIRMED edge</span></h3>
-  <p><b>Climbing the river, but no firm dated edge today.</b> Below Ennis the water is warm and primed (McAllister/Kirby ~65°F / 1,240 cfs); below Hebgen cooler (~56°F / 699 cfs) and lagging as always; West Yellowstone ~64°F / 356 cfs. Seasonally the edge runs well up past Ennis Lake by now and climbs ~3–5 mi/day. <b>Leading edge: UNCONFIRMED today</b> — Slide Inn / Blue Ribbon reports weren't reachable this morning. Call the Tackle Shop / Blue Ribbon / Slide Inn / MRFC before driving. You don't need it — the Snake and South Fork salmonfly already delivered, and the Madison is 2 hr each way on spec.</p>
-</div>
-
-<div class="sf-tracker confirmed">
-  <h3>④ Big Hole salmonfly — OVER for 2026 &nbsp;<span class="lbl lbl-conf">Confirmed</span></h3>
-  <p><b>Done — a short hatch this year.</b> Confirmed gone by Sunrise Fly Shop and by you on the water Jun 12–13. The dry play there is <b>golden stones</b> on the swing/skate (your Powerhouse find). No Big Hole salmonfly to chase.</p>
-</div>
-
-<div class="sf-tracker">
-  <h3>⑤ Lower Henry's Fork (Vernon) — today's outlook (the close-to-home backup)</h3>
-  <p>Flow ~858 cfs at Rexburg (13056500), down off runoff and clear — good dry-fly water (temp sensor reading an obvious glitch overnight, treat as offline). Today is warm (~85°F) and partly cloudy (~73%) but <b>windy (~27 mph)</b> at St. Anthony — fishable but the wind will push the dry bite to sheltered seams and you may end up nymphing through gusts.</p>
-  <p><b>Tonight's Vernon outlook (the close farewell option):</b> if you close the trip here instead of the Ranch, lead with a <b>PMD Sparkle Dun / Parachute Adams</b> over the riffle lines as the light softens → <b>PMD Rusty Spinner</b> at last light → the Bill's Hole boat-ramp <b>pod after dark</b>. Keep a golden-stone foam on a second rod for an opportunistic bank eat — the wind blowing bugs onto the water is the same setup that produced your Jun 16 browns. <b>Caddis caveat:</b> your log has it oddly unreliable down low, so treat a caddis blizzard as a bonus, not the plan.</p>
-</div>
-
-<!-- ============ RIVERS ============ -->
-
-<!-- HENRY'S FORK -->
-<div class="river-section">
-  <h2>Henry's Fork <span class="tag tag-home">Home water</span></h2>
-  <div class="section-note">Your primary water and TODAY's lean: the Ranch (open since Jun 15) to finally land Ranch fish on the last day. Vernon is the close farewell backup; Box Canyon is the wind-proof goldens bail-out. Green drakes reported active midday (FFF Jun 21, now 5 days old) — the evening play is the spinner fall.</div>
-
-  <div class="stat-row">
-    <div class="sc"><div class="sc-label">Lower — nr Rexburg (Vernon proxy)</div><div class="sc-val v-good">858</div><div class="sc-unit">cfs · dropping &amp; clear</div><div class="sc-meta">USGS 13056500 <span class="prov">temp sensor offline</span></div></div>
-    <div class="sc"><div class="sc-label">Upper — nr Island Park (Box Canyon)</div><div class="sc-val">1,260</div><div class="sc-unit">cfs</div><div class="sc-meta">USGS 13042500</div></div>
-    <div class="sc"><div class="sc-label">Ranch / Last Chance</div><div class="sc-val v-good">~550</div><div class="sc-unit">cfs · clear (est.)</div><div class="sc-meta">no direct gauge — ideal 400–700 band</div></div>
-  </div>
-
-  <div class="wx-strip">
-    <div class="wx-period"><div class="wx-name">Fri Jun 26 (LAST day)</div><div class="wx-temp">79–85°</div><div class="wx-desc">Warm, ~68% cloud, windy ~20–27 — workable light, but wind is the catch for the Ranch</div></div>
-    <div class="wx-period"><div class="wx-name">Sat Jun 27 (fly out)</div><div class="wx-temp">66°</div><div class="wx-desc">Cold front, t-storms ~81% rain — travel day, no fishing</div></div>
-    <div class="wx-period"><div class="wx-name">Sun Jun 28</div><div class="wx-temp">60°</div><div class="wx-desc">Cool &amp; unsettled — you'll be home by now</div></div>
-  </div>
-
-  <div class="subhead">Railroad Ranch / Harriman State Park — OPEN — TODAY'S LEAN</div>
-  <p class="section-note">Walk-in, sight-fishing to technical risers. Green drakes reported active midday (FFF Jun 21, 11 AM–3 PM) plus PMDs/flavs; the evening window is the <b>PMD spinner fall, Last Chance caddis, and spent green-/brown-drake spinners</b> on the meadow flats. Today is warm with ~68% cloud — workable soft light — <b>but ~20–27 mph wind is the enemy of meadow sight-fishing</b>, so hunt the morning/evening lulls, pick sheltered flats, and cast only to risers you can see. If it howls all day, pivot to Box Canyon. Long leaders (12'+), light tippet (5–6X), sparse low-riding CDC; set on the slow sip. ~1 hr from St. Anthony.</p>
-
-  <div class="subhead">Lower river: Vernon Bridge &amp; nearby evening access — THE CLOSE FAREWELL</div>
-  <p class="section-note">Your closer (~20 min) farewell option. Flow ~858 cfs at Rexburg, eased into shape and clear. Warm partly-cloudy light is OK but the wind (~27 mph) hurts — fish sheltered seams. Evening caddis normally ~19:00–21:30 and PMD spinner ~19:30–20:30 — <b>but your log flags the caddis as oddly absent</b>; lead with PMD/searching dries and treat caddis as a bonus. The wind blowing stoneflies onto the water is the same setup that produced your Jun 16 browns — keep a golden-stone foam ready.</p>
-  <div class="access">
-    <h4>Evening access points (off ID-32)</h4>
-    <ul>
-      <li><span class="good">Vernon Bridge</span> — primary; below the bridge near the two metal feed silos down to the rapids / big-bank pool</li>
-      <li><span class="good">Bill's Hole</span> — your proven evening pod water (18" rainbow, two 16" browns came here); boat-ramp pod works late under low light</li>
-      <li>Chester Dam pool · Henry's Fork Twin Bridges access (ID — <span class="warn">not MT Twin Bridges</span>) · Fun Farm Bridge</li>
-      <li>Riverside Park in town (St. Anthony) · Ora Bridge · Stinker Lane</li>
+  <div class="section">
+    <h2>What you&rsquo;ll carry to next year</h2>
+    <ul class="lessons">
+      <li><b>Chase the water that&rsquo;s fishing, not the hatch you want.</b> Two dead days flipped to the best day of your life the moment you moved rivers. Mobility &gt; grinding.</li>
+      <li><b>When salmonflies are on big water, the eaters are where only a boat reaches.</b> Wading the side channels got numbers; the float got the salmonfly eats.</li>
+      <li><b>Skate the golden stone.</b> Swinging it across the current &mdash; not a dead drift &mdash; triggered violent eats. New go-to when fish are aggressive.</li>
+      <li><b>Wind can be the trigger.</b> It blew stoneflies onto the water and turned the bite on. Match what the wind delivers.</li>
+      <li><b>Fish where you can see the eat.</b> The best takes of the trip came in the riffle head in plain sight, not blind in the pool.</li>
+      <li><b>Trust the dated report over the calendar.</b> Every salmonfly call this trip came down to whether a shop &mdash; or the water &mdash; actually confirmed adults.</li>
+      <li><b>Bring the net. Have a car-key spot.</b> The small systems that nearly cost you an 18-incher and a night outside.</li>
     </ul>
   </div>
 
-  <div class="subhead">Box Canyon · Last Chance · Riverside</div>
-  <p class="section-note">Box Canyon (~1,240 cfs): dry-dropper &amp; nymphing, Pat's Rubber Legs / golden-stone nymph as the anchor — the all-weather, wind-proof option and a strong <b>goldens-farewell</b> candidate for the last day, ~45 min from St. Anthony. Last Chance: caddis + PMD evenings just below the Ranch (upper-river caddis still strong) — your pull-out spot if the Ranch flats go quiet at dark.</p>
-
-  <div class="shop-quote">
-    <span class="shop-name">Fly Fish Food — Henry's Fork <span class="shop-date">(published Jun 21, 2026 · freshest dated HF report, now 5 days old)</span></span>
-    Hatch read: <b>Green Drake #12–14 "moderate," 11 AM–3 PM</b>; <b>PMD #18–20 "heavy," 10 AM–2 PM</b>; <b>Caddis #16–18 "moderate," 6 PM–dusk</b> ("skate a CDC caddis through the riffles"). "Flows are low and stable with good clarity — ideal dry fly conditions." A midday-weighted hatch read — the evening play is the spinner fall.
+  <div class="signoff">
+    <h2>That&rsquo;s the trip, Karel.</h2>
+    <p>Twenty-three days from salmonflies to goldens, six species, fifty-plus fish, and a Snake float you&rsquo;ll never forget &mdash; on the same water where you sent Dad&rsquo;s rose petals down a year ago. The dashboard goes quiet now. When you&rsquo;ve had a night&rsquo;s sleep, write up the last few days in the journal so the record&rsquo;s complete.</p>
+    <p>Safe flight home. &#9992;&#65039;</p>
+    <p><a class="journal-pill" href="./journal.html" style="margin-top:6px">&#128214; Open the Trip Journal</a></p>
   </div>
+
 </div>
 
-<!-- SOUTH FORK -->
-<div class="river-section">
-  <h2>South Fork of the Snake <span class="tag tag-home">Home water</span></h2>
-  <div class="section-note">~1 hr to Swan Valley / Heise. Salmonfly is CONFIRMED on — but the river ticked UP today, so it's big &amp; pushy: a real but bank-only last-day card.</div>
-  <div class="stat-row">
-    <div class="sc"><div class="sc-label">nr Irwin (below Palisades)</div><div class="sc-val v-high">13,200</div><div class="sc-unit">cfs · high · 49°F</div><div class="sc-meta">USGS 13032500</div></div>
-    <div class="sc"><div class="sc-label">nr Heise</div><div class="sc-val v-high">13,300</div><div class="sc-unit">cfs · high, ticked up again</div><div class="sc-meta">USGS 13037500</div></div>
-  </div>
-  <p class="section-note">Big, pushy snowmelt — fish bank edges. The reports said "trending down," but the <b>live gauge ticked up again to ~13,300 cfs</b> on the warm days (snowmelt bump), so don't count on a clean-flowing float for the last day — it's a bank-only card. The <b>salmonfly is confirmed hatching</b> here (WorldCast Jun 18: "We have Salmonflies hatching in mid June!"; FFF Jun 21: salmonflies "moderate" #6–8 with PMDs "heavy") plus your Jun 20 Snake-system float. If you fish it, pound a big foam dry tight to the banks where the fish hold out of the push — and watch the Heise gauge for any real drop.</p>
-</div>
-
-<!-- TETON -->
-<div class="river-section">
-  <h2>Teton River <span class="tag tag-home">Home water</span></h2>
-  <div class="section-note">~20 min to the lower river; ~1 hr to the Driggs upper canyon. Brown drake hatch begins late-June evenings (Driggs upper canyon).</div>
-  <div class="stat-row">
-    <div class="sc"><div class="sc-label">nr St. Anthony (lower)</div><div class="sc-val">874</div><div class="sc-unit">cfs</div><div class="sc-meta">USGS 13055000</div></div>
-    <div class="sc"><div class="sc-label">ab South Leigh Cr (Driggs)</div><div class="sc-val">608</div><div class="sc-unit">cfs</div><div class="sc-meta">USGS 13052200</div></div>
-  </div>
-  <p class="section-note">A close-to-home alternate. The <b>brown drake</b> on the upper canyon near Driggs typically begins ~Jun 20+; <b>not confirmed</b> — Yostmark's report page was unreachable this morning (403), so no dated read. Lower river fishes caddis and stoneflies if you want a quick close-to-home evening; today the wind (~14–19 mph in Driggs) is more manageable here than out west.</p>
-</div>
-
-<!-- MADISON -->
-<div class="river-section">
-  <h2>Madison River <span class="tag tag-overnight">~2 hr · day-trip or overnight</span></h2>
-  <div class="section-note">Salmonfly-chase water — the edge is climbing, but no firm dated edge today, and you no longer need it (the Snake &amp; South Fork delivered).</div>
-  <div class="stat-row">
-    <div class="sc"><div class="sc-label">bl Hebgen (Grayling)</div><div class="sc-val">699</div><div class="sc-unit">cfs · 56°F</div><div class="sc-meta">USGS 06038500 · cooler, lagging</div></div>
-    <div class="sc"><div class="sc-label">@ Kirby / McAllister (bl Ennis)</div><div class="sc-val">1,240</div><div class="sc-unit">cfs · 65°F</div><div class="sc-meta">USGS 06041000 · warm, primed</div></div>
-    <div class="sc"><div class="sc-label">nr West Yellowstone</div><div class="sc-val">356</div><div class="sc-unit">cfs · 64°F</div><div class="sc-meta">USGS 06037500</div></div>
-  </div>
-  <div class="sf-tracker unconf" style="margin-top:12px">
-    <h3>Salmonfly leading edge <span class="lbl lbl-unconf">Progressing — UNCONFIRMED edge</span></h3>
-    <p>By Jun 26 the hatch has been climbing for over two weeks and is generally well up the lower river toward Ennis and beyond; below Hebgen still cooler (~56°F) and lagging. Warmest water (~64–66°F) is below Ennis (Kirby) and at West Yellowstone. Seasonally the edge has pushed well past Ennis Lake by now. <b>Leading edge: UNCONFIRMED today</b> — Slide Inn / Blue Ribbon reports weren't reachable this morning. <b>Call the Tackle Shop / Blue Ribbon / Slide Inn / MRFC to pin it</b> — but with the Snake and South Fork salmonfly both confirmed and close, a 2-hour spec drive on the last day isn't worth it.</p>
-  </div>
-</div>
-
-<!-- FIREHOLE / GIBBON / MADISON-IN-PARK -->
-<div class="river-section">
-  <h2>Firehole · Gibbon · Madison-in-Park <span class="tag tag-overnight">YNP · pair with Madison</span></h2>
-  <p class="section-note">YNP general season open. The Firehole (~62°F, warming as summer sets in — fish it early before it gets too warm) and Gibbon fish white miller caddis and PMDs and are a great morning/midday change-up to pair with an upper-Madison day. Madison-in-Park at the Junction is already ~69°F — getting warm.</p>
-</div>
-
-<!-- TWIN BRIDGES MT -->
-<div class="river-section">
-  <h2>Twin Bridges MT — Big Hole · Beaverhead · Jefferson · Ruby <span class="tag tag-overnight">~3 hr · overnight</span></h2>
-  <div class="section-note">Week-2 water you already fished. Big Hole salmonfly is OVER — goldens are the dry.</div>
-  <p class="section-note"><b>Big Hole:</b> golden stones on the swing/skate (your Powerhouse find); Melrose ~785 cfs / 62°F, upper river at Wisdom thin (~28 cfs / 59°F). <b>Beaverhead:</b> Poindexter Slough (spring creek near Dillon) fishes technical PMDs — you put ~10 trout on a small PMD there Jun 13; near Twin Bridges ~482 cfs. Frontier Anglers in Dillon is the local intel stop. Too far for the last weekend, but logged here for completeness.</p>
-</div>
-
-<!-- JACKSON HOLE -->
-<div class="river-section">
-  <h2>Jackson Hole <span class="tag tag-day">Teton Pass day trip</span></h2>
-  <p class="section-note">The Snake above the reservoir is still big snowmelt (~10,300 cfs / 59°F near Alpine) — but this is the system that produced your Jun 20 salmonfly float, and where Rob may have pointed the boat yesterday. Flat Creek closed until Aug 1. It's proven salmonfly water right now, but a long haul for the last day with the Ranch and Box Canyon close to home — fish the banks out of the heavy current if you go.</p>
-</div>
-
-<!-- YELLOWSTONE RIVER -->
-<div class="river-section">
-  <h2>Yellowstone River <span class="tag tag-overnight">Paradise Valley</span></h2>
-  <p class="section-note">The YNP Canyon section is <b>closed until Jul 15</b>. Below the park (Paradise Valley / Livingston) the river is dropping off runoff but still high (~6,000–6,400 cfs / ~58–60°F at Corwin Springs &amp; Livingston), and the salmonfly/golden window builds late June. A long round-trip; not a priority with the Snake/South Fork salmonfly closer to home and Rob's boat on tap.</p>
-</div>
-
-<!-- ============ LODGING ============ -->
-<div class="lodging">
-  <h2 style="font-size:1.3rem">Lodging — hatch-chase basecamps</h2>
-  <p class="section-note">You're home at St. Anthony for the last day — no overnight needed; sleep there tonight and fly out tomorrow morning. Panels below are kept for reference / future trips.</p>
-  <div class="lodge-grid">
-    <div class="lodge-panel">
-      <h4>West Yellowstone</h4>
-      <div class="lp-note">Madison / YNP weekends</div>
-      <ul><li>Brandin' Iron Inn</li><li>Stage Coach Inn</li><li>Madison Arm Resort</li><li>Slide Inn cabins</li></ul>
-    </div>
-    <div class="lodge-panel">
-      <h4>Ennis</h4>
-      <div class="lp-note">Lower Madison salmonfly</div>
-      <ul><li>El Western Cabins</li><li>Hi Country Motel</li><li>Riverside Motel</li></ul>
-    </div>
-    <div class="lodge-panel">
-      <h4>Twin Bridges MT</h4>
-      <div class="lp-note">Big Hole / Beaverhead</div>
-      <ul><li>The Old Hotel</li><li>Stardust Country Inn</li><li>Four Rivers guest house</li><li>Dillon Best Western (backup)</li></ul>
-    </div>
-    <div class="lodge-panel">
-      <h4>Paradise Valley</h4>
-      <div class="lp-note">Yellowstone River</div>
-      <ul><li>Chico Hot Springs (Emigrant)</li><li>Murray Hotel (Livingston)</li><li>Yellowstone Valley Lodge</li></ul>
-    </div>
-  </div>
-</div>
-
-</div><!-- /.c -->
-
-<!-- ============ FOOTER ============ -->
 <footer>
-<div class="c">
-  <div class="footer-cols">
-    <div class="footer-col">
-      <h3>Live Gauges &amp; Forecasts</h3>
-      <ul>
-        <li><a href="https://waterdata.usgs.gov/monitoring-location/13056500/">Henry's Fork nr Rexburg (lower / Vernon)</a></li>
-        <li><a href="https://waterdata.usgs.gov/monitoring-location/13042500/">Henry's Fork nr Island Park (upper / Box)</a></li>
-        <li><a href="https://waterdata.usgs.gov/monitoring-location/13037500/">South Fork nr Heise (watch the salmonfly flow)</a></li>
-        <li><a href="https://waterdata.usgs.gov/monitoring-location/13055000/">Teton nr St. Anthony</a></li>
-        <li><a href="https://waterdata.usgs.gov/monitoring-location/06041000/">Madison bl Ennis (Kirby)</a></li>
-        <li><a href="https://forecast.weather.gov/MapClick.php?lat=44.42&lon=-111.37">NWS — Island Park / Ranch</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h3>Shop Reports — Henry's Fork (last 3 days, newest first)</h3>
-      <div class="shop-quote">
-        <span class="shop-name">Fly Fish Food — Henry's Fork <span class="shop-date">(published Jun 21, 2026 — 5 days old; still the freshest dated report)</span></span>
-        Hatch read: Green Drake #12–14 "moderate," 11 AM–3 PM; PMD #18–20 "heavy," 10 AM–2 PM; Caddis #16–18 "moderate," 6 PM–dusk. "Flows are low and stable with good clarity — ideal dry fly conditions." A midday-weighted hatch — the evening play is the PMD/drake spinner fall.
-      </div>
-      <div class="shop-quote">
-        <span class="shop-name">WorldCast Anglers — Henry's Fork <span class="shop-date">(published Jun 18, 2026 — 8 days old)</span></span>
-        "Green Drakes, Brown Drakes, Flavs, PMDs and Caddis are going to be the name of the game." Ranch opened Jun 15 "with some good fishing conditions." Upper river flows "around 1100 cfs."
-      </div>
-      <p style="font-size:.72rem;color:#6a8a78;margin-top:6px;font-style:italic">No new dated Henry's Fork report has posted since Fly Fish Food's Jun 21 (now 5 days old) — re-checked FFF, Trout Hunt, Henry's Fork Anglers, and WorldCast this morning, all unchanged. It remains the freshest, confirming green drakes active midday. WorldCast is Jun 18 (8 days). Henry's Fork Anglers' latest is stale (Jun 5/6); Trout Hunt's is stale (Mar 13); Yostmark was unreachable (403). <b>Karel's own ground truth still tempers the charts:</b> his Jun 18–19 lower-river floats were nearly fishless and the lower-river caddis has been unreliable — so on the Ranch, fish to risers you actually see. Call Trout Hunt / Henry's Fork Anglers for a live Ranch-meadow read before driving up.</p>
-    </div>
+  <div class="c">
+    Greater Yellowstone Fly Fishing Dashboard &middot; Trip complete &mdash; final wrap-up<br>
+    Generated Sat, June 27, 2026 &middot; 05:32 MDT &middot; stats tallied from trip-log.json (Jun 5&ndash;22 logged)
   </div>
-  <div class="footer-col" style="margin-top:18px">
-    <h3>Licenses &amp; Permits</h3>
-    <ul>
-      <li>Idaho: <a href="https://idfg.idaho.gov/licenses">IDFG annual / nonres season</a> — required Henry's Fork, South Fork, Teton</li>
-      <li>Montana: <a href="https://fwp.mt.gov/buyandapply">FWP license + AIS prevention pass</a> — Madison, Big Hole, Beaverhead</li>
-      <li>Wyoming / YNP: <a href="https://www.nps.gov/yell/planyourvisit/fishing.htm">YNP fishing permit</a> — separate from state license; Snake near Jackson needs a WY license</li>
-    </ul>
-  </div>
-  <div class="ts">
-    Generated Fri Jun 26, 2026 · 5:32 AM MDT · Day 22 of 23 · the LAST fishing day · Gauge data USGS (provisional). Hatch status shown as CONFIRMED only where a dated shop report or Karel's trip log supports it; everything else is labeled an expectation. Tight lines — make this one count. 🎣
-  </div>
-</div>
 </footer>
 
 </body>
