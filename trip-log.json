@@ -4,8 +4,95 @@
   "arrive": "2026-06-05",
   "depart": "2026-06-27",
   "lastFishingDay": "2026-06-26",
-  "updated": "2026-06-23",
+  "updated": "2026-06-28",
   "entries": [
+    {
+      "date": "2026-06-25",
+      "day": "Thursday",
+      "leg": "Goodbye weekend · Harriman Ranch (AM) + South Fork float with Rob (PM)",
+      "status": "logged",
+      "locations": [
+        "Henry's Fork — Harriman (Railroad) Ranch, the riffle into the deeper run just below Millionaire's Pool (wade, late morning into early afternoon)",
+        "South Fork of the Snake — Spring Creek boat launch, afternoon float with Rob"
+      ],
+      "summary": "The fly that saved the trip. Late morning into early afternoon I waded the Harriman (Railroad) Ranch and tied on a Renegade for the very first time. Right away a big eat, then a missed second fish out of the riffle into the deeper run just below Millionaire's Pool, plus a big rainbow that ate in the main current and another missed eat. Even missing them, the Renegade was drawing fish and I started to become a believer. Rob called and told me to meet him at the Spring Creek boat launch, so I got there around 4pm and we floated. The salmonfly bite was off — no salmonflies at all, which seemed strange since I'd seen them in that same stretch just a few days before. But I caught 3 cutthroat, all around 12\", in the riffle on the Renegade and went all-in on a fly I'd never fished before. Rob said it's a very old pattern and was surprised someone had sold it to me. Those 3 cutts were my first fish since Monday the 22nd — a brutal cold run (skunked on the Ranch Tuesday evening, skunked on the Madison Wednesday) finally broken. The Renegade changed everything.",
+      "catches": [
+        {
+          "species": "Cutthroat Trout",
+          "count": 3,
+          "notes": "~12\" each — in the riffle on the South Fork float (Spring Creek launch), all on the Renegade. First fish since Monday Jun 22 — the catch that broke a three-day cold run."
+        }
+      ],
+      "flies": [
+        "Renegade (classic old attractor dry) — first time fishing it; drew a big eat and a missed rainbow at the Ranch, then landed the 3 South Fork cutthroat"
+      ],
+      "notes": "The Renegade was the whole story — a fly I'd never fished. Rob (who ran the float) said it's a very old pattern and was surprised a shop sold it to me. It drew a big eat and a missed rainbow at the Ranch in the morning, then put 3 cutthroat in the net on the South Fork float, breaking a cold run that ran back to Monday Jun 22 (two straight skunks: Tue Ranch + Wed Madison). Salmonflies were absent on the float even though they'd been in that stretch days earlier.",
+      "lessons": [
+        "An unfashionable classic can out-fish the 'right' fly. The Renegade — a very old attractor I'd never tried — turned a brutal cold run around. Carry a few old-school attractors and actually fish them.",
+        "A hatch can vanish fast on water that just had it. No salmonflies on the float despite seeing them in the same area days before — don't assume last week's bugs are still on; read the day in front of you.",
+        "Commit once a fly proves itself. After repeated eats at the Ranch I went all-in on the Renegade and it landed the South Fork cutts — confidence on a producing fly matters.",
+        "Cold runs end — keep fishing. Three days without a fish (Mon to Thu) flipped in a single riffle. Grinding through the skunks kept me on the water for the turn."
+      ],
+      "conditions": {
+        "air": "Island Park (Ranch, AM): high ~73°F / low ~45°F. Swan Valley (South Fork float, PM): high ~77°F / low ~54°F.",
+        "waterTemp": "Henry's Fork Ranch — no reach gauge, rich tailwater, est. ~58–62°F. South Fork of the Snake — dam-controlled tailwater, no temp sensor, est. ~52–56°F.",
+        "flowCfs": "Henry's Fork nr Island Park (Ranch reach) ~1,250 cfs (USGS 13042500). South Fork of the Snake nr Heise ~12,600 cfs (USGS 13037500) — rising through the week.",
+        "weather": "Ranch AM ~54% cloud mean, wind max ~10 mph, gusts to ~23. South Fork PM ~44% cloud mean, wind max ~10 mph, gusts to ~27. [Open-Meteo]",
+        "hatch": "Salmonfly bite OFF on the South Fork float — no salmonfly adults seen, despite them being in the same stretch a few days earlier. Fish ate the Renegade attractor, not a hatch-match."
+      }
+    },
+    {
+      "date": "2026-06-24",
+      "day": "Wednesday",
+      "leg": "Work-week · Madison salmonfly chase (Lyons Bridge)",
+      "status": "logged",
+      "locations": [
+        "Upper Madison — Lyons Bridge (between the lakes); the heavy riffle/current just below the bridge"
+      ],
+      "summary": "Drove over to chase the Madison salmonfly hatch and fished Lyons Bridge, between the lakes, with only a big golden stone all day. Turns out the worker at the Slide Inn should have sent me further down river — up at Lyons Bridge I saw only a couple of salmonflies. I was dead-set on a big fish, so I stuck with the big golden stone the whole time. I missed a couple of good eats but ended up skunked. The biggest look came from a big brown in the heavy riffle current down below the bridge. Then I drove to the Trout Hunter Lodge in Island Park, where I was staying the night, and crashed.",
+      "catches": [],
+      "flies": [
+        "Big golden stone dry (all day — committed to it for a big fish)"
+      ],
+      "notes": "A salmonfly chase that didn't pan out — the bugs weren't really at Lyons Bridge (only a couple seen); the Slide Inn worker should have pointed me further downriver. Stayed the night at the Trout Hunter Lodge, Island Park.",
+      "lessons": [
+        "Pin the fly shop down on WHERE, not just whether. The Slide Inn sent me to Lyons Bridge but the salmonflies were further downriver — ask exactly which access/reach the bugs are on before committing the day.",
+        "Don't force the big-fish fly when the bugs aren't there. Sticking with one big golden stone all day for a trophy, with only a couple salmonflies around, got me a skunk and a couple of missed eats — match the day, not the dream.",
+        "Convert the few eats you get on a tough day. With only a handful of looks, missing a couple of good eats was the whole difference between a skunk and a fish — stay sharp when chances are scarce.",
+        "The big riffle current below Lyons Bridge held the better fish (a big brown looked) — note it for a future salmonfly day when the bugs are actually on."
+      ],
+      "conditions": {
+        "air": "Upper Madison: high ~72°F / low ~42°F.",
+        "waterTemp": "Upper Madison at Kirby Ranch (Lyons Bridge reach) ~51–65°F, mean ~57°F (USGS 00010).",
+        "flowCfs": "Upper Madison at Kirby Ranch (Lyons Bridge) ~931 cfs (USGS 06038800).",
+        "weather": "~49% cloud mean. Light wind — max ~7 mph, gusts to ~19. [Open-Meteo]",
+        "hatch": "Salmonfly chase — only a couple of salmonfly adults seen at Lyons Bridge; the hatch was further downriver. Fished a big golden stone; a couple eats missed, a big brown looked in the riffle below the bridge."
+      }
+    },
+    {
+      "date": "2026-06-23",
+      "day": "Tuesday",
+      "leg": "Work-week · Harriman Ranch (evening)",
+      "status": "logged",
+      "locations": [
+        "Henry's Fork — Harriman (Railroad) Ranch (evening wade)"
+      ],
+      "summary": "Evening session on the Harriman (Railroad) Ranch and got skunked — the start of a cold run. Nothing for me here tonight; I wouldn't land another fish until the Renegade turned it around on Thursday's float with Rob.",
+      "catches": [],
+      "flies": [],
+      "notes": "Skunked on the Ranch in the evening. The first of two straight blanks (this, then the Madison on Wednesday) — my last fish had been Monday Jun 22 on the South Fork, and I wouldn't catch again until Thursday's South Fork float with Rob.",
+      "lessons": [
+        "The Harriman Ranch is technical, demanding water — an evening drop-in without dialing the right hatch/pattern can easily blank. Treat the Ranch as a plan-ahead session, not a quick after-work stop.",
+        "One skunk isn't a slump, but log it. This was night one of a multi-day cold run; tracking it kept me from blaming the wrong thing and pushed me to change it up (a new fly) when the run finally broke."
+      ],
+      "conditions": {
+        "air": "Island Park: high ~77°F / low ~42°F.",
+        "waterTemp": "Henry's Fork Ranch — no reach gauge; rich, slow tailwater/spring water, est. ~58–62°F.",
+        "flowCfs": "Henry's Fork nr Island Park (Ranch reach) ~1,240 cfs (USGS 13042500); ~1,100 at St. Anthony.",
+        "weather": "Bright — ~8% cloud mean. Wind max ~11 mph, gusts to ~22. [Open-Meteo]",
+        "hatch": "Nothing moved for me this evening (skunked); no hatch logged."
+      }
+    },
     {
       "date": "2026-06-22",
       "day": "Monday",
