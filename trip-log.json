@@ -7,6 +7,56 @@
   "updated": "2026-06-28",
   "entries": [
     {
+      "date": "2026-06-26",
+      "day": "Friday",
+      "leg": "Goodbye weekend · South Fork of the Snake (Conant) — LAST fishing day · \"Renegade Day\"",
+      "status": "logged",
+      "locations": [
+        "South Fork of the Snake — Conant boat launch (near South Fork Lodge); hiked down to the island just below — the log-jam outer riffle, the undercut side channel behind the island, and the huge riffle up to its top"
+      ],
+      "summary": "The last day, and the best dry-fly day by numbers I've ever had — forever \"Renegade Day.\" I went to the Conant boat launch near South Fork Lodge, parked, and hiked down to the island just below. First fish was a cutthroat on the Renegade near the log-jam outer riffle, and I thought, wow, this could be a great call — come fish this island area and big riffle. I worked the undercut bank behind the island and hooked what I'd put at a 16\" cutthroat that eventually broke off in that side channel. Then I started working my way up that huge riffle on the Renegade and just kept catching fish — 24 landed, up and down the riffle. One was an absolute highlight I'll never forget: at the very top of the riffle I spotted a bigger fish active near me; with a beer in my left hand and the rod in my right, I flicked the Renegade twice and on the second flick that sighted fish ate. I set the hook and, with no net and no intention of losing it, worked it all the way down to the head of the gravel bar — so glad I did, because it was a beautiful 16\" Snake River fine-spotted cutthroat, and I got a great picture of it in the gravel. Another fish, about 15\", was a cutbow I caught in the riffle at the bottom of the island; the rest were 10–14\" cutthroats and a rainbow. Every fish but the one that broke off in the side channel ate the Renegade.",
+      "catches": [
+        {
+          "species": "Cutthroat Trout",
+          "count": 1,
+          "notes": "16\" — THE fish, and a trip highlight. Sighted active at the very top of the riffle; beer in the left hand, rod in the right, flicked the Renegade twice and he ate on the second. No net, so I worked him all the way down to the head of the gravel bar to land him safely. A gorgeous Snake River fine-spotted cutthroat — got a great photo of it in the gravel."
+        },
+        {
+          "species": "Cutbow (Cutthroat-Rainbow hybrid)",
+          "count": 1,
+          "notes": "~15\" — in the riffle section at the bottom of the island, on the Renegade."
+        },
+        {
+          "species": "Rainbow Trout",
+          "count": 1,
+          "notes": "Up in the big riffle, on the Renegade."
+        },
+        {
+          "species": "Cutthroat Trout",
+          "count": 21,
+          "notes": "10–14\" — up and down the huge riffle (including the first fish near the log-jam outer riffle), all on the Renegade. 24 landed total on the day."
+        }
+      ],
+      "flies": [
+        "Renegade (classic old attractor dry) — every landed fish (24) ate it; the only fish lost, a ~16\" cutthroat that broke off in the side-channel undercut, was the lone one not on the Renegade"
+      ],
+      "notes": "\"Renegade Day\" — the last fishing day of the trip and the best dry-fly day by numbers of my life: 24 landed on a single fly, all up and down one big island riffle on the South Fork below Conant. The standout was the sighted 16\" fine-spotted cutthroat I called my shot on (two flicks, beer in hand) and walked down to the gravel bar to land without a net — photographed in the gravel. A ~16\" cutthroat broke off earlier in the undercut side channel behind the island (the only fish not on the Renegade, and the only one lost). After Thursday broke the cold run, the Renegade closed the trip out completely.",
+      "lessons": [
+        "Find one piece of structure and mine it. 24 fish came up and down a single big island riffle — once the first cutt ate near the log-jam outer riffle, I committed to that water instead of roaming, and it became the best dry-fly day of my life by numbers.",
+        "Sight-fish the eat when you can. The fish of the day was one I spotted active at the top of the riffle, then dropped the Renegade right on him — a targeted, visible eat beats blind casting.",
+        "No net? Play it down to the gravel. Without a net I walked the 16\" cutthroat all the way down to the head of the gravel bar to land it safely rather than risk it at my feet — patience landed the trip's best fish.",
+        "When a fly is this on, ride it all day. After breaking the cold run Thursday, the Renegade took every one of the 24 landed fish — full confidence in a single producer carried two days running.",
+        "The only fish lost was the only one not on the Renegade — the ~16\" that broke off in the side-channel undercut. A small reinforcement to stick with the pattern that's working."
+      ],
+      "conditions": {
+        "air": "Swan Valley / South Fork: high ~79°F / low ~54°F.",
+        "waterTemp": "South Fork of the Snake — dam-controlled tailwater, no temp sensor, est. ~52–56°F.",
+        "flowCfs": "South Fork of the Snake nr Heise ~13,300 cfs (USGS 13037500) — the high end of a week of rising dam-controlled flow.",
+        "weather": "Overcast — ~86% cloud mean. Wind max ~14 mph, gusts to ~34. [Open-Meteo]",
+        "hatch": "No hatch to match — the fish ate the Renegade attractor up and down the riffle all day. The only fish lost (side-channel undercut) was on a different fly."
+      }
+    },
+    {
       "date": "2026-06-25",
       "day": "Thursday",
       "leg": "Goodbye weekend · Harriman Ranch (AM) + South Fork float with Rob (PM)",
