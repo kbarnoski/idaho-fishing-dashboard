@@ -3,9 +3,41 @@
   "homeBase": "St. Anthony, ID",
   "arrive": "2026-06-05",
   "depart": "2026-06-27",
-  "lastFishingDay": "2026-06-26",
+  "lastFishingDay": "2026-06-27",
   "updated": "2026-06-28",
   "entries": [
+    {
+      "date": "2026-06-27",
+      "day": "Saturday",
+      "leg": "Departure morning · Bill's Hole (home water) — one last cast before the flight",
+      "status": "logged",
+      "locations": [
+        "Lower Henry's Fork — Bill's Hole (home water), one last session before flying home"
+      ],
+      "summary": "One last casual session at Bill's Hole on the way out, before my flight home. It was dead, so I swung a wet fly and picked up two 10\" browns to close the trip. A quiet, fitting goodbye on the home water where I sent Dad's rose petals down the river a year ago — those two browns ended the trip at 86 fish.",
+      "catches": [
+        {
+          "species": "Brown Trout",
+          "count": 2,
+          "notes": "10\" each — Bill's Hole was dead on top, so I swung a wet fly and both came on the swing. The last fish of the trip (86th and final)."
+        }
+      ],
+      "flies": [
+        "Wet fly (swung) — when the dead-drift produced nothing, the swing drew both browns"
+      ],
+      "notes": "A low-key send-off at Bill's Hole before the airport. Nothing on the dead-drift; switching to a swung wet fly saved a last two browns. Ended the trip at 86 fish, back on the home water where it started.",
+      "lessons": [
+        "When it's dead on the dead-drift, swing a wet fly. The two closing browns came on the swing after nothing was happening up top — a simple change of presentation salvaged the last session.",
+        "Always worth one last cast. A casual stop on the way to the airport still added two fish and a proper goodbye to the home water."
+      ],
+      "conditions": {
+        "air": "Lower Henry's Fork: high ~61°F / low ~50°F — cool and breezy.",
+        "waterTemp": "Lower Henry's Fork — no active gauge (Rexburg sensor offline); est. ~54–58°F.",
+        "flowCfs": "Lower Henry's Fork ~1,140 cfs at St. Anthony (USGS 13050500) / ~1,030 nr Rexburg (USGS 13056500).",
+        "weather": "Cool and overcast — ~73% cloud mean. Wind max ~17 mph, gusts to ~34. [Open-Meteo]",
+        "hatch": "Nothing on top — dead on the dead-drift. Two browns came on a swung wet fly."
+      }
+    },
     {
       "date": "2026-06-26",
       "day": "Friday",
