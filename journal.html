@@ -24,7 +24,22 @@ a{color:var(--rust)}
 .nav-back{display:inline-block;margin-top:14px;font-size:.82rem;color:#9fd4b4;text-decoration:none}
 .nav-back:hover{color:var(--gold)}
 
-.intro{font-size:.84rem;color:var(--muted);margin:20px 0 4px;font-style:italic}
+.intro{font-size:.84rem;color:var(--muted);margin:20px 0 10px;font-style:italic}
+
+.chapters{display:flex;flex-wrap:wrap;gap:7px;margin:0 0 6px}
+.chapters a{font-size:.74rem;text-decoration:none;color:var(--green);background:#fff;border:1px solid var(--dcream);border-radius:20px;padding:5px 11px;transition:background .15s,color .15s}
+.chapters a:hover{background:var(--green);color:var(--cream)}
+.chapters a .ch-n{color:var(--gold);font-weight:700;margin-right:5px}
+
+.phase{margin:30px 0 0;scroll-margin-top:14px}
+.phase-head{background:linear-gradient(135deg,#22382d,#2d4a3e);color:var(--cream);border-radius:12px;padding:16px 18px;border:1px solid var(--green)}
+.phase-top{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px}
+.phase-head h2{font-family:Georgia,serif;font-size:1.3rem;color:var(--gold);letter-spacing:.01em}
+.phase-range{font-size:.74rem;text-transform:uppercase;letter-spacing:.07em;color:#bcd4c4;white-space:nowrap}
+.phase-stats{display:flex;gap:14px;margin:9px 0 2px}
+.phase-stats span{font-size:.74rem;color:#cde0d4}
+.phase-stats b{color:var(--gold);font-family:Georgia,serif;font-size:.95rem;margin-right:3px}
+.phase-blurb{font-size:.86rem;color:#e3ecdf;margin-top:8px;line-height:1.5}
 
 .entry{background:var(--card);border:1px solid var(--dcream);border-left:5px solid var(--gold);border-radius:10px;padding:18px 20px;margin:18px 0;box-shadow:0 1px 3px rgba(0,0,0,.05)}
 .entry.pending{border-left-color:var(--dcream);opacity:.92}
@@ -82,7 +97,8 @@ footer{background:#1a2e25;color:#9ab8a8;padding:22px 0;margin-top:36px;font-size
 </div>
 
 <div class="c">
-  <p class="intro">A running record of where I went, what I caught, and the conditions of each day — the look-back companion to the forward-looking forecast.</p>
+  <p class="intro">A running record of where I went, what I caught, and the conditions of each day — grouped into the legs of the trip. The look-back companion to the forward-looking forecast.</p>
+  <nav class="chapters" id="chapters"></nav>
   <div id="entries"></div>
 </div>
 
@@ -133,14 +149,17 @@ function renderEntry(e){
   </div>`;
 }
 
+const fishCount = list => list.reduce((n,e)=>n+(e.catches||[]).reduce((m,c)=>m+(Number(c.count)||0),0),0);
+
 fetch("./trip-log.json?v=" + Date.now())
   .then(r => r.json())
   .then(data => {
     document.getElementById("trip-name").textContent = data.trip || "";
     document.getElementById("updated").textContent = data.updated ? fmtDate(data.updated) : "—";
-    const entries = (data.entries||[]).slice().sort((a,b)=>b.date.localeCompare(a.date));
+
+    const entries = (data.entries||[]).slice();
     const logged = entries.filter(e=>e.status!=="pending"||e.summary).length;
-    const fish = entries.reduce((n,e)=>n+(e.catches||[]).reduce((m,c)=>m+(Number(c.count)||0),0),0);
+    const fish = fishCount(entries);
     let left = "—";
     if(data.lastFishingDay){
       const today = new Date(); today.setHours(0,0,0,0);
@@ -150,7 +169,38 @@ fetch("./trip-log.json?v=" + Date.now())
     document.getElementById("dc-logged").textContent = logged;
     document.getElementById("dc-fish").textContent = fish;
     document.getElementById("dc-left").textContent = left;
-    document.getElementById("entries").innerHTML = entries.map(renderEntry).join("");
+
+    // Group entries by phase (chronological chapters). Any phase defined in
+    // data.phases keeps that order; untagged entries fall into a trailing group.
+    const phases = (data.phases||[]).slice();
+    const byPhase = {};
+    entries.forEach(e => { (byPhase[e.phase||"_"] = byPhase[e.phase||"_"] || []).push(e); });
+    if(byPhase["_"] && !phases.some(p=>p.id==="_"))
+      phases.push({id:"_",title:"Other days",range:"",blurb:""});
+
+    const chapters = [];
+    const sections = phases.map(p => {
+      const days = (byPhase[p.id]||[]).slice().sort((a,b)=>a.date.localeCompare(b.date));
+      if(!days.length) return "";
+      const n = chapters.length + 1;
+      chapters.push(`<a href="#${p.id}"><span class="ch-n">${n}</span>${esc(p.title.replace(/^.*·\s*/,""))}</a>`);
+      const f = fishCount(days);
+      const stats = `<div class="phase-stats">
+        <span><b>${days.length}</b>day${days.length!==1?"s":""}</span>
+        <span><b>${f}</b>fish</span>
+      </div>`;
+      return `<section class="phase" id="${p.id}">
+        <div class="phase-head">
+          <div class="phase-top"><h2>${esc(p.title)}</h2>${p.range?`<span class="phase-range">${esc(p.range)}</span>`:""}</div>
+          ${stats}
+          ${p.blurb?`<p class="phase-blurb">${esc(p.blurb)}</p>`:""}
+        </div>
+        ${days.map(renderEntry).join("")}
+      </section>`;
+    }).join("");
+
+    document.getElementById("chapters").innerHTML = chapters.join("");
+    document.getElementById("entries").innerHTML = sections;
   })
   .catch(() => {
     document.getElementById("entries").innerHTML =

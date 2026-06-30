@@ -5,9 +5,17 @@
   "depart": "2026-06-27",
   "lastFishingDay": "2026-06-27",
   "updated": "2026-06-28",
+  "phases": [
+    {"id":"p1","title":"Week 1 · Arrival & Home Water","range":"Jun 5–8","blurb":"Straight from the airport to Bill's Hole, the home water on the lower Henry's Fork. An 18\" rainbow the first night, then a thick 16\" brown that chased a golden stone down the riffle — bracketed by a couple of slow, windy evenings."},
+    {"id":"p2","title":"Weekend 2 · Montana Road Trip","range":"Jun 12–14","blurb":"West into Montana: Big Hole brookies, a grayling, and a stacked diversion channel of browns crushing a skated golden stone; the Poindexter Slough PMD hatch near Dillon; then a Madison drift on the way home."},
+    {"id":"p3","title":"Week 2 · Home Water & the Wind","range":"Jun 15–17","blurb":"Back around Vernon on the lower Henry's Fork. The dependable evening caddis went missing for days, but a hard wind blew stoneflies onto the water for one powerful, thick brown."},
+    {"id":"p4","title":"Weekend 3 · The Floats & the Snake Breakthrough","range":"Jun 18–22","blurb":"Two dead floats on the lower Henry's Fork — then Rob's tip flipped the trip: a Snake River salmonfly float that became the best day of my life, an 18\" cutthroat on a dry. Capped by a 9-fish wade on the South Fork."},
+    {"id":"p5","title":"Final Week · The Cold Run & the Renegade","range":"Jun 23–27","blurb":"A brutal three-day cold run — two skunks and a fruitless Madison salmonfly chase — broken by an old attractor, the Renegade. It carried a 24-fish \"Renegade Day\" on the South Fork and a two-brown send-off at Bill's Hole to close the trip at 86."}
+  ],
   "entries": [
     {
       "date": "2026-06-27",
+      "phase": "p5",
       "day": "Saturday",
       "leg": "Departure morning · Bill's Hole (home water) — one last cast before the flight",
       "status": "logged",
@@ -40,6 +48,7 @@
     },
     {
       "date": "2026-06-26",
+      "phase": "p5",
       "day": "Friday",
       "leg": "Goodbye weekend · South Fork of the Snake (Conant) — LAST fishing day · \"Renegade Day\"",
       "status": "logged",
@@ -90,6 +99,7 @@
     },
     {
       "date": "2026-06-25",
+      "phase": "p5",
       "day": "Thursday",
       "leg": "Goodbye weekend · Harriman Ranch (AM) + South Fork float with Rob (PM)",
       "status": "logged",
@@ -125,6 +135,7 @@
     },
     {
       "date": "2026-06-24",
+      "phase": "p5",
       "day": "Wednesday",
       "leg": "Work-week · Madison salmonfly chase (Lyons Bridge)",
       "status": "logged",
@@ -153,6 +164,7 @@
     },
     {
       "date": "2026-06-23",
+      "phase": "p5",
       "day": "Tuesday",
       "leg": "Work-week · Harriman Ranch (evening)",
       "status": "logged",
@@ -177,6 +189,7 @@
     },
     {
       "date": "2026-06-22",
+      "phase": "p4",
       "day": "Monday",
       "leg": "Weekend 3 · South Fork of the Snake (wade)",
       "status": "logged",
@@ -231,6 +244,7 @@
     },
     {
       "date": "2026-06-20",
+      "phase": "p4",
       "day": "Saturday",
       "leg": "Weekend 3 · South Fork of the Snake (Heise) with Rob & Mike",
       "status": "logged",
@@ -287,6 +301,7 @@
     },
     {
       "date": "2026-06-19",
+      "phase": "p4",
       "day": "Friday",
       "leg": "Weekend 3 · Henry's Fork float with Mike",
       "status": "logged",
@@ -315,6 +330,7 @@
     },
     {
       "date": "2026-06-18",
+      "phase": "p4",
       "day": "Thursday",
       "leg": "Weekend 3 · Henry's Fork float with Mike",
       "status": "logged",
@@ -353,6 +369,7 @@
     },
     {
       "date": "2026-06-17",
+      "phase": "p3",
       "day": "Wednesday",
       "leg": "Work-week · Vernon → drive to Jackson",
       "status": "logged",
@@ -381,6 +398,7 @@
     },
     {
       "date": "2026-06-16",
+      "phase": "p3",
       "day": "Tuesday",
       "leg": "Work-week · Vernon",
       "status": "logged",
@@ -420,6 +438,7 @@
     },
     {
       "date": "2026-06-15",
+      "phase": "p3",
       "day": "Monday",
       "leg": "Work-week · Vernon",
       "status": "logged",
@@ -445,6 +464,7 @@
     },
     {
       "date": "2026-06-14",
+      "phase": "p2",
       "day": "Sunday",
       "leg": "Weekend 2 · Madison drift home",
       "status": "logged",
@@ -481,6 +501,7 @@
     },
     {
       "date": "2026-06-13",
+      "phase": "p2",
       "day": "Saturday",
       "leg": "Weekend 2 · Beaverhead / Dillon",
       "status": "logged",
@@ -525,6 +546,7 @@
     },
     {
       "date": "2026-06-12",
+      "phase": "p2",
       "day": "Friday",
       "leg": "Weekend 2 · Big Hole",
       "status": "logged",
@@ -581,6 +603,7 @@
     },
     {
       "date": "2026-06-08",
+      "phase": "p1",
       "day": "Monday",
       "leg": "Work-week · Vernon",
       "status": "logged",
@@ -623,6 +646,7 @@
     },
     {
       "date": "2026-06-07",
+      "phase": "p1",
       "day": "Sunday",
       "leg": "Weekend 1 · Vernon",
       "status": "logged",
@@ -659,6 +683,7 @@
     },
     {
       "date": "2026-06-06",
+      "phase": "p1",
       "day": "Saturday",
       "leg": "Weekend 1 · Vernon",
       "status": "logged",
@@ -695,6 +720,7 @@
     },
     {
       "date": "2026-06-05",
+      "phase": "p1",
       "day": "Friday",
       "leg": "Weekend 1 · Arrival",
       "status": "logged",
