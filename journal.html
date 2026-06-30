@@ -43,8 +43,11 @@ a{color:var(--rust)}
 
 .entry{background:var(--card);border:1px solid var(--dcream);border-left:5px solid var(--gold);border-radius:10px;padding:18px 20px;margin:18px 0;box-shadow:0 1px 3px rgba(0,0,0,.05)}
 .entry.pending{border-left-color:var(--dcream);opacity:.92}
+.entry.skunked{border-left-color:#3a352c;border-left-style:dashed}
 .e-date{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px;border-bottom:1px solid var(--dcream);padding-bottom:8px;margin-bottom:12px}
 .e-date h2{font-family:Georgia,serif;font-size:1.18rem;color:var(--green)}
+.skunk{display:inline-block;font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#f5f1e8;background:#2a2620;border-radius:20px;padding:3px 9px 3px 8px;margin-left:9px;vertical-align:middle;box-shadow:inset 0 0 0 1px rgba(245,241,232,.25)}
+.phase-stats .sk b{color:#f3e7c4}
 .e-leg{font-size:.7rem;text-transform:uppercase;letter-spacing:.07em;color:var(--gold);background:rgba(201,168,107,.12);padding:3px 9px;border-radius:20px}
 .e-loc{font-size:.92rem;color:var(--rust);font-weight:600;margin-bottom:10px}
 .e-loc::before{content:"\1F4CD";margin-right:5px;font-weight:400}
@@ -90,7 +93,7 @@ footer{background:#1a2e25;color:#9ab8a8;padding:22px 0;margin-top:36px;font-size
     <div class="hero-row">
       <div class="daycount"><b id="dc-logged">0</b><small>Days Logged</small></div>
       <div class="daycount"><b id="dc-fish">0</b><small>Fish Landed</small></div>
-      <div class="daycount"><b id="dc-left">—</b><small>Fishing Days Left</small></div>
+      <div class="daycount"><b id="dc-skunk">0</b><small>Skunked Days</small></div>
     </div>
     <a class="nav-back" href="./index.html">&larr; Back to the forecast dashboard</a>
   </div>
@@ -120,6 +123,8 @@ function condCell(label, val){
 
 function renderEntry(e){
   const pending = e.status === "pending";
+  const fishN = (e.catches||[]).reduce((m,c)=>m+(Number(c.count)||0),0);
+  const skunked = !pending && fishN === 0;
   const locs = (e.locations||[]).map(esc).join(" &middot; ");
   const catches = (e.catches||[]).map(c =>
     `<div class="catch"><span class="sp">${c.count!=null?`<b>${esc(c.count)}</b>`:""}${esc(c.species)}</span>${c.notes?`<span class="cn">${esc(c.notes)}</span>`:""}</div>`
@@ -141,8 +146,8 @@ function renderEntry(e){
        ${flies}
        ${e.notes?`<div class="notes">${esc(e.notes)}</div>`:""}
        ${lessons}`;
-  return `<div class="entry${pending?" pending":""}">
-    <div class="e-date"><h2>${fmtDate(e.date)}</h2>${e.leg?`<span class="e-leg">${esc(e.leg)}</span>`:""}</div>
+  return `<div class="entry${pending?" pending":""}${skunked?" skunked":""}">
+    <div class="e-date"><h2>${fmtDate(e.date)}${skunked?` <span class="skunk">🦨 Skunked</span>`:""}</h2>${e.leg?`<span class="e-leg">${esc(e.leg)}</span>`:""}</div>
     ${locs?`<div class="e-loc">${locs}</div>`:""}
     ${body}
     ${cond?`<div class="cond"><h4>Conditions that day</h4><div class="cond-grid">${cond}</div></div>`:""}
@@ -150,6 +155,8 @@ function renderEntry(e){
 }
 
 const fishCount = list => list.reduce((n,e)=>n+(e.catches||[]).reduce((m,c)=>m+(Number(c.count)||0),0),0);
+const isSkunk = e => e.status!=="pending" && fishCount([e])===0;
+const skunkCount = list => list.filter(isSkunk).length;
 
 fetch("./trip-log.json?v=" + Date.now())
   .then(r => r.json())
@@ -160,15 +167,9 @@ fetch("./trip-log.json?v=" + Date.now())
     const entries = (data.entries||[]).slice();
     const logged = entries.filter(e=>e.status!=="pending"||e.summary).length;
     const fish = fishCount(entries);
-    let left = "—";
-    if(data.lastFishingDay){
-      const today = new Date(); today.setHours(0,0,0,0);
-      const last = new Date(data.lastFishingDay+"T12:00:00");
-      left = Math.max(0, Math.ceil((last-today)/86400000));
-    }
     document.getElementById("dc-logged").textContent = logged;
     document.getElementById("dc-fish").textContent = fish;
-    document.getElementById("dc-left").textContent = left;
+    document.getElementById("dc-skunk").textContent = skunkCount(entries);
 
     // Group entries by phase (chronological chapters). Any phase defined in
     // data.phases keeps that order; untagged entries fall into a trailing group.
@@ -185,9 +186,11 @@ fetch("./trip-log.json?v=" + Date.now())
       const n = chapters.length + 1;
       chapters.push(`<a href="#${p.id}"><span class="ch-n">${n}</span>${esc(p.title.replace(/^.*·\s*/,""))}</a>`);
       const f = fishCount(days);
+      const sk = skunkCount(days);
       const stats = `<div class="phase-stats">
         <span><b>${days.length}</b>day${days.length!==1?"s":""}</span>
         <span><b>${f}</b>fish</span>
+        ${sk?`<span class="sk">🦨 <b>${sk}</b>skunk${sk!==1?"s":""}</span>`:""}
       </div>`;
       return `<section class="phase" id="${p.id}">
         <div class="phase-head">
